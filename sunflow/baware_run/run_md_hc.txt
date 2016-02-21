@@ -1,0 +1,34 @@
+class org.sunflow.core.renderer.BucketRenderer:2
+class org.sunflow.core.Scene:1
+ERun 0: 10.250397 655.436080 771.832504
+class org.sunflow.core.renderer.BucketRenderer:2
+class org.sunflow.core.Scene:1
+ERun 1: 11.054000 633.061447 746.799423
+class org.sunflow.core.renderer.BucketRenderer:2
+class org.sunflow.core.Scene:1
+ERun 2: 11.326386 630.552292 744.612900
+class org.sunflow.core.renderer.BucketRenderer:2
+class org.sunflow.core.Scene:1
+ERun 3: 9.892822 632.200683 744.892716
+class org.sunflow.core.renderer.BucketRenderer:2
+class org.sunflow.core.Scene:1
+ERun 4: 11.030579 630.804779 744.544265
+class org.sunflow.core.renderer.BucketRenderer:2
+class org.sunflow.core.Scene:1
+ERun 5: 10.987701 631.993118 745.770417
+class org.sunflow.core.renderer.BucketRenderer:2
+class org.sunflow.core.Scene:1
+ERun 6: 11.908234 629.524597 743.911468
+class org.sunflow.core.renderer.BucketRenderer:2
+class org.sunflow.core.Scene:1
+ERun 7: 11.944824 631.500763 746.059647
+class org.sunflow.core.renderer.BucketRenderer:2
+class org.sunflow.core.Scene:1
+ERun 8: 12.248200 630.306626 745.253128
+class org.sunflow.core.renderer.BucketRenderer:2
+class org.sunflow.core.Scene:1
+ERun 9: 10.615860 628.725982 741.845459
+class org.sunflow.core.renderer.BucketRenderer:2
+class org.sunflow.core.Scene:1
+ERun 10: 10.712173 630.497177 743.819946
+Energy: 0.000000 0.000000 744.750937
