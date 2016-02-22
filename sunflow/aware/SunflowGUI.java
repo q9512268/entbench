@@ -363,7 +363,7 @@ public class SunflowGUI extends javax.swing.JFrame implements UserInterface {
                   }
               }
 
-              PANDA_Util.initModeFile();
+              ENT_Util.initModeFile();
               double[] energyRuns = new double[11];
 
               for (int k = 0; k < 11; k++) {
@@ -453,7 +453,7 @@ public class SunflowGUI extends javax.swing.JFrame implements UserInterface {
                 }
 
                 double[] after = EnergyCheckUtils.getEnergyStats();
-                PANDA_Util.writeModeFile(String.format("ERun %d: %f %f %f\n", k, after[0]-before[0], after[1]-before[1], after[2]-before[2]));
+                ENT_Util.writeModeFile(String.format("ERun %d: %f %f %f\n", k, after[0]-before[0], after[1]-before[1], after[2]-before[2]));
                 energyRuns[k] = after[2]-before[2];
               }
 
@@ -461,9 +461,9 @@ public class SunflowGUI extends javax.swing.JFrame implements UserInterface {
               for (int k = 1; k < 11; k++) {
                 energyTotal += energyRuns[k];
               }
-              PANDA_Util.writeModeFile(String.format("Energy: %f %f %f\n", 0.0, 0.0, (energyTotal / 10.0)));
+              ENT_Util.writeModeFile(String.format("Energy: %f %f %f\n", 0.0, 0.0, (energyTotal / 10.0)));
 
-              PANDA_Util.closeModeFile();
+              ENT_Util.closeModeFile();
               EnergyCheckUtils.DeallocProfile();
 
           } else {

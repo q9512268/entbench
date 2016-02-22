@@ -22,7 +22,7 @@ import org.sunflow.system.Timer;
 import org.sunflow.system.UI;
 import org.sunflow.system.UI.Module;
 
-import panda.runtime.*;
+import ent.runtime.*;
 
 public class BucketRenderer@mode<?->X> implements ImageSampler@mode<X> {
     private Scene@mode<low <= * <= X> scene;
@@ -61,10 +61,10 @@ public class BucketRenderer@mode<?->X> implements ImageSampler@mode<X> {
     private int fs;
     private float fhs;
 
-    panda_attribute {
-      if (PANDA_Util.Battery.percentRemaining() >= 0.75) {
+    attributor {
+      if (ENT_Util.Battery.percentRemaining() >= 0.75) {
         return @mode<high>;
-      } else if (PANDA_Util.Battery.percentRemaining() >= 0.50) {
+      } else if (ENT_Util.Battery.percentRemaining() >= 0.50) {
         return @mode<mid>;
       } else {
         return @mode<low>;
@@ -200,9 +200,9 @@ public class BucketRenderer@mode<?->X> implements ImageSampler@mode<X> {
     private class BucketThread extends Thread {
         
         private class Sleeper@mode<?->X> {
-          panda_attribute {
-            float temp = PANDA_Util.Temperature.getTempC();
-            PANDA_Util.writeModeFile(String.format("Temperature:%f\n",temp));
+          attributor {
+            float temp = ENT_Util.Temperature.getTempC();
+            ENT_Util.writeModeFile(String.format("Temperature:%f\n",temp));
             if (temp >= 65.0) {
               return @mode<low>;
             } else if (temp >= 60.0) {

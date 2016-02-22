@@ -684,7 +684,6 @@ public class SunflowAPI {
         bucketRenderer.preprepare(opt);
   
         ImageSampler@mode<*> sampler2 = snapshot bucketRenderer ?mode[@mode<low>, @mode<high>];
-        PANDA_Util.writeModeFile(PANDA_Util.dumpMode(sampler2)+"\n");
 
         sampler2.prepare(opt, scene, scene.getImageWidth(), scene.getImageHeight());
         sampler2.render(scene.getDisplay());

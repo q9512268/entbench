@@ -20,7 +20,7 @@ public class SimpleRenderer@mode<?->X> implements ImageSampler@mode<X> {
     private int numBucketsX, numBucketsY;
     private int bucketCounter, numBuckets;
 
-    panda_attribute {
+    attributor {
       // Just simulate for now
       int batteryMode = BatteryContext.batteryMode;
 

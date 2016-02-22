@@ -22,8 +22,6 @@ import org.sunflow.system.Timer;
 import org.sunflow.system.UI;
 import org.sunflow.system.UI.Module;
 
-import panda.runtime.*;
-
 public class BucketRenderer@mode<?->X> implements ImageSampler@mode<X> {
     private Scene@mode<low <= * <= X> scene;
     private Display display;
@@ -62,11 +60,11 @@ public class BucketRenderer@mode<?->X> implements ImageSampler@mode<X> {
     private int fs;
     private float fhs;
 
-    panda_attribute {
+    attributor {
       if (useBat) {
-        if (PANDA_Util.Battery.percentRemaining() >= 0.75) {
+        if (ENT_Util.Battery.percentRemaining() >= 0.75) {
           return @mode<high>;
-        } else if (PANDA_Util.Battery.percentRemaining() >= 0.50) {
+        } else if (ENT_Util.Battery.percentRemaining() >= 0.50) {
           return @mode<mid>;
         } else {
           return @mode<low>;
@@ -113,14 +111,10 @@ public class BucketRenderer@mode<?->X> implements ImageSampler@mode<X> {
 
         try {
           this.scene = snapshot scene ?mode[@mode<low>, @mode<X>];
-          PANDA_Util.writeModeFile(PANDA_Util.dumpMode(this.scene)+"\n");
         } catch (RuntimeException e) {
           this.scene = snapshotforce scene ?mode[@mode<low>, @mode<X>];
           if (recover) {
-            PANDA_Util.writeModeFile("Recovered from " + PANDA_Util.dumpMode(this.scene) + "\n");
             maxAADepth = 0;
-          } else {
-            PANDA_Util.writeModeFile("Forced to " + PANDA_Util.dumpMode(this.scene) + "\n");
           }
         }
 
