@@ -1,0 +1,818 @@
+08:48:51,707 INFO  [PluginFactory] Loading 4 plugins.
+08:48:51,708 INFO  [PluginFactory] Loading plugin configuration 'console'...
+08:48:51,710 INFO  [ConsolePlugin] Prefix set to '[Plugin] '
+08:48:51,710 INFO  [PluginFactory] Plugin not configured for local event filtering
+08:48:51,710 INFO  [PluginFactory] Plugin Name    : Console writer JSpider module
+08:48:51,710 INFO  [PluginFactory] Plugin Version : v1.0
+08:48:51,711 INFO  [PluginFactory] Plugin Vendor  : http://www.javacoding.net
+08:48:51,711 INFO  [PluginFactory] Loading plugin configuration 'velocity'...
+08:48:51,712 INFO  [PluginFactory] Plugin uses local event filtering
+08:48:51,716 INFO  [PluginFactory] Plugin Name    : Velocity Template JSpider module
+08:48:51,716 INFO  [PluginFactory] Plugin Version : v1.0
+08:48:51,716 INFO  [PluginFactory] Plugin Vendor  : http://www.javacoding.net
+08:48:51,716 INFO  [PluginFactory] Loading plugin configuration 'statusbasedfilewriter'...
+08:48:51,720 INFO  [StatusBasedFileWriterPlugin] initialized.
+08:48:51,720 INFO  [PluginFactory] Plugin not configured for local event filtering
+08:48:51,720 INFO  [PluginFactory] Plugin Name    : Status based  Filewriter JSpider plugin
+08:48:51,720 INFO  [PluginFactory] Plugin Version : v1.0
+08:48:51,720 INFO  [PluginFactory] Plugin Vendor  : http://www.javacoding.net
+08:48:51,720 INFO  [PluginFactory] Loading plugin configuration 'xmldump'...
+08:48:51,720 INFO  [PluginFactory] Plugin uses local event filtering
+08:48:51,721 INFO  [PluginFactory] Plugin Name    : Velocity Template JSpider module
+08:48:51,721 INFO  [PluginFactory] Plugin Version : v1.0
+08:48:51,721 INFO  [PluginFactory] Plugin Vendor  : http://www.javacoding.net
+08:48:51,721 INFO  [PluginFactory] Loaded 4 plugins.
+08:48:51,721 INFO  [VelocityPlugin] writing trace file: true
+08:48:51,721 INFO  [VelocityPlugin] writing dump file: true
+08:48:51,721 INFO  [VelocityPlugin] Velocity template folder : velocity
+08:48:51,776 INFO  [VelocityPlugin] Writing to trace file: ./velocity-trace.out
+08:48:51,776 INFO  [VelocityPlugin] Writing to dump file: ./velocity-dump.out
+08:48:51,776 INFO  [VelocityPlugin] writing trace file: false
+08:48:51,776 INFO  [VelocityPlugin] writing dump file: true
+08:48:51,776 INFO  [VelocityPlugin] Velocity template folder : xmldump
+08:48:51,784 INFO  [VelocityPlugin] Writing to dump file: ./xml-dump.xml
+08:48:51,789 INFO  [StorageFactory] Storage provider class is 'class net.javacoding.jspider.core.storage.memory.InMemoryStorageProvider'
+08:48:51,817 INFO  [SpiderContext] default user Agent is 'JSpider v0.5.0-dev (http://j-spider.sourceforge.net)'
+08:48:51,829 INFO  [SchedulerFactory] TaskScheduler provider class is 'class net.javacoding.jspider.core.task.impl.DefaultSchedulerProvider'
+08:48:51,837 INFO  [Spider] Spider born - threads: spiders: 5, thinkers: 1
+08:48:52,017 INFO  [SpiderContext] using userAgent 'JSpider v0.5.0-dev (http://j-spider.sourceforge.net)' for site 'http://synergyendwell.com'
+08:48:52,036 INFO  [ThrottleFactory] Throttle provider class is 'class net.javacoding.jspider.core.throttle.impl.PandaLoadThrottleProvider'
+08:48:53,136 INFO  [StatusBasedFileWriterPlugin] creating file for status '200'
+08:48:54,984 INFO  [SpiderContext] site http://fonts.googleapis.com must not be handled.
+08:48:55,037 INFO  [SpiderContext] site https://www.facebook.com must not be handled.
+08:48:55,087 INFO  [SpiderContext] site http://html5shiv.googlecode.com must not be handled.
+08:48:55,160 INFO  [SpiderContext] site https://maps.googleapis.com must not be handled.
+08:48:55,298 INFO  [SpiderContext] site http://www.voxel-labs.com must not be handled.
+08:48:56,853 INFO  [StatusBasedFileWriterPlugin] creating file for status '404'
+08:48:58,383 ERROR [SpiderHttpURLTask] exception during spidering
+java.io.IOException: Server returned HTTP response code: 405 for URL: http://synergyendwell.com/xmlrpc.php
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:422)
+	at sun.net.www.protocol.http.HttpURLConnection$10.run(HttpURLConnection.java:1889)
+	at sun.net.www.protocol.http.HttpURLConnection$10.run(HttpURLConnection.java:1884)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at sun.net.www.protocol.http.HttpURLConnection.getChainedException(HttpURLConnection.java:1883)
+	at sun.net.www.protocol.http.HttpURLConnection.getInputStream0(HttpURLConnection.java:1456)
+	at sun.net.www.protocol.http.HttpURLConnection.getInputStream(HttpURLConnection.java:1440)
+	at net.javacoding.jspider.core.task.work.SpiderHttpURLTask.execute(Unknown Source)
+	at net.javacoding.jspider.core.threading.WorkerThread.run(Unknown Source)
+Caused by: java.io.IOException: Server returned HTTP response code: 405 for URL: http://synergyendwell.com/xmlrpc.php
+	at sun.net.www.protocol.http.HttpURLConnection.getInputStream0(HttpURLConnection.java:1839)
+	at sun.net.www.protocol.http.HttpURLConnection.getInputStream(HttpURLConnection.java:1440)
+	at java.net.HttpURLConnection.getResponseCode(HttpURLConnection.java:480)
+	... 2 more
+08:48:58,386 INFO  [StatusBasedFileWriterPlugin] creating file for status '405'
+08:49:00,580 INFO  [SpiderContext] site https://www.youtube.com must not be handled.
+08:49:03,646 INFO  [StatusBasedFileWriterPlugin] creating file for status '301'
+08:49:17,874 INFO  [SpiderContext] site http://www.facebook.com must not be handled.
+08:49:17,917 INFO  [SpiderContext] site https://twitter.com must not be handled.
+08:49:17,966 INFO  [SpiderContext] site https://plus.google.com must not be handled.
+08:49:18,039 INFO  [SpiderContext] site https://pinterest.com must not be handled.
+08:49:18,087 INFO  [SpiderContext] site http://www.linkedin.com must not be handled.
+08:49:18,127 INFO  [SpiderContext] site http://www.tumblr.com must not be handled.
+08:49:18,159 INFO  [SpiderContext] site http://reddit.com must not be handled.
+08:49:18,199 INFO  [SpiderContext] site http://www.stumbleupon.com must not be handled.
+08:49:35,224 INFO  [Spider] Stopped spider workers...
+08:49:35,224 INFO  [Spider] Stopped thinker workers...
+08:49:35,239 INFO  [VelocityPlugin] writing dump - this could take a while
+08:49:35,417 INFO  [VelocityPlugin] writing dump - this could take a while
+08:49:35,659 INFO  [Spider] Spidering done!
+08:49:35,659 INFO  [Spider] Elapsed time : 43808
+08:49:35,666 INFO  [PluginFactory] Loading 4 plugins.
+08:49:35,666 INFO  [PluginFactory] Loading plugin configuration 'console'...
+08:49:35,666 INFO  [ConsolePlugin] Prefix set to '[Plugin] '
+08:49:35,667 INFO  [PluginFactory] Plugin not configured for local event filtering
+08:49:35,667 INFO  [PluginFactory] Plugin Name    : Console writer JSpider module
+08:49:35,667 INFO  [PluginFactory] Plugin Version : v1.0
+08:49:35,667 INFO  [PluginFactory] Plugin Vendor  : http://www.javacoding.net
+08:49:35,667 INFO  [PluginFactory] Loading plugin configuration 'velocity'...
+08:49:35,667 INFO  [PluginFactory] Plugin uses local event filtering
+08:49:35,667 INFO  [PluginFactory] Plugin Name    : Velocity Template JSpider module
+08:49:35,667 INFO  [PluginFactory] Plugin Version : v1.0
+08:49:35,667 INFO  [PluginFactory] Plugin Vendor  : http://www.javacoding.net
+08:49:35,667 INFO  [PluginFactory] Loading plugin configuration 'statusbasedfilewriter'...
+08:49:35,667 INFO  [StatusBasedFileWriterPlugin] initialized.
+08:49:35,667 INFO  [PluginFactory] Plugin not configured for local event filtering
+08:49:35,667 INFO  [PluginFactory] Plugin Name    : Status based  Filewriter JSpider plugin
+08:49:35,667 INFO  [PluginFactory] Plugin Version : v1.0
+08:49:35,667 INFO  [PluginFactory] Plugin Vendor  : http://www.javacoding.net
+08:49:35,667 INFO  [PluginFactory] Loading plugin configuration 'xmldump'...
+08:49:35,667 INFO  [PluginFactory] Plugin uses local event filtering
+08:49:35,668 INFO  [PluginFactory] Plugin Name    : Velocity Template JSpider module
+08:49:35,668 INFO  [PluginFactory] Plugin Version : v1.0
+08:49:35,668 INFO  [PluginFactory] Plugin Vendor  : http://www.javacoding.net
+08:49:35,668 INFO  [PluginFactory] Loaded 4 plugins.
+08:49:35,668 INFO  [VelocityPlugin] writing trace file: true
+08:49:35,668 INFO  [VelocityPlugin] writing dump file: true
+08:49:35,668 INFO  [VelocityPlugin] Velocity template folder : velocity
+08:49:35,672 INFO  [VelocityPlugin] Writing to trace file: ./velocity-trace.out
+08:49:35,673 INFO  [VelocityPlugin] Writing to dump file: ./velocity-dump.out
+08:49:35,673 INFO  [VelocityPlugin] writing trace file: false
+08:49:35,673 INFO  [VelocityPlugin] writing dump file: true
+08:49:35,673 INFO  [VelocityPlugin] Velocity template folder : xmldump
+08:49:35,676 INFO  [VelocityPlugin] Writing to dump file: ./xml-dump.xml
+08:49:35,676 INFO  [StorageFactory] Storage provider class is 'class net.javacoding.jspider.core.storage.memory.InMemoryStorageProvider'
+08:49:35,677 INFO  [SpiderContext] default user Agent is 'JSpider v0.5.0-dev (http://j-spider.sourceforge.net)'
+08:49:35,677 INFO  [SchedulerFactory] TaskScheduler provider class is 'class net.javacoding.jspider.core.task.impl.DefaultSchedulerProvider'
+08:49:35,677 INFO  [Spider] Spider born - threads: spiders: 5, thinkers: 1
+08:49:35,679 INFO  [SpiderContext] using userAgent 'JSpider v0.5.0-dev (http://j-spider.sourceforge.net)' for site 'http://synergyendwell.com'
+08:49:35,688 INFO  [ThrottleFactory] Throttle provider class is 'class net.javacoding.jspider.core.throttle.impl.PandaLoadThrottleProvider'
+08:49:36,731 INFO  [StatusBasedFileWriterPlugin] creating file for status '200'
+08:49:38,480 INFO  [SpiderContext] site http://fonts.googleapis.com must not be handled.
+08:49:38,484 INFO  [SpiderContext] site https://www.facebook.com must not be handled.
+08:49:38,486 INFO  [SpiderContext] site http://html5shiv.googlecode.com must not be handled.
+08:49:38,494 INFO  [SpiderContext] site https://maps.googleapis.com must not be handled.
+08:49:38,495 INFO  [SpiderContext] site http://www.voxel-labs.com must not be handled.
+08:49:40,276 INFO  [StatusBasedFileWriterPlugin] creating file for status '404'
+08:49:42,865 ERROR [SpiderHttpURLTask] exception during spidering
+java.io.IOException: Server returned HTTP response code: 405 for URL: http://synergyendwell.com/xmlrpc.php
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:422)
+	at sun.net.www.protocol.http.HttpURLConnection$10.run(HttpURLConnection.java:1889)
+	at sun.net.www.protocol.http.HttpURLConnection$10.run(HttpURLConnection.java:1884)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at sun.net.www.protocol.http.HttpURLConnection.getChainedException(HttpURLConnection.java:1883)
+	at sun.net.www.protocol.http.HttpURLConnection.getInputStream0(HttpURLConnection.java:1456)
+	at sun.net.www.protocol.http.HttpURLConnection.getInputStream(HttpURLConnection.java:1440)
+	at net.javacoding.jspider.core.task.work.SpiderHttpURLTask.execute(Unknown Source)
+	at net.javacoding.jspider.core.threading.WorkerThread.run(Unknown Source)
+Caused by: java.io.IOException: Server returned HTTP response code: 405 for URL: http://synergyendwell.com/xmlrpc.php
+	at sun.net.www.protocol.http.HttpURLConnection.getInputStream0(HttpURLConnection.java:1839)
+	at sun.net.www.protocol.http.HttpURLConnection.getInputStream(HttpURLConnection.java:1440)
+	at java.net.HttpURLConnection.getResponseCode(HttpURLConnection.java:480)
+	... 2 more
+08:49:42,865 INFO  [StatusBasedFileWriterPlugin] creating file for status '405'
+08:49:43,517 INFO  [SpiderContext] site https://www.youtube.com must not be handled.
+08:49:47,671 INFO  [StatusBasedFileWriterPlugin] creating file for status '301'
+08:50:09,207 INFO  [SpiderContext] site http://www.facebook.com must not be handled.
+08:50:09,248 INFO  [SpiderContext] site https://twitter.com must not be handled.
+08:50:09,282 INFO  [SpiderContext] site https://plus.google.com must not be handled.
+08:50:09,324 INFO  [SpiderContext] site https://pinterest.com must not be handled.
+08:50:09,380 INFO  [SpiderContext] site http://www.linkedin.com must not be handled.
+08:50:09,422 INFO  [SpiderContext] site http://www.tumblr.com must not be handled.
+08:50:09,454 INFO  [SpiderContext] site http://reddit.com must not be handled.
+08:50:09,501 INFO  [SpiderContext] site http://www.stumbleupon.com must not be handled.
+08:50:26,468 INFO  [Spider] Stopped spider workers...
+08:50:26,468 INFO  [Spider] Stopped thinker workers...
+08:50:26,473 INFO  [VelocityPlugin] writing dump - this could take a while
+08:50:26,570 INFO  [VelocityPlugin] writing dump - this could take a while
+08:50:26,694 INFO  [Spider] Spidering done!
+08:50:26,694 INFO  [Spider] Elapsed time : 51016
+08:50:26,694 INFO  [PluginFactory] Loading 4 plugins.
+08:50:26,694 INFO  [PluginFactory] Loading plugin configuration 'console'...
+08:50:26,694 INFO  [ConsolePlugin] Prefix set to '[Plugin] '
+08:50:26,694 INFO  [PluginFactory] Plugin not configured for local event filtering
+08:50:26,695 INFO  [PluginFactory] Plugin Name    : Console writer JSpider module
+08:50:26,695 INFO  [PluginFactory] Plugin Version : v1.0
+08:50:26,695 INFO  [PluginFactory] Plugin Vendor  : http://www.javacoding.net
+08:50:26,695 INFO  [PluginFactory] Loading plugin configuration 'velocity'...
+08:50:26,695 INFO  [PluginFactory] Plugin uses local event filtering
+08:50:26,695 INFO  [PluginFactory] Plugin Name    : Velocity Template JSpider module
+08:50:26,695 INFO  [PluginFactory] Plugin Version : v1.0
+08:50:26,695 INFO  [PluginFactory] Plugin Vendor  : http://www.javacoding.net
+08:50:26,695 INFO  [PluginFactory] Loading plugin configuration 'statusbasedfilewriter'...
+08:50:26,695 INFO  [StatusBasedFileWriterPlugin] initialized.
+08:50:26,695 INFO  [PluginFactory] Plugin not configured for local event filtering
+08:50:26,695 INFO  [PluginFactory] Plugin Name    : Status based  Filewriter JSpider plugin
+08:50:26,695 INFO  [PluginFactory] Plugin Version : v1.0
+08:50:26,695 INFO  [PluginFactory] Plugin Vendor  : http://www.javacoding.net
+08:50:26,695 INFO  [PluginFactory] Loading plugin configuration 'xmldump'...
+08:50:26,695 INFO  [PluginFactory] Plugin uses local event filtering
+08:50:26,695 INFO  [PluginFactory] Plugin Name    : Velocity Template JSpider module
+08:50:26,695 INFO  [PluginFactory] Plugin Version : v1.0
+08:50:26,695 INFO  [PluginFactory] Plugin Vendor  : http://www.javacoding.net
+08:50:26,695 INFO  [PluginFactory] Loaded 4 plugins.
+08:50:26,696 INFO  [VelocityPlugin] writing trace file: true
+08:50:26,696 INFO  [VelocityPlugin] writing dump file: true
+08:50:26,696 INFO  [VelocityPlugin] Velocity template folder : velocity
+08:50:26,699 INFO  [VelocityPlugin] Writing to trace file: ./velocity-trace.out
+08:50:26,699 INFO  [VelocityPlugin] Writing to dump file: ./velocity-dump.out
+08:50:26,699 INFO  [VelocityPlugin] writing trace file: false
+08:50:26,699 INFO  [VelocityPlugin] writing dump file: true
+08:50:26,699 INFO  [VelocityPlugin] Velocity template folder : xmldump
+08:50:26,702 INFO  [VelocityPlugin] Writing to dump file: ./xml-dump.xml
+08:50:26,702 INFO  [StorageFactory] Storage provider class is 'class net.javacoding.jspider.core.storage.memory.InMemoryStorageProvider'
+08:50:26,703 INFO  [SpiderContext] default user Agent is 'JSpider v0.5.0-dev (http://j-spider.sourceforge.net)'
+08:50:26,703 INFO  [SchedulerFactory] TaskScheduler provider class is 'class net.javacoding.jspider.core.task.impl.DefaultSchedulerProvider'
+08:50:26,703 INFO  [Spider] Spider born - threads: spiders: 5, thinkers: 1
+08:50:26,706 INFO  [SpiderContext] using userAgent 'JSpider v0.5.0-dev (http://j-spider.sourceforge.net)' for site 'http://synergyendwell.com'
+08:50:26,710 INFO  [ThrottleFactory] Throttle provider class is 'class net.javacoding.jspider.core.throttle.impl.PandaLoadThrottleProvider'
+08:50:27,573 INFO  [StatusBasedFileWriterPlugin] creating file for status '200'
+08:50:29,537 INFO  [SpiderContext] site http://fonts.googleapis.com must not be handled.
+08:50:29,540 INFO  [SpiderContext] site https://www.facebook.com must not be handled.
+08:50:29,542 INFO  [SpiderContext] site http://html5shiv.googlecode.com must not be handled.
+08:50:29,547 INFO  [SpiderContext] site https://maps.googleapis.com must not be handled.
+08:50:29,547 INFO  [SpiderContext] site http://www.voxel-labs.com must not be handled.
+08:50:31,215 INFO  [StatusBasedFileWriterPlugin] creating file for status '404'
+08:50:33,801 ERROR [SpiderHttpURLTask] exception during spidering
+java.io.IOException: Server returned HTTP response code: 405 for URL: http://synergyendwell.com/xmlrpc.php
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:422)
+	at sun.net.www.protocol.http.HttpURLConnection$10.run(HttpURLConnection.java:1889)
+	at sun.net.www.protocol.http.HttpURLConnection$10.run(HttpURLConnection.java:1884)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at sun.net.www.protocol.http.HttpURLConnection.getChainedException(HttpURLConnection.java:1883)
+	at sun.net.www.protocol.http.HttpURLConnection.getInputStream0(HttpURLConnection.java:1456)
+	at sun.net.www.protocol.http.HttpURLConnection.getInputStream(HttpURLConnection.java:1440)
+	at net.javacoding.jspider.core.task.work.SpiderHttpURLTask.execute(Unknown Source)
+	at net.javacoding.jspider.core.threading.WorkerThread.run(Unknown Source)
+Caused by: java.io.IOException: Server returned HTTP response code: 405 for URL: http://synergyendwell.com/xmlrpc.php
+	at sun.net.www.protocol.http.HttpURLConnection.getInputStream0(HttpURLConnection.java:1839)
+	at sun.net.www.protocol.http.HttpURLConnection.getInputStream(HttpURLConnection.java:1440)
+	at java.net.HttpURLConnection.getResponseCode(HttpURLConnection.java:480)
+	... 2 more
+08:50:33,802 INFO  [StatusBasedFileWriterPlugin] creating file for status '405'
+08:50:34,319 INFO  [SpiderContext] site https://www.youtube.com must not be handled.
+08:50:37,668 INFO  [StatusBasedFileWriterPlugin] creating file for status '301'
+08:50:52,188 INFO  [SpiderContext] site http://www.facebook.com must not be handled.
+08:50:52,225 INFO  [SpiderContext] site https://twitter.com must not be handled.
+08:50:52,256 INFO  [SpiderContext] site https://plus.google.com must not be handled.
+08:50:52,299 INFO  [SpiderContext] site https://pinterest.com must not be handled.
+08:50:52,334 INFO  [SpiderContext] site http://www.linkedin.com must not be handled.
+08:50:52,365 INFO  [SpiderContext] site http://www.tumblr.com must not be handled.
+08:50:52,419 INFO  [SpiderContext] site http://reddit.com must not be handled.
+08:50:52,454 INFO  [SpiderContext] site http://www.stumbleupon.com must not be handled.
+08:51:09,446 INFO  [Spider] Stopped spider workers...
+08:51:09,446 INFO  [Spider] Stopped thinker workers...
+08:51:09,448 INFO  [VelocityPlugin] writing dump - this could take a while
+08:51:09,537 INFO  [VelocityPlugin] writing dump - this could take a while
+08:51:09,628 INFO  [Spider] Spidering done!
+08:51:09,628 INFO  [Spider] Elapsed time : 42922
+08:51:09,629 INFO  [PluginFactory] Loading 4 plugins.
+08:51:09,629 INFO  [PluginFactory] Loading plugin configuration 'console'...
+08:51:09,629 INFO  [ConsolePlugin] Prefix set to '[Plugin] '
+08:51:09,629 INFO  [PluginFactory] Plugin not configured for local event filtering
+08:51:09,629 INFO  [PluginFactory] Plugin Name    : Console writer JSpider module
+08:51:09,629 INFO  [PluginFactory] Plugin Version : v1.0
+08:51:09,629 INFO  [PluginFactory] Plugin Vendor  : http://www.javacoding.net
+08:51:09,629 INFO  [PluginFactory] Loading plugin configuration 'velocity'...
+08:51:09,629 INFO  [PluginFactory] Plugin uses local event filtering
+08:51:09,629 INFO  [PluginFactory] Plugin Name    : Velocity Template JSpider module
+08:51:09,629 INFO  [PluginFactory] Plugin Version : v1.0
+08:51:09,629 INFO  [PluginFactory] Plugin Vendor  : http://www.javacoding.net
+08:51:09,629 INFO  [PluginFactory] Loading plugin configuration 'statusbasedfilewriter'...
+08:51:09,629 INFO  [StatusBasedFileWriterPlugin] initialized.
+08:51:09,629 INFO  [PluginFactory] Plugin not configured for local event filtering
+08:51:09,629 INFO  [PluginFactory] Plugin Name    : Status based  Filewriter JSpider plugin
+08:51:09,629 INFO  [PluginFactory] Plugin Version : v1.0
+08:51:09,629 INFO  [PluginFactory] Plugin Vendor  : http://www.javacoding.net
+08:51:09,629 INFO  [PluginFactory] Loading plugin configuration 'xmldump'...
+08:51:09,629 INFO  [PluginFactory] Plugin uses local event filtering
+08:51:09,630 INFO  [PluginFactory] Plugin Name    : Velocity Template JSpider module
+08:51:09,630 INFO  [PluginFactory] Plugin Version : v1.0
+08:51:09,630 INFO  [PluginFactory] Plugin Vendor  : http://www.javacoding.net
+08:51:09,630 INFO  [PluginFactory] Loaded 4 plugins.
+08:51:09,630 INFO  [VelocityPlugin] writing trace file: true
+08:51:09,630 INFO  [VelocityPlugin] writing dump file: true
+08:51:09,630 INFO  [VelocityPlugin] Velocity template folder : velocity
+08:51:09,633 INFO  [VelocityPlugin] Writing to trace file: ./velocity-trace.out
+08:51:09,633 INFO  [VelocityPlugin] Writing to dump file: ./velocity-dump.out
+08:51:09,633 INFO  [VelocityPlugin] writing trace file: false
+08:51:09,633 INFO  [VelocityPlugin] writing dump file: true
+08:51:09,633 INFO  [VelocityPlugin] Velocity template folder : xmldump
+08:51:09,636 INFO  [VelocityPlugin] Writing to dump file: ./xml-dump.xml
+08:51:09,636 INFO  [StorageFactory] Storage provider class is 'class net.javacoding.jspider.core.storage.memory.InMemoryStorageProvider'
+08:51:09,636 INFO  [SpiderContext] default user Agent is 'JSpider v0.5.0-dev (http://j-spider.sourceforge.net)'
+08:51:09,636 INFO  [SchedulerFactory] TaskScheduler provider class is 'class net.javacoding.jspider.core.task.impl.DefaultSchedulerProvider'
+08:51:09,638 INFO  [Spider] Spider born - threads: spiders: 5, thinkers: 1
+08:51:09,640 INFO  [SpiderContext] using userAgent 'JSpider v0.5.0-dev (http://j-spider.sourceforge.net)' for site 'http://synergyendwell.com'
+08:51:09,647 INFO  [ThrottleFactory] Throttle provider class is 'class net.javacoding.jspider.core.throttle.impl.PandaLoadThrottleProvider'
+08:51:10,679 INFO  [StatusBasedFileWriterPlugin] creating file for status '200'
+08:51:12,548 INFO  [SpiderContext] site http://fonts.googleapis.com must not be handled.
+08:51:12,552 INFO  [SpiderContext] site https://www.facebook.com must not be handled.
+08:51:12,554 INFO  [SpiderContext] site http://html5shiv.googlecode.com must not be handled.
+08:51:12,562 INFO  [SpiderContext] site https://maps.googleapis.com must not be handled.
+08:51:12,563 INFO  [SpiderContext] site http://www.voxel-labs.com must not be handled.
+08:51:14,442 INFO  [StatusBasedFileWriterPlugin] creating file for status '404'
+08:51:15,658 ERROR [SpiderHttpURLTask] exception during spidering
+java.io.IOException: Server returned HTTP response code: 405 for URL: http://synergyendwell.com/xmlrpc.php
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:422)
+	at sun.net.www.protocol.http.HttpURLConnection$10.run(HttpURLConnection.java:1889)
+	at sun.net.www.protocol.http.HttpURLConnection$10.run(HttpURLConnection.java:1884)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at sun.net.www.protocol.http.HttpURLConnection.getChainedException(HttpURLConnection.java:1883)
+	at sun.net.www.protocol.http.HttpURLConnection.getInputStream0(HttpURLConnection.java:1456)
+	at sun.net.www.protocol.http.HttpURLConnection.getInputStream(HttpURLConnection.java:1440)
+	at net.javacoding.jspider.core.task.work.SpiderHttpURLTask.execute(Unknown Source)
+	at net.javacoding.jspider.core.threading.WorkerThread.run(Unknown Source)
+Caused by: java.io.IOException: Server returned HTTP response code: 405 for URL: http://synergyendwell.com/xmlrpc.php
+	at sun.net.www.protocol.http.HttpURLConnection.getInputStream0(HttpURLConnection.java:1839)
+	at sun.net.www.protocol.http.HttpURLConnection.getInputStream(HttpURLConnection.java:1440)
+	at java.net.HttpURLConnection.getResponseCode(HttpURLConnection.java:480)
+	... 2 more
+08:51:15,659 INFO  [StatusBasedFileWriterPlugin] creating file for status '405'
+08:51:17,665 INFO  [SpiderContext] site https://www.youtube.com must not be handled.
+08:51:20,884 INFO  [StatusBasedFileWriterPlugin] creating file for status '301'
+08:51:35,182 INFO  [SpiderContext] site http://www.facebook.com must not be handled.
+08:51:35,226 INFO  [SpiderContext] site https://twitter.com must not be handled.
+08:51:35,261 INFO  [SpiderContext] site https://plus.google.com must not be handled.
+08:51:35,300 INFO  [SpiderContext] site https://pinterest.com must not be handled.
+08:51:35,350 INFO  [SpiderContext] site http://www.linkedin.com must not be handled.
+08:51:35,390 INFO  [SpiderContext] site http://www.tumblr.com must not be handled.
+08:51:35,434 INFO  [SpiderContext] site http://reddit.com must not be handled.
+08:51:35,470 INFO  [SpiderContext] site http://www.stumbleupon.com must not be handled.
+08:51:52,244 INFO  [Spider] Stopped spider workers...
+08:51:52,245 INFO  [Spider] Stopped thinker workers...
+08:51:52,247 INFO  [VelocityPlugin] writing dump - this could take a while
+08:51:52,523 INFO  [VelocityPlugin] writing dump - this could take a while
+08:51:52,615 INFO  [Spider] Spidering done!
+08:51:52,615 INFO  [Spider] Elapsed time : 42976
+08:51:52,616 INFO  [PluginFactory] Loading 4 plugins.
+08:51:52,616 INFO  [PluginFactory] Loading plugin configuration 'console'...
+08:51:52,616 INFO  [ConsolePlugin] Prefix set to '[Plugin] '
+08:51:52,616 INFO  [PluginFactory] Plugin not configured for local event filtering
+08:51:52,616 INFO  [PluginFactory] Plugin Name    : Console writer JSpider module
+08:51:52,616 INFO  [PluginFactory] Plugin Version : v1.0
+08:51:52,616 INFO  [PluginFactory] Plugin Vendor  : http://www.javacoding.net
+08:51:52,616 INFO  [PluginFactory] Loading plugin configuration 'velocity'...
+08:51:52,616 INFO  [PluginFactory] Plugin uses local event filtering
+08:51:52,617 INFO  [PluginFactory] Plugin Name    : Velocity Template JSpider module
+08:51:52,617 INFO  [PluginFactory] Plugin Version : v1.0
+08:51:52,617 INFO  [PluginFactory] Plugin Vendor  : http://www.javacoding.net
+08:51:52,617 INFO  [PluginFactory] Loading plugin configuration 'statusbasedfilewriter'...
+08:51:52,617 INFO  [StatusBasedFileWriterPlugin] initialized.
+08:51:52,617 INFO  [PluginFactory] Plugin not configured for local event filtering
+08:51:52,617 INFO  [PluginFactory] Plugin Name    : Status based  Filewriter JSpider plugin
+08:51:52,617 INFO  [PluginFactory] Plugin Version : v1.0
+08:51:52,617 INFO  [PluginFactory] Plugin Vendor  : http://www.javacoding.net
+08:51:52,617 INFO  [PluginFactory] Loading plugin configuration 'xmldump'...
+08:51:52,617 INFO  [PluginFactory] Plugin uses local event filtering
+08:51:52,617 INFO  [PluginFactory] Plugin Name    : Velocity Template JSpider module
+08:51:52,617 INFO  [PluginFactory] Plugin Version : v1.0
+08:51:52,617 INFO  [PluginFactory] Plugin Vendor  : http://www.javacoding.net
+08:51:52,617 INFO  [PluginFactory] Loaded 4 plugins.
+08:51:52,617 INFO  [VelocityPlugin] writing trace file: true
+08:51:52,617 INFO  [VelocityPlugin] writing dump file: true
+08:51:52,617 INFO  [VelocityPlugin] Velocity template folder : velocity
+08:51:52,620 INFO  [VelocityPlugin] Writing to trace file: ./velocity-trace.out
+08:51:52,620 INFO  [VelocityPlugin] Writing to dump file: ./velocity-dump.out
+08:51:52,620 INFO  [VelocityPlugin] writing trace file: false
+08:51:52,620 INFO  [VelocityPlugin] writing dump file: true
+08:51:52,620 INFO  [VelocityPlugin] Velocity template folder : xmldump
+08:51:52,623 INFO  [VelocityPlugin] Writing to dump file: ./xml-dump.xml
+08:51:52,623 INFO  [StorageFactory] Storage provider class is 'class net.javacoding.jspider.core.storage.memory.InMemoryStorageProvider'
+08:51:52,623 INFO  [SpiderContext] default user Agent is 'JSpider v0.5.0-dev (http://j-spider.sourceforge.net)'
+08:51:52,623 INFO  [SchedulerFactory] TaskScheduler provider class is 'class net.javacoding.jspider.core.task.impl.DefaultSchedulerProvider'
+08:51:52,625 INFO  [Spider] Spider born - threads: spiders: 5, thinkers: 1
+08:51:52,631 INFO  [SpiderContext] using userAgent 'JSpider v0.5.0-dev (http://j-spider.sourceforge.net)' for site 'http://synergyendwell.com'
+08:51:52,635 INFO  [ThrottleFactory] Throttle provider class is 'class net.javacoding.jspider.core.throttle.impl.PandaLoadThrottleProvider'
+08:51:53,438 INFO  [StatusBasedFileWriterPlugin] creating file for status '200'
+08:51:55,050 INFO  [SpiderContext] site http://fonts.googleapis.com must not be handled.
+08:51:55,053 INFO  [SpiderContext] site https://www.facebook.com must not be handled.
+08:51:55,054 INFO  [SpiderContext] site http://html5shiv.googlecode.com must not be handled.
+08:51:55,059 INFO  [SpiderContext] site https://maps.googleapis.com must not be handled.
+08:51:55,060 INFO  [SpiderContext] site http://www.voxel-labs.com must not be handled.
+08:51:57,494 INFO  [StatusBasedFileWriterPlugin] creating file for status '404'
+08:51:58,973 ERROR [SpiderHttpURLTask] exception during spidering
+java.io.IOException: Server returned HTTP response code: 405 for URL: http://synergyendwell.com/xmlrpc.php
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:422)
+	at sun.net.www.protocol.http.HttpURLConnection$10.run(HttpURLConnection.java:1889)
+	at sun.net.www.protocol.http.HttpURLConnection$10.run(HttpURLConnection.java:1884)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at sun.net.www.protocol.http.HttpURLConnection.getChainedException(HttpURLConnection.java:1883)
+	at sun.net.www.protocol.http.HttpURLConnection.getInputStream0(HttpURLConnection.java:1456)
+	at sun.net.www.protocol.http.HttpURLConnection.getInputStream(HttpURLConnection.java:1440)
+	at net.javacoding.jspider.core.task.work.SpiderHttpURLTask.execute(Unknown Source)
+	at net.javacoding.jspider.core.threading.WorkerThread.run(Unknown Source)
+Caused by: java.io.IOException: Server returned HTTP response code: 405 for URL: http://synergyendwell.com/xmlrpc.php
+	at sun.net.www.protocol.http.HttpURLConnection.getInputStream0(HttpURLConnection.java:1839)
+	at sun.net.www.protocol.http.HttpURLConnection.getInputStream(HttpURLConnection.java:1440)
+	at java.net.HttpURLConnection.getResponseCode(HttpURLConnection.java:480)
+	... 2 more
+08:51:58,975 INFO  [StatusBasedFileWriterPlugin] creating file for status '405'
+08:51:59,549 INFO  [SpiderContext] site https://www.youtube.com must not be handled.
+08:52:03,279 INFO  [StatusBasedFileWriterPlugin] creating file for status '301'
+08:52:16,584 INFO  [SpiderContext] site http://www.facebook.com must not be handled.
+08:52:16,634 INFO  [SpiderContext] site https://twitter.com must not be handled.
+08:52:16,675 INFO  [SpiderContext] site https://plus.google.com must not be handled.
+08:52:16,723 INFO  [SpiderContext] site https://pinterest.com must not be handled.
+08:52:16,793 INFO  [SpiderContext] site http://www.linkedin.com must not be handled.
+08:52:16,855 INFO  [SpiderContext] site http://www.tumblr.com must not be handled.
+08:52:16,908 INFO  [SpiderContext] site http://reddit.com must not be handled.
+08:52:16,967 INFO  [SpiderContext] site http://www.stumbleupon.com must not be handled.
+08:52:35,574 INFO  [Spider] Stopped spider workers...
+08:52:35,574 INFO  [Spider] Stopped thinker workers...
+08:52:35,576 INFO  [VelocityPlugin] writing dump - this could take a while
+08:52:35,655 INFO  [VelocityPlugin] writing dump - this could take a while
+08:52:35,722 INFO  [Spider] Spidering done!
+08:52:35,722 INFO  [Spider] Elapsed time : 43091
+08:52:35,723 INFO  [PluginFactory] Loading 4 plugins.
+08:52:35,723 INFO  [PluginFactory] Loading plugin configuration 'console'...
+08:52:35,723 INFO  [ConsolePlugin] Prefix set to '[Plugin] '
+08:52:35,723 INFO  [PluginFactory] Plugin not configured for local event filtering
+08:52:35,723 INFO  [PluginFactory] Plugin Name    : Console writer JSpider module
+08:52:35,723 INFO  [PluginFactory] Plugin Version : v1.0
+08:52:35,723 INFO  [PluginFactory] Plugin Vendor  : http://www.javacoding.net
+08:52:35,723 INFO  [PluginFactory] Loading plugin configuration 'velocity'...
+08:52:35,723 INFO  [PluginFactory] Plugin uses local event filtering
+08:52:35,724 INFO  [PluginFactory] Plugin Name    : Velocity Template JSpider module
+08:52:35,724 INFO  [PluginFactory] Plugin Version : v1.0
+08:52:35,724 INFO  [PluginFactory] Plugin Vendor  : http://www.javacoding.net
+08:52:35,724 INFO  [PluginFactory] Loading plugin configuration 'statusbasedfilewriter'...
+08:52:35,724 INFO  [StatusBasedFileWriterPlugin] initialized.
+08:52:35,724 INFO  [PluginFactory] Plugin not configured for local event filtering
+08:52:35,724 INFO  [PluginFactory] Plugin Name    : Status based  Filewriter JSpider plugin
+08:52:35,724 INFO  [PluginFactory] Plugin Version : v1.0
+08:52:35,724 INFO  [PluginFactory] Plugin Vendor  : http://www.javacoding.net
+08:52:35,724 INFO  [PluginFactory] Loading plugin configuration 'xmldump'...
+08:52:35,724 INFO  [PluginFactory] Plugin uses local event filtering
+08:52:35,724 INFO  [PluginFactory] Plugin Name    : Velocity Template JSpider module
+08:52:35,724 INFO  [PluginFactory] Plugin Version : v1.0
+08:52:35,724 INFO  [PluginFactory] Plugin Vendor  : http://www.javacoding.net
+08:52:35,724 INFO  [PluginFactory] Loaded 4 plugins.
+08:52:35,725 INFO  [VelocityPlugin] writing trace file: true
+08:52:35,725 INFO  [VelocityPlugin] writing dump file: true
+08:52:35,725 INFO  [VelocityPlugin] Velocity template folder : velocity
+08:52:35,727 INFO  [VelocityPlugin] Writing to trace file: ./velocity-trace.out
+08:52:35,727 INFO  [VelocityPlugin] Writing to dump file: ./velocity-dump.out
+08:52:35,727 INFO  [VelocityPlugin] writing trace file: false
+08:52:35,727 INFO  [VelocityPlugin] writing dump file: true
+08:52:35,727 INFO  [VelocityPlugin] Velocity template folder : xmldump
+08:52:35,832 INFO  [VelocityPlugin] Writing to dump file: ./xml-dump.xml
+08:52:35,832 INFO  [StorageFactory] Storage provider class is 'class net.javacoding.jspider.core.storage.memory.InMemoryStorageProvider'
+08:52:35,832 INFO  [SpiderContext] default user Agent is 'JSpider v0.5.0-dev (http://j-spider.sourceforge.net)'
+08:52:35,832 INFO  [SchedulerFactory] TaskScheduler provider class is 'class net.javacoding.jspider.core.task.impl.DefaultSchedulerProvider'
+08:52:35,833 INFO  [Spider] Spider born - threads: spiders: 5, thinkers: 1
+08:52:35,838 INFO  [SpiderContext] using userAgent 'JSpider v0.5.0-dev (http://j-spider.sourceforge.net)' for site 'http://synergyendwell.com'
+08:52:35,846 INFO  [ThrottleFactory] Throttle provider class is 'class net.javacoding.jspider.core.throttle.impl.PandaLoadThrottleProvider'
+08:52:36,842 INFO  [StatusBasedFileWriterPlugin] creating file for status '200'
+08:52:38,538 INFO  [SpiderContext] site http://fonts.googleapis.com must not be handled.
+08:52:38,542 INFO  [SpiderContext] site https://www.facebook.com must not be handled.
+08:52:38,543 INFO  [SpiderContext] site http://html5shiv.googlecode.com must not be handled.
+08:52:38,549 INFO  [SpiderContext] site https://maps.googleapis.com must not be handled.
+08:52:38,550 INFO  [SpiderContext] site http://www.voxel-labs.com must not be handled.
+08:52:40,127 INFO  [StatusBasedFileWriterPlugin] creating file for status '404'
+08:52:42,861 ERROR [SpiderHttpURLTask] exception during spidering
+java.io.IOException: Server returned HTTP response code: 405 for URL: http://synergyendwell.com/xmlrpc.php
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:422)
+	at sun.net.www.protocol.http.HttpURLConnection$10.run(HttpURLConnection.java:1889)
+	at sun.net.www.protocol.http.HttpURLConnection$10.run(HttpURLConnection.java:1884)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at sun.net.www.protocol.http.HttpURLConnection.getChainedException(HttpURLConnection.java:1883)
+	at sun.net.www.protocol.http.HttpURLConnection.getInputStream0(HttpURLConnection.java:1456)
+	at sun.net.www.protocol.http.HttpURLConnection.getInputStream(HttpURLConnection.java:1440)
+	at net.javacoding.jspider.core.task.work.SpiderHttpURLTask.execute(Unknown Source)
+	at net.javacoding.jspider.core.threading.WorkerThread.run(Unknown Source)
+Caused by: java.io.IOException: Server returned HTTP response code: 405 for URL: http://synergyendwell.com/xmlrpc.php
+	at sun.net.www.protocol.http.HttpURLConnection.getInputStream0(HttpURLConnection.java:1839)
+	at sun.net.www.protocol.http.HttpURLConnection.getInputStream(HttpURLConnection.java:1440)
+	at java.net.HttpURLConnection.getResponseCode(HttpURLConnection.java:480)
+	... 2 more
+08:52:42,862 INFO  [StatusBasedFileWriterPlugin] creating file for status '405'
+08:52:43,278 INFO  [SpiderContext] site https://www.youtube.com must not be handled.
+08:52:47,181 INFO  [StatusBasedFileWriterPlugin] creating file for status '301'
+08:53:01,472 INFO  [SpiderContext] site http://www.facebook.com must not be handled.
+08:53:01,512 INFO  [SpiderContext] site https://twitter.com must not be handled.
+08:53:01,543 INFO  [SpiderContext] site https://plus.google.com must not be handled.
+08:53:01,577 INFO  [SpiderContext] site https://pinterest.com must not be handled.
+08:53:01,615 INFO  [SpiderContext] site http://www.linkedin.com must not be handled.
+08:53:01,677 INFO  [SpiderContext] site http://www.tumblr.com must not be handled.
+08:53:01,711 INFO  [SpiderContext] site http://reddit.com must not be handled.
+08:53:01,743 INFO  [SpiderContext] site http://www.stumbleupon.com must not be handled.
+08:53:18,096 INFO  [Spider] Stopped spider workers...
+08:53:18,096 INFO  [Spider] Stopped thinker workers...
+08:53:18,097 INFO  [VelocityPlugin] writing dump - this could take a while
+08:53:18,199 INFO  [VelocityPlugin] writing dump - this could take a while
+08:53:18,299 INFO  [Spider] Spidering done!
+08:53:18,300 INFO  [Spider] Elapsed time : 42462
+08:53:18,300 INFO  [PluginFactory] Loading 4 plugins.
+08:53:18,301 INFO  [PluginFactory] Loading plugin configuration 'console'...
+08:53:18,301 INFO  [ConsolePlugin] Prefix set to '[Plugin] '
+08:53:18,301 INFO  [PluginFactory] Plugin not configured for local event filtering
+08:53:18,301 INFO  [PluginFactory] Plugin Name    : Console writer JSpider module
+08:53:18,301 INFO  [PluginFactory] Plugin Version : v1.0
+08:53:18,301 INFO  [PluginFactory] Plugin Vendor  : http://www.javacoding.net
+08:53:18,302 INFO  [PluginFactory] Loading plugin configuration 'velocity'...
+08:53:18,302 INFO  [PluginFactory] Plugin uses local event filtering
+08:53:18,302 INFO  [PluginFactory] Plugin Name    : Velocity Template JSpider module
+08:53:18,302 INFO  [PluginFactory] Plugin Version : v1.0
+08:53:18,302 INFO  [PluginFactory] Plugin Vendor  : http://www.javacoding.net
+08:53:18,302 INFO  [PluginFactory] Loading plugin configuration 'statusbasedfilewriter'...
+08:53:18,302 INFO  [StatusBasedFileWriterPlugin] initialized.
+08:53:18,302 INFO  [PluginFactory] Plugin not configured for local event filtering
+08:53:18,303 INFO  [PluginFactory] Plugin Name    : Status based  Filewriter JSpider plugin
+08:53:18,303 INFO  [PluginFactory] Plugin Version : v1.0
+08:53:18,303 INFO  [PluginFactory] Plugin Vendor  : http://www.javacoding.net
+08:53:18,303 INFO  [PluginFactory] Loading plugin configuration 'xmldump'...
+08:53:18,303 INFO  [PluginFactory] Plugin uses local event filtering
+08:53:18,303 INFO  [PluginFactory] Plugin Name    : Velocity Template JSpider module
+08:53:18,303 INFO  [PluginFactory] Plugin Version : v1.0
+08:53:18,303 INFO  [PluginFactory] Plugin Vendor  : http://www.javacoding.net
+08:53:18,303 INFO  [PluginFactory] Loaded 4 plugins.
+08:53:18,304 INFO  [VelocityPlugin] writing trace file: true
+08:53:18,304 INFO  [VelocityPlugin] writing dump file: true
+08:53:18,304 INFO  [VelocityPlugin] Velocity template folder : velocity
+08:53:18,306 INFO  [VelocityPlugin] Writing to trace file: ./velocity-trace.out
+08:53:18,307 INFO  [VelocityPlugin] Writing to dump file: ./velocity-dump.out
+08:53:18,307 INFO  [VelocityPlugin] writing trace file: false
+08:53:18,307 INFO  [VelocityPlugin] writing dump file: true
+08:53:18,307 INFO  [VelocityPlugin] Velocity template folder : xmldump
+08:53:18,312 INFO  [VelocityPlugin] Writing to dump file: ./xml-dump.xml
+08:53:18,313 INFO  [StorageFactory] Storage provider class is 'class net.javacoding.jspider.core.storage.memory.InMemoryStorageProvider'
+08:53:18,313 INFO  [SpiderContext] default user Agent is 'JSpider v0.5.0-dev (http://j-spider.sourceforge.net)'
+08:53:18,313 INFO  [SchedulerFactory] TaskScheduler provider class is 'class net.javacoding.jspider.core.task.impl.DefaultSchedulerProvider'
+08:53:18,313 INFO  [Spider] Spider born - threads: spiders: 5, thinkers: 1
+08:53:18,315 INFO  [SpiderContext] using userAgent 'JSpider v0.5.0-dev (http://j-spider.sourceforge.net)' for site 'http://synergyendwell.com'
+08:53:18,319 INFO  [ThrottleFactory] Throttle provider class is 'class net.javacoding.jspider.core.throttle.impl.PandaLoadThrottleProvider'
+08:53:19,346 INFO  [StatusBasedFileWriterPlugin] creating file for status '200'
+08:53:20,881 INFO  [SpiderContext] site http://fonts.googleapis.com must not be handled.
+08:53:20,885 INFO  [SpiderContext] site https://www.facebook.com must not be handled.
+08:53:20,887 INFO  [SpiderContext] site http://html5shiv.googlecode.com must not be handled.
+08:53:20,893 INFO  [SpiderContext] site https://maps.googleapis.com must not be handled.
+08:53:20,894 INFO  [SpiderContext] site http://www.voxel-labs.com must not be handled.
+08:53:22,680 INFO  [StatusBasedFileWriterPlugin] creating file for status '404'
+08:53:25,111 ERROR [SpiderHttpURLTask] exception during spidering
+java.io.IOException: Server returned HTTP response code: 405 for URL: http://synergyendwell.com/xmlrpc.php
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:422)
+	at sun.net.www.protocol.http.HttpURLConnection$10.run(HttpURLConnection.java:1889)
+	at sun.net.www.protocol.http.HttpURLConnection$10.run(HttpURLConnection.java:1884)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at sun.net.www.protocol.http.HttpURLConnection.getChainedException(HttpURLConnection.java:1883)
+	at sun.net.www.protocol.http.HttpURLConnection.getInputStream0(HttpURLConnection.java:1456)
+	at sun.net.www.protocol.http.HttpURLConnection.getInputStream(HttpURLConnection.java:1440)
+	at net.javacoding.jspider.core.task.work.SpiderHttpURLTask.execute(Unknown Source)
+	at net.javacoding.jspider.core.threading.WorkerThread.run(Unknown Source)
+Caused by: java.io.IOException: Server returned HTTP response code: 405 for URL: http://synergyendwell.com/xmlrpc.php
+	at sun.net.www.protocol.http.HttpURLConnection.getInputStream0(HttpURLConnection.java:1839)
+	at sun.net.www.protocol.http.HttpURLConnection.getInputStream(HttpURLConnection.java:1440)
+	at java.net.HttpURLConnection.getResponseCode(HttpURLConnection.java:480)
+	... 2 more
+08:53:25,111 INFO  [StatusBasedFileWriterPlugin] creating file for status '405'
+08:53:25,440 INFO  [SpiderContext] site https://www.youtube.com must not be handled.
+08:53:29,437 INFO  [StatusBasedFileWriterPlugin] creating file for status '301'
+08:53:44,514 INFO  [SpiderContext] site http://www.facebook.com must not be handled.
+08:53:44,559 INFO  [SpiderContext] site https://twitter.com must not be handled.
+08:53:44,592 INFO  [SpiderContext] site https://plus.google.com must not be handled.
+08:53:44,635 INFO  [SpiderContext] site https://pinterest.com must not be handled.
+08:53:44,672 INFO  [SpiderContext] site http://www.linkedin.com must not be handled.
+08:53:44,707 INFO  [SpiderContext] site http://www.tumblr.com must not be handled.
+08:53:44,748 INFO  [SpiderContext] site http://reddit.com must not be handled.
+08:53:44,781 INFO  [SpiderContext] site http://www.stumbleupon.com must not be handled.
+08:54:01,351 INFO  [Spider] Stopped spider workers...
+08:54:01,351 INFO  [Spider] Stopped thinker workers...
+08:54:01,354 INFO  [VelocityPlugin] writing dump - this could take a while
+08:54:01,588 INFO  [VelocityPlugin] writing dump - this could take a while
+08:54:01,645 INFO  [Spider] Spidering done!
+08:54:01,645 INFO  [Spider] Elapsed time : 43331
+08:54:01,646 INFO  [PluginFactory] Loading 4 plugins.
+08:54:01,646 INFO  [PluginFactory] Loading plugin configuration 'console'...
+08:54:01,646 INFO  [ConsolePlugin] Prefix set to '[Plugin] '
+08:54:01,646 INFO  [PluginFactory] Plugin not configured for local event filtering
+08:54:01,646 INFO  [PluginFactory] Plugin Name    : Console writer JSpider module
+08:54:01,646 INFO  [PluginFactory] Plugin Version : v1.0
+08:54:01,646 INFO  [PluginFactory] Plugin Vendor  : http://www.javacoding.net
+08:54:01,646 INFO  [PluginFactory] Loading plugin configuration 'velocity'...
+08:54:01,646 INFO  [PluginFactory] Plugin uses local event filtering
+08:54:01,646 INFO  [PluginFactory] Plugin Name    : Velocity Template JSpider module
+08:54:01,646 INFO  [PluginFactory] Plugin Version : v1.0
+08:54:01,646 INFO  [PluginFactory] Plugin Vendor  : http://www.javacoding.net
+08:54:01,646 INFO  [PluginFactory] Loading plugin configuration 'statusbasedfilewriter'...
+08:54:01,646 INFO  [StatusBasedFileWriterPlugin] initialized.
+08:54:01,646 INFO  [PluginFactory] Plugin not configured for local event filtering
+08:54:01,646 INFO  [PluginFactory] Plugin Name    : Status based  Filewriter JSpider plugin
+08:54:01,646 INFO  [PluginFactory] Plugin Version : v1.0
+08:54:01,646 INFO  [PluginFactory] Plugin Vendor  : http://www.javacoding.net
+08:54:01,646 INFO  [PluginFactory] Loading plugin configuration 'xmldump'...
+08:54:01,646 INFO  [PluginFactory] Plugin uses local event filtering
+08:54:01,646 INFO  [PluginFactory] Plugin Name    : Velocity Template JSpider module
+08:54:01,646 INFO  [PluginFactory] Plugin Version : v1.0
+08:54:01,646 INFO  [PluginFactory] Plugin Vendor  : http://www.javacoding.net
+08:54:01,646 INFO  [PluginFactory] Loaded 4 plugins.
+08:54:01,646 INFO  [VelocityPlugin] writing trace file: true
+08:54:01,646 INFO  [VelocityPlugin] writing dump file: true
+08:54:01,646 INFO  [VelocityPlugin] Velocity template folder : velocity
+08:54:01,654 INFO  [VelocityPlugin] Writing to trace file: ./velocity-trace.out
+08:54:01,655 INFO  [VelocityPlugin] Writing to dump file: ./velocity-dump.out
+08:54:01,655 INFO  [VelocityPlugin] writing trace file: false
+08:54:01,655 INFO  [VelocityPlugin] writing dump file: true
+08:54:01,655 INFO  [VelocityPlugin] Velocity template folder : xmldump
+08:54:01,660 INFO  [VelocityPlugin] Writing to dump file: ./xml-dump.xml
+08:54:01,660 INFO  [StorageFactory] Storage provider class is 'class net.javacoding.jspider.core.storage.memory.InMemoryStorageProvider'
+08:54:01,660 INFO  [SpiderContext] default user Agent is 'JSpider v0.5.0-dev (http://j-spider.sourceforge.net)'
+08:54:01,660 INFO  [SchedulerFactory] TaskScheduler provider class is 'class net.javacoding.jspider.core.task.impl.DefaultSchedulerProvider'
+08:54:01,660 INFO  [Spider] Spider born - threads: spiders: 5, thinkers: 1
+08:54:01,678 INFO  [SpiderContext] using userAgent 'JSpider v0.5.0-dev (http://j-spider.sourceforge.net)' for site 'http://synergyendwell.com'
+08:54:01,680 INFO  [ThrottleFactory] Throttle provider class is 'class net.javacoding.jspider.core.throttle.impl.PandaLoadThrottleProvider'
+08:54:02,812 INFO  [StatusBasedFileWriterPlugin] creating file for status '200'
+08:54:04,513 INFO  [SpiderContext] site http://fonts.googleapis.com must not be handled.
+08:54:04,517 INFO  [SpiderContext] site https://www.facebook.com must not be handled.
+08:54:04,554 INFO  [SpiderContext] site http://html5shiv.googlecode.com must not be handled.
+08:54:04,561 INFO  [SpiderContext] site https://maps.googleapis.com must not be handled.
+08:54:04,593 INFO  [SpiderContext] site http://www.voxel-labs.com must not be handled.
+08:54:06,134 INFO  [StatusBasedFileWriterPlugin] creating file for status '404'
+08:54:07,815 ERROR [SpiderHttpURLTask] exception during spidering
+java.io.IOException: Server returned HTTP response code: 405 for URL: http://synergyendwell.com/xmlrpc.php
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:422)
+	at sun.net.www.protocol.http.HttpURLConnection$10.run(HttpURLConnection.java:1889)
+	at sun.net.www.protocol.http.HttpURLConnection$10.run(HttpURLConnection.java:1884)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at sun.net.www.protocol.http.HttpURLConnection.getChainedException(HttpURLConnection.java:1883)
+	at sun.net.www.protocol.http.HttpURLConnection.getInputStream0(HttpURLConnection.java:1456)
+	at sun.net.www.protocol.http.HttpURLConnection.getInputStream(HttpURLConnection.java:1440)
+	at net.javacoding.jspider.core.task.work.SpiderHttpURLTask.execute(Unknown Source)
+	at net.javacoding.jspider.core.threading.WorkerThread.run(Unknown Source)
+Caused by: java.io.IOException: Server returned HTTP response code: 405 for URL: http://synergyendwell.com/xmlrpc.php
+	at sun.net.www.protocol.http.HttpURLConnection.getInputStream0(HttpURLConnection.java:1839)
+	at sun.net.www.protocol.http.HttpURLConnection.getInputStream(HttpURLConnection.java:1440)
+	at java.net.HttpURLConnection.getResponseCode(HttpURLConnection.java:480)
+	... 2 more
+08:54:07,816 INFO  [StatusBasedFileWriterPlugin] creating file for status '405'
+08:54:09,849 INFO  [SpiderContext] site https://www.youtube.com must not be handled.
+08:54:13,580 INFO  [StatusBasedFileWriterPlugin] creating file for status '301'
+08:54:27,475 INFO  [SpiderContext] site http://www.facebook.com must not be handled.
+08:54:27,534 INFO  [SpiderContext] site https://twitter.com must not be handled.
+08:54:27,567 INFO  [SpiderContext] site https://plus.google.com must not be handled.
+08:54:27,603 INFO  [SpiderContext] site https://pinterest.com must not be handled.
+08:54:27,638 INFO  [SpiderContext] site http://www.linkedin.com must not be handled.
+08:54:27,672 INFO  [SpiderContext] site http://www.tumblr.com must not be handled.
+08:54:27,706 INFO  [SpiderContext] site http://reddit.com must not be handled.
+08:54:27,741 INFO  [SpiderContext] site http://www.stumbleupon.com must not be handled.
+08:54:45,997 INFO  [Spider] Stopped spider workers...
+08:54:45,997 INFO  [Spider] Stopped thinker workers...
+08:54:45,999 INFO  [VelocityPlugin] writing dump - this could take a while
+08:54:46,082 INFO  [VelocityPlugin] writing dump - this could take a while
+08:54:46,156 INFO  [Spider] Spidering done!
+08:54:46,156 INFO  [Spider] Elapsed time : 44479
+08:54:46,157 INFO  [PluginFactory] Loading 4 plugins.
+08:54:46,157 INFO  [PluginFactory] Loading plugin configuration 'console'...
+08:54:46,157 INFO  [ConsolePlugin] Prefix set to '[Plugin] '
+08:54:46,157 INFO  [PluginFactory] Plugin not configured for local event filtering
+08:54:46,157 INFO  [PluginFactory] Plugin Name    : Console writer JSpider module
+08:54:46,157 INFO  [PluginFactory] Plugin Version : v1.0
+08:54:46,157 INFO  [PluginFactory] Plugin Vendor  : http://www.javacoding.net
+08:54:46,157 INFO  [PluginFactory] Loading plugin configuration 'velocity'...
+08:54:46,157 INFO  [PluginFactory] Plugin uses local event filtering
+08:54:46,157 INFO  [PluginFactory] Plugin Name    : Velocity Template JSpider module
+08:54:46,157 INFO  [PluginFactory] Plugin Version : v1.0
+08:54:46,157 INFO  [PluginFactory] Plugin Vendor  : http://www.javacoding.net
+08:54:46,157 INFO  [PluginFactory] Loading plugin configuration 'statusbasedfilewriter'...
+08:54:46,158 INFO  [StatusBasedFileWriterPlugin] initialized.
+08:54:46,158 INFO  [PluginFactory] Plugin not configured for local event filtering
+08:54:46,158 INFO  [PluginFactory] Plugin Name    : Status based  Filewriter JSpider plugin
+08:54:46,158 INFO  [PluginFactory] Plugin Version : v1.0
+08:54:46,158 INFO  [PluginFactory] Plugin Vendor  : http://www.javacoding.net
+08:54:46,158 INFO  [PluginFactory] Loading plugin configuration 'xmldump'...
+08:54:46,158 INFO  [PluginFactory] Plugin uses local event filtering
+08:54:46,158 INFO  [PluginFactory] Plugin Name    : Velocity Template JSpider module
+08:54:46,158 INFO  [PluginFactory] Plugin Version : v1.0
+08:54:46,158 INFO  [PluginFactory] Plugin Vendor  : http://www.javacoding.net
+08:54:46,158 INFO  [PluginFactory] Loaded 4 plugins.
+08:54:46,158 INFO  [VelocityPlugin] writing trace file: true
+08:54:46,158 INFO  [VelocityPlugin] writing dump file: true
+08:54:46,158 INFO  [VelocityPlugin] Velocity template folder : velocity
+08:54:46,161 INFO  [VelocityPlugin] Writing to trace file: ./velocity-trace.out
+08:54:46,161 INFO  [VelocityPlugin] Writing to dump file: ./velocity-dump.out
+08:54:46,161 INFO  [VelocityPlugin] writing trace file: false
+08:54:46,161 INFO  [VelocityPlugin] writing dump file: true
+08:54:46,161 INFO  [VelocityPlugin] Velocity template folder : xmldump
+08:54:46,164 INFO  [VelocityPlugin] Writing to dump file: ./xml-dump.xml
+08:54:46,164 INFO  [StorageFactory] Storage provider class is 'class net.javacoding.jspider.core.storage.memory.InMemoryStorageProvider'
+08:54:46,165 INFO  [SpiderContext] default user Agent is 'JSpider v0.5.0-dev (http://j-spider.sourceforge.net)'
+08:54:46,165 INFO  [SchedulerFactory] TaskScheduler provider class is 'class net.javacoding.jspider.core.task.impl.DefaultSchedulerProvider'
+08:54:46,165 INFO  [Spider] Spider born - threads: spiders: 5, thinkers: 1
+08:54:46,167 INFO  [SpiderContext] using userAgent 'JSpider v0.5.0-dev (http://j-spider.sourceforge.net)' for site 'http://synergyendwell.com'
+08:54:46,171 INFO  [ThrottleFactory] Throttle provider class is 'class net.javacoding.jspider.core.throttle.impl.PandaLoadThrottleProvider'
+08:54:47,239 INFO  [StatusBasedFileWriterPlugin] creating file for status '200'
+08:54:48,904 INFO  [SpiderContext] site http://fonts.googleapis.com must not be handled.
+08:54:48,907 INFO  [SpiderContext] site https://www.facebook.com must not be handled.
+08:54:48,911 INFO  [SpiderContext] site http://html5shiv.googlecode.com must not be handled.
+08:54:48,920 INFO  [SpiderContext] site https://maps.googleapis.com must not be handled.
+08:54:48,921 INFO  [SpiderContext] site http://www.voxel-labs.com must not be handled.
+08:54:50,568 INFO  [StatusBasedFileWriterPlugin] creating file for status '404'
+08:54:53,282 ERROR [SpiderHttpURLTask] exception during spidering
+java.io.IOException: Server returned HTTP response code: 405 for URL: http://synergyendwell.com/xmlrpc.php
+	at sun.reflect.GeneratedConstructorAccessor15.newInstance(Unknown Source)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:422)
+	at sun.net.www.protocol.http.HttpURLConnection$10.run(HttpURLConnection.java:1889)
+	at sun.net.www.protocol.http.HttpURLConnection$10.run(HttpURLConnection.java:1884)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at sun.net.www.protocol.http.HttpURLConnection.getChainedException(HttpURLConnection.java:1883)
+	at sun.net.www.protocol.http.HttpURLConnection.getInputStream0(HttpURLConnection.java:1456)
+	at sun.net.www.protocol.http.HttpURLConnection.getInputStream(HttpURLConnection.java:1440)
+	at net.javacoding.jspider.core.task.work.SpiderHttpURLTask.execute(Unknown Source)
+	at net.javacoding.jspider.core.threading.WorkerThread.run(Unknown Source)
+Caused by: java.io.IOException: Server returned HTTP response code: 405 for URL: http://synergyendwell.com/xmlrpc.php
+	at sun.net.www.protocol.http.HttpURLConnection.getInputStream0(HttpURLConnection.java:1839)
+	at sun.net.www.protocol.http.HttpURLConnection.getInputStream(HttpURLConnection.java:1440)
+	at java.net.HttpURLConnection.getResponseCode(HttpURLConnection.java:480)
+	... 2 more
+08:54:53,283 INFO  [StatusBasedFileWriterPlugin] creating file for status '405'
+08:54:54,337 INFO  [SpiderContext] site https://www.youtube.com must not be handled.
+08:54:57,392 INFO  [StatusBasedFileWriterPlugin] creating file for status '301'
+08:55:12,702 INFO  [SpiderContext] site http://www.facebook.com must not be handled.
+08:55:12,752 INFO  [SpiderContext] site https://twitter.com must not be handled.
+08:55:12,784 INFO  [SpiderContext] site https://plus.google.com must not be handled.
+08:55:12,828 INFO  [SpiderContext] site https://pinterest.com must not be handled.
+08:55:12,868 INFO  [SpiderContext] site http://www.linkedin.com must not be handled.
+08:55:12,934 INFO  [SpiderContext] site http://www.tumblr.com must not be handled.
+08:55:12,971 INFO  [SpiderContext] site http://reddit.com must not be handled.
+08:55:13,006 INFO  [SpiderContext] site http://www.stumbleupon.com must not be handled.
+08:55:28,567 INFO  [Spider] Stopped spider workers...
+08:55:28,567 INFO  [Spider] Stopped thinker workers...
+08:55:28,569 INFO  [VelocityPlugin] writing dump - this could take a while
+08:55:28,650 INFO  [VelocityPlugin] writing dump - this could take a while
+08:55:28,723 INFO  [Spider] Spidering done!
+08:55:28,723 INFO  [Spider] Elapsed time : 42556
+08:55:28,724 INFO  [PluginFactory] Loading 4 plugins.
+08:55:28,724 INFO  [PluginFactory] Loading plugin configuration 'console'...
+08:55:28,724 INFO  [ConsolePlugin] Prefix set to '[Plugin] '
+08:55:28,724 INFO  [PluginFactory] Plugin not configured for local event filtering
+08:55:28,724 INFO  [PluginFactory] Plugin Name    : Console writer JSpider module
+08:55:28,724 INFO  [PluginFactory] Plugin Version : v1.0
+08:55:28,724 INFO  [PluginFactory] Plugin Vendor  : http://www.javacoding.net
+08:55:28,724 INFO  [PluginFactory] Loading plugin configuration 'velocity'...
+08:55:28,724 INFO  [PluginFactory] Plugin uses local event filtering
+08:55:28,724 INFO  [PluginFactory] Plugin Name    : Velocity Template JSpider module
+08:55:28,724 INFO  [PluginFactory] Plugin Version : v1.0
+08:55:28,724 INFO  [PluginFactory] Plugin Vendor  : http://www.javacoding.net
+08:55:28,724 INFO  [PluginFactory] Loading plugin configuration 'statusbasedfilewriter'...
+08:55:28,724 INFO  [StatusBasedFileWriterPlugin] initialized.
+08:55:28,724 INFO  [PluginFactory] Plugin not configured for local event filtering
+08:55:28,724 INFO  [PluginFactory] Plugin Name    : Status based  Filewriter JSpider plugin
+08:55:28,724 INFO  [PluginFactory] Plugin Version : v1.0
+08:55:28,724 INFO  [PluginFactory] Plugin Vendor  : http://www.javacoding.net
+08:55:28,724 INFO  [PluginFactory] Loading plugin configuration 'xmldump'...
+08:55:28,724 INFO  [PluginFactory] Plugin uses local event filtering
+08:55:28,724 INFO  [PluginFactory] Plugin Name    : Velocity Template JSpider module
+08:55:28,724 INFO  [PluginFactory] Plugin Version : v1.0
+08:55:28,724 INFO  [PluginFactory] Plugin Vendor  : http://www.javacoding.net
+08:55:28,724 INFO  [PluginFactory] Loaded 4 plugins.
+08:55:28,724 INFO  [VelocityPlugin] writing trace file: true
+08:55:28,724 INFO  [VelocityPlugin] writing dump file: true
+08:55:28,724 INFO  [VelocityPlugin] Velocity template folder : velocity
+08:55:28,727 INFO  [VelocityPlugin] Writing to trace file: ./velocity-trace.out
+08:55:28,727 INFO  [VelocityPlugin] Writing to dump file: ./velocity-dump.out
+08:55:28,727 INFO  [VelocityPlugin] writing trace file: false
+08:55:28,727 INFO  [VelocityPlugin] writing dump file: true
+08:55:28,727 INFO  [VelocityPlugin] Velocity template folder : xmldump
+08:55:28,729 INFO  [VelocityPlugin] Writing to dump file: ./xml-dump.xml
+08:55:28,729 INFO  [StorageFactory] Storage provider class is 'class net.javacoding.jspider.core.storage.memory.InMemoryStorageProvider'
+08:55:28,730 INFO  [SpiderContext] default user Agent is 'JSpider v0.5.0-dev (http://j-spider.sourceforge.net)'
+08:55:28,730 INFO  [SchedulerFactory] TaskScheduler provider class is 'class net.javacoding.jspider.core.task.impl.DefaultSchedulerProvider'
+08:55:28,730 INFO  [Spider] Spider born - threads: spiders: 5, thinkers: 1
+08:55:28,732 INFO  [SpiderContext] using userAgent 'JSpider v0.5.0-dev (http://j-spider.sourceforge.net)' for site 'http://synergyendwell.com'
+08:55:28,733 INFO  [ThrottleFactory] Throttle provider class is 'class net.javacoding.jspider.core.throttle.impl.PandaLoadThrottleProvider'
+08:55:29,610 INFO  [StatusBasedFileWriterPlugin] creating file for status '200'
+08:55:31,070 INFO  [SpiderContext] site http://fonts.googleapis.com must not be handled.
+08:55:31,073 INFO  [SpiderContext] site https://www.facebook.com must not be handled.
+08:55:31,074 INFO  [SpiderContext] site http://html5shiv.googlecode.com must not be handled.
+08:55:31,080 INFO  [SpiderContext] site https://maps.googleapis.com must not be handled.
+08:55:31,080 INFO  [SpiderContext] site http://www.voxel-labs.com must not be handled.
+08:55:32,775 INFO  [StatusBasedFileWriterPlugin] creating file for status '404'
+08:55:34,225 ERROR [SpiderHttpURLTask] exception during spidering
+java.io.IOException: Server returned HTTP response code: 405 for URL: http://synergyendwell.com/xmlrpc.php
+	at sun.reflect.GeneratedConstructorAccessor15.newInstance(Unknown Source)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:422)
+	at sun.net.www.protocol.http.HttpURLConnection$10.run(HttpURLConnection.java:1889)
+	at sun.net.www.protocol.http.HttpURLConnection$10.run(HttpURLConnection.java:1884)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at sun.net.www.protocol.http.HttpURLConnection.getChainedException(HttpURLConnection.java:1883)
+	at sun.net.www.protocol.http.HttpURLConnection.getInputStream0(HttpURLConnection.java:1456)
+	at sun.net.www.protocol.http.HttpURLConnection.getInputStream(HttpURLConnection.java:1440)
+	at net.javacoding.jspider.core.task.work.SpiderHttpURLTask.execute(Unknown Source)
+	at net.javacoding.jspider.core.threading.WorkerThread.run(Unknown Source)
+Caused by: java.io.IOException: Server returned HTTP response code: 405 for URL: http://synergyendwell.com/xmlrpc.php
+	at sun.net.www.protocol.http.HttpURLConnection.getInputStream0(HttpURLConnection.java:1839)
+	at sun.net.www.protocol.http.HttpURLConnection.getInputStream(HttpURLConnection.java:1440)
+	at java.net.HttpURLConnection.getResponseCode(HttpURLConnection.java:480)
+	... 2 more
+08:55:34,226 INFO  [StatusBasedFileWriterPlugin] creating file for status '405'
+08:55:36,077 INFO  [SpiderContext] site https://www.youtube.com must not be handled.
+08:55:39,803 INFO  [StatusBasedFileWriterPlugin] creating file for status '301'
+08:55:53,960 INFO  [SpiderContext] site http://www.facebook.com must not be handled.
+08:55:53,991 INFO  [SpiderContext] site https://twitter.com must not be handled.
+08:55:54,022 INFO  [SpiderContext] site https://plus.google.com must not be handled.
+08:55:54,062 INFO  [SpiderContext] site https://pinterest.com must not be handled.
+08:55:54,091 INFO  [SpiderContext] site http://www.linkedin.com must not be handled.
+08:55:54,121 INFO  [SpiderContext] site http://www.tumblr.com must not be handled.
+08:55:54,151 INFO  [SpiderContext] site http://reddit.com must not be handled.
+08:55:54,192 INFO  [SpiderContext] site http://www.stumbleupon.com must not be handled.
+08:56:10,843 INFO  [Spider] Stopped spider workers...
+08:56:10,843 INFO  [Spider] Stopped thinker workers...
+08:56:10,845 INFO  [VelocityPlugin] writing dump - this could take a while
+08:56:10,919 INFO  [VelocityPlugin] writing dump - this could take a while
+08:56:11,007 INFO  [Spider] Spidering done!
+08:56:11,007 INFO  [Spider] Elapsed time : 42276
