@@ -14,8 +14,6 @@ import org.sunflow.system.UI.Module;
  * camera.
  */
 public class Scene@mode<?->X> {
-    private mcase<int> HACK = mcase<int> { low:0; mid:0; high:0; };
-
     // scene storage
     private LightServer lightServer;
     private InstanceList instanceList;
@@ -40,7 +38,7 @@ public class Scene@mode<?->X> {
     private int threads;
     private boolean lowPriority;
 
-    panda_attribute {
+    attributor {
       int instances = this.instanceList.getNumPrimitives();
       if (instances > 12) {
         return @mode<high>;

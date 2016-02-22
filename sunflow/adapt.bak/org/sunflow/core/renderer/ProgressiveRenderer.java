@@ -24,7 +24,7 @@ public class ProgressiveRenderer@mode<?->X> implements ImageSampler@mode<X> {
     private PriorityBlockingQueue<SmallBucket> smallBucketQueue;
     private int counter, counterMax;
 
-    panda_attribute {
+    attributor {
       // Just simulate for now
       int batteryMode = BatteryContext.batteryMode;
 

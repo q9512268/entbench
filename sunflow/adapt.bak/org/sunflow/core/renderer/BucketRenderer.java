@@ -22,7 +22,7 @@ import org.sunflow.system.Timer;
 import org.sunflow.system.UI;
 import org.sunflow.system.UI.Module;
 
-import panda.runtime.*;
+import ent.runtime.*;
 
 public class BucketRenderer@mode<?->X> implements ImageSampler@mode<X> {
     private Scene@mode<low <= * <= X> scene;
@@ -48,7 +48,7 @@ public class BucketRenderer@mode<?->X> implements ImageSampler@mode<X> {
     private mcase<int> maxAADepth = mcase<int> {
       low: 0;
       mid: 1;
-      high: 3;
+      high: 2;
     };
 
     private int superSampling;
@@ -71,10 +71,10 @@ public class BucketRenderer@mode<?->X> implements ImageSampler@mode<X> {
     private int fs;
     private float fhs;
 
-    panda_attribute {
-      if (PANDA_Util.Battery.percentRemaining() >= 0.75) {
+    attributor {
+      if (ENT_Util.Battery.percentRemaining() >= 0.75) {
         return @mode<high>;
-      } else if (PANDA_Util.Battery.percentRemaining() >= 0.50) {
+      } else if (ENT_Util.Battery.percentRemaining() >= 0.50) {
         return @mode<mid>;
       } else {
         return @mode<low>;
