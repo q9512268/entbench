@@ -38,7 +38,7 @@ public class Scene@mode<?->X> {
     private int threads;
     private boolean lowPriority;
 
-    ent_attribute {
+    attributor {
       int instances = this.instanceList.getNumPrimitives();
       if (instances > 12) {
         return @mode<high>;

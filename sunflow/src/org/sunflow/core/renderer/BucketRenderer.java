@@ -60,7 +60,7 @@ public class BucketRenderer@mode<?->X> implements ImageSampler@mode<X> {
     private int fs;
     private float fhs;
 
-    ent_attribute {
+    attributor {
       if (useBat) {
         if (ENT_Util.Battery.percentRemaining() >= 0.75) {
           return @mode<high>;
