@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="crypto" default="compile">
+	<target name="init">
+    <property name="src.dir" value="src" />
+    <property name="build.dir" value="build" />
+    <property name="build.classes.dir" value="${build.dir}/classes" />
+	  <property name="crypto.libs" value="" />
+  </target>
+	<target name="clean" depends="init" description="Remove build files created this scripts">
+		<delete dir="${build.dir}" />
+  </target>
+
+	<target name="compile" depends="init" description="Compile source">
+		<mkdir dir="${build.classes.dir}" />
+    <javac 
+      fork="yes" 
+      srcdir="${src.dir}" 
+      destdir="${build.classes.dir}" 
+      debug="on" 
+      classpath="${crypto.libs}">
+    </javac>
+	</target>
+</project> 
