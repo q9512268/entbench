@@ -9,5 +9,5 @@ fi
 
 level=$1 
 
-ent -cp $dir/../build/classes:$dir/../janino.jar SunflowGUI -aa 0 1 -nogui $dir/large.sc
+ent -cp $dir/../build/classes:$dir/../janino.jar SunflowGUI -aa -1 1 -nogui $dir/large.sc
 mv $dir/mode.txt $dir/run_ld_${level}.txt

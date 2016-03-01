@@ -96,73 +96,6 @@ shader {
 }
 
 object {
-	shader default
-	transform {
-		rotatex -90
-		scaleu 0.1
-		rotatey 75
-		translate -0.25 0 0.63
-	}
-	type gumbo
-	name gumbo_0
-	subdivs 7
-}
-
-/*
-object {
-	shader shiny_orange
-	transform {
-		rotatex -90
-		scaleu 0.05
-		rotatey 120
-		translate -2.25 0 -4.0
-	}
-	type gumbo
-	name gumbo_10
-	subdivs 7
-}
-
-object {
-	shader shiny_lime
-	transform {
-		rotatex -90
-		scaleu 0.05
-		rotatey 140
-		translate -3.00 0 -2.5
-	}
-	type gumbo
-	name gumbo_11
-	subdivs 7
-}
-
-object {
-	shader shiny_pink
-	transform {
-		rotatex -90
-		scaleu 0.05
-		rotatey -120
-		translate -2.25 0 2.5
-	}
-	type gumbo
-	name gumbo_12
-	subdivs 7
-}
-
-object {
-	shader shiny_cyan
-	transform {
-		rotatex -90
-		scaleu 0.05
-		rotatey -140
-		translate -3.00 0 1.5
-	}
-	type gumbo
-	name gumbo_13
-	subdivs 7
-} 
-*/
-
-object {
 	shader simple_red
 	transform {
 		rotatex -90
@@ -238,6 +171,7 @@ object {
 	subdivs 7
 }
 
+/*
 object {
 	shader simple_yellow
 	transform {
@@ -252,7 +186,6 @@ object {
 	smooth false
 }
 
-/*
 object {
 	shader simple_green
 	transform {
@@ -266,7 +199,6 @@ object {
 	subdivs 3
 	smooth false
 }
-*/
 
 object {
 	shader simple_red
@@ -281,6 +213,7 @@ object {
 	subdivs 5
 	smooth false
 }
+*/
 
 object {
 	shader simple_blue

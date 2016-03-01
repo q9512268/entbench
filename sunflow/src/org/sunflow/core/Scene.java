@@ -39,6 +39,7 @@ public class Scene@mode<?->X> {
     private boolean lowPriority;
 
     attributor {
+      /*
       int instances = this.instanceList.getNumPrimitives();
       if (instances > 12) {
         return @mode<high>;
@@ -47,6 +48,8 @@ public class Scene@mode<?->X> {
       } else {
         return @mode<low>;
       }
+      */
+      return @mode<low>;
     }
 
     private Display display;

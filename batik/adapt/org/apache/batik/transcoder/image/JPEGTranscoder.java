@@ -39,10 +39,10 @@ import org.apache.batik.transcoder.image.resources.Messages;
  */
 public class JPEGTranscoder@mode<?->X> extends ImageTranscoder@mode<X> {
 
-    panda_attribute {
-      if (PANDA_Util.Battery.percentRemaining() >= 0.75) {
+    attributor {
+      if (ENT_Util.Battery.percentRemaining() >= 0.75) {
         return @mode<high>;
-      } else if (PANDA_Util.Battery.percentRemaining() >= 0.50) {
+      } else if (ENT_Util.Battery.percentRemaining() >= 0.50) {
         return @mode<mid>;
       } else {
         return @mode<low>;

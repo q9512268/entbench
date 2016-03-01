@@ -91,7 +91,7 @@ import org.w3c.dom.Element;
  */
 public class WMFTranscoder@mode<?->X> extends ToSVGAbstractTranscoder@mode<X> {
 
-    panda_attribute {
+    attributor {
       return @mode<low>;
     }
 

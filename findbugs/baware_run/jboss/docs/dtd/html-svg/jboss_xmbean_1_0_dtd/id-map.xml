@@ -1,0 +1,43 @@
+<?xml version = "1.0" encoding = "UTF-8"?>
+<id-map>
+	<entry path = "e:mbean" id = "comp00001" width = "184" height = "248"/>
+	<entry path = "e:class" id = "comp00002" width = "55" height = "38"/>
+	<entry path = "e:constructor" id = "comp00003" width = "199" height = "143"/>
+	<entry path = "e:attribute" id = "comp00004" width = "357" height = "186"/>
+	<entry path = "e:attribute/a:access" id = "comp00005" width = "75" height = "38"/>
+	<entry path = "e:attribute/a:getMethod" id = "comp00006" width = "96" height = "38"/>
+	<entry path = "e:attribute/a:setMethod" id = "comp00007" width = "94" height = "38"/>
+	<entry path = "e:operation" id = "comp00008" width = "194" height = "221"/>
+	<entry path = "e:operation/a:impact" id = "comp00009" width = "77" height = "38"/>
+	<entry path = "e:descriptors" id = "comp00010" width = "252" height = "318"/>
+	<entry path = "e:interceptors" id = "comp00011" width = "202" height = "38"/>
+	<entry path = "e:interceptor" id = "comp00012" width = "169" height = "48"/>
+	<entry path = "e:interceptor/a:code" id = "comp00013" width = "56" height = "38"/>
+	<entry path = "e:persistence" id = "comp00014" width = "525" height = "48"/>
+	<entry path = "e:persistence/a:persistPolicy" id = "comp00015" width = "103" height = "38"/>
+	<entry path = "e:persistence/a:persistPeriod" id = "comp00016" width = "105" height = "38"/>
+	<entry path = "e:persistence/a:persistLocation" id = "comp00017" width = "115" height = "38"/>
+	<entry path = "e:persistence/a:persistName" id = "comp00018" width = "102" height = "38"/>
+	<entry path = "e:currencyTimeLimit" id = "comp00019" width = "222" height = "48"/>
+	<entry path = "e:currencyTimeLimit/a:value" id = "comp00020" width = "71" height = "38"/>
+	<entry path = "e:state-action-on-update" id = "comp00021" width = "239" height = "48"/>
+	<entry path = "e:state-action-on-update/a:value" id = "comp00022" width = "71" height = "38"/>
+	<entry path = "e:display-name" id = "comp00023" width = "197" height = "48"/>
+	<entry path = "e:display-name/a:value" id = "comp00024" width = "71" height = "38"/>
+	<entry path = "e:persistence-manager" id = "comp00025" width = "231" height = "48"/>
+	<entry path = "e:persistence-manager/a:value" id = "comp00026" width = "71" height = "38"/>
+	<entry path = "e:default" id = "comp00027" width = "155" height = "48"/>
+	<entry path = "e:default/a:value" id = "comp00028" width = "59" height = "38"/>
+	<entry path = "e:value" id = "comp00029" width = "148" height = "48"/>
+	<entry path = "e:value/a:value" id = "comp00030" width = "59" height = "38"/>
+	<entry path = "e:descriptor" id = "comp00031" width = "222" height = "48"/>
+	<entry path = "e:descriptor/a:name" id = "comp00032" width = "60" height = "38"/>
+	<entry path = "e:descriptor/a:value" id = "comp00033" width = "59" height = "38"/>
+	<entry path = "e:notification" id = "comp00034" width = "227" height = "143"/>
+	<entry path = "e:parameter" id = "comp00035" width = "197" height = "108"/>
+	<entry path = "e:name" id = "comp00036" width = "60" height = "38"/>
+	<entry path = "e:description" id = "comp00037" width = "84" height = "38"/>
+	<entry path = "e:type" id = "comp00038" width = "53" height = "38"/>
+	<entry path = "e:return-type" id = "comp00039" width = "83" height = "38"/>
+	<entry path = "e:notification-type" id = "comp00040" width = "109" height = "38"/>
+</id-map>

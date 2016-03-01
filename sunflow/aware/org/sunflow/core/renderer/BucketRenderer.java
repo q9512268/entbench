@@ -114,6 +114,7 @@ public class BucketRenderer@mode<?->X> implements ImageSampler@mode<X> {
         } catch (RuntimeException e) {
           this.scene = snapshotforce scene ?mode[@mode<low>, @mode<X>];
           if (recover) {
+            minAADepth = -1;
             maxAADepth = 0;
           }
         }

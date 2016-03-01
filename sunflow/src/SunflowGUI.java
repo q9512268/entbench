@@ -179,305 +179,300 @@ public class SunflowGUI extends javax.swing.JFrame implements UserInterface {
         System.exit(1);
     }
 
-    public static void main(String[] args) {
-          UI.verbosity(4);
-          if (args.length > 0) {
-              boolean showFrame = true;
-              String sampler = "bucket";
-              boolean noRender = false;
-              String filename = null;
-              String input = null;
-              int i = 0;
-              int threads = 0;
-              boolean lowPriority = true;
-              boolean showAA = false;
-              boolean noGI = false;
-              boolean noCaustics = false;
-              int pathGI = 0;
-              Shader shaderOverride = null;
-              int resolutionW = 0, resolutionH = 0;
-              int aaMin = -5, aaMax = -5;
-              int bucketSize = 0;
-              String bucketOrder = null;
-              String bakingName = null;
-              boolean bakeViewdep = false;
-              String filterType = null;
-              boolean runBenchmark = false;
-              boolean runRTBenchmark = false;
-              int frameStart = 1, frameStop = 1;
-              while (i < args.length) {
-                  if (args[i].equals("-o")) {
-                      if (i > args.length - 2)
-                          usage(false);
-                      filename = args[i + 1];
-                      i += 2;
-                  } else if (args[i].equals("-nogui")) {
-                      showFrame = false;
-                      i++;
-                  } else if (args[i].equals("-ipr")) {
-                      sampler = "ipr";
-                      i++;
-                  } else if (args[i].equals("-threads")) {
-                      if (i > args.length - 2)
-                          usage(false);
-                      threads = Integer.parseInt(args[i + 1]);
-                      i += 2;
-                  } else if (args[i].equals("-lopri")) {
-                      lowPriority = true;
-                      i++;
-                  } else if (args[i].equals("-hipri")) {
-                      lowPriority = false;
-                      i++;
-                  } else if (args[i].equals("-sampler")) {
-                      if (i > args.length - 2)
-                          usage(false);
-                      sampler = args[i + 1];
-                      i += 2;
-                  } else if (args[i].equals("-smallmesh")) {
-                      TriangleMesh.setSmallTriangles(true);
-                      i++;
-                  } else if (args[i].equals("-dumpkd")) {
-                      KDTree.setDumpMode(true, "kdtree");
-                      i++;
-                  } else if (args[i].equals("-buildonly")) {
-                      noRender = true;
-                      i++;
-                  } else if (args[i].equals("-showaa")) {
-                      showAA = true;
-                      i++;
-                  } else if (args[i].equals("-nogi")) {
-                      noGI = true;
-                      i++;
-                  } else if (args[i].equals("-nocaustics")) {
-                      noCaustics = true;
-                      i++;
-                  } else if (args[i].equals("-pathgi")) {
-                      if (i > args.length - 2)
-                          usage(false);
-                      pathGI = Integer.parseInt(args[i + 1]);
-                      i += 2;
-                  } else if (args[i].equals("-quick_ambocc")) {
-                      if (i > args.length - 2)
-                          usage(false);
-                      float d = Float.parseFloat(args[i + 1]);
-                      shaderOverride = new AmbientOcclusionShader(Color.WHITE, d);
-                      i += 2;
-                  } else if (args[i].equals("-quick_uvs")) {
-                      if (i > args.length - 1)
-                          usage(false);
-                      shaderOverride = new UVShader();
-                      i++;
-                  } else if (args[i].equals("-quick_normals")) {
-                      if (i > args.length - 1)
-                          usage(false);
-                      shaderOverride = new NormalShader();
-                      i++;
-                  } else if (args[i].equals("-quick_id")) {
-                      if (i > args.length - 1)
-                          usage(false);
-                      shaderOverride = new IDShader();
-                      i++;
-                  } else if (args[i].equals("-quick_prims")) {
-                      if (i > args.length - 1)
-                          usage(false);
-                      shaderOverride = new PrimIDShader();
-                      i++;
-                  } else if (args[i].equals("-quick_gray")) {
-                      if (i > args.length - 1)
-                          usage(false);
-                      shaderOverride = new QuickGrayShader();
-                      i++;
-                  } else if (args[i].equals("-quick_wire")) {
-                      if (i > args.length - 1)
-                          usage(false);
-                      shaderOverride = new WireframeShader();
-                      i++;
-                  } else if (args[i].equals("-resolution")) {
-                      if (i > args.length - 3)
-                          usage(false);
-                      resolutionW = Integer.parseInt(args[i + 1]);
-                      resolutionH = Integer.parseInt(args[i + 2]);
-                      i += 3;
-                  } else if (args[i].equals("-aa")) {
-                      if (i > args.length - 3)
-                          usage(false);
-                      aaMin = Integer.parseInt(args[i + 1]);
-                      aaMax = Integer.parseInt(args[i + 2]);
-                      i += 3;
-                  } else if (args[i].equals("-bucket")) {
-                      if (i > args.length - 3)
-                          usage(false);
-                      bucketSize = Integer.parseInt(args[i + 1]);
-                      bucketOrder = args[i + 2];
-                      i += 3;
-                  } else if (args[i].equals("-bake")) {
-                      if (i > args.length - 2)
-                          usage(false);
-                      bakingName = args[i + 1];
-                      i += 2;
-                  } else if (args[i].equals("-bakedir")) {
-                      if (i > args.length - 2)
-                          usage(false);
-                      String baketype = args[i + 1];
-                      if (baketype.equals("view"))
-                          bakeViewdep = true;
-                      else if (baketype.equals("ortho"))
-                          bakeViewdep = false;
-                      else
-                          usage(false);
-                      i += 2;
-                  } else if (args[i].equals("-filter")) {
-                      if (i > args.length - 2)
-                          usage(false);
-                      filterType = args[i + 1];
-                      i += 2;
-                  } else if (args[i].equals("-bench")) {
-                      runBenchmark = true;
-                      i++;
-                  } else if (args[i].equals("-rtbench")) {
-                      runRTBenchmark = true;
-                      i++;
-                  } else if (args[i].equals("-frame")) {
-                      if (i > args.length - 2)
-                          usage(false);
-                      frameStart = frameStop = Integer.parseInt(args[i + 1]);
-                      i += 2;
-                  } else if (args[i].equals("-anim")) {
-                      if (i > args.length - 3)
-                          usage(false);
-                      frameStart = Integer.parseInt(args[i + 1]);
-                      frameStop = Integer.parseInt(args[i + 2]);
-                      i += 3;
-                  } else if (args[i].equals("-v")) {
-                      if (i > args.length - 2)
-                          usage(false);
-                      UI.verbosity(Integer.parseInt(args[i + 1]));
-                      i += 2;
-                  } else if (args[i].equals("-h") || args[i].equals("-help")) {
-                      usage(true);
-                  } else {
-                      if (input != null)
-                          usage(false);
-                      input = args[i];
-                      i++;
-                  }
-              }
-
-              ENT_Util.initModeFile();
-              double[] energyRuns = new double[11];
-
-              for (int k = 0; k < 11; k++) {
-                double[] before = EnergyCheckUtils.getEnergyStats();
-
-                if (runBenchmark) {
-                    SunflowAPI.runSystemCheck();
-                    new Benchmark().execute();
-                    return;
-                }
-                if (runRTBenchmark) {
-                    SunflowAPI.runSystemCheck();
-                    RealtimeBenchmark t = new RealtimeBenchmark(showFrame, threads);
-                    return;
-                }
-                if (input == null)
-                    usage(false);
-                SunflowAPI.runSystemCheck();
-                if (frameStart < frameStop && showFrame) {
-                    UI.printWarning(Module.GUI, "Animations should not be rendered without -nogui - forcing GUI off anyway");
+    public static void main(String[] args) { 
+        UI.verbosity(4);
+        if (args.length > 0) {
+            boolean showFrame = true;
+            String sampler = "bucket";
+            boolean noRender = false;
+            String filename = null;
+            String input = null;
+            int i = 0;
+            int threads = 0;
+            boolean lowPriority = true;
+            boolean showAA = false;
+            boolean noGI = false;
+            boolean noCaustics = false;
+            int pathGI = 0;
+            Shader shaderOverride = null;
+            int resolutionW = 0, resolutionH = 0;
+            int aaMin = -5, aaMax = -5;
+            int bucketSize = 0;
+            String bucketOrder = null;
+            String bakingName = null;
+            boolean bakeViewdep = false;
+            String filterType = null;
+            boolean runBenchmark = false;
+            boolean runRTBenchmark = false;
+            int frameStart = 1, frameStop = 1;
+            while (i < args.length) {
+                if (args[i].equals("-o")) {
+                    if (i > args.length - 2)
+                        usage(false);
+                    filename = args[i + 1];
+                    i += 2;
+                } else if (args[i].equals("-nogui")) {
                     showFrame = false;
+                    i++;
+                } else if (args[i].equals("-ipr")) {
+                    sampler = "ipr";
+                    i++;
+                } else if (args[i].equals("-threads")) {
+                    if (i > args.length - 2)
+                        usage(false);
+                    threads = Integer.parseInt(args[i + 1]);
+                    i += 2;
+                } else if (args[i].equals("-lopri")) {
+                    lowPriority = true;
+                    i++;
+                } else if (args[i].equals("-hipri")) {
+                    lowPriority = false;
+                    i++;
+                } else if (args[i].equals("-sampler")) {
+                    if (i > args.length - 2)
+                        usage(false);
+                    sampler = args[i + 1];
+                    i += 2;
+                } else if (args[i].equals("-smallmesh")) {
+                    TriangleMesh.setSmallTriangles(true);
+                    i++;
+                } else if (args[i].equals("-dumpkd")) {
+                    KDTree.setDumpMode(true, "kdtree");
+                    i++;
+                } else if (args[i].equals("-buildonly")) {
+                    noRender = true;
+                    i++;
+                } else if (args[i].equals("-showaa")) {
+                    showAA = true;
+                    i++;
+                } else if (args[i].equals("-nogi")) {
+                    noGI = true;
+                    i++;
+                } else if (args[i].equals("-nocaustics")) {
+                    noCaustics = true;
+                    i++;
+                } else if (args[i].equals("-pathgi")) {
+                    if (i > args.length - 2)
+                        usage(false);
+                    pathGI = Integer.parseInt(args[i + 1]);
+                    i += 2;
+                } else if (args[i].equals("-quick_ambocc")) {
+                    if (i > args.length - 2)
+                        usage(false);
+                    float d = Float.parseFloat(args[i + 1]);
+                    shaderOverride = new AmbientOcclusionShader(Color.WHITE, d);
+                    i += 2;
+                } else if (args[i].equals("-quick_uvs")) {
+                    if (i > args.length - 1)
+                        usage(false);
+                    shaderOverride = new UVShader();
+                    i++;
+                } else if (args[i].equals("-quick_normals")) {
+                    if (i > args.length - 1)
+                        usage(false);
+                    shaderOverride = new NormalShader();
+                    i++;
+                } else if (args[i].equals("-quick_id")) {
+                    if (i > args.length - 1)
+                        usage(false);
+                    shaderOverride = new IDShader();
+                    i++;
+                } else if (args[i].equals("-quick_prims")) {
+                    if (i > args.length - 1)
+                        usage(false);
+                    shaderOverride = new PrimIDShader();
+                    i++;
+                } else if (args[i].equals("-quick_gray")) {
+                    if (i > args.length - 1)
+                        usage(false);
+                    shaderOverride = new QuickGrayShader();
+                    i++;
+                } else if (args[i].equals("-quick_wire")) {
+                    if (i > args.length - 1)
+                        usage(false);
+                    shaderOverride = new WireframeShader();
+                    i++;
+                } else if (args[i].equals("-resolution")) {
+                    if (i > args.length - 3)
+                        usage(false);
+                    resolutionW = Integer.parseInt(args[i + 1]);
+                    resolutionH = Integer.parseInt(args[i + 2]);
+                    i += 3;
+                } else if (args[i].equals("-aa")) {
+                    if (i > args.length - 3)
+                        usage(false);
+                    aaMin = Integer.parseInt(args[i + 1]);
+                    aaMax = Integer.parseInt(args[i + 2]);
+                    i += 3;
+                } else if (args[i].equals("-bucket")) {
+                    if (i > args.length - 3)
+                        usage(false);
+                    bucketSize = Integer.parseInt(args[i + 1]);
+                    bucketOrder = args[i + 2];
+                    i += 3;
+                } else if (args[i].equals("-bake")) {
+                    if (i > args.length - 2)
+                        usage(false);
+                    bakingName = args[i + 1];
+                    i += 2;
+                } else if (args[i].equals("-bakedir")) {
+                    if (i > args.length - 2)
+                        usage(false);
+                    String baketype = args[i + 1];
+                    if (baketype.equals("view"))
+                        bakeViewdep = true;
+                    else if (baketype.equals("ortho"))
+                        bakeViewdep = false;
+                    else
+                        usage(false);
+                    i += 2;
+                } else if (args[i].equals("-filter")) {
+                    if (i > args.length - 2)
+                        usage(false);
+                    filterType = args[i + 1];
+                    i += 2;
+                } else if (args[i].equals("-bench")) {
+                    runBenchmark = true;
+                    i++;
+                } else if (args[i].equals("-rtbench")) {
+                    runRTBenchmark = true;
+                    i++;
+                } else if (args[i].equals("-frame")) {
+                    if (i > args.length - 2)
+                        usage(false);
+                    frameStart = frameStop = Integer.parseInt(args[i + 1]);
+                    i += 2;
+                } else if (args[i].equals("-anim")) {
+                    if (i > args.length - 3)
+                        usage(false);
+                    frameStart = Integer.parseInt(args[i + 1]);
+                    frameStop = Integer.parseInt(args[i + 2]);
+                    i += 3;
+                } else if (args[i].equals("-v")) {
+                    if (i > args.length - 2)
+                        usage(false);
+                    UI.verbosity(Integer.parseInt(args[i + 1]));
+                    i += 2;
+                } else if (args[i].equals("-h") || args[i].equals("-help")) {
+                    usage(true);
+                } else {
+                    if (input != null)
+                        usage(false);
+                    input = args[i];
+                    i++;
                 }
-                if (frameStart < frameStop && filename == null) {
-                    filename = "output.#.png";
-                    UI.printWarning(Module.GUI, "Animation output was not specified - defaulting to: \"%s\"", filename);
-                }
-                for (int frameNumber = frameStart; frameNumber <= frameStop; frameNumber++) {
-                    SunflowAPI api = SunflowAPI.create(input, frameNumber);
-                    if (api == null)
-                        continue;
-                    if (noRender)
-                        continue;
-                    if (resolutionW > 0 && resolutionH > 0) {
-                        api.parameter("resolutionX", resolutionW);
-                        api.parameter("resolutionY", resolutionH);
-                    }
-                    if (aaMin != -5 || aaMax != -5) {
-                        api.parameter("aa.min", aaMin);
-                        api.parameter("aa.max", aaMax);
-                    }
-                    if (bucketSize > 0)
-                        api.parameter("bucket.size", bucketSize);
-                    if (bucketOrder != null)
-                        api.parameter("bucket.order", bucketOrder);
-                    api.parameter("aa.display", showAA);
-                    api.parameter("threads", threads);
-                    api.parameter("threads.lowPriority", lowPriority);
-                    if (bakingName != null) {
-                        api.parameter("baking.instance", bakingName);
-                        api.parameter("baking.viewdep", bakeViewdep);
-                    }
-                    if (filterType != null)
-                        api.parameter("filter", filterType);
-                    if (noGI)
-                        api.parameter("gi.engine", "none");
-                    else if (pathGI > 0) {
-                        api.parameter("gi.engine", "path");
-                        api.parameter("gi.path.samples", pathGI);
-                    }
-                    if (noCaustics)
-                        api.parameter("caustics", "none");
-                    api.parameter("sampler", sampler);
-                    api.options(SunflowAPI.DEFAULT_OPTIONS);
-                    if (shaderOverride != null) {
-                        api.shader("ambocc", shaderOverride);
-                        api.shaderOverride("ambocc", true);
-                    }
-                    // create display
-                    Display display;
-                    String currentFilename = (filename != null) ? filename.replace("#", String.format("%04d", frameNumber)) : null;
-                    if (showFrame) {
-                        display = new FrameDisplay(currentFilename);
-                    } else {
-                        if (currentFilename != null && currentFilename.endsWith(".exr")) {
-                            try {
-                                display = new OpenExrDisplay(currentFilename, "zip", "float");
-                            } catch (Exception e) {
-                                e.printStackTrace();
-                                return;
-                            }
-                        } else if (currentFilename != null && currentFilename.equals("imgpipe")) {
-                            display = new ImgPipeDisplay();
-                        } else
-                            display = new FileDisplay(currentFilename);
-                    }
-                    api.render(SunflowAPI.DEFAULT_OPTIONS, display);
-                }
+            }
 
-                double[] after = EnergyCheckUtils.getEnergyStats();
-                ENT_Util.writeModeFile(String.format("ERun %d: %f %f %f\n", k, after[0]-before[0], after[1]-before[1], after[2]-before[2]));
-                energyRuns[k] = after[2]-before[2];
+            ENT_Util.initModeFile();
+            int PANDA_RUNS = Integer.parseInt(System.getenv("PANDA_RUNS"));
+
+            for (int k = 0; k < PANDA_RUNS; k++) {
+              double[] before = EnergyCheckUtils.getEnergyStats();
+              ENT_Util.resetStopwatch();
+              ENT_Util.startStopwatch();
+
+              if (runBenchmark) {
+                  SunflowAPI.runSystemCheck();
+                  new Benchmark().execute();
+                  return;
               }
-
-              double energyTotal = 0.0;
-              for (int k = 1; k < 11; k++) {
-                energyTotal += energyRuns[k];
+              if (runRTBenchmark) {
+                  SunflowAPI.runSystemCheck();
+                  RealtimeBenchmark t = new RealtimeBenchmark(showFrame, threads);
+                  return;
               }
-              ENT_Util.writeModeFile(String.format("Energy: %f %f %f\n", 0.0, 0.0, (energyTotal / 10.0)));
-
-              ENT_Util.closeModeFile();
-              EnergyCheckUtils.DeallocProfile();
-
-          } else {
-              MetalLookAndFeel.setCurrentTheme(new DefaultMetalTheme());
-              SunflowGUI gui = new SunflowGUI();
-              gui.setVisible(true);
-              Dimension screenRes = Toolkit.getDefaultToolkit().getScreenSize();
-              if (screenRes.getWidth() <= DEFAULT_WIDTH || screenRes.getHeight() <= DEFAULT_HEIGHT)
-                  gui.setExtendedState(MAXIMIZED_BOTH);
-              gui.tileWindowMenuItem.doClick();
+              if (input == null)
+                  usage(false);
               SunflowAPI.runSystemCheck();
-          }
+              if (frameStart < frameStop && showFrame) {
+                  UI.printWarning(Module.GUI, "Animations should not be rendered without -nogui - forcing GUI off anyway");
+                  showFrame = false;
+              }
+              if (frameStart < frameStop && filename == null) {
+                  filename = "output.#.png";
+                  UI.printWarning(Module.GUI, "Animation output was not specified - defaulting to: \"%s\"", filename);
+              }
+              for (int frameNumber = frameStart; frameNumber <= frameStop; frameNumber++) {
+                  SunflowAPI api = SunflowAPI.create(input, frameNumber);
+                  if (api == null)
+                      continue;
+                  if (noRender)
+                      continue;
+                  if (resolutionW > 0 && resolutionH > 0) {
+                      api.parameter("resolutionX", resolutionW);
+                      api.parameter("resolutionY", resolutionH);
+                  }
+                  if (aaMin != -5 || aaMax != -5) {
+                      api.parameter("aa.min", aaMin);
+                      api.parameter("aa.max", aaMax);
+                  }
+                  if (bucketSize > 0)
+                      api.parameter("bucket.size", bucketSize);
+                  if (bucketOrder != null)
+                      api.parameter("bucket.order", bucketOrder);
+                  api.parameter("aa.display", showAA);
+                  api.parameter("threads", threads);
+                  api.parameter("threads.lowPriority", lowPriority);
+                  if (bakingName != null) {
+                      api.parameter("baking.instance", bakingName);
+                      api.parameter("baking.viewdep", bakeViewdep);
+                  }
+                  if (filterType != null)
+                      api.parameter("filter", filterType);
+                  if (noGI)
+                      api.parameter("gi.engine", "none");
+                  else if (pathGI > 0) {
+                      api.parameter("gi.engine", "path");
+                      api.parameter("gi.path.samples", pathGI);
+                  }
+                  if (noCaustics)
+                      api.parameter("caustics", "none");
+                  api.parameter("sampler", sampler);
+                  api.options(SunflowAPI.DEFAULT_OPTIONS);
+                  if (shaderOverride != null) {
+                      api.shader("ambocc", shaderOverride);
+                      api.shaderOverride("ambocc", true);
+                  }
+                  // create display
+                  Display display;
+                  String currentFilename = (filename != null) ? filename.replace("#", String.format("%04d", frameNumber)) : null;
+                  if (showFrame) {
+                      display = new FrameDisplay(currentFilename);
+                  } else {
+                      if (currentFilename != null && currentFilename.endsWith(".exr")) {
+                          try {
+                              display = new OpenExrDisplay(currentFilename, "zip", "float");
+                          } catch (Exception e) {
+                              e.printStackTrace();
+                              return;
+                          }
+                      } else if (currentFilename != null && currentFilename.equals("imgpipe")) {
+                          display = new ImgPipeDisplay();
+                      } else
+                          display = new FileDisplay(currentFilename);
+                  }
+                  api.render(SunflowAPI.DEFAULT_OPTIONS, display);
+              }
 
-        }
+              double[] after = EnergyCheckUtils.getEnergyStats();
+              ENT_Util.stopStopwatch();
+              ENT_Util.writeModeFile(String.format("ERun %d: %f %f %f %f\n", k, after[0]-before[0], after[1]-before[1], after[2]-before[2], ENT_Util.elapsedTime()));
+            } 
+
+            ENT_Util.closeModeFile();
+            EnergyCheckUtils.DeallocProfile();
+
+        } else {
+            MetalLookAndFeel.setCurrentTheme(new DefaultMetalTheme());
+            SunflowGUI gui = new SunflowGUI();
+            gui.setVisible(true);
+            Dimension screenRes = Toolkit.getDefaultToolkit().getScreenSize();
+            if (screenRes.getWidth() <= DEFAULT_WIDTH || screenRes.getHeight() <= DEFAULT_HEIGHT)
+                gui.setExtendedState(MAXIMIZED_BOTH);
+            gui.tileWindowMenuItem.doClick();
+            SunflowAPI.runSystemCheck();
+        } 
+    }
 
     public SunflowGUI() {
         super();

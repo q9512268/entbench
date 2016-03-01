@@ -45,7 +45,7 @@ import org.w3c.dom.Document;
  */
 public class SVGTranscoder@mode<?->X> extends AbstractTranscoder@mode<X> {
 
-    panda_attribute {
+    attributor {
       return @mode<low>;
     }
 

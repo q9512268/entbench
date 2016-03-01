@@ -1,34 +1,33 @@
-class org.sunflow.core.renderer.BucketRenderer:0
-Recovered from class org.sunflow.core.Scene:0
-ERun 0: 12.110932 467.185303 555.832397
-class org.sunflow.core.renderer.BucketRenderer:0
-Recovered from class org.sunflow.core.Scene:0
-ERun 1: 12.302277 440.085114 524.497223
-class org.sunflow.core.renderer.BucketRenderer:0
-Recovered from class org.sunflow.core.Scene:0
-ERun 2: 12.474335 440.904770 525.719116
-class org.sunflow.core.renderer.BucketRenderer:0
-Recovered from class org.sunflow.core.Scene:0
-ERun 3: 12.463409 441.240112 526.525177
-class org.sunflow.core.renderer.BucketRenderer:0
-Recovered from class org.sunflow.core.Scene:0
-ERun 4: 12.295029 440.916840 526.052170
-class org.sunflow.core.renderer.BucketRenderer:0
-Recovered from class org.sunflow.core.Scene:0
-ERun 5: 13.591064 441.475860 527.733490
-class org.sunflow.core.renderer.BucketRenderer:0
-Recovered from class org.sunflow.core.Scene:0
-ERun 6: 12.530121 439.672364 524.500183
-class org.sunflow.core.renderer.BucketRenderer:0
-Recovered from class org.sunflow.core.Scene:0
-ERun 7: 11.943421 440.694427 525.279754
-class org.sunflow.core.renderer.BucketRenderer:0
-Recovered from class org.sunflow.core.Scene:0
-ERun 8: 14.104599 439.026581 525.424240
-class org.sunflow.core.renderer.BucketRenderer:0
-Recovered from class org.sunflow.core.Scene:0
-ERun 9: 11.836914 441.255493 525.792084
-class org.sunflow.core.renderer.BucketRenderer:0
-Recovered from class org.sunflow.core.Scene:0
-ERun 10: 11.846725 439.640397 523.812943
-Energy: 0.000000 0.000000 525.533638
+Num Instances: 9
+Num Instances: 9
+ERun 0: 11.255753 233.285920 283.288849 15.641000
+Num Instances: 9
+Num Instances: 9
+ERun 1: 10.836304 208.003663 253.295944 13.964000
+Num Instances: 9
+Num Instances: 9
+ERun 2: 10.135666 207.494689 252.082047 14.000000
+Num Instances: 9
+Num Instances: 9
+ERun 3: 10.656434 206.945801 252.041015 13.966000
+Num Instances: 9
+Num Instances: 9
+ERun 4: 11.317504 208.241684 254.282135 14.100000
+Num Instances: 9
+Num Instances: 9
+ERun 5: 11.032868 205.434098 250.725449 13.928000
+Num Instances: 9
+Num Instances: 9
+ERun 6: 10.668747 205.482193 250.689056 14.036000
+Num Instances: 9
+Num Instances: 9
+ERun 7: 10.798172 206.258651 251.750336 14.095000
+Num Instances: 9
+Num Instances: 9
+ERun 8: 10.878906 205.417588 250.652008 13.944000
+Num Instances: 9
+Num Instances: 9
+ERun 9: 11.370773 205.179260 250.918259 13.934000
+Num Instances: 9
+Num Instances: 9
+ERun 10: 10.868683 205.936569 251.312362 13.974000

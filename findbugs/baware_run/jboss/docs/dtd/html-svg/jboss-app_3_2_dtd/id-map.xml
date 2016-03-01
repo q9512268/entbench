@@ -1,0 +1,10 @@
+<?xml version = "1.0" encoding = "UTF-8"?>
+<id-map>
+	<entry path = "e:jboss-app" id = "comp00001" width = "220" height = "73"/>
+	<entry path = "e:loader-repository" id = "comp00002" width = "298" height = "81"/>
+	<entry path = "e:loader-repository/a:loaderRepositoryClass" id = "comp00003" width = "148" height = "38"/>
+	<entry path = "e:loader-repository-config" id = "comp00004" width = "300" height = "48"/>
+	<entry path = "e:loader-repository-config/a:configParserClass" id = "comp00005" width = "127" height = "38"/>
+	<entry path = "e:module" id = "comp00006" width = "166" height = "38"/>
+	<entry path = "e:service" id = "comp00007" width = "65" height = "38"/>
+</id-map>

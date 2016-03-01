@@ -109,7 +109,7 @@ public class SVGConverter {
     };
 
     /*
-    panda_attribute {
+    attributor {
       int batteryMode = 2;
       if (batteryMode == 0) {
         return @mode<high>;

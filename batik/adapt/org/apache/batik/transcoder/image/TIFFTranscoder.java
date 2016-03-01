@@ -37,7 +37,7 @@ import org.apache.batik.transcoder.keys.StringKey;
  */
 public class TIFFTranscoder@mode<?->X> extends ImageTranscoder@mode<X> {
 
-    panda_attribute {
+    attributor {
       return @mode<low>;
     }
 

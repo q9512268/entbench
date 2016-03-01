@@ -1,34 +1,21 @@
-class org.sunflow.core.renderer.BucketRenderer:1
-class org.sunflow.core.Scene:1
-ERun 0: 12.391983 644.068314 760.923523
-class org.sunflow.core.renderer.BucketRenderer:1
-class org.sunflow.core.Scene:1
-ERun 1: 10.794387 637.704849 752.472260
-class org.sunflow.core.renderer.BucketRenderer:1
-class org.sunflow.core.Scene:1
-ERun 2: 11.006317 628.099594 741.308944
-class org.sunflow.core.renderer.BucketRenderer:1
-class org.sunflow.core.Scene:1
-ERun 3: 11.332322 627.915390 741.272461
-class org.sunflow.core.renderer.BucketRenderer:1
-class org.sunflow.core.Scene:1
-ERun 4: 12.748871 628.250122 743.121215
-class org.sunflow.core.renderer.BucketRenderer:1
-class org.sunflow.core.Scene:1
-ERun 5: 11.569488 626.066635 739.444931
-class org.sunflow.core.renderer.BucketRenderer:1
-class org.sunflow.core.Scene:1
-ERun 6: 10.995621 625.502899 738.197891
-class org.sunflow.core.renderer.BucketRenderer:1
-class org.sunflow.core.Scene:1
-ERun 7: 11.439712 626.748841 740.196594
-class org.sunflow.core.renderer.BucketRenderer:1
-class org.sunflow.core.Scene:1
-ERun 8: 11.969040 627.494522 741.346466
-class org.sunflow.core.renderer.BucketRenderer:1
-class org.sunflow.core.Scene:1
-ERun 9: 12.058487 627.171402 741.084793
-class org.sunflow.core.renderer.BucketRenderer:1
-class org.sunflow.core.Scene:1
-ERun 10: 11.676880 629.082580 742.805176
-Energy: 0.000000 0.000000 742.125073
+Num Instances: 6
+ERun 0: 11.425674 330.947006 396.889358 22.114000
+Num Instances: 6
+ERun 1: 12.426956 306.533539 369.255081 20.489000
+Num Instances: 6
+ERun 2: 13.643112 316.748978 383.099106 21.277000
+Num Instances: 6
+ERun 3: 13.123230 307.867889 372.006408 20.728000
+Num Instances: 6
+ERun 4: 12.499344 309.234177 373.001389 20.832000
+Num Instances: 6
+ERun 5: 12.988785 308.240845 372.301361 20.787000
+Num Instances: 6
+Num Instances: 6
+ERun 7: 12.699417 307.030136 370.752518 20.752000
+Num Instances: 6
+ERun 8: 13.138626 307.549545 371.677185 20.730000
+Num Instances: 6
+ERun 9: 13.527542 309.196595 374.157150 20.894000
+Num Instances: 6
+ERun 10: 12.950623 314.155868 379.529297 21.196000

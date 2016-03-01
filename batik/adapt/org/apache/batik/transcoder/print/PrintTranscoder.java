@@ -79,7 +79,7 @@ import org.w3c.dom.Document;
 public class PrintTranscoder@mode<?->X> extends SVGAbstractTranscoder@mode<X>
     implements Printable {
 
-    panda_attribute {
+    attributor {
       return @mode<low>;
     }
 

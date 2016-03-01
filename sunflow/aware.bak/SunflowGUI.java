@@ -364,10 +364,11 @@ public class SunflowGUI extends javax.swing.JFrame implements UserInterface {
               }
 
               ENT_Util.initModeFile();
-              double[] energyRuns = new double[11];
-
-              for (int k = 0; k < 11; k++) {
+              int PANDA_RUNS = Integer.parseInt(System.getenv("PANDA_RUNS"));
+              for (int k = 0; k < PANDA_RUNS; k++) {
                 double[] before = EnergyCheckUtils.getEnergyStats();
+                ENT_Util.resetStopwatch();
+                ENT_Util.startStopwatch();
 
                 if (runBenchmark) {
                     SunflowAPI.runSystemCheck();
@@ -453,15 +454,9 @@ public class SunflowGUI extends javax.swing.JFrame implements UserInterface {
                 }
 
                 double[] after = EnergyCheckUtils.getEnergyStats();
-                ENT_Util.writeModeFile(String.format("ERun %d: %f %f %f\n", k, after[0]-before[0], after[1]-before[1], after[2]-before[2]));
-                energyRuns[k] = after[2]-before[2];
+                ENT_Util.stopStopwatch();
+                ENT_Util.writeModeFile(String.format("ERun %d: %f %f %f %f\n", k, after[0]-before[0], after[1]-before[1], after[2]-before[2], ENT_Util.elapsedTime()));
               }
-
-              double energyTotal = 0.0;
-              for (int k = 1; k < 11; k++) {
-                energyTotal += energyRuns[k];
-              }
-              ENT_Util.writeModeFile(String.format("Energy: %f %f %f\n", 0.0, 0.0, (energyTotal / 10.0)));
 
               ENT_Util.closeModeFile();
               EnergyCheckUtils.DeallocProfile();

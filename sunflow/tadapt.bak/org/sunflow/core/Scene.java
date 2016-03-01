@@ -38,7 +38,7 @@ public class Scene@mode<?->X> {
     private int threads;
     private boolean lowPriority;
 
-    panda_attribute {
+    attributor {
       /*
       int instances = this.instanceList.getNumPrimitives();
       if (instances > 12) {

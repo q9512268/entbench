@@ -1,0 +1,76 @@
+<?xml version = "1.0"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 20010904//EN" "http://www.w3.org/TR/2001/REC-SVG-20010904/DTD/svg10.dtd">
+<svg width = "184pt" height = "248pt" viewBox = "0 0 184 248" xmlns = "http://www.w3.org/2000/svg" xmlns:xlink = "http://www.w3.org/1999/xlink">
+	<defs>
+		<style type = "text/css"><![CDATA[
+rect.attrGroup { fill: ivory ; stroke: black; stroke-width: 1 }
+rect.element { fill: ivory ; stroke: black; stroke-width: 1 }
+rect.elTypeBkgnd { fill: lightgray ; stroke: none }
+text.elName { font-family: helvetica ; font-size : 10 }
+text.elType { font-family: helvetica ; font-size : 7 }
+text.occurLarge { font-family: helvetica ; font-size : 9; fill : blue }
+text.occurSmall { font-family: helvetica ; font-size : 7; fill : blue }
+rect.typeIconDark { fill : darkslategray }
+circle.occurs { stroke : black ; stroke-width: 1; fill : white }
+circle.ellipsis { fill : black }
+path.typeIconDark { stroke : lightgray ; stroke-width: 1 }
+path.connector { stroke : red ; stroke-width: 1 ; fill: none; }
+path.modelGroup { stroke : black ; stroke-width: 1 ; fill: lightgray; }
+polyline.connector { stroke : red ; stroke-width: 1 ; fill: none; }
+.nodeStyle { fill : blue }
+]]></style>
+	</defs>
+	<rect x = "5" y = "110" width = "56" height = "28" class = "element"/>
+	<polygon class = "nodeStyle" points = "11,112 7,116 11,120 15,116"/>
+	<text x = "16" y = "121" class = "elName">mbean</text>
+	<rect x = "6" y = "125" width = "54" height = "12" class = "elTypeBkgnd"/>
+	<image xlink:href = "../dgmTypeComplex.gif" width = "10" height = "10" x = "51" y = "120"/>
+	<polyline class = "connector" points = "91,19 71,19 71,124 61,124 71,124 71,229 91,229"/>
+	<circle class = "occurs" cx = "97" cy = "19" r = "6"/>
+	<text x = "94" y = "22" class = "occurLarge">?</text>
+	<rect x = "103" y = "5" width = "74" height = "28" class = "element"/>
+	<polygon class = "nodeStyle" points = "109,7 105,11 109,15 113,11"/>
+	<text x = "114" y = "16" class = "elName">description</text>
+	<rect x = "104" y = "20" width = "72" height = "12" class = "elTypeBkgnd"/>
+	<image xlink:href = "../dgmDtString.gif" width = "10" height = "10" x = "167" y = "15"/>
+	<circle class = "occurs" cx = "97" cy = "54" r = "6"/>
+	<text x = "94" y = "57" class = "occurLarge">?</text>
+	<rect x = "103" y = "40" width = "72" height = "28" class = "element"/>
+	<polygon class = "nodeStyle" points = "109,42 105,46 109,50 113,46"/>
+	<text x = "114" y = "51" class = "elName">descriptors</text>
+	<rect x = "104" y = "55" width = "70" height = "12" class = "elTypeBkgnd"/>
+	<image xlink:href = "../dgmTypeComplex.gif" width = "10" height = "10" x = "165" y = "50"/>
+	<rect x = "103" y = "75" width = "45" height = "28" class = "element"/>
+	<polygon class = "nodeStyle" points = "109,77 105,81 109,85 113,81"/>
+	<text x = "114" y = "86" class = "elName">class</text>
+	<rect x = "104" y = "90" width = "43" height = "12" class = "elTypeBkgnd"/>
+	<image xlink:href = "../dgmDtString.gif" width = "10" height = "10" x = "138" y = "85"/>
+	<circle class = "occurs" cx = "97" cy = "124" r = "6"/>
+	<text x = "94" y = "127" class = "occurLarge">*</text>
+	<rect x = "103" y = "110" width = "73" height = "28" class = "element"/>
+	<polygon class = "nodeStyle" points = "109,112 105,116 109,120 113,116"/>
+	<text x = "114" y = "121" class = "elName">constructor</text>
+	<rect x = "104" y = "125" width = "71" height = "12" class = "elTypeBkgnd"/>
+	<image xlink:href = "../dgmTypeComplex.gif" width = "10" height = "10" x = "166" y = "120"/>
+	<circle class = "occurs" cx = "97" cy = "159" r = "6"/>
+	<text x = "94" y = "162" class = "occurLarge">*</text>
+	<rect x = "103" y = "145" width = "62" height = "28" class = "element"/>
+	<polygon class = "nodeStyle" points = "109,147 105,151 109,155 113,151"/>
+	<text x = "114" y = "156" class = "elName">attribute</text>
+	<rect x = "104" y = "160" width = "60" height = "12" class = "elTypeBkgnd"/>
+	<image xlink:href = "../dgmTypeComplex.gif" width = "10" height = "10" x = "155" y = "155"/>
+	<circle class = "occurs" cx = "97" cy = "194" r = "6"/>
+	<text x = "94" y = "197" class = "occurLarge">*</text>
+	<rect x = "103" y = "180" width = "68" height = "28" class = "element"/>
+	<polygon class = "nodeStyle" points = "109,182 105,186 109,190 113,186"/>
+	<text x = "114" y = "191" class = "elName">operation</text>
+	<rect x = "104" y = "195" width = "66" height = "12" class = "elTypeBkgnd"/>
+	<image xlink:href = "../dgmTypeComplex.gif" width = "10" height = "10" x = "161" y = "190"/>
+	<circle class = "occurs" cx = "97" cy = "229" r = "6"/>
+	<text x = "94" y = "232" class = "occurLarge">*</text>
+	<rect x = "103" y = "215" width = "76" height = "28" class = "element"/>
+	<polygon class = "nodeStyle" points = "109,217 105,221 109,225 113,221"/>
+	<text x = "114" y = "226" class = "elName">notification</text>
+	<rect x = "104" y = "230" width = "74" height = "12" class = "elTypeBkgnd"/>
+	<image xlink:href = "../dgmTypeComplex.gif" width = "10" height = "10" x = "169" y = "225"/>
+</svg>

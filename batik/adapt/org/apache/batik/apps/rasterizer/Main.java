@@ -991,23 +991,24 @@ public class Main implements SVGConverterController {
     }
 
     public static void main(String [] args) {
-        PANDA_Util.initModeFile();
+        ENT_Util.initModeFile();
         int PANDA_RUNS = Integer.parseInt(System.getenv("PANDA_RUNS"));
         double energyTotal = 0.0;
-        for (int i = 0; i < PANDA_RUNS; i++) {
+        for (int k = 0; k < PANDA_RUNS; k++) {
+
           double[] before = EnergyCheckUtils.getEnergyStats();
+          ENT_Util.resetStopwatch();
+          ENT_Util.startStopwatch();
 
           (new Main(args)).execute();
 
           //PANDA_Util.stopStopwatch();
           double[] after = EnergyCheckUtils.getEnergyStats();
-          PANDA_Util.writeModeFile(String.format("ERun %d: %f %f %f\n", i, after[0]-before[0], after[1]-before[1], after[2]-before[2]));
-          energyTotal += after[2]-before[2];
+          ENT_Util.stopStopwatch();
+          ENT_Util.writeModeFile(String.format("ERun %d: %f %f %f %f\n", k, after[0]-before[0], after[1]-before[1], after[2]-before[2], ENT_Util.elapsedTime()));
         }
 
-        PANDA_Util.writeModeFile(String.format("Energy: %f %f %f\n", 0.0, 0.0, energyTotal));
-
-        PANDA_Util.closeModeFile();
+        ENT_Util.closeModeFile();
         EnergyCheckUtils.DeallocProfile();
 
         System.exit(0);
