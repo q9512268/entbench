@@ -43,8 +43,6 @@ import edu.umd.cs.findbugs.updates.UpdateChecker;
 import edu.umd.cs.findbugs.updates.UpdateChecker.PluginUpdate;
 import edu.umd.cs.findbugs.util.FutureValue;
 
-import jrapl.EnergyCheckUtils;
-
 /**
  * Static methods and fields useful for working with instances of
  * IFindBugsEngine.
@@ -392,60 +390,63 @@ public abstract class FindBugs {
      *            the TextUICommandLine used to configure the IFindBugsEngine
      */
     @SuppressFBWarnings("DM_EXIT")
-    public static void runMain(IFindBugsEngine@mode<?> findBugs, TextUICommandLine commandLine) throws IOException { 
-        boolean verbose = !commandLine.quiet() || commandLine.setExitCode();
+    public static void runMain(IFindBugsEngine@mode<?> findBugs, TextUICommandLine commandLine) throws IOException {
 
-        FutureValue<Collection<UpdateChecker.PluginUpdate>>
-        updateHolder = null;
-        if (verbose) {
-            updateHolder  = DetectorFactoryCollection.instance().getUpdates();
-        }
+          boolean verbose = !commandLine.quiet() || commandLine.setExitCode();
 
-        IFindBugsEngine@mode<low<=*<=high> c_findBugs = snapshot findBugs ?mode[@mode<low>,@mode<high>];
+          FutureValue<Collection<UpdateChecker.PluginUpdate>>
+          updateHolder = null;
+          if (verbose) {
+              updateHolder  = DetectorFactoryCollection.instance().getUpdates();
+          }
 
-        try {
-            c_findBugs.execute();
-        } catch (InterruptedException e) {
-            assert false; // should not occur
-            checkExitCodeFail(commandLine, e);
-            throw new RuntimeException(e);
-        } catch (RuntimeException e) {
-            checkExitCodeFail(commandLine, e);
-            throw e;
-        } catch (IOException e) {
-            checkExitCodeFail(commandLine, e);
-            throw e;
-        }
+          IFindBugsEngine@mode<low<=*<=high> c_findBugs = snapshot findBugs ?mode[@mode<low>,@mode<high>];
 
-        int bugCount = c_findBugs.getBugCount();
-        int missingClassCount = c_findBugs.getMissingClassCount();
-        int errorCount = c_findBugs.getErrorCount();
+          try {
+              c_findBugs.execute();
+          } catch (InterruptedException e) {
+              assert false; // should not occur
+              checkExitCodeFail(commandLine, e);
+              throw new RuntimeException(e);
+          } catch (RuntimeException e) {
+              checkExitCodeFail(commandLine, e);
+              throw e;
+          } catch (IOException e) {
+              checkExitCodeFail(commandLine, e);
+              throw e;
+          }
 
-        if (verbose) {
-            if (bugCount > 0) {
-                System.err.println("Warnings generated: " + bugCount);
-            }
-            if (missingClassCount > 0) {
-                System.err.println("Missing classes: " + missingClassCount);
-            }
-            if (errorCount > 0) {
-                System.err.println("Analysis errors: " + errorCount);
-            }
-            if (updateHolder.isDone()) {
-                try {
-                    Collection<PluginUpdate> updates = updateHolder.get();
-                    if (!DetectorFactoryCollection.instance().getUpdateChecker().updatesHaveBeenSeenBefore(updates)) {
-                        for(UpdateChecker.PluginUpdate u : updates) {
-                            System.err.println(u);
-                        }
-                    }
-                } catch (InterruptedException e) {
-                    assert true;
-                }
+          int bugCount = c_findBugs.getBugCount();
+          int missingClassCount = c_findBugs.getMissingClassCount();
+          int errorCount = c_findBugs.getErrorCount();
+        
+          if (false) {
+              if (bugCount > 0) {
+                  System.err.println("Warnings generated: " + bugCount);
+              }
+              if (missingClassCount > 0) {
+                  System.err.println("Missing classes: " + missingClassCount);
+              }
+              if (errorCount > 0) {
+                  System.err.println("Analysis errors: " + errorCount);
+              }
+              if (updateHolder.isDone()) {
+                  try {
+                      Collection<PluginUpdate> updates = updateHolder.get();
+                      if (!DetectorFactoryCollection.instance().getUpdateChecker().updatesHaveBeenSeenBefore(updates)) {
+                          for(UpdateChecker.PluginUpdate u : updates) {
+                              System.err.println(u);
+                          }
+                      }
+                  } catch (InterruptedException e) {
+                      assert true;
+                  }
 
-            }
-        }
+              }
+          }
 
+      
+        /*
         if (commandLine.setExitCode()) {
             int exitCode = 0;
             System.err.println("Calculating exit code...");
@@ -465,6 +466,7 @@ public abstract class FindBugs {
 
             System.exit(exitCode);
         }
+        */
     }
 
     /**

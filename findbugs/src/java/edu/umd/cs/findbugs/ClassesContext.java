@@ -12,9 +12,9 @@ public class ClassesContext@mode<?->X> {
 
   attributor {
     int size = appClassList.size();
-    if (size < 1000) {
+    if (size < 2000) {
       return @mode<low>;
-    } else if (size < 2600) {
+    } else if (size < 6000) {
       return @mode<mid>;
     } else {
       return @mode<high>;

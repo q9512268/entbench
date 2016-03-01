@@ -99,7 +99,7 @@ public class FindBugs2@mode<?->X> implements IFindBugsEngine {
 
   private mcase<AnalysisFeatureSetting[]> featureSetting = mcase<AnalysisFeatureSetting[]> {
     low: FindBugs.MIN_EFFORT;
-    mid: FindBugs.LESS_EFFORT;
+    mid: FindBugs.DEFAULT_EFFORT;
     high: FindBugs.MAX_EFFORT;
   };
 
@@ -1203,9 +1203,10 @@ public class FindBugs2@mode<?->X> implements IFindBugsEngine {
 
         ENT_Util.initModeFile();
         int PANDA_RUNS = Integer.parseInt(System.getenv("PANDA_RUNS"));
-        double energyTotal = 0.0;
-        for (int i = 0; i < PANDA_RUNS; i++) {
+        for (int k = 0; k < PANDA_RUNS; k++) {
           double[] before = EnergyCheckUtils.getEnergyStats();
+          ENT_Util.resetStopwatch();
+          ENT_Util.startStopwatch();
 
           // Create FindBugs2 engine
           FindBugs2 findBugs = new FindBugs2();
@@ -1227,11 +1228,17 @@ public class FindBugs2@mode<?->X> implements IFindBugsEngine {
           FindBugs.runMain(findBugs, commandLine);
 
           double[] after = EnergyCheckUtils.getEnergyStats();
-          ENT_Util.writeModeFile(String.format("ERun %d: %f %f %f\n", i, after[0]-before[0], after[1]-before[1], after[2]-before[2]));
-          energyTotal += after[2]-before[2];
+          double diff = after[2]-before[2];
+
+          if (diff < 0) {
+            diff += EnergyCheckUtils.wraparoundValue;
+          }
+
+          ENT_Util.stopStopwatch();
+
+          ENT_Util.writeModeFile(String.format("ERun %d: %f %f %f %f\n", k, after[0]-before[0], after[1]-before[1], diff, ENT_Util.elapsedTime()));
         }
 
-        ENT_Util.writeModeFile(String.format("Energy: %f %f %f\n", 0.0, 0.0, energyTotal));
         ENT_Util.closeModeFile();
         EnergyCheckUtils.DeallocProfile();
 

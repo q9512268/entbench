@@ -85,23 +85,58 @@ modes {low <: mid; mid <: high; }
  *
  * @author David Hovemeyer
  */
-public class FindBugs2@mode<?->X> implements IFindBugsEngine {
+public class FindBugs2@mode<?->X> implements IFindBugsEngine@mode<X> {
 
-  attributor {
-    if (ENT_Util.Battery.percentRemaining() >= 0.75) {
-      return @mode<high>;
-    } else if (ENT_Util.Battery.percentRemaining() >= 0.50) {
-      return @mode<mid>;
-    } else {
-      return @mode<low>;
+    private mcase<int> HACK = mcase<int> { low:0; mid:0; high:0; };
+
+    private ClassesContext@mode<low<=*<=X> appClasses;
+
+    attributor {
+      if (useBat) {
+        if (ENT_Util.Battery.percentRemaining() >= 0.75) {
+          return @mode<high>;
+        } else if (ENT_Util.Battery.percentRemaining() >= 0.50) {
+          return @mode<mid>;
+        } else {
+          return @mode<low>;
+        }
+      } else {
+        int score = pointScore();
+        if (score <= 2) {
+          return @mode<high>;
+        } else if (score <= 8) {
+          return @mode<mid>;
+        } else {
+          return @mode<low>;
+        }
+      }
     }
-  }
 
-  private mcase<AnalysisFeatureSetting[]> featureSetting = mcase<AnalysisFeatureSetting[]> {
-    low: FindBugs.MIN_EFFORT;
-    mid: FindBugs.DEFAULT_EFFORT;
-    high: FindBugs.MAX_EFFORT;
-  };
+    private boolean useBat = false;
+
+    int pointScore() {
+      int score = 0;
+      for (AnalysisFeatureSetting f : this.analysisOptions.analysisFeatureSettingList) {
+        if (f.property == AnalysisFeatures.ACCURATE_EXCEPTIONS ||
+            f.property == AnalysisFeatures.MERGE_SIMILAR_WARNINGS ||
+            f.property == AnalysisFeatures.MODEL_INSTANCEOF ||
+            f.property == AnalysisFeatures.INTERATIVE_OPCODE_STACK_ANALYSIS ||
+            f.property == AnalysisFeatures.TRACK_GUARANTEED_VALUE_DEREFS_IN_NULL_POINTER_ANALYSIS ||
+            f.property == AnalysisFeatures.TRACK_VALUE_NUMBERS_IN_NULL_POINTER_ANALYSIS ||
+            f.property == FindBugsAnalysisFeatures.INTERPROCEDURAL_ANALYSIS ||
+            f.property == FindBugsAnalysisFeatures.INTERPROCEDURAL_ANALYSIS_OF_REFERENCED_CLASSES) {
+              if (f.enabled) {
+                score++;
+              }
+        } else if (f.property == AnalysisFeatures.CONSERVE_SPACE ||
+                   f.property == AnalysisFeatures.SKIP_HUGE_METHODS) {
+            if (!f.enabled) {
+              score++;
+            }
+        }
+      }
+      return score;
+    }
 
     private static final boolean LIST_ORDER = SystemProperties.getBoolean("findbugs.listOrder");
 
@@ -185,6 +220,11 @@ public class FindBugs2@mode<?->X> implements IFindBugsEngine {
         // bug 2815983: no bugs are reported anymore
         // there is no info which value should be default, so using the any one
         rankThreshold = BugRanker.VISIBLE_RANK_MAX;
+
+        String useBatStr = System.getenv("PANDA_BATTERY_RUN");
+        if (useBatStr != null && useBatStr.equals("true")) {
+          useBat = true;
+        }
     }
 
     /**
@@ -199,17 +239,8 @@ public class FindBugs2@mode<?->X> implements IFindBugsEngine {
         this.detectorFactoryCollection = detectorFactoryCollection;
     }
 
-    /**
-     * Execute the analysis. For obscure reasons, CheckedAnalysisExceptions are
-     * re-thrown as IOExceptions. However, these can only happen during the
-     * setup phase where we scan codebases for classes.
-     *
-     * @throws IOException
-     * @throws InterruptedException
-     */
     @Override
     public void execute() throws IOException, InterruptedException {
-        this.analysisOptions.analysisFeatureSettingList = featureSetting;
 
         if (FindBugs.isNoAnalysis()) {
             throw new UnsupportedOperationException("This FindBugs invocation was started without analysis capabilities");
@@ -243,7 +274,7 @@ public class FindBugs2@mode<?->X> implements IFindBugsEngine {
                 buildReferencedClassSet();
 
                 // Create BCEL compatibility layer
-                setAppClassList(appClassList);
+                setAppClassList(appClasses.appClassList);
 
                 // Configure the BugCollection (if we are generating one)
                 FindBugs.configureBugCollection(this);
@@ -289,7 +320,7 @@ public class FindBugs2@mode<?->X> implements IFindBugsEngine {
                     bugReporter = new FilterBugReporter(bugReporter, m, false);
                 }
 
-                if (appClassList.size() == 0) {
+                if (appClasses.appClassList.size() == 0) {
                     Map<String, ICodeBaseEntry> codebase = classPath.getApplicationCodebaseEntries();
                     if (analysisOptions.noClassOk) {
                         System.err.println("No classfiles specified; output will have no warnings");
@@ -328,6 +359,7 @@ public class FindBugs2@mode<?->X> implements IFindBugsEngine {
             throw e;
         }
     }
+
 
     /**
      * Protected to allow Eclipse plugin remember some cache data for later reuse
@@ -447,7 +479,7 @@ public class FindBugs2@mode<?->X> implements IFindBugsEngine {
 
     @Override
     public void setAnalysisFeatureSettings(AnalysisFeatureSetting[] settingList) {
-        //this.analysisOptions.analysisFeatureSettingList = settingList;
+        this.analysisOptions.analysisFeatureSettingList = settingList;
     }
 
     @Override
@@ -695,12 +727,28 @@ public class FindBugs2@mode<?->X> implements IFindBugsEngine {
 
         builder.scanNestedArchives(analysisOptions.scanNestedArchives);
 
+        String recovstr = System.getenv("PANDA_RECOVER");
+        boolean recover = true;
+        if (recovstr != null && recovstr.equals("false")) {
+          recover = false;
+        } 
+
         builder.build(classPath, progress);
 
         appClassList = builder.getAppClassList();
+        ClassesContext@mode<?> d_appClasses = new ClassesContext@mode<?>(appClassList);
+        try {
+          appClasses = snapshot d_appClasses ?mode[@mode<low>,@mode<X>];
+        } catch (Exception e) {
+          appClasses = snapshotforce d_appClasses ?mode[@mode<low>,@mode<X>];
+          if (recover) {
+            this.analysisOptions.analysisFeatureSettingList = FindBugs.MIN_EFFORT;
+            configureAnalysisFeatures();
+          } 
+        }
 
         if (PROGRESS) {
-            System.out.println(appClassList.size() + " classes scanned");
+            System.out.println(appClasses.appClassList.size() + " classes scanned");
         }
 
         // If any of the application codebases contain source code,
@@ -731,16 +779,16 @@ public class FindBugs2@mode<?->X> implements IFindBugsEngine {
         Set<String> referencedPackageSet = new HashSet<String>();
 
         LinkedList<ClassDescriptor> workList = new LinkedList<ClassDescriptor>();
-        workList.addAll(appClassList);
+        workList.addAll(appClasses.appClassList);
 
         Set<ClassDescriptor> seen = new HashSet<ClassDescriptor>();
-        Set<ClassDescriptor> appClassSet = new HashSet<ClassDescriptor>(appClassList);
+        Set<ClassDescriptor> appClassSet = new HashSet<ClassDescriptor>(appClasses.appClassList);
 
         Set<ClassDescriptor> badAppClassSet = new HashSet<ClassDescriptor>();
         HashSet<ClassDescriptor> knownDescriptors = new HashSet<ClassDescriptor>(DescriptorFactory.instance()
                 .getAllClassDescriptors());
         int count = 0;
-        Set<ClassDescriptor> addedToWorkList = new HashSet<ClassDescriptor>(appClassList);
+        Set<ClassDescriptor> addedToWorkList = new HashSet<ClassDescriptor>(appClasses.appClassList);
 
         // add fields
         //noinspection ConstantIfStatement
@@ -831,7 +879,7 @@ public class FindBugs2@mode<?->X> implements IFindBugsEngine {
             }
         }
         // Delete any application classes that could not be read
-        appClassList.removeAll(badAppClassSet);
+        appClasses.appClassList.removeAll(badAppClassSet);
         DescriptorFactory.instance().purge(badAppClassSet);
 
         for (ClassDescriptor d : DescriptorFactory.instance().getAllClassDescriptors()) {
@@ -979,7 +1027,7 @@ public class FindBugs2@mode<?->X> implements IFindBugsEngine {
             int[] classesPerPass = new int[executionPlan.getNumPasses()];
             classesPerPass[0] = referencedClassSet.size();
             for (int i = 0; i < classesPerPass.length; i++) {
-                classesPerPass[i] = i == 0 ? referencedClassSet.size() : appClassList.size();
+                classesPerPass[i] = i == 0 ? referencedClassSet.size() : appClasses.appClassList.size();
             }
             progress.predictPassCount(classesPerPass);
             XFactory factory = AnalysisContext.currentXFactory();
@@ -1018,7 +1066,7 @@ public class FindBugs2@mode<?->X> implements IFindBugsEngine {
                 // application classes.
                 // On subsequent passes, we apply detector only to application
                 // classes.
-                Collection<ClassDescriptor> classCollection = (isNonReportingFirstPass) ? referencedClassSet : appClassList;
+                Collection<ClassDescriptor> classCollection = (isNonReportingFirstPass) ? referencedClassSet : appClasses.appClassList;
                 AnalysisContext.currentXFactory().canonicalizeAll();
                 if (PROGRESS || LIST_ORDER) {
                     System.out.printf("%6d : Pass %d: %d classes%n", (System.currentTimeMillis() - startTime)/1000, passCount,  classCollection.size());
@@ -1203,13 +1251,16 @@ public class FindBugs2@mode<?->X> implements IFindBugsEngine {
 
         ENT_Util.initModeFile();
         int PANDA_RUNS = Integer.parseInt(System.getenv("PANDA_RUNS"));
+
+        double energyTotal = 0.0;
         for (int k = 0; k < PANDA_RUNS; k++) {
           double[] before = EnergyCheckUtils.getEnergyStats();
           ENT_Util.resetStopwatch();
           ENT_Util.startStopwatch();
 
+
           // Create FindBugs2 engine
-          FindBugs2 findBugs = new FindBugs2();
+          FindBugs2@mode<?> findBugs = new FindBugs2@mode<?>();
 
           // Parse command line and configure the engine
           TextUICommandLine commandLine = new TextUICommandLine();
@@ -1223,7 +1274,6 @@ public class FindBugs2@mode<?->X> implements IFindBugsEngine {
               return;
           }
           // Away we go!
-
 
           FindBugs.runMain(findBugs, commandLine);
 
@@ -1241,8 +1291,6 @@ public class FindBugs2@mode<?->X> implements IFindBugsEngine {
 
         ENT_Util.closeModeFile();
         EnergyCheckUtils.DeallocProfile();
-
-
     }
 
 
