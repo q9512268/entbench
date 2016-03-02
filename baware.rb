@@ -3,7 +3,7 @@
 require 'terminal-table'
 
 #$BENCH = {batik:"batik-1.7", jspider:"jspider", findbugs:"findbugs-3.0.1-new", pagerank:"jung"}
-$BENCH = {sunflow:"sunflow", crypto:"crypto"}
+$BENCH = {sunflow:"sunflow", crypto:"crypto", findbugs:"findbugs"}
 
 $DIR   = "baware_run"
 $RUNS = [
