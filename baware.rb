@@ -70,7 +70,6 @@ $BENCH.each do |bench, path|
 end 
 
 # Dump energy saved tables
-puts "bench energy_saver/managed % managed/full_throttle % energy_saver/full_throttle %"
 rows = []
 $BENCH.each do |bench, path|
   es_m = consumedtable[bench][10] - consumedtable[bench][11]
