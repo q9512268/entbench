@@ -7,7 +7,7 @@ if [ $# -ne 1 ]; then
   exit
 fi
 
-export PANDA_RUNS=10
+export PANDA_RUNS=51
 
 runs=(
   sd.sh

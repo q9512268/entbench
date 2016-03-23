@@ -2,8 +2,7 @@
 
 require 'terminal-table'
 
-#$BENCH = {batik:"batik-1.7", jspider:"jspider", findbugs:"findbugs-3.0.1-new", pagerank:"jung"}
-$BENCH = {sunflow:"sunflow", crypto:"crypto", findbugs:"findbugs"}
+$BENCH = {sunflow:"sunflow", jspider:"jspider", crypto:"crypto", findbugs:"findbugs", pagerank:"pagerank", batik:"batik"}
 
 $DIR   = "baware_run"
 $RUNS = [
@@ -71,19 +70,39 @@ end
 
 # Dump energy saved tables
 rows = []
+rowsp = []
+rowse = []
 $BENCH.each do |bench, path|
-  es_m = consumedtable[bench][10] - consumedtable[bench][11]
-  es_mp = (es_m / consumedtable[bench][10]) * 100.0
+  p consumedtable[bench]
 
-  m_ft = consumedtable[bench][14] - consumedtable[bench][15]
-  m_ftp = (es_m / consumedtable[bench][14]) * 100.0
+  es_m = consumedtable[bench][11] - consumedtable[bench][10]
+  es_mp = (es_m / ((consumedtable[bench][11] + consumedtable[bench][10]) / 2.0)) * 100.0
+  es_me = (es_m / consumedtable[bench][11]) * 100.0
 
-  es_ft = consumedtable[bench][16] - consumedtable[bench][17]
-  es_ftp = (es_m / consumedtable[bench][16]) * 100.0
+  m_ft = consumedtable[bench][15] - consumedtable[bench][14]
+  m_ftp = (m_ft / ((consumedtable[bench][15] + consumedtable[bench][14]) / 2.0)) * 100.0
+  m_fte = (m_ft / consumedtable[bench][15]) * 100.0
+
+  es_ft = consumedtable[bench][17] - consumedtable[bench][16]
+  es_ftp = (es_ft / ((consumedtable[bench][17] + consumedtable[bench][17]) / 2.0)) * 100.0
+  es_fte = (es_ft / consumedtable[bench][17]) * 100.0
   
-  rows << [bench, es_m, es_mp, m_ft, m_ftp, es_ft, es_ftp]
-  rows << :separator
-end
+  rows << [bench, es_m.round(2), m_ft.round(2), es_ft.round(2)]
+  rowsp << [bench, es_mp.round(2), m_ftp.round(2), es_ftp.round(2)]
+  rowse << [bench, es_me.round(2), m_fte.round(2), es_fte.round(2)]
 
-table = Terminal::Table.new :headings => ["Bench", "energy_saver/managed", "%", "managed/full_throttle", "%", "energy_saver/full_throttle", "%"], :rows => rows
+  rows << :separator
+  rowsp << :separator
+  rowse << :separator
+end 
+
+table = Terminal::Table.new :title => "Raw Difference", :headings => ["Bench", "saver-managed", "managed-full", "saver-full"], :rows => rows
 puts table
+
+#table2 = Terminal::Table.new :title => "Percent Difference", :headings => ["Bench", "saver-managed", "managed-full", "saver-full"], :rows => rowsp
+#puts table2
+
+table3 = Terminal::Table.new :title => "Percent Error (Against full-throttle)", :headings => ["Bench", "saver-managed", "managed-full", "saver-full"], :rows => rowse
+puts table3
+
+

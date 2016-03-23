@@ -40,9 +40,9 @@ public class BucketRenderer@mode<?->X> implements ImageSampler@mode<X> {
 
     // anti-aliasing
     private mcase<int> minAADepth = mcase<int> {
-      low: 0;
-      mid: 0;
-      high: 0;
+      low: -1;
+      mid: -1;
+      high: -1;
     };
 
     private mcase<int> maxAADepth = mcase<int> {

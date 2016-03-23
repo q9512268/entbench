@@ -84,7 +84,7 @@ public class RSA@mode<?->X> {
     } catch (RuntimeException e) {
       data = snapshotforce datadyn ?mode[@mode<low>,@mode<X>]; 
       if (recover) {
-        keySize = 1024;
+        keySize = 768;
         this.init();
       }
     }
@@ -97,8 +97,24 @@ public class RSA@mode<?->X> {
   }
   
   public void runMultiEncryptDecrypt(String algorithm, String inputFile) {
+    String recovstr = System.getenv("PANDA_RECOVER");
+    boolean recover = true;
+    if (recovstr != null && recovstr.equals("false")) {
+      recover = false;
+    } 
+
     Data@mode<?> datadyn = Util.getTestData(inputFile);
-    Data@mode<*> data = snapshot datadyn ?mode[@mode<low>,@mode<X>];
+    Data@mode<low <= * <= X> data; 
+
+    try { 
+      data = snapshot datadyn ?mode[@mode<low>,@mode<X>];
+    } catch (RuntimeException e) {
+      data = snapshotforce datadyn ?mode[@mode<low>,@mode<X>]; 
+      if (recover) {
+        keySize = 768;
+        this.init();
+      }
+    }
 
     int blockSize = 64;
     byte [] fullIndata = data.stream;

@@ -22,8 +22,6 @@ import org.sunflow.system.Timer;
 import org.sunflow.system.UI;
 import org.sunflow.system.UI.Module;
 
-import ent.runtime.*;
-
 public class BucketRenderer@mode<?->X> implements ImageSampler@mode<X> {
     private Scene@mode<low <= * <= X> scene;
     private Display display;
@@ -39,17 +37,8 @@ public class BucketRenderer@mode<?->X> implements ImageSampler@mode<X> {
     private boolean dumpBuckets;
 
     // anti-aliasing
-    private mcase<int> minAADepth = mcase<int> {
-      low: -1;
-      mid: -1;
-      high: -1;
-    };
-
-    private mcase<int> maxAADepth = mcase<int> {
-      low: 0;
-      mid: 1;
-      high: 2;
-    };
+    private int minAADepth;
+    private int maxAADepth;
 
     private int superSampling;
     private float contrastThreshold;
@@ -72,14 +61,26 @@ public class BucketRenderer@mode<?->X> implements ImageSampler@mode<X> {
     private float fhs;
 
     attributor {
-      if (ENT_Util.Battery.percentRemaining() >= 0.75) {
-        return @mode<high>;
-      } else if (ENT_Util.Battery.percentRemaining() >= 0.50) {
-        return @mode<mid>;
+      if (useBat) {
+        if (ENT_Util.Battery.percentRemaining() >= 0.75) {
+          return @mode<high>;
+        } else if (ENT_Util.Battery.percentRemaining() >= 0.50) {
+          return @mode<mid>;
+        } else {
+          return @mode<low>;
+        }
       } else {
-        return @mode<low>;
+        if (this.maxAADepth >= 2) {
+          return @mode<low>;
+        } else if (this.maxAADepth >= 1) {
+          return @mode<mid>;
+        } else {
+          return @mode<high>;
+        }
       }
     }
+
+    private boolean useBat = false;
 
     public BucketRenderer() {
         bucketSize = 32;
@@ -89,10 +90,34 @@ public class BucketRenderer@mode<?->X> implements ImageSampler@mode<X> {
         filterName = "box";
         jitter = false; // off by default
         dumpBuckets = false; // for debugging only - not user settable
+        
+        String useBatStr = System.getenv("PANDA_BATTERY_RUN");
+        if (useBatStr != null && useBatStr.equals("true")) {
+          useBat = true;
+        }
+    }
+
+    public modesafe void preprepare(Options options) {
+        minAADepth = options.getInt("aa.min", minAADepth);
+        maxAADepth = options.getInt("aa.max", maxAADepth);
     }
 
     public boolean prepare(Options options, Scene@mode<?> scene, int w, int h) {
-        this.scene = snapshot scene ?mode[@mode<low>, @mode<X>];
+        String recovstr = System.getenv("PANDA_RECOVER");
+        boolean recover = true;
+        if (recovstr != null && recovstr.equals("false")) {
+          recover = false;
+        }
+
+        try {
+          this.scene = snapshot scene ?mode[@mode<low>, @mode<X>];
+        } catch (RuntimeException e) {
+          this.scene = snapshotforce scene ?mode[@mode<low>, @mode<X>];
+          if (recover) {
+            minAADepth = -1;
+            maxAADepth = 0;
+          }
+        }
 
         imageWidth = w;
         imageHeight = h;
@@ -101,9 +126,6 @@ public class BucketRenderer@mode<?->X> implements ImageSampler@mode<X> {
         bucketSize = options.getInt("bucket.size", bucketSize);
         bucketOrderName = options.getString("bucket.order", bucketOrderName);
 
-        //minAADepth = options.getInt("aa.min", minAADepth);
-        //maxAADepth = options.getInt("aa.max", maxAADepth);
-        
         superSampling = options.getInt("aa.samples", superSampling);
         displayAA = options.getBoolean("aa.display", displayAA);
         jitter = options.getBoolean("aa.jitter", jitter);
@@ -117,14 +139,11 @@ public class BucketRenderer@mode<?->X> implements ImageSampler@mode<X> {
         bucketCoords = bucketOrder.getBucketSequence(numBucketsX, numBucketsY);
         // validate AA options
 
-        //minAADepth = MathUtils.clamp(minAADepth, -4, 5);
-        //maxAADepth = MathUtils.clamp(maxAADepth, minAADepth, 5);
+        minAADepth = MathUtils.clamp(minAADepth, -4, 5);
+        maxAADepth = MathUtils.clamp(maxAADepth, minAADepth, 5);
         superSampling = MathUtils.clamp(superSampling, 1, 256);
 
-        System.out.format("minAADepth:%d maxAADepth:%d superSampling:%d\n", minAADepth, maxAADepth, superSampling);
-        
         invSuperSampling = 1.0 / superSampling;
-
 
         // compute AA stepping sizes
         subPixelSize = (maxAADepth > 0) ? (1 << maxAADepth) : 1;

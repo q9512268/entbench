@@ -68,7 +68,6 @@ public class RealtimeBenchmark extends SunflowAPI {
         int frames = 0;
 
         while (phi < totalPhi) {
-
             eye.x = 30 * (float) Math.cos(phi);
             eye.y = 30 * (float) Math.sin(phi);
             phi += Math.PI / 30;

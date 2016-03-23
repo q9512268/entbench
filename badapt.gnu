@@ -29,11 +29,20 @@ plot './dat/badapt_batik_consumed.dat' using 2:xtic(1) ti col lc rgb "#DC143C" ,
 
 set output "./dat/badapt_pagerank_consumed.png"
 
+set title "Pagerank Battery Adapt Run"
+
+plot './dat/badapt_pagerank_consumed.dat' using 2:xtic(1) ti col lc rgb "#DC143C" ,\
+     '' u 3 ti col lc rgb "#0000CD",\
+     '' u 4 ti col lc rgb "#2E8B57",\
+
+set output "./dat/badapt_crypto_consumed.png"
+
 set title "Crypto Battery Adapt Run"
 
 plot './dat/badapt_crypto_consumed.dat' using 2:xtic(1) ti col lc rgb "#DC143C" ,\
      '' u 3 ti col lc rgb "#0000CD",\
      '' u 4 ti col lc rgb "#2E8B57",\
+
 
 set output "./dat/badapt_monte_carlo_consumed.png"
 

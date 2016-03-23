@@ -58,9 +58,9 @@ public class Benchmark implements BenchmarkTest, UserInterface, Display {
             if (args.length > 2)
                 resolution = Integer.parseInt(args[2]);
             Benchmark benchmark = new Benchmark(resolution, true, true, false, threads);
-            benchmark.kernelBegin();
+            //benchmark.kernelBegin();
             benchmark.kernelMain();
-            benchmark.kernelEnd();
+            //benchmark.kernelEnd();
         }
     }
 
@@ -84,9 +84,10 @@ public class Benchmark implements BenchmarkTest, UserInterface, Display {
         // fetch reference image from resources (jar file or classpath)
         if (saveOutput)
             return;
-        URL imageURL = Benchmark.class.getResource(String.format("/resources/golden_%04X.png", resolution));
-        if (imageURL == null)
-            UI.printError(Module.BENCH, "Unable to find reference frame!");
+        //URL imageURL = Benchmark.class.getResource(String.format("/resources/golden_%04X.png", resolution));
+        //if (imageURL == null)
+            //UI.printError(Module.BENCH, "Unable to find reference frame!");
+        /*
         UI.printInfo(Module.BENCH, "Loading reference image from: %s", imageURL);
         try {
             BufferedImage bi = ImageIO.read(imageURL);
@@ -99,6 +100,7 @@ public class Benchmark implements BenchmarkTest, UserInterface, Display {
         } catch (IOException e) {
             UI.printError(Module.BENCH, "Unable to load reference frame!");
         }
+        */
     }
 
     public void execute() {
@@ -209,11 +211,11 @@ public class Benchmark implements BenchmarkTest, UserInterface, Display {
             instance("teapot.instance2", "teapot");
 
             // PANDA_MOD : Trying to add more instances
-            instance("teapot.instance3", "teapot");
-            instance("teapot.instance4", "teapot");
-            instance("teapot.instance5", "teapot");
-            instance("teapot.instance6", "teapot");
-            instance("teapot.instance7", "teapot");
+            //instance("teapot.instance3", "teapot");
+            //instance("teapot.instance4", "teapot");
+            //instance("teapot.instance5", "teapot");
+            //instance("teapot.instance6", "teapot");
+            //instance("teapot.instance7", "teapot");
         }
 
         private void sphere(String name, String shaderName, float x, float y, float z, float radius) {

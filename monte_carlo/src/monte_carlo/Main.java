@@ -9,12 +9,39 @@ package monte_carlo;
 
 import utils.kernel;
 
+import jrapl.EnergyCheckUtils;
+
+modes {low <: mid; mid <: high; }
+
 public class Main {
     static void runBenchmark() {
-        // Loop a few times, to create some more work in each ops.
-        for (int i = kernel.MC_LOOPS; i > 0; i --) {
-            MonteCarlo.main();
+      ENT_Util.initModeFile();
+      int PANDA_RUNS = Integer.parseInt(System.getenv("PANDA_RUNS"));
+
+      // Loop a few times, to create some more work in each ops.
+      for (int k = 0; k < PANDA_RUNS; k++) {
+        double[] before = EnergyCheckUtils.getEnergyStats();
+        ENT_Util.resetStopwatch();
+        ENT_Util.startStopwatch();
+
+        MonteCarlo@mode<?> mcdyn = new MonteCarlo@mode<?>();
+        MonteCarlo@mode<*> mc = snapshot mcdyn ?mode[@mode<low>,@mode<high>];
+
+        mc.run();
+
+        double[] after = EnergyCheckUtils.getEnergyStats();
+
+        double diff = after[2]-before[2];
+
+        if (diff < 0) {
+          diff += EnergyCheckUtils.wraparoundValue;
         }
+
+        ENT_Util.writeModeFile(String.format("ERun %d: %f %f %f %f\n", k, after[0]-before[0], after[1]-before[1], diff, ENT_Util.elapsedTime()));
+      }
+
+      ENT_Util.closeModeFile();
+      EnergyCheckUtils.DeallocProfile();
     }
     
     public static void main(String[] args) throws Exception {

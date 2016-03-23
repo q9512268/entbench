@@ -3,7 +3,7 @@
 require 'terminal-table'
 
 #$BENCH = {batik:"batik-1.7", jspider:"jspider", sunflow:"sunflow", findbugs:"findbugs-3.0.1-new", pagerank:"jung"}
-$BENCH = {sunflow:"sunflow", batik:"batik", crypto:"crypto", monte_carlo:"monte_carlo", findbugs:"findbugs"}
+$BENCH = {sunflow:"sunflow", jspider:"jspider", batik:"batik", crypto:"crypto", monte_carlo:"monte_carlo", findbugs:"findbugs", pagerank:"pagerank"}
 $DIR   = "adapt_run"
 $RUNS = [
   "run_sd_hc.txt",  #0
@@ -57,32 +57,48 @@ end
 # Dump energy consumed diff
 rows = []
 rowsp = []
+rowse = []
 $BENCH.each do |bench, path|
   ld_ft_m = consumedtable[bench][6]-consumedtable[bench][7]
-  ld_ft_mp = (ld_ft_m / consumedtable[bench][6]) * 100.0
-  ld_m_es = consumedtable[bench][7]-consumedtable[bench][8]
-  ld_m_esp = (ld_ft_m / consumedtable[bench][7]) * 100.0
+  ld_ft_mp = (ld_ft_m / ((consumedtable[bench][6] + consumedtable[bench][7]) / 2.0)) * 100.0
+  ld_ft_me = (ld_ft_m / consumedtable[bench][6]) * 100.0
+
+  ld_ft_es = consumedtable[bench][6]-consumedtable[bench][8]
+  ld_ft_esp = (ld_ft_es / ((consumedtable[bench][6] + consumedtable[bench][8]) / 2.0)) * 100.0
+  ld_ft_ese = (ld_ft_es / consumedtable[bench][6]) * 100.0
 
   md_ft_m = consumedtable[bench][3]-consumedtable[bench][4]
-  md_ft_mp = (ld_ft_m / consumedtable[bench][3]) * 100.0
-  md_m_es = consumedtable[bench][4]-consumedtable[bench][5]
-  md_m_esp = (ld_ft_m / consumedtable[bench][4]) * 100.0
+  md_ft_mp = (md_ft_m / ((consumedtable[bench][3] + consumedtable[bench][4]) / 2.0)) * 100.0
+  md_ft_me = (md_ft_m / consumedtable[bench][3]) * 100.0
+
+  md_ft_es = consumedtable[bench][3]-consumedtable[bench][5]
+  md_ft_esp = (md_ft_es / ((consumedtable[bench][3] + consumedtable[bench][5]) / 2.0)) * 100.0
+  md_ft_ese = (md_ft_es / consumedtable[bench][3]) * 100.0
 
   sd_ft_m = consumedtable[bench][0]-consumedtable[bench][1]
-  sd_ft_mp = (ld_ft_m / consumedtable[bench][0]) * 100.0
-  sd_m_es = consumedtable[bench][1]-consumedtable[bench][2]
-  sd_m_esp = (ld_ft_m / consumedtable[bench][2]) * 100.0
+  sd_ft_mp = (sd_ft_m / ((consumedtable[bench][0] + consumedtable[bench][1]) / 2.0)) * 100.0
+  sd_ft_me = (sd_ft_m / consumedtable[bench][0]) * 100.0
 
-  rows << [bench, ld_ft_m, ld_m_es, md_ft_m, md_m_es, sd_ft_m, sd_m_es]
-  rowsp << [bench, ld_ft_mp, ld_m_esp, md_ft_mp, md_m_esp, sd_ft_mp, sd_m_esp]
+  sd_ft_es = consumedtable[bench][0]-consumedtable[bench][2]
+  sd_ft_esp = (sd_ft_es / ((consumedtable[bench][0] + consumedtable[bench][2]) / 2.0)) * 100.0
+  sd_ft_ese = (sd_ft_es / consumedtable[bench][0]) * 100.0
+
+  rows << [bench, ld_ft_m.round(2), ld_ft_es.round(2), md_ft_m.round(2), md_ft_es.round(2), sd_ft_m.round(2), sd_ft_es.round(2)]
+  rowsp << [bench, ld_ft_mp.round(2), ld_ft_esp.round(2), md_ft_mp.round(2), md_ft_esp.round(2), sd_ft_mp.round(2), sd_ft_esp.round(2)]
+  rowse << [bench, ld_ft_me.round(2), ld_ft_ese.round(2), md_ft_me.round(2), md_ft_ese.round(2), sd_ft_me.round(2), sd_ft_ese.round(2)]
 
   rows << :separator
   rowsp << :separator
+  rowse << :separator
 end
 
-table = Terminal::Table.new :headings => ["Bench", "ld:full-managed", "ld:managed-saver", "md:full-managed", "md:managed-saver", "sd:full-managed", "sd:managed-saver"], :rows => rows
+table = Terminal::Table.new :title => "Raw Difference", :headings => ["Bench", "ld:full-managed", "ld:full-saver", "md:full-managed", "md:full-saver", "sd:full-managed", "sd:full-saver"], :rows => rows
 puts table
 
-table2 = Terminal::Table.new :headings => ["Bench", "ld:full-managed", "ld:managed-saver", "md:full-managed", "md:managed-saver", "sd:full-managed", "sd:managed-saver"], :rows => rowsp
+#table2 = Terminal::Table.new :title => "Percent Difference", :headings => ["Bench", "ld:full-managed", "ld:full-saver", "md:full-managed", "md:full-saver", "sd:full-managed", "sd:full-saver"], :rows => rowsp
+#puts table2
 
-puts table2
+table3 = Terminal::Table.new :title => "Percent Error (Against full-throttle)", :headings => ["Bench", "ld:full-managed", "ld:full-saver", "md:full-managed", "md:full-saver", "sd:full-managed", "sd:full-saver"], :rows => rowse
+puts table3
+
+

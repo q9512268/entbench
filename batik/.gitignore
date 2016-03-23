@@ -2,3 +2,5 @@
 *.bak
 *.jpg
 *.png
+aware_run/*.txt
+adapt_run/*.txt

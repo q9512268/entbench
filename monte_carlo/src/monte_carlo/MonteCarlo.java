@@ -43,28 +43,33 @@ import utils.Stopwatch;
  *
  */
 
-public class MonteCarlo {
+public class MonteCarlo@mode<?->X> {
+    attributor {
+      if (ENT_Util.Battery.percentRemaining() >= 0.75) {
+        return @mode<high>;
+      } else if (ENT_Util.Battery.percentRemaining() >= 0.50) {
+        return @mode<mid>;
+      } else {
+        return @mode<low>;
+      }
+    } 
+
+    mcase<int> cycles = mcase<int>{low:10000000; mid:16777216; high:20000000; };
+
     final static int SEED = 113;
-    
-    public static void main() {
-        MonteCarlo mc = new MonteCarlo();
-        mc.run();
-    }
     
     public final double num_flops(int Num_samples) {
         // 3 flops in x^2+y^2 and 1 flop in random routine
         
         return ((double) Num_samples)* 4.0;
         
-    }
-    
-    
+    } 
     
     public final double integrate(int numSamples) {
       Random R = new Random(SEED);
+
       int underCurve = 0;
       for (int count = 0; count < numSamples; count++) {
-          
         double x = R.nextDouble();
         double y = R.nextDouble();
         
@@ -76,22 +81,12 @@ public class MonteCarlo {
     }
     
     public double measureMonteCarlo() {
-      Stopwatch Q = new Stopwatch();
-      
-      // Cycles set to integrate into SPECjvm2008 benchmark harness.  Testing done on
-      // Apple Macbook Pro 2.0Ghz Intel Core Duo, 1GB 667mhz SODIMM
-      // J2SE 5.0_06 (Apple)
-      // Tuning: -server
-      //int cycles=16777216;
-      int cycles=30000000;
       double x =0.0;
       
-      Q.start();
       x = integrate(cycles);
-      Q.stop();
       
       System.out.println(x);
-      return num_flops(cycles) / Q.read() * 1.0e-6;
+      return 0;
     }
     
     public void run() {

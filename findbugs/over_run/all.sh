@@ -15,7 +15,7 @@ runs=(
   ld.sh
 )
 
-export PANDA_RUNS=10
+export PANDA_RUNS=11
 
 for rn in ${runs[@]}; do
   echo "Starting ${rn}"
