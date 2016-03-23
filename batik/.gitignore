@@ -3,4 +3,5 @@
 *.jpg
 *.png
 aware_run/*.txt
+baware_run/*.txt
 adapt_run/*.txt

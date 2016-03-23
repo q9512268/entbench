@@ -1,0 +1,277 @@
+API    error : JVM available memory is below 800 MB (found 208 MB only).
+Please make sure you launched the program with the -Xmx command line options.
+API    error : You do not appear to be running Sun's server JVM
+Performance may suffer
+API    detail: Java environment settings:
+API    detail:   * Max memory available : 208 MB
+API    detail:   * Virtual machine name : Java HotSpot(TM) Client VM
+API    detail:   * Operating system     : Linux
+API    detail:   * CPU architecture     : arm
+SYS    detail: Resolving include path "./large.sc" ...
+SYS    info  : Adding include search path: "/home/pi/Projects/entbench/sunflow/adapt_run"
+SYS    info  : Adding texture search path: "/home/pi/Projects/entbench/sunflow/adapt_run"
+API    info  : Parsing "./large.sc" ...
+API    info  : Reading image settings ...
+API    detail: Updating options object "::options"
+API    info  : Reading pinhole camera ...
+API    detail: Updating camera object "camera_1"
+API    detail: Updating options object "::options"
+API    detail: Updating geometry object "sunsky_1"
+API    detail: Updating shader object "sunsky_1.shader"
+API    detail: Updating instance object "sunsky_1.instance"
+API    detail: Updating light object "sunsky_1.light"
+API    info  : Reading shader: default ...
+API    detail: Updating shader object "default"
+API    info  : Reading shader: shiny_orange ...
+API    detail: Updating shader object "shiny_orange"
+API    info  : Reading shader: shiny_lime ...
+API    detail: Updating shader object "shiny_lime"
+API    info  : Reading shader: shiny_pink ...
+API    detail: Updating shader object "shiny_pink"
+API    info  : Reading shader: shiny_cyan ...
+API    detail: Updating shader object "shiny_cyan"
+API    info  : Reading shader: simple ...
+API    detail: Updating shader object "simple"
+API    info  : Reading shader: simple_red ...
+API    detail: Updating shader object "simple_red"
+API    info  : Reading shader: simple_green ...
+API    detail: Updating shader object "simple_green"
+API    info  : Reading shader: simple_blue ...
+API    detail: Updating shader object "simple_blue"
+API    info  : Reading shader: simple_yellow ...
+API    detail: Updating shader object "simple_yellow"
+API    info  : Reading shader: floor ...
+API    detail: Updating shader object "floor"
+API    info  : Reading gumbo: gumbo_1 ... 
+API    detail: Updating geometry object "gumbo_1"
+API    detail: Updating instance object "gumbo_1.instance"
+API    info  : Reading gumbo: gumbo_2 ... 
+API    detail: Updating geometry object "gumbo_2"
+API    detail: Updating instance object "gumbo_2.instance"
+API    info  : Reading gumbo: gumbo_3 ... 
+API    detail: Updating geometry object "gumbo_3"
+API    detail: Updating instance object "gumbo_3.instance"
+API    info  : Reading gumbo: gumbo_4 ... 
+API    detail: Updating geometry object "gumbo_4"
+API    detail: Updating instance object "gumbo_4.instance"
+API    info  : Reading plane ...
+API    detail: Updating geometry object "plane_1"
+API    detail: Updating instance object "plane_1.instance"
+API    info  : Reading teapot: teapot_0 ... 
+API    detail: Updating geometry object "teapot_0"
+API    detail: Updating instance object "teapot_0.instance"
+API    info  : Reading teapot: teapot_1 ... 
+API    detail: Updating geometry object "teapot_1"
+API    detail: Updating instance object "teapot_1.instance"
+API    info  : Reading teapot: teapot_2 ... 
+API    detail: Updating geometry object "teapot_2"
+API    detail: Updating instance object "teapot_2.instance"
+API    info  : Reading teapot: teapot_3 ... 
+API    detail: Updating geometry object "teapot_3"
+API    detail: Updating instance object "teapot_3.instance"
+API    info  : Reading teapot: teapot_4 ... 
+API    detail: Updating geometry object "teapot_4"
+API    detail: Updating instance object "teapot_4.instance"
+API    info  : Done parsing.
+API    info  : Parsing time: 459ms
+API    detail: Updating options object "::options"
+API    info  : Building scene instance list for rendering ...
+API    info  : Building scene light list for rendering ...
+SCENE  info  : Scene stats:
+SCENE  info  :   * Infinite instances:  2
+SCENE  info  :   * Instances:           9
+SCENE  info  :   * Primitives:          0
+SCENE  info  :   * Instance accel:      auto
+ACCEL  detail: Getting bounding box ...
+ACCEL  detail: Creating tree ...
+ACCEL  detail: Trimming tree ...
+ACCEL  detail: Tree stats:
+ACCEL  detail:   * Nodes:          4
+ACCEL  detail:   * Leaves:         5
+ACCEL  detail:   * Objects: min    1
+ACCEL  detail:              avg    1.80
+ACCEL  detail:            avg(n>0) 1.80
+ACCEL  detail:              max    2
+ACCEL  detail:   * Depth:   min    3
+ACCEL  detail:              avg    3.40
+ACCEL  detail:              max    4
+ACCEL  detail:   * Leaves w/: N=0    0%
+ACCEL  detail:                N=1   20%
+ACCEL  detail:                N=2   80%
+ACCEL  detail:                N=3    0%
+ACCEL  detail:                N=4    0%
+ACCEL  detail:                N>4    0%
+ACCEL  detail:   * BVH2 nodes:     0 (  0%)
+ACCEL  detail:   * Creation time:  0ms
+ACCEL  detail:   * Usage of init:    8%
+ACCEL  detail:   * Tree memory:    108b
+ACCEL  detail:   * Indices memory: 36b
+SCENE  info  :   * Scene bounds:        (-3.73, -0.09, -5.91) to (4.12, 2.03, 4.06)
+SCENE  info  :   * Scene center:        (0.19, 0.97, -0.93)
+SCENE  info  :   * Scene diameter:      12.86
+SCENE  info  :   * Lightmap bake:       off
+LIGHT  info  : Light Server stats:
+LIGHT  info  :   * Light sources found: 1
+LIGHT  info  :   * Light samples:       65
+LIGHT  info  :   * Max raytrace depth:
+LIGHT  info  :       - Diffuse          4
+LIGHT  info  :       - Reflection       16
+LIGHT  info  :       - Refraction       16
+LIGHT  info  :   * GI engine            none
+LIGHT  info  :   * Caustics:            none
+LIGHT  info  :   * Shader override:     false
+LIGHT  info  :   * Photon override:     false
+LIGHT  info  :   * Shading cache:       off
+LIGHT  info  :   * Build time:          0ms
+SCENE  info  : Rendering ...
+SCENE  info  : Done.
+QMC    info  : Initializing Faure scrambling tables ...
+BCKT   info  : Bucket renderer settings:
+BCKT   info  :   * Resolution:         800x450
+BCKT   info  :   * Bucket size:        32
+BCKT   info  :   * Number of buckets:  25x15
+BCKT   info  :   * Anti-aliasing:      1/4 samples -> 1 sample (adaptive)
+BCKT   info  :   * Rays per sample:    1
+BCKT   info  :   * Subpixel jitter:    off
+BCKT   info  :   * Contrast threshold: 0.10
+BCKT   info  :   * Filter type:        triangle
+BCKT   info  :   * Filter size:        2.00 pixels
+Rendering [0%]GEOM   info  : Tesselating geometry ...
+GEOM   info  : Tesselating geometry ...
+GEOM   detail: Tesselation produced 4096 primitives
+GEOM   info  : Building acceleration structure for 4096 primitives ...
+GEOM   detail: Tesselation produced 9216 primitives
+GEOM   info  : Building acceleration structure for 9216 primitives ...
+ACCEL  detail: KDTree settings
+ACCEL  detail: KDTree settings
+ACCEL  detail:   * Max Leaf Size:  0
+ACCEL  detail:   * Max Leaf Size:  0
+ACCEL  detail:   * Max Depth:      64
+ACCEL  detail:   * Max Depth:      64
+ACCEL  detail:   * Traversal cost: 1.00
+ACCEL  detail:   * Traversal cost: 1.00
+ACCEL  detail:   * Intersect cost: 0.50
+ACCEL  detail:   * Intersect cost: 0.50
+ACCEL  detail:   * Empty bonus:    0.20
+ACCEL  detail:   * Empty bonus:    0.20
+ACCEL  detail:   * Dump leaves:    disabled
+ACCEL  detail:   * Dump leaves:    disabled
+ACCEL  detail: KDTree stats:
+ACCEL  detail:   * Nodes:          3460
+ACCEL  detail:   * Leaves:         3461
+ACCEL  detail:   * Objects: min    0
+ACCEL  detail:              avg    4.15
+ACCEL  detail:            avg(n>0) 6.82
+ACCEL  detail:              max    28
+ACCEL  detail:   * Depth:   min    5
+ACCEL  detail:              avg    16.03
+ACCEL  detail:              max    26
+ACCEL  detail:   * Leaves w/: N=0   39%
+ACCEL  detail:                N=1    2%
+ACCEL  detail:                N=2    1%
+ACCEL  detail:                N=3    3%
+ACCEL  detail:                N=4    6%
+ACCEL  detail:                N>4   47%
+ACCEL  detail:   * Node memory:    54Kb
+ACCEL  detail:   * Object memory:  56Kb
+ACCEL  detail:   * Prepare time:   35ms
+ACCEL  detail:   * Sorting time:   103ms
+ACCEL  detail:   * Tree creation:  578ms
+ACCEL  detail:   * Build time:     621ms
+GEOM   info  : Tesselating geometry ...
+GEOM   detail: Tesselation produced 2304 primitives
+GEOM   info  : Building acceleration structure for 2304 primitives ...
+ACCEL  detail: KDTree settings
+ACCEL  detail:   * Max Leaf Size:  0
+ACCEL  detail:   * Max Depth:      64
+ACCEL  detail:   * Traversal cost: 1.00
+ACCEL  detail:   * Intersect cost: 0.50
+ACCEL  detail:   * Empty bonus:    0.20
+ACCEL  detail:   * Dump leaves:    disabled
+ACCEL  detail: KDTree stats:
+ACCEL  detail:   * Nodes:          1961
+ACCEL  detail:   * Leaves:         1962
+ACCEL  detail:   * Objects: min    0
+ACCEL  detail:              avg    4.33
+ACCEL  detail:            avg(n>0) 6.95
+ACCEL  detail:              max    24
+ACCEL  detail:   * Depth:   min    4
+ACCEL  detail:              avg    15.18
+ACCEL  detail:              max    25
+ACCEL  detail:   * Leaves w/: N=0   37%
+ACCEL  detail:                N=1    2%
+ACCEL  detail:                N=2    1%
+ACCEL  detail:                N=3    3%
+ACCEL  detail:                N=4    6%
+ACCEL  detail:                N>4   47%
+ACCEL  detail:   * Node memory:    31Kb
+ACCEL  detail:   * Object memory:  33Kb
+ACCEL  detail:   * Prepare time:   36ms
+ACCEL  detail:   * Sorting time:   20ms
+ACCEL  detail:   * Tree creation:  132ms
+ACCEL  detail:   * Build time:     171ms
+GEOM   info  : Tesselating geometry ...
+GEOM   detail: Tesselation produced 1024 primitives
+GEOM   info  : Building acceleration structure for 1024 primitives ...
+ACCEL  detail: KDTree settings
+ACCEL  detail:   * Max Leaf Size:  0
+ACCEL  detail:   * Max Depth:      64
+ACCEL  detail:   * Traversal cost: 1.00
+ACCEL  detail:   * Intersect cost: 0.50
+ACCEL  detail:   * Empty bonus:    0.20
+ACCEL  detail:   * Dump leaves:    disabled
+ACCEL  detail: KDTree stats:
+ACCEL  detail:   * Nodes:          8549
+ACCEL  detail:   * Leaves:         8550
+ACCEL  detail:   * Objects: min    0
+ACCEL  detail:              avg    3.88
+ACCEL  detail:            avg(n>0) 6.76
+ACCEL  detail:              max    24
+ACCEL  detail:   * Depth:   min    4
+ACCEL  detail:              avg    17.71
+ACCEL  detail:              max    27
+ACCEL  detail:   * Leaves w/: N=0   42%
+ACCEL  detail:                N=1    2%
+ACCEL  detail:                N=2    2%
+ACCEL  detail:                N=3    3%
+ACCEL  detail:                N=4    5%
+ACCEL  detail:                N>4   44%
+ACCEL  detail:   * Node memory:    134Kb
+ACCEL  detail:   * Object memory:  130Kb
+ACCEL  detail:   * Prepare time:   73ms
+ACCEL  detail:   * Sorting time:   72ms
+ACCEL  detail:   * Tree creation:  837ms
+ACCEL  detail:   * Build time:     919ms
+ACCEL  detail: KDTree stats:
+ACCEL  detail:   * Nodes:          616
+ACCEL  detail:   * Leaves:         617
+ACCEL  detail:   * Objects: min    0
+ACCEL  detail:              avg    3.66
+ACCEL  detail:            avg(n>0) 5.32
+ACCEL  detail:              max    14
+ACCEL  detail:   * Depth:   min    5
+ACCEL  detail:              avg    12.82
+ACCEL  detail:              max    18
+ACCEL  detail:   * Leaves w/: N=0   31%
+ACCEL  detail:                N=1    3%
+ACCEL  detail:                N=2    2%
+ACCEL  detail:                N=3    6%
+ACCEL  detail:                N=4   15%
+ACCEL  detail:                N>4   40%
+GEOM   info  : Tesselating geometry ...
+ACCEL  detail:   * Node memory:    10Kb
+ACCEL  detail:   * Object memory:  9Kb
+ACCEL  detail:   * Prepare time:   1ms
+ACCEL  detail:   * Sorting time:   1ms
+ACCEL  detail:   * Tree creation:  38ms
+ACCEL  detail:   * Build time:     41ms
+GEOM   info  : Tesselating geometry ...
+GEOM   detail: Tesselation produced 3136 primitives
+GEOM   info  : Building acceleration structure for 3136 primitives ...
+ACCEL  detail: KDTree settings
+ACCEL  detail:   * Max Leaf Size:  0
+ACCEL  detail:   * Max Depth:      64
+ACCEL  detail:   * Traversal cost: 1.00
+ACCEL  detail:   * Intersect cost: 0.50
+ACCEL  detail:   * Empty bonus:    0.20
+ACCEL  detail:   * Dump leaves:    disabled
