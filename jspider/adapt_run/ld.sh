@@ -7,5 +7,6 @@ fi
 
 export PANDA_JSPIDER_INTERVAL=250
 export PANDA_JSPIDER_DEPTH=4
-jspider.sh http://docs.idris-lang.org/en/latest/index.html
+#jspider.sh https://angularjs.org/
+jspider.sh http://api.rubyonrails.org/
 mv mode.txt run_ld_${1}.txt

@@ -21,7 +21,7 @@ import java.util.List;
  */
 public class RuleSetImpl@mode<?->X> implements Ruleset@mode<X> {
 
-    mcase<int> HACK = mcase<int>{ low: 0; mid: 0; high: 0; };
+    private mcase<int> HACK = mcase<int> {low: 0; mid: 0; high: 0; };
 
     attributor {
       if (ENT_Util.Battery.percentRemaining() >= 0.75) {
@@ -36,28 +36,45 @@ public class RuleSetImpl@mode<?->X> implements Ruleset@mode<X> {
     protected int type;
     protected Ruleset generalRules;
     protected List localRules;
-    protected PandaDepthRule@mode<X> depthRule;
+    protected PandaDepthRule depthRule;
 
     public RuleSetImpl(int type, List rules) {
         this(type, null, rules);
-    }
-
-    public void postResolve() {
-      this.depthRule = new PandaDepthRule@mode<X>();
-      this.localRules.add(this.depthRule);
+        this.depthRule = new PandaDepthRule();
+        this.localRules.add(this.depthRule);
     }
 
     public RuleSetImpl(int type, Ruleset generalRules, List rules) {
         this.type = type;
         this.generalRules = generalRules;
         this.localRules = rules;
+
+        this.depthRule = new PandaDepthRule();
+        this.localRules.add(this.depthRule);
     }
 
-    public Decision applyRules(SpiderContext context, Site site, URL url) {
+    public Decision applyRules(SpiderContext context, Site@mode<?> site, Site@mode<*> currentSite, URL url) {
         Decision decision = null;
 
+        String recovstr = System.getenv("PANDA_RECOVER");
+        boolean recover = true;
+        if (recovstr != null && recovstr.equals("false")) {
+          recover = false;
+        } 
+
+        Site@mode<*> c_site = null;
+
+        try {
+          c_site = snapshot site ?mode[@mode<low>,@mode<X>];
+        } catch (RuntimeException e) {
+          c_site = snapshotforce site ?mode[@mode<low>,@mode<X>];
+          if (recover) {
+            this.depthRule.maxDepth = 3;
+          }
+        }
+
         if (generalRules != null) {
-            decision = generalRules.applyRules(context, site, url);
+            decision = generalRules.applyRules(context, site, currentSite, url);
         } else {
             decision = new DecisionInternal();
         }
@@ -67,7 +84,7 @@ public class RuleSetImpl@mode<?->X> implements Ruleset@mode<X> {
             Rule[] rules = (Rule[]) localRules.toArray(new Rule[localRules.size()]);
             for (int i = 0; i < rules.length; i++) {
                 Rule rule = rules[i];
-                Decision lastDecision = rule.apply(context, site, url);
+                Decision lastDecision = rule.apply(context, currentSite, url);
                 decision.addStep(rule.getName(), type, lastDecision.getDecision(), lastDecision.getComment() );
                 decision.merge(lastDecision);
 

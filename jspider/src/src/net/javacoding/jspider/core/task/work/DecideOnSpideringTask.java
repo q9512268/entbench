@@ -26,38 +26,37 @@ public class DecideOnSpideringTask extends BaseWorkerTaskImpl {
     protected Storage storage;
     protected URLFoundEvent event;
     protected EventDispatcher eventDispatcher;
-    protected Site site;
 
     public DecideOnSpideringTask(SpiderContext context, URLFoundEvent urlFoundEvent) {
         super(context, WorkerTask.WORKERTASK_THINKERTASK);
         this.event = urlFoundEvent;
         this.eventDispatcher = context.getEventDispatcher();
-        this.storage = context.getStorage();
-
-        URL foundURL = event.getFoundURL();
-
-        URL siteURL = URLUtil.getSiteURL(foundURL);
-
-        this.site = storage.getSiteDAO().find(siteURL);
+        this.storage = context.getStorage(); 
     }
 
     public void prepare() {
     }
 
     public synchronized void execute() {
-        URL foundURL = event.getFoundURL();
-        Resource foundResource = storage.getResourceDAO().getResource(foundURL);
-
         URL url = event.getURL();
+        URL foundURL = event.getFoundURL();
+
         URL currentSiteURL = URLUtil.getSiteURL(url);
+        URL siteURL = URLUtil.getSiteURL(foundURL);
+
         Site currentSite = null;
         if ( currentSiteURL != null ) {
             currentSite = storage.getSiteDAO().find(currentSiteURL);
         } 
 
-        Ruleset@mode<*> spiderRules = context.getSiteSpiderRules(site);
+        Site@mode<?> site = storage.getSiteDAO().find(siteURL);
+        Resource foundResource = storage.getResourceDAO().getResource(foundURL);
 
-        Decision spiderDecision = spiderRules.applyRules(context, currentSite, foundURL);
+        Ruleset@mode<*> spiderRules = context.getSiteSpiderRules(site);
+        
+        System.out.println("Site: " + site + " + Current Site: " + currentSite);
+
+        Decision spiderDecision = spiderRules.applyRules(context, site, currentSite, foundURL);
 
         storage.getDecisionDAO().saveSpiderDecision(foundResource, spiderDecision);
 

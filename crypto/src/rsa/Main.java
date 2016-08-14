@@ -39,13 +39,13 @@ public class Main {
 
         if (choice == 0) {
           //rsa.runSingleEncryptDecrypt("RSA/ECB/PKCS1Padding", Util.TEST_DATA_4);
-          rsa.runMultiEncryptDecrypt("RSA/ECB/PKCS1Padding", Util.TEST_DATA_4);
+          rsa.runMultiEncryptDecrypt("RSA/ECB/PKCS1Padding", Util.TEST_SMALL);
         } else if (choice == 1) {
           //rsa.runSingleEncryptDecrypt("RSA/ECB/PKCS1Padding", Util.TEST_DATA_5);
-          rsa.runMultiEncryptDecrypt("RSA/ECB/PKCS1Padding", Util.TEST_DATA_5);
+          rsa.runMultiEncryptDecrypt("RSA/ECB/PKCS1Padding", Util.TEST_MEDIUM);
         } else {
           //rsa.runSingleEncryptDecrypt("RSA/ECB/PKCS1Padding", Util.TEST_DATA_6);
-          rsa.runMultiEncryptDecrypt("RSA/ECB/PKCS1Padding", Util.TEST_DATA_6);
+          rsa.runMultiEncryptDecrypt("RSA/ECB/PKCS1Padding", Util.TEST_LARGE);
         }
 
         double[] after = EnergyCheckUtils.getEnergyStats();
@@ -70,11 +70,11 @@ public class Main {
 
       try {
         if (choice == 0) {
-          Context.fileCache.loadFile(Util.TEST_DATA_4);
+          Context.fileCache.loadFile(Util.TEST_SMALL);
         } else if (choice == 1) {
-          Context.fileCache.loadFile(Util.TEST_DATA_5);
+          Context.fileCache.loadFile(Util.TEST_MEDIUM);
         } else {
-          Context.fileCache.loadFile(Util.TEST_DATA_6);
+          Context.fileCache.loadFile(Util.TEST_LARGE);
         }
       } catch (Exception e) {
         throw new RuntimeException("Error in setup of crypto.aes." + e);

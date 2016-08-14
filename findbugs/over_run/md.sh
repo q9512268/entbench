@@ -10,7 +10,9 @@ fi
 level=$1 
 
 export PANDA_RUNS=11
-export PANDA_BATTERY_RUN=true
+export ENT_BATTERY_LEVEL=0.70
 
-pfb analyze -effort:default drjava/drjava-stable-20140826-r5761.jar
-mv $dir/mode.txt $dir/run_md_${level}.txt
+export PANDA_RECOVER=true
+
+pfb analyze -maxHeap 2048 -effort:default rtjar/rt.jar
+mv $dir/mode.txt $dir/run_md_${level}_java.txt

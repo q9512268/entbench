@@ -2,22 +2,36 @@
 
 dir=`dirname "$0"`
 
-if [ $# -ne 1 ]; then
-  echo "sd usage: [ESTIMATED_LEVEL]"
-  exit
-fi
-
 runs=(
-  sd.sh
-  md.sh
   ld.sh
+  md.sh
+  sd.sh
 )
 
-export PANDA_RUNS=10
+contexts=(
+  hc
+#  mc
+#  lc
+)
 
-for rn in ${runs[@]}; do
-  echo "Starting ${rn}"
-  $(./$rn $1 > /dev/null)  
-  echo "Completed ${rn}"
-  sleep 10
+blevels=(
+  0.90
+#  0.70
+#  0.40
+) 
+
+export PANDA_RUNS=11
+
+for i in `seq 0 2`; do
+  export ENT_BATTERY_LEVEL=${blevels[$i]}
+
+  for rn in ${runs[@]}; do
+    echo "Starting ${contexts[$i]} ${rn}"
+    $(./$rn ${contexts[$i]} >/dev/null)  
+    echo "Completed ${contexts[$i]} ${rn}"
+  done
 done
+
+#jspider.sh http://synergyendwell.com
+#jspider.sh http://www.organicyogajcny.com/ 
+#jspider.sh http://learnyouahaskell.com

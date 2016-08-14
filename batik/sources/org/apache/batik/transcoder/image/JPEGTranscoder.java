@@ -31,6 +31,8 @@ import org.apache.batik.transcoder.TranscoderOutput;
 import org.apache.batik.transcoder.TranscodingHints;
 import org.apache.batik.transcoder.image.resources.Messages;
 
+import java.util.Map;
+
 /**
  * This class is an <tt>ImageTranscoder</tt> that produces a JPEG image.
  *
@@ -39,21 +41,45 @@ import org.apache.batik.transcoder.image.resources.Messages;
  */
 public class JPEGTranscoder@mode<?->X> extends ImageTranscoder@mode<X> {
 
-    attributor {
-      if (ENT_Util.Battery.percentRemaining() >= 0.75) {
-        return @mode<high>;
-      } else if (ENT_Util.Battery.percentRemaining() >= 0.50) {
-        return @mode<mid>;
+    attributor { 
+      if (useBat) {
+        if (ENT_Util.Battery.percentRemaining() >= 0.75) {
+          return @mode<high>;
+        } else if (ENT_Util.Battery.percentRemaining() >= 0.50) {
+          return @mode<mid>;
+        } else {
+          return @mode<low>;
+        }
       } else {
-        return @mode<low>;
+        if (width > 2048) {
+          return @mode<low>;
+        } else if (width > 1024) {
+          return @mode<mid>;
+        } else {
+          return @mode<high>;
+        }
       }
-    } 
+    }
+
+    private boolean useBat = false;
+
+    ent_copy {
+      JPEGTranscoder copy = new JPEGTranscoder();
+      copy.width = width;
+      copy.height = height;
+      return copy;
+    }
 
     /**
      * Constructs a new transcoder that produces jpeg images.
      */
     public JPEGTranscoder() {
-        hints.put(ImageTranscoder.KEY_BACKGROUND_COLOR, Color.white);
+        hints.put(ImageTranscoder.KEY_BACKGROUND_COLOR, Color.white); 
+
+        String useBatStr = System.getenv("PANDA_BATTERY_RUN");
+        if (useBatStr != null && useBatStr.equals("true")) {
+          useBat = true;
+        }
     }
 
     /**
@@ -85,8 +111,8 @@ public class JPEGTranscoder@mode<?->X> extends ImageTranscoder@mode<X> {
         }
 
         try {
-            ImageWriter writer = ImageWriterRegistry.getInstance()
-                .getWriterFor("image/jpeg");
+            ImageWriter writer = ImageWriterRegistry.getInstance().getWriterFor("image/jpeg");
+
             ImageWriterParams params = new ImageWriterParams();
 
             float quality = -1;
@@ -94,12 +120,10 @@ public class JPEGTranscoder@mode<?->X> extends ImageTranscoder@mode<X> {
                 quality = ((Float)hints.get(KEY_QUALITY)).floatValue();
             } else {
                 quality = 0.75f;
-            }
-
+            } 
             params.setJPEGQuality(quality, true);
 
             float PixSzMM = userAgent.getPixelUnitToMillimeter();
-
             int PixSzInch = (int)(25.4 / PixSzMM + 0.5);
             params.setResolution(PixSzInch);
             writer.writeImage(img, ostream, params);

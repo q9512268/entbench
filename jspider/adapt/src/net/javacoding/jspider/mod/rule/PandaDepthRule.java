@@ -16,7 +16,7 @@ import java.net.URL;
 public class PandaDepthRule extends BaseRuleImpl {
 
     public int minDepth = 0;
-    public mcase<int> maxDepth = mcase<int> { low: 3; mid: 4; high: 5; };
+    public mcase<int> maxDepth = mcase<int> { low: 4; mid: 5; high: 6; };
 
     public PandaDepthRule() {
     }

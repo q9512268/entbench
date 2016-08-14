@@ -12,10 +12,13 @@ import crypto.Util;
 public class RSA@mode<?->X> {
   attributor {
     if (ENT_Util.Battery.percentRemaining() >= 0.75) {
+      System.out.println("Hit High!\n");
       return @mode<high>;
     } else if (ENT_Util.Battery.percentRemaining() >= 0.50) {
+      System.out.println("Hit Mid!\n");
       return @mode<mid>;
     } else {
+      System.out.println("Hit Low!\n");
       return @mode<low>;
     }
   }

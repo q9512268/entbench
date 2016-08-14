@@ -39,15 +39,17 @@ public class Scene@mode<?->X> {
     private boolean lowPriority;
 
     attributor {
+      /*
       int instances = this.instanceList.getNumPrimitives();
-      ENT_Util.writeModeFile(String.format("Num Instances: %d\n",instances));
-      if (instances >= 8) {
+      if (instances > 12) {
         return @mode<high>;
-      } else if (instances >= 6) {
+      } else if (instances > 6) {
         return @mode<mid>;
       } else {
         return @mode<low>;
       }
+      */
+      return @mode<low>;
     }
 
     private Display display;

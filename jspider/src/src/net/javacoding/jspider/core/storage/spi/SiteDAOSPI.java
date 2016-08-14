@@ -9,7 +9,7 @@ import java.net.URL;
  */
 public interface SiteDAOSPI {
 
-    public SiteInternal find ( URL siteURL );
+    public SiteInternal@mode<*> find ( URL siteURL );
 
     public SiteInternal find ( int id );
 

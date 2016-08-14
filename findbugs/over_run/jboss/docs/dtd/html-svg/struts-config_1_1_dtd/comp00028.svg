@@ -1,0 +1,151 @@
+<?xml version = "1.0"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 20010904//EN" "http://www.w3.org/TR/2001/REC-SVG-20010904/DTD/svg10.dtd">
+<svg width = "385pt" height = "219pt" viewBox = "0 0 385 219" xmlns = "http://www.w3.org/2000/svg" xmlns:xlink = "http://www.w3.org/1999/xlink">
+	<defs>
+		<style type = "text/css"><![CDATA[
+rect.attrGroup { fill: ivory ; stroke: black; stroke-width: 1 }
+rect.element { fill: ivory ; stroke: black; stroke-width: 1 }
+rect.elTypeBkgnd { fill: lightgray ; stroke: none }
+text.elName { font-family: helvetica ; font-size : 10 }
+text.elType { font-family: helvetica ; font-size : 7 }
+text.occurLarge { font-family: helvetica ; font-size : 9; fill : blue }
+text.occurSmall { font-family: helvetica ; font-size : 7; fill : blue }
+rect.typeIconDark { fill : darkslategray }
+circle.occurs { stroke : black ; stroke-width: 1; fill : white }
+circle.ellipsis { fill : black }
+path.typeIconDark { stroke : lightgray ; stroke-width: 1 }
+path.connector { stroke : red ; stroke-width: 1 ; fill: none; }
+path.modelGroup { stroke : black ; stroke-width: 1 ; fill: lightgray; }
+polyline.connector { stroke : red ; stroke-width: 1 ; fill: none; }
+.nodeStyle { fill : blue }
+]]></style>
+	</defs>
+	<rect x = "104" y = "5" width = "276" height = "71" class = "attrGroup" rx = "5" ry = "5"/>
+	<rect x = "109" y = "10" width = "38" height = "28" class = "element" rx = "5" ry = "5"/>
+	<circle class = "nodeStyle" cx = "115" cy = "16" r = "4"/>
+	<text x = "120" y = "21" class = "elName">key</text>
+	<rect x = "110" y = "11" width = "36" height = "26" class = "elTypeBkgnd" rx = "5" ry = "5" clip-path = "url(#e:exception/a:key)"/>
+	<defs/>
+	<clipPath id = "e:exception/a:key">
+		<rect x = "109" y = "25" width = "38" height = "12"/>
+	</clipPath>
+	<text x = "110" y = "33" class = "elType">string</text>
+	<image xlink:href = "../dgmDtString.gif" width = "10" height = "10" x = "137" y = "20"/>
+	<circle class = "occurs" cx = "248" cy = "24" r = "6"/>
+	<text x = "245" y = "27" class = "occurLarge">?</text>
+	<rect x = "254" y = "10" width = "32" height = "28" class = "element" rx = "5" ry = "5"/>
+	<circle class = "nodeStyle" cx = "260" cy = "16" r = "4"/>
+	<text x = "265" y = "21" class = "elName">id</text>
+	<rect x = "255" y = "11" width = "30" height = "26" class = "elTypeBkgnd" rx = "5" ry = "5" clip-path = "url(#e:exception/a:id)"/>
+	<defs/>
+	<clipPath id = "e:exception/a:id">
+		<rect x = "254" y = "25" width = "32" height = "12"/>
+	</clipPath>
+	<text x = "255" y = "33" class = "elType">ID</text>
+	<image xlink:href = "../dgmDtName.gif" width = "10" height = "10" x = "276" y = "20"/>
+	<rect x = "109" y = "43" width = "51" height = "28" class = "element" rx = "5" ry = "5"/>
+	<circle class = "nodeStyle" cx = "115" cy = "49" r = "4"/>
+	<text x = "120" y = "54" class = "elName">type</text>
+	<rect x = "110" y = "44" width = "49" height = "26" class = "elTypeBkgnd" rx = "5" ry = "5" clip-path = "url(#e:exception/a:type)"/>
+	<defs/>
+	<clipPath id = "e:exception/a:type">
+		<rect x = "109" y = "58" width = "51" height = "12"/>
+	</clipPath>
+	<text x = "110" y = "66" class = "elType">ClassName</text>
+	<image xlink:href = "../dgmDtString.gif" width = "10" height = "10" x = "150" y = "53"/>
+	<circle class = "occurs" cx = "247" cy = "57" r = "6"/>
+	<text x = "244" y = "60" class = "occurLarge">?</text>
+	<rect x = "253" y = "43" width = "50" height = "28" class = "element" rx = "5" ry = "5"/>
+	<circle class = "nodeStyle" cx = "259" cy = "49" r = "4"/>
+	<text x = "264" y = "54" class = "elName">scope</text>
+	<rect x = "254" y = "44" width = "48" height = "26" class = "elTypeBkgnd" rx = "5" ry = "5" clip-path = "url(#e:exception/a:scope)"/>
+	<defs/>
+	<clipPath id = "e:exception/a:scope">
+		<rect x = "253" y = "58" width = "50" height = "12"/>
+	</clipPath>
+	<text x = "254" y = "66" class = "elType">string</text>
+	<image xlink:href = "../dgmDtString.gif" width = "10" height = "10" x = "293" y = "53"/>
+	<circle class = "occurs" cx = "314" cy = "57" r = "6"/>
+	<text x = "311" y = "60" class = "occurLarge">?</text>
+	<rect x = "320" y = "43" width = "55" height = "28" class = "element" rx = "5" ry = "5"/>
+	<circle class = "nodeStyle" cx = "326" cy = "49" r = "4"/>
+	<text x = "331" y = "54" class = "elName">path</text>
+	<rect x = "321" y = "44" width = "53" height = "26" class = "elTypeBkgnd" rx = "5" ry = "5" clip-path = "url(#e:exception/a:path)"/>
+	<defs/>
+	<clipPath id = "e:exception/a:path">
+		<rect x = "320" y = "58" width = "55" height = "12"/>
+	</clipPath>
+	<text x = "321" y = "66" class = "elType">RequestPath</text>
+	<image xlink:href = "../dgmDtString.gif" width = "10" height = "10" x = "365" y = "53"/>
+	<circle class = "occurs" cx = "171" cy = "57" r = "6"/>
+	<text x = "168" y = "60" class = "occurLarge">?</text>
+	<rect x = "177" y = "43" width = "59" height = "28" class = "element" rx = "5" ry = "5"/>
+	<circle class = "nodeStyle" cx = "183" cy = "49" r = "4"/>
+	<text x = "188" y = "54" class = "elName">bundle</text>
+	<rect x = "178" y = "44" width = "57" height = "26" class = "elTypeBkgnd" rx = "5" ry = "5" clip-path = "url(#e:exception/a:bundle)"/>
+	<defs/>
+	<clipPath id = "e:exception/a:bundle">
+		<rect x = "177" y = "58" width = "59" height = "12"/>
+	</clipPath>
+	<text x = "178" y = "66" class = "elType">AttributeName</text>
+	<image xlink:href = "../dgmDtString.gif" width = "10" height = "10" x = "226" y = "53"/>
+	<circle class = "occurs" cx = "297" cy = "24" r = "6"/>
+	<text x = "294" y = "27" class = "occurLarge">?</text>
+	<rect x = "303" y = "10" width = "59" height = "28" class = "element" rx = "5" ry = "5"/>
+	<circle class = "nodeStyle" cx = "309" cy = "16" r = "4"/>
+	<text x = "314" y = "21" class = "elName">handler</text>
+	<rect x = "304" y = "11" width = "57" height = "26" class = "elTypeBkgnd" rx = "5" ry = "5" clip-path = "url(#e:exception/a:handler)"/>
+	<defs/>
+	<clipPath id = "e:exception/a:handler">
+		<rect x = "303" y = "25" width = "59" height = "12"/>
+	</clipPath>
+	<text x = "304" y = "33" class = "elType">ClassName</text>
+	<image xlink:href = "../dgmDtString.gif" width = "10" height = "10" x = "352" y = "20"/>
+	<circle class = "occurs" cx = "158" cy = "24" r = "6"/>
+	<text x = "155" y = "27" class = "occurLarge">?</text>
+	<rect x = "164" y = "10" width = "73" height = "28" class = "element" rx = "5" ry = "5"/>
+	<circle class = "nodeStyle" cx = "170" cy = "16" r = "4"/>
+	<text x = "175" y = "21" class = "elName">className</text>
+	<rect x = "165" y = "11" width = "71" height = "26" class = "elTypeBkgnd" rx = "5" ry = "5" clip-path = "url(#e:exception/a:className)"/>
+	<defs/>
+	<clipPath id = "e:exception/a:className">
+		<rect x = "164" y = "25" width = "73" height = "12"/>
+	</clipPath>
+	<text x = "165" y = "33" class = "elType">ClassName</text>
+	<image xlink:href = "../dgmDtString.gif" width = "10" height = "10" x = "227" y = "20"/>
+	<rect x = "5" y = "133" width = "69" height = "28" class = "element"/>
+	<polygon class = "nodeStyle" points = "11,135 7,139 11,143 15,139"/>
+	<text x = "16" y = "144" class = "elName">exception</text>
+	<rect x = "6" y = "148" width = "67" height = "12" class = "elTypeBkgnd"/>
+	<image xlink:href = "../dgmTypeComplex.gif" width = "10" height = "10" x = "64" y = "143"/>
+	<polyline class = "connector" points = "104,95 84,95 84,147 74,147 84,147 84,200 104,200"/>
+	<polyline class = "connector" points = "74,145 82,145 82,40 104,40"/>
+	<circle class = "occurs" cx = "110" cy = "95" r = "6"/>
+	<text x = "107" y = "98" class = "occurLarge">?</text>
+	<rect x = "116" y = "81" width = "43" height = "28" class = "element"/>
+	<polygon class = "nodeStyle" points = "122,83 118,87 122,91 126,87"/>
+	<text x = "127" y = "92" class = "elName">icon</text>
+	<rect x = "117" y = "96" width = "41" height = "12" class = "elTypeBkgnd"/>
+	<image xlink:href = "../dgmTypeComplex.gif" width = "10" height = "10" x = "149" y = "91"/>
+	<circle class = "occurs" cx = "110" cy = "130" r = "6"/>
+	<text x = "107" y = "133" class = "occurLarge">?</text>
+	<rect x = "116" y = "116" width = "86" height = "28" class = "element"/>
+	<polygon class = "nodeStyle" points = "122,118 118,122 122,126 126,122"/>
+	<text x = "127" y = "127" class = "elName">display-name</text>
+	<rect x = "117" y = "131" width = "84" height = "12" class = "elTypeBkgnd"/>
+	<image xlink:href = "../dgmDtString.gif" width = "10" height = "10" x = "192" y = "126"/>
+	<circle class = "occurs" cx = "110" cy = "165" r = "6"/>
+	<text x = "107" y = "168" class = "occurLarge">?</text>
+	<rect x = "116" y = "151" width = "74" height = "28" class = "element"/>
+	<polygon class = "nodeStyle" points = "122,153 118,157 122,161 126,157"/>
+	<text x = "127" y = "162" class = "elName">description</text>
+	<rect x = "117" y = "166" width = "72" height = "12" class = "elTypeBkgnd"/>
+	<image xlink:href = "../dgmDtString.gif" width = "10" height = "10" x = "180" y = "161"/>
+	<circle class = "occurs" cx = "110" cy = "200" r = "6"/>
+	<text x = "107" y = "203" class = "occurLarge">*</text>
+	<rect x = "116" y = "186" width = "77" height = "28" class = "element"/>
+	<polygon class = "nodeStyle" points = "122,188 118,192 122,196 126,192"/>
+	<text x = "127" y = "197" class = "elName">set-property</text>
+	<rect x = "117" y = "201" width = "75" height = "12" class = "elTypeBkgnd"/>
+	<image xlink:href = "../dgmTypeEmpty.gif" width = "10" height = "10" x = "183" y = "196"/>
+</svg>

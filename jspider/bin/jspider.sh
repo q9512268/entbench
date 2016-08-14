@@ -3,7 +3,7 @@
 echo ------------------------------------------------------------
 echo JSpider startup script
 
-export JSPIDER_HOME=/home/acanino/Projects/Panda/tests/dacapo/jspider
+export JSPIDER_HOME=/home/acanino/Projects/entbench/jspider
 
 if [ ! -d "$JSPIDER_HOME" ]; then
   echo JSPIDER_HOME does not exist as a valid directory : $JSPIDER_HOME
@@ -27,4 +27,4 @@ export JSPIDER_CLASSPATH="$JSPIDER_CLASSPATH:$JSPIDER_HOME/lib/log4j-1.2.8.jar"
 export JSPIDER_CLASSPATH="$JSPIDER_CLASSPATH:$JSPIDER_HOME/common"
 export JSPIDER_CLASSPATH="$JSPIDER_CLASSPATH:$CLASSPATH"
 
-panda -cp $JSPIDER_CLASSPATH:$CLASSPATH $JSPIDER_OPTS net.javacoding.jspider.JSpider $1 $2
+ent -cp $JSPIDER_CLASSPATH:$CLASSPATH $JSPIDER_OPTS net.javacoding.jspider.JSpider $1 $2

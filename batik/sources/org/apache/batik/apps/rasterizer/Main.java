@@ -34,6 +34,8 @@ import org.apache.batik.parser.ClockParser;
 import org.apache.batik.parser.ParseException;
 import org.apache.batik.util.ApplicationSecurityEnforcer;
 
+//import java.util.Date;
+
 import jrapl.EnergyCheckUtils;
 
 /**
@@ -992,26 +994,45 @@ public class Main implements SVGConverterController {
 
     public static void main(String [] args) {
         ENT_Util.initModeFile();
-        int PANDA_RUNS = Integer.parseInt(System.getenv("PANDA_RUNS"));
-        double energyTotal = 0.0;
-        for (int k = 0; k < PANDA_RUNS; k++) {
 
-          double[] before = EnergyCheckUtils.getEnergyStats();
+        int PANDA_RUNS = Integer.parseInt(System.getenv("PANDA_RUNS"));
+
+        double[] energyRuns = new double[PANDA_RUNS];
+        for (int k = 0; k < PANDA_RUNS; k++) {
           ENT_Util.resetStopwatch();
           ENT_Util.startStopwatch();
+          double[] before = EnergyCheckUtils.getEnergyStats();
+
+          //long startStamp = (new Date()).getTime()/1000;
 
           (new Main(args)).execute();
 
-          //PANDA_Util.stopStopwatch();
+          //long endStamp = (new Date()).getTime()/1000;
+
           double[] after = EnergyCheckUtils.getEnergyStats();
+          double diff = after[2]-before[2];
+
+          if (diff < 0) {
+            diff += EnergyCheckUtils.wraparoundValue;
+          }
+
           ENT_Util.stopStopwatch();
-          ENT_Util.writeModeFile(String.format("ERun %d: %f %f %f %f\n", k, after[0]-before[0], after[1]-before[1], after[2]-before[2], ENT_Util.elapsedTime()));
+
+          ENT_Util.writeModeFile(String.format("ERun %d: %f %f %f %f\n", k, after[0]-before[0], after[1]-before[1], diff, ENT_Util.elapsedTime())); 
+          
+          //ENT_Util.writeModeFile(String.format("ERun %d: %d %d\n", k, startStamp, endStamp));
+
+          /*
+          try {
+            Thread.sleep(30000);
+          } catch (Exception e) {
+            System.err.println(e);
+          }
+          */
         }
 
         ENT_Util.closeModeFile();
         EnergyCheckUtils.DeallocProfile();
-
-        System.exit(0);
     }
 
     //

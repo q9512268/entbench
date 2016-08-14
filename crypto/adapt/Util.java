@@ -38,6 +38,15 @@ public class Util {
     
     public final static String TEST_DATA_6 =
             TEST_DATA_BASE + "random1048576.dat";
+
+    public final static String TEST_SMALL =
+            TEST_DATA_BASE + "small.dat";
+    
+    public final static String TEST_MEDIUM =
+            TEST_DATA_BASE + "medium.dat";
+    
+    public final static String TEST_LARGE =
+            TEST_DATA_BASE + "large.dat";
     
     /**
      * Will collect the test data from FileCache.

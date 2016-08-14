@@ -9,7 +9,10 @@ fi
 
 level=$1 
 
-export PANDA_BATTERY_RUN=true
+export PANDA_RUNS=11
 
-pfb analyze -effort:default rtjar/rt.jar
+export PANDA_RECOVER=true
+
+
+pfb analyze -maxHeap 2048 -effort:default jboss/jboss-as-7.1.1.Final/modules 
 mv $dir/mode.txt $dir/run_ld_${level}.txt

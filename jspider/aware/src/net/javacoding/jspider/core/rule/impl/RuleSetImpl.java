@@ -24,26 +24,14 @@ public class RuleSetImpl@mode<?->X> implements Ruleset@mode<X> {
     private mcase<int> HACK = mcase<int> {low: 0; mid: 0; high: 0; };
 
     attributor {
-      if (useBat) {
-        if (ENT_Util.Battery.percentRemaining() >= 0.75) {
-          return @mode<high>;
-        } else if (ENT_Util.Battery.percentRemaining() >= 0.50) {
-          return @mode<mid>;
-        } else {
-          return @mode<low>;
-        }
-      } else { 
-        if (this.depthRule.maxDepth <= 3) {
-          return @mode<high>;
-        } else if (this.depthRule.maxDepth <= 4) {
-          return @mode<mid>;
-        } else {
-          return @mode<low>;
-        }
+      if (ENT_Util.Battery.percentRemaining() >= 0.75) {
+        return @mode<high>;
+      } else if (ENT_Util.Battery.percentRemaining() >= 0.50) {
+        return @mode<mid>;
+      } else {
+        return @mode<low>;
       }
     }
-
-    private boolean useBat = false;
 
     protected int type;
     protected Ruleset generalRules;
@@ -63,12 +51,6 @@ public class RuleSetImpl@mode<?->X> implements Ruleset@mode<X> {
 
         this.depthRule = new PandaDepthRule();
         this.localRules.add(this.depthRule);
-
-
-        String useBatStr = System.getenv("PANDA_BATTERY_RUN");
-        if (useBatStr != null && useBatStr.equals("true")) {
-          useBat = true;
-        }
     }
 
     public Decision applyRules(SpiderContext context, Site@mode<?> site, Site@mode<*> currentSite, URL url) {
@@ -87,6 +69,7 @@ public class RuleSetImpl@mode<?->X> implements Ruleset@mode<X> {
         } catch (RuntimeException e) {
           c_site = snapshotforce site ?mode[@mode<low>,@mode<X>];
           if (recover) {
+            System.err.format("Recovered!\n");
             this.depthRule.maxDepth = 3;
           }
         }

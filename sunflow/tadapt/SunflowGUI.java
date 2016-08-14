@@ -180,8 +180,6 @@ public class SunflowGUI extends javax.swing.JFrame implements UserInterface {
     }
 
     public static void main(String[] args) {
-        double[] before = null;
-
         UI.verbosity(4);
         if (args.length > 0) {
             boolean showFrame = true;
@@ -366,90 +364,106 @@ public class SunflowGUI extends javax.swing.JFrame implements UserInterface {
             }
 
             ENT_Util.initModeFile();
-            before = EnergyCheckUtils.getEnergyStats();
+            int PANDA_RUNS = Integer.parseInt(System.getenv("PANDA_RUNS"));
 
-            if (runBenchmark) {
-                SunflowAPI.runSystemCheck();
-                new Benchmark().execute();
-                return;
+            for (int k = 0; k < PANDA_RUNS; k++) {
+              double[] before = EnergyCheckUtils.getEnergyStats();
+              ENT_Util.resetStopwatch();
+              ENT_Util.startStopwatch();
+
+              if (runBenchmark) {
+                  SunflowAPI.runSystemCheck();
+                  new Benchmark().execute();
+                  return;
+              }
+              if (runRTBenchmark) {
+                  SunflowAPI.runSystemCheck();
+                  RealtimeBenchmark t = new RealtimeBenchmark(showFrame, threads);
+                  return;
+              }
+              if (input == null)
+                  usage(false);
+              SunflowAPI.runSystemCheck();
+              if (frameStart < frameStop && showFrame) {
+                  UI.printWarning(Module.GUI, "Animations should not be rendered without -nogui - forcing GUI off anyway");
+                  showFrame = false;
+              }
+              if (frameStart < frameStop && filename == null) {
+                  filename = "output.#.png";
+                  UI.printWarning(Module.GUI, "Animation output was not specified - defaulting to: \"%s\"", filename);
+              }
+              for (int frameNumber = frameStart; frameNumber <= frameStop; frameNumber++) {
+                  SunflowAPI api = SunflowAPI.create(input, frameNumber);
+                  if (api == null)
+                      continue;
+                  if (noRender)
+                      continue;
+                  if (resolutionW > 0 && resolutionH > 0) {
+                      api.parameter("resolutionX", resolutionW);
+                      api.parameter("resolutionY", resolutionH);
+                  }
+                  if (aaMin != -5 || aaMax != -5) {
+                      api.parameter("aa.min", aaMin);
+                      api.parameter("aa.max", aaMax);
+                  }
+                  if (bucketSize > 0)
+                      api.parameter("bucket.size", bucketSize);
+                  if (bucketOrder != null)
+                      api.parameter("bucket.order", bucketOrder);
+                  api.parameter("aa.display", showAA);
+                  api.parameter("threads", threads);
+                  api.parameter("threads.lowPriority", lowPriority);
+                  if (bakingName != null) {
+                      api.parameter("baking.instance", bakingName);
+                      api.parameter("baking.viewdep", bakeViewdep);
+                  }
+                  if (filterType != null)
+                      api.parameter("filter", filterType);
+                  if (noGI)
+                      api.parameter("gi.engine", "none");
+                  else if (pathGI > 0) {
+                      api.parameter("gi.engine", "path");
+                      api.parameter("gi.path.samples", pathGI);
+                  }
+                  if (noCaustics)
+                      api.parameter("caustics", "none");
+                  api.parameter("sampler", sampler);
+                  api.options(SunflowAPI.DEFAULT_OPTIONS);
+                  if (shaderOverride != null) {
+                      api.shader("ambocc", shaderOverride);
+                      api.shaderOverride("ambocc", true);
+                  }
+                  // create display
+                  Display display;
+                  String currentFilename = (filename != null) ? filename.replace("#", String.format("%04d", frameNumber)) : null;
+                  if (showFrame) {
+                      display = new FrameDisplay(currentFilename);
+                  } else {
+                      if (currentFilename != null && currentFilename.endsWith(".exr")) {
+                          try {
+                              display = new OpenExrDisplay(currentFilename, "zip", "float");
+                          } catch (Exception e) {
+                              e.printStackTrace();
+                              return;
+                          }
+                      } else if (currentFilename != null && currentFilename.equals("imgpipe")) {
+                          display = new ImgPipeDisplay();
+                      } else
+                          display = new FileDisplay(currentFilename);
+                  }
+                  api.render(SunflowAPI.DEFAULT_OPTIONS, display);
+              }
+
+              double[] after = EnergyCheckUtils.getEnergyStats();
+              ENT_Util.stopStopwatch();
+              ENT_Util.writeModeFile(String.format("ERun %d: %f %f %f %f\n", k, after[0]-before[0], after[1]-before[1], after[2]-before[2], ENT_Util.elapsedTime()));
+
             }
-            if (runRTBenchmark) {
-                SunflowAPI.runSystemCheck();
-                RealtimeBenchmark t = new RealtimeBenchmark(showFrame, threads);
-                return;
-            }
-            if (input == null)
-                usage(false);
-            SunflowAPI.runSystemCheck();
-            if (frameStart < frameStop && showFrame) {
-                UI.printWarning(Module.GUI, "Animations should not be rendered without -nogui - forcing GUI off anyway");
-                showFrame = false;
-            }
-            if (frameStart < frameStop && filename == null) {
-                filename = "output.#.png";
-                UI.printWarning(Module.GUI, "Animation output was not specified - defaulting to: \"%s\"", filename);
-            }
-            for (int frameNumber = frameStart; frameNumber <= frameStop; frameNumber++) {
-                SunflowAPI api = SunflowAPI.create(input, frameNumber);
-                if (api == null)
-                    continue;
-                if (noRender)
-                    continue;
-                if (resolutionW > 0 && resolutionH > 0) {
-                    api.parameter("resolutionX", resolutionW);
-                    api.parameter("resolutionY", resolutionH);
-                }
-                if (aaMin != -5 || aaMax != -5) {
-                    api.parameter("aa.min", aaMin);
-                    api.parameter("aa.max", aaMax);
-                }
-                if (bucketSize > 0)
-                    api.parameter("bucket.size", bucketSize);
-                if (bucketOrder != null)
-                    api.parameter("bucket.order", bucketOrder);
-                api.parameter("aa.display", showAA);
-                api.parameter("threads", threads);
-                api.parameter("threads.lowPriority", lowPriority);
-                if (bakingName != null) {
-                    api.parameter("baking.instance", bakingName);
-                    api.parameter("baking.viewdep", bakeViewdep);
-                }
-                if (filterType != null)
-                    api.parameter("filter", filterType);
-                if (noGI)
-                    api.parameter("gi.engine", "none");
-                else if (pathGI > 0) {
-                    api.parameter("gi.engine", "path");
-                    api.parameter("gi.path.samples", pathGI);
-                }
-                if (noCaustics)
-                    api.parameter("caustics", "none");
-                api.parameter("sampler", sampler);
-                api.options(SunflowAPI.DEFAULT_OPTIONS);
-                if (shaderOverride != null) {
-                    api.shader("ambocc", shaderOverride);
-                    api.shaderOverride("ambocc", true);
-                }
-                // create display
-                Display display;
-                String currentFilename = (filename != null) ? filename.replace("#", String.format("%04d", frameNumber)) : null;
-                if (showFrame) {
-                    display = new FrameDisplay(currentFilename);
-                } else {
-                    if (currentFilename != null && currentFilename.endsWith(".exr")) {
-                        try {
-                            display = new OpenExrDisplay(currentFilename, "zip", "float");
-                        } catch (Exception e) {
-                            e.printStackTrace();
-                            return;
-                        }
-                    } else if (currentFilename != null && currentFilename.equals("imgpipe")) {
-                        display = new ImgPipeDisplay();
-                    } else
-                        display = new FileDisplay(currentFilename);
-                }
-                api.render(SunflowAPI.DEFAULT_OPTIONS, display);
-            }
+
+            ENT_Util.closeModeFile();
+            EnergyCheckUtils.DeallocProfile();
+
+
         } else {
             MetalLookAndFeel.setCurrentTheme(new DefaultMetalTheme());
             SunflowGUI gui = new SunflowGUI();
@@ -461,10 +475,6 @@ public class SunflowGUI extends javax.swing.JFrame implements UserInterface {
             SunflowAPI.runSystemCheck();
         }
 
-        double[] after = EnergyCheckUtils.getEnergyStats();
-        ENT_Util.writeModeFile(String.format("Energy: %f %f %f\n", after[0]-before[0], after[1]-before[1], after[2]-before[2]));
-        ENT_Util.closeModeFile();
-        EnergyCheckUtils.DeallocProfile();
     }
 
     public SunflowGUI() {

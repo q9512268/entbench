@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="Jung" default="compile">
+  <path id="src.path">    
+    <pathelement path="src/"/>
+  </path>
+
+  <path id="compile.path">
+    <path refid="src.path"/>
+    <fileset dir="lib/">
+      <include name="**/*.jar"/>
+    </fileset>
+  </path>
+
+  <!--
+    executable="/home/acanino/Research/polyglot-personal/bin/jl5c" 
+    executable="/home/acanino/Projects/Panda/bin/pandac" 
+  -->
+
+  <target name="compile">
+    <mkdir dir="classes"/>
+    <javac 
+      fork="yes"
+      executable="/home/acanino/Projects/ent/bin/entc" 
+      destdir="classes">
+      <src path="src/util"/>
+      <classpath refid="compile.path"/>
+    </javac>
+  </target>
+
+  <target name="clean">
+    <delete dir="classes" />
+  </target>
+</project>

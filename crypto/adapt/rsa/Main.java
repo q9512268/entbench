@@ -28,6 +28,16 @@ public class Main {
       ENT_Util.initModeFile();
       int PANDA_RUNS = Integer.parseInt(System.getenv("PANDA_RUNS"));
 
+      /*
+      try {
+        Util.createRandomTestData("./small.dat", 1048576);
+        Util.createRandomTestData("./medium.dat", 2 * 1048576);
+        Util.createRandomTestData("./large.dat", 4 * 1048576);
+      } catch (Exception e) {
+        System.out.println(e);
+      }
+      */
+
       for (int k = 0; k < PANDA_RUNS; k++) {
         double[] before = EnergyCheckUtils.getEnergyStats();
         ENT_Util.resetStopwatch();
@@ -39,13 +49,13 @@ public class Main {
 
         if (choice == 0) {
           //rsa.runSingleEncryptDecrypt("RSA/ECB/PKCS1Padding", Util.TEST_DATA_4);
-          rsa.runMultiEncryptDecrypt("RSA/ECB/PKCS1Padding", Util.TEST_DATA_4);
+          rsa.runMultiEncryptDecrypt("RSA/ECB/PKCS1Padding", Util.TEST_SMALL);
         } else if (choice == 1) {
           //rsa.runSingleEncryptDecrypt("RSA/ECB/PKCS1Padding", Util.TEST_DATA_5);
-          rsa.runMultiEncryptDecrypt("RSA/ECB/PKCS1Padding", Util.TEST_DATA_5);
+          rsa.runMultiEncryptDecrypt("RSA/ECB/PKCS1Padding", Util.TEST_MEDIUM);
         } else {
           //rsa.runSingleEncryptDecrypt("RSA/ECB/PKCS1Padding", Util.TEST_DATA_6);
-          rsa.runMultiEncryptDecrypt("RSA/ECB/PKCS1Padding", Util.TEST_DATA_6);
+          rsa.runMultiEncryptDecrypt("RSA/ECB/PKCS1Padding", Util.TEST_LARGE);
         }
 
         double[] after = EnergyCheckUtils.getEnergyStats();
@@ -58,6 +68,7 @@ public class Main {
 
         ENT_Util.stopStopwatch();
 
+        System.out.format("Finished run %d\n", k);
         ENT_Util.writeModeFile(String.format("ERun %d: %f %f %f %f\n", k, after[0]-before[0], after[1]-before[1], diff, ENT_Util.elapsedTime()));
       }
 
@@ -70,11 +81,11 @@ public class Main {
       choice = Integer.parseInt(System.getenv("ENT_SIZE"));
       try {
         if (choice == 0) {
-          Context.fileCache.loadFile(Util.TEST_DATA_4);
+          Context.fileCache.loadFile(Util.TEST_SMALL);
         } else if (choice == 1) {
-          Context.fileCache.loadFile(Util.TEST_DATA_5);
+          Context.fileCache.loadFile(Util.TEST_MEDIUM);
         } else {
-          Context.fileCache.loadFile(Util.TEST_DATA_6);
+          Context.fileCache.loadFile(Util.TEST_LARGE);
         }
 
       } catch (Exception e) {

@@ -153,8 +153,6 @@ public class SpiderContextImpl implements SpiderContext {
         if (throttle == null) {
             Throttle@mode<?> throttleDyn = throttleFactory.createThrottle(site);
             Throttle@mode<*> throttle2 = snapshot throttleDyn ?mode[@mode<low>,@mode<high>];
-            PANDA_Util.writeModeFile(PANDA_Util.dumpMode(throttle2)+"\n");
-
             throttles.put(site.getHost(), throttle2);
             throttle = throttle2;
         }

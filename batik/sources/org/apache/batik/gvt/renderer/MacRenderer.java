@@ -40,7 +40,11 @@ import org.apache.batik.util.HaltingThread;
  * @author <a href="mailto:Thierry.Kormann@sophia.inria.fr">Thierry Kormann</a>
  * @version $Id: MacRenderer.java 504819 2007-02-08 08:23:19Z dvholten $
  */
-public class MacRenderer implements ImageRenderer {
+public class MacRenderer@mode<?->X> implements ImageRenderer@mode<X> {
+
+    attributor {
+      return @mode<high>;
+    }
 
     static final int COPY_OVERHEAD      = 1000;
     static final int COPY_LINE_OVERHEAD = 10;

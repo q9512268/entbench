@@ -1,0 +1,33 @@
+Num Instances: 9
+Num Instances: 9
+ERun 0: 1470298478 1470298646
+Num Instances: 9
+Num Instances: 9
+ERun 1: 1470298676 1470298842
+Num Instances: 9
+Num Instances: 9
+ERun 2: 1470298872 1470299037
+Num Instances: 9
+Num Instances: 9
+ERun 3: 1470299067 1470299232
+Num Instances: 9
+Num Instances: 9
+ERun 4: 1470299262 1470299427
+Num Instances: 9
+Num Instances: 9
+ERun 5: 1470299457 1470299622
+Num Instances: 9
+Num Instances: 9
+ERun 6: 1470299652 1470299817
+Num Instances: 9
+Num Instances: 9
+ERun 7: 1470299847 1470300011
+Num Instances: 9
+Num Instances: 9
+ERun 8: 1470300041 1470300206
+Num Instances: 9
+Num Instances: 9
+ERun 9: 1470300236 1470300401
+Num Instances: 9
+Num Instances: 9
+ERun 10: 1470300431 1470300596

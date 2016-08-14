@@ -9,5 +9,5 @@ fi
 
 level=$1 
 
-pfb analyze -effort:default jEdit/build/classes
+pfb analyze -maxHeap 2048 -effort:default drjava/drjava-stable-20140826-r5761.jar
 mv $dir/mode.txt $dir/run_sd_${level}.txt

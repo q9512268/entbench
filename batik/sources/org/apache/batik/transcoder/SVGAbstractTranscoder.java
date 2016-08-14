@@ -58,6 +58,8 @@ import org.w3c.dom.DOMImplementation;
 import org.w3c.dom.Document;
 import org.w3c.dom.svg.SVGSVGElement;
 
+import java.util.Map;
+
 /**
  * This class may be the base class of all transcoders which take an
  * SVG document as input and which need to build a DOM tree. The
@@ -109,10 +111,7 @@ public abstract class SVGAbstractTranscoder@mode<?->X> extends XMLAbstractTransc
     /**
      * Image's width and height (init to 400x400).
      */
-    protected mcase<float> imgWidth = mcase<float> {low: 320f; mid: 480f; high: 720f; };
-    
-    protected float height=400;
-    protected float width=400;
+    protected float width=400, height=400;
 
     /** The user agent dedicated to an SVG Transcoder. */
     protected UserAgent userAgent;
@@ -139,6 +138,14 @@ public abstract class SVGAbstractTranscoder@mode<?->X> extends XMLAbstractTransc
 
     protected UserAgent createUserAgent() {
         return new SVGAbstractTranscoderUserAgent();
+    }
+
+    modesafe public void setTranscodingHints(Map hints) {
+      super.setTranscodingHints(hints);
+      if (hints.containsKey(KEY_WIDTH))
+        width = ((Float)hints.get(KEY_WIDTH)).floatValue();
+      if (hints.containsKey(KEY_HEIGHT))
+        height = ((Float)hints.get(KEY_HEIGHT)).floatValue();
     }
 
     /**
@@ -191,6 +198,8 @@ public abstract class SVGAbstractTranscoder@mode<?->X> extends XMLAbstractTransc
         SVGSVGElement root = svgDoc.getRootElement();
         ctx = createBridgeContext(svgDoc);
 
+        GraphicsNode gvtRoot;
+
         // build the GVT tree
         builder = new GVTBuilder();
         // flag that indicates if the document is dynamic
@@ -198,7 +207,6 @@ public abstract class SVGAbstractTranscoder@mode<?->X> extends XMLAbstractTransc
             hints.containsKey(KEY_EXECUTE_ONLOAD) &&
              ((Boolean)hints.get(KEY_EXECUTE_ONLOAD)).booleanValue();
 
-        GraphicsNode gvtRoot;
         try {
             if (isDynamic)
                 ctx.setDynamicState(BridgeContext.DYNAMIC);
@@ -225,13 +233,34 @@ public abstract class SVGAbstractTranscoder@mode<?->X> extends XMLAbstractTransc
             throw new TranscoderException(ex);
         }
 
+        updateTransform(document, uri); 
+
+        this.root = gvtRoot;
+    }
+
+    protected CanvasGraphicsNode getCanvasGraphicsNode(GraphicsNode gn) {
+        if (!(gn instanceof CompositeGraphicsNode))
+            return null;
+        CompositeGraphicsNode cgn = (CompositeGraphicsNode)gn;
+        List children = cgn.getChildren();
+        if (children.size() == 0)
+            return null;
+        gn = (GraphicsNode)children.get(0);
+        if (!(gn instanceof CanvasGraphicsNode))
+            return null;
+        return (CanvasGraphicsNode)gn;
+    }
+
+    protected void updateTransform(Document document, String uri) {
         // get the 'width' and 'height' attributes of the SVG document
+
+        SVGOMDocument svgDoc = (SVGOMDocument)document;
+        SVGSVGElement root = svgDoc.getRootElement();
+
         float docWidth = (float)ctx.getDocumentSize().getWidth();
         float docHeight = (float)ctx.getDocumentSize().getHeight();
 
         setImageSize(docWidth, docHeight);
-
-        System.out.format("Width:%f Height:%f\n", width, height);
 
         // compute the preserveAspectRatio matrix
         AffineTransform Px;
@@ -278,7 +307,7 @@ public abstract class SVGAbstractTranscoder@mode<?->X> extends XMLAbstractTransc
             curAOI = new Rectangle2D.Float(0, 0, width, height);
         }
 
-        CanvasGraphicsNode cgn = getCanvasGraphicsNode(gvtRoot);
+        CanvasGraphicsNode cgn = getCanvasGraphicsNode(this.root);
         if (cgn != null) {
             cgn.setViewingTransform(Px);
             curTxf = new AffineTransform();
@@ -286,20 +315,6 @@ public abstract class SVGAbstractTranscoder@mode<?->X> extends XMLAbstractTransc
             curTxf = Px;
         }
 
-        this.root = gvtRoot;
-    }
-
-    protected CanvasGraphicsNode getCanvasGraphicsNode(GraphicsNode gn) {
-        if (!(gn instanceof CompositeGraphicsNode))
-            return null;
-        CompositeGraphicsNode cgn = (CompositeGraphicsNode)gn;
-        List children = cgn.getChildren();
-        if (children.size() == 0)
-            return null;
-        gn = (GraphicsNode)children.get(0);
-        if (!(gn instanceof CanvasGraphicsNode))
-            return null;
-        return (CanvasGraphicsNode)gn;
     }
 
     /**
@@ -348,10 +363,18 @@ public abstract class SVGAbstractTranscoder@mode<?->X> extends XMLAbstractTransc
     protected void setImageSize(float docWidth, float docHeight) {
 
         // Compute the image's width and height according the hints
+        /*
+        if (hints.containsKey(KEY_WIDTH)) {
+            imgWidth = ((Float)hints.get(KEY_WIDTH)).floatValue();
+        }
         float imgHeight = -1;
         if (hints.containsKey(KEY_HEIGHT)) {
             imgHeight = ((Float)hints.get(KEY_HEIGHT)).floatValue();
         }
+        */
+
+        float imgWidth = width;
+        float imgHeight = -1;
 
         if (imgWidth > 0 && imgHeight > 0) {
             width = imgWidth;

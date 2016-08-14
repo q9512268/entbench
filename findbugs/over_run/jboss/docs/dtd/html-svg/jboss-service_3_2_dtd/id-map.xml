@@ -1,0 +1,33 @@
+<?xml version = "1.0" encoding = "UTF-8"?>
+<id-map>
+	<entry path = "e:server" id = "comp00001" width = "203" height = "143"/>
+	<entry path = "e:loader-repository" id = "comp00002" width = "298" height = "81"/>
+	<entry path = "e:loader-repository/a:loaderRepositoryClass" id = "comp00003" width = "148" height = "38"/>
+	<entry path = "e:loader-repository-config" id = "comp00004" width = "300" height = "48"/>
+	<entry path = "e:loader-repository-config/a:configParserClass" id = "comp00005" width = "127" height = "38"/>
+	<entry path = "e:local-directory" id = "comp00006" width = "195" height = "48"/>
+	<entry path = "e:local-directory/a:path" id = "comp00007" width = "66" height = "38"/>
+	<entry path = "e:classpath" id = "comp00008" width = "262" height = "48"/>
+	<entry path = "e:classpath/a:codebase" id = "comp00009" width = "78" height = "38"/>
+	<entry path = "e:classpath/a:archives" id = "comp00010" width = "83" height = "38"/>
+	<entry path = "e:mbean" id = "comp00011" width = "404" height = "221"/>
+	<entry path = "e:mbean/a:code" id = "comp00012" width = "56" height = "38"/>
+	<entry path = "e:mbean/a:name" id = "comp00013" width = "60" height = "38"/>
+	<entry path = "e:mbean/a:xmbean-dd" id = "comp00014" width = "98" height = "38"/>
+	<entry path = "e:mbean/a:xmbean-code" id = "comp00015" width = "109" height = "38"/>
+	<entry path = "e:xmbean" id = "comp00016" width = "71" height = "38"/>
+	<entry path = "e:constructor" id = "comp00017" width = "163" height = "38"/>
+	<entry path = "e:arg" id = "comp00018" width = "197" height = "48"/>
+	<entry path = "e:arg/a:type" id = "comp00019" width = "65" height = "38"/>
+	<entry path = "e:arg/a:value" id = "comp00020" width = "59" height = "38"/>
+	<entry path = "e:attribute" id = "comp00021" width = "295" height = "48"/>
+	<entry path = "e:attribute/a:name" id = "comp00022" width = "60" height = "38"/>
+	<entry path = "e:attribute/a:replace" id = "comp00023" width = "80" height = "38"/>
+	<entry path = "e:attribute/a:trim" id = "comp00024" width = "63" height = "38"/>
+	<entry path = "e:depends" id = "comp00025" width = "347" height = "81"/>
+	<entry path = "e:depends/a:optional-attribute-name" id = "comp00026" width = "156" height = "38"/>
+	<entry path = "e:depends/a:proxy-type" id = "comp00027" width = "93" height = "38"/>
+	<entry path = "e:depends-list" id = "comp00028" width = "275" height = "81"/>
+	<entry path = "e:depends-list/a:optional-attribute-name" id = "comp00029" width = "156" height = "38"/>
+	<entry path = "e:depends-list-element" id = "comp00030" width = "241" height = "38"/>
+</id-map>

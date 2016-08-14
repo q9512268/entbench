@@ -14,7 +14,7 @@
 		<mkdir dir="${build.classes.dir}" />
     <javac 
       fork="yes" 
-      executable="/home/pi/Projects/ent/bin/entc" 
+      executable="/home/acanino/Projects/ent/bin/entc" 
       srcdir="${src.dir}" 
       destdir="${build.classes.dir}" 
       debug="on" 

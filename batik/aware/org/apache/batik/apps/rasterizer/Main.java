@@ -34,6 +34,8 @@ import org.apache.batik.parser.ClockParser;
 import org.apache.batik.parser.ParseException;
 import org.apache.batik.util.ApplicationSecurityEnforcer;
 
+//import java.util.Date;
+
 import jrapl.EnergyCheckUtils;
 
 /**
@@ -996,21 +998,38 @@ public class Main implements SVGConverterController {
         int PANDA_RUNS = Integer.parseInt(System.getenv("PANDA_RUNS"));
 
         double[] energyRuns = new double[PANDA_RUNS];
-        for (int i = 0; i < PANDA_RUNS; i++) {
+        for (int k = 0; k < PANDA_RUNS; k++) {
+          ENT_Util.resetStopwatch();
+          ENT_Util.startStopwatch();
           double[] before = EnergyCheckUtils.getEnergyStats();
 
+          //long startStamp = (new Date()).getTime()/1000;
+
           (new Main(args)).execute();
+
+          //long endStamp = (new Date()).getTime()/1000;
+
           double[] after = EnergyCheckUtils.getEnergyStats();
-          ENT_Util.writeModeFile(String.format("ERun %d: %f %f %f\n", i, after[0]-before[0], after[1]-before[1], after[2]-before[2]));
-          energyRuns[i] = after[2]-before[2];
-        }
+          double diff = after[2]-before[2];
 
-        double energyTotal = 0.0;
-        for (int i = 1; i < PANDA_RUNS; i++) {
-          energyTotal += energyRuns[i];
-        }
+          if (diff < 0) {
+            diff += EnergyCheckUtils.wraparoundValue;
+          }
 
-        ENT_Util.writeModeFile(String.format("Energy: %f %f %f\n", 0.0, 0.0, energyTotal));
+          ENT_Util.stopStopwatch();
+
+          ENT_Util.writeModeFile(String.format("ERun %d: %f %f %f %f\n", k, after[0]-before[0], after[1]-before[1], diff, ENT_Util.elapsedTime())); 
+          
+          //ENT_Util.writeModeFile(String.format("ERun %d: %d %d\n", k, startStamp, endStamp));
+
+          /*
+          try {
+            Thread.sleep(30000);
+          } catch (Exception e) {
+            System.err.println(e);
+          }
+          */
+        }
 
         ENT_Util.closeModeFile();
         EnergyCheckUtils.DeallocProfile();

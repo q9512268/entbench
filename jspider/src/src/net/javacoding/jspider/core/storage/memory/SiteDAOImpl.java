@@ -27,7 +27,7 @@ class SiteDAOImpl implements SiteDAOSPI {
         return (SiteInternal)byId.get(new Integer(id));
     }
 
-    public SiteInternal find(URL siteURL) {
+    public SiteInternal@mode<*> find(URL siteURL) {
         return (SiteInternal)byURL.get(siteURL);
     }
 

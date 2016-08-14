@@ -109,7 +109,8 @@ public abstract class SVGAbstractTranscoder@mode<?->X> extends XMLAbstractTransc
     /**
      * Image's width and height (init to 400x400).
      */
-    protected mcase<float> imgWidth = mcase<float> {low: 320f; mid: 480f; high: 720f; };
+    //protected mcase<float> imgWidth = mcase<float> {low: 320f; mid: 480f; high: 720f; };
+    protected mcase<float> imgWidth = mcase<float> {low: 512f; mid: 1024f; high: 2048f; };
     
     protected float height=400;
     protected float width=400;

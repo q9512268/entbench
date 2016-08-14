@@ -1056,6 +1056,10 @@ public class JavaBoy@mode<?->X> extends java.applet.Applet implements Runnable, 
    } while (appletRunning);
   }
 
+  // Simulate Load
+  mainWindow.actionPerformed(new ActionEvent(this, 0, "Open ROM"));
+  mainWindow.actionPerformed(new ActionEvent(this, 0, "Reset"));
+
   do {
 //   repaint();
    try {

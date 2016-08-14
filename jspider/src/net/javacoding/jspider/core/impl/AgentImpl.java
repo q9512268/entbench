@@ -109,7 +109,6 @@ public class AgentImpl implements Agent, CoreEventVisitor {
         SpiderHttpURLTask@mode<?> task = new SpiderHttpURLTask@mode<?>(context, foundURL, site);
         Throttle@mode<*> throttle = context.throttle(site);
         SpiderHttpURLTask@mode<*> task2 = snapshot task ?mode[throttle, @mode<high>];
-        PANDA_Util.writeModeFile(PANDA_Util.dumpMode(task2)+"\n");
 
         scheduler.schedule(task2);
         notifyAll();

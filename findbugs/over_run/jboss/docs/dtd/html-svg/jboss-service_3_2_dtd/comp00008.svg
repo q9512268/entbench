@@ -1,0 +1,52 @@
+<?xml version = "1.0"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 20010904//EN" "http://www.w3.org/TR/2001/REC-SVG-20010904/DTD/svg10.dtd">
+<svg width = "262pt" height = "48pt" viewBox = "0 0 262 48" xmlns = "http://www.w3.org/2000/svg" xmlns:xlink = "http://www.w3.org/1999/xlink">
+	<defs>
+		<style type = "text/css"><![CDATA[
+rect.attrGroup { fill: ivory ; stroke: black; stroke-width: 1 }
+rect.element { fill: ivory ; stroke: black; stroke-width: 1 }
+rect.elTypeBkgnd { fill: lightgray ; stroke: none }
+text.elName { font-family: helvetica ; font-size : 10 }
+text.elType { font-family: helvetica ; font-size : 7 }
+text.occurLarge { font-family: helvetica ; font-size : 9; fill : blue }
+text.occurSmall { font-family: helvetica ; font-size : 7; fill : blue }
+rect.typeIconDark { fill : darkslategray }
+circle.occurs { stroke : black ; stroke-width: 1; fill : white }
+circle.ellipsis { fill : black }
+path.typeIconDark { stroke : lightgray ; stroke-width: 1 }
+path.connector { stroke : red ; stroke-width: 1 ; fill: none; }
+path.modelGroup { stroke : black ; stroke-width: 1 ; fill: lightgray; }
+polyline.connector { stroke : red ; stroke-width: 1 ; fill: none; }
+.nodeStyle { fill : blue }
+]]></style>
+	</defs>
+	<rect x = "5" y = "10" width = "66" height = "28" class = "element"/>
+	<polygon class = "nodeStyle" points = "11,12 7,16 11,20 15,16"/>
+	<text x = "16" y = "21" class = "elName">classpath</text>
+	<rect x = "6" y = "25" width = "64" height = "12" class = "elTypeBkgnd"/>
+	<image xlink:href = "../dgmTypeEmpty.gif" width = "10" height = "10" x = "61" y = "20"/>
+	<polyline class = "connector" points = "71,24 101,24"/>
+	<rect x = "101" y = "5" width = "156" height = "38" class = "attrGroup" rx = "5" ry = "5"/>
+	<rect x = "106" y = "10" width = "68" height = "28" class = "element" rx = "5" ry = "5"/>
+	<circle class = "nodeStyle" cx = "112" cy = "16" r = "4"/>
+	<text x = "117" y = "21" class = "elName">codebase</text>
+	<rect x = "107" y = "11" width = "66" height = "26" class = "elTypeBkgnd" rx = "5" ry = "5" clip-path = "url(#e:classpath/a:codebase)"/>
+	<defs/>
+	<clipPath id = "e:classpath/a:codebase">
+		<rect x = "106" y = "25" width = "68" height = "12"/>
+	</clipPath>
+	<text x = "107" y = "33" class = "elType">string</text>
+	<image xlink:href = "../dgmDtString.gif" width = "10" height = "10" x = "164" y = "20"/>
+	<circle class = "occurs" cx = "185" cy = "24" r = "6"/>
+	<text x = "182" y = "27" class = "occurLarge">?</text>
+	<rect x = "191" y = "10" width = "61" height = "28" class = "element" rx = "5" ry = "5"/>
+	<circle class = "nodeStyle" cx = "197" cy = "16" r = "4"/>
+	<text x = "202" y = "21" class = "elName">archives</text>
+	<rect x = "192" y = "11" width = "59" height = "26" class = "elTypeBkgnd" rx = "5" ry = "5" clip-path = "url(#e:classpath/a:archives)"/>
+	<defs/>
+	<clipPath id = "e:classpath/a:archives">
+		<rect x = "191" y = "25" width = "61" height = "12"/>
+	</clipPath>
+	<text x = "192" y = "33" class = "elType">string</text>
+	<image xlink:href = "../dgmDtString.gif" width = "10" height = "10" x = "242" y = "20"/>
+</svg>

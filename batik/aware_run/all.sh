@@ -1,30 +1,48 @@
 #!/bin/bash
 
+dir=`dirname "$0"`
+
 runs=(
-  sd_hc.sh
-  sd_mc.sh
-  sd_lc.sh
-  md_hc.sh
-  md_mc.sh
-  md_lc.sh
-  ld_hc.sh
-  ld_mc.sh
-  ld_lc.sh
+  ld.sh
+  md.sh
+  sd.sh
 )
 
-export PANDA_RUNS=50
+contexts=(
+  hc
+  mc
+  lc
+)
 
-for rn in ${runs[@]}; do
-  echo "Starting ${rn}"
-  $(./$rn > /dev/null)  
-  echo "Completed ${rn}"
-  sleep 10
+blevels=(
+  0.90
+  0.70
+  0.40
+) 
+
+export PANDA_RUNS=11
+export PANDA_BATTERY_RUN=true
+export PANDA_RECOVER=true
+
+for i in `seq 0 2`; do
+  export ENT_BATTERY_LEVEL=${blevels[$i]}
+
+  for rn in ${runs[@]}; do
+    echo "Starting ${contexts[$i]} ${rn}"
+    $(./$rn ${contexts[$i]} > /dev/null)  
+    echo "Completed ${contexts[$i]} ${rn}"
+  done
 done
 
 export PANDA_RECOVER=false
-for rn in ${runs[@]}; do
-  echo "Starting ${rn}"
-  $(./$rn "u" > /dev/null)  
-  echo "Completed ${rn}"
-  sleep 10
+
+for i in `seq 0 2`; do
+  export ENT_BATTERY_LEVEL=${blevels[$i]}
+
+  for rn in ${runs[@]}; do
+    echo "Starting ${contexts[$i]}u ${rn}"
+    $(./$rn ${contexts[$i]}u > /dev/null)  
+    echo "Completed ${contexts[$i]}u ${rn}"
+  done
 done
+

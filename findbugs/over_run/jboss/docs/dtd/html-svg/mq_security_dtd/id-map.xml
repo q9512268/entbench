@@ -1,0 +1,9 @@
+<?xml version = "1.0" encoding = "UTF-8"?>
+<id-map>
+	<entry path = "e:security" id = "comp00001" width = "151" height = "38"/>
+	<entry path = "e:role" id = "comp00002" width = "297" height = "48"/>
+	<entry path = "e:role/a:name" id = "comp00003" width = "60" height = "38"/>
+	<entry path = "e:role/a:create" id = "comp00004" width = "62" height = "38"/>
+	<entry path = "e:role/a:write" id = "comp00005" width = "55" height = "38"/>
+	<entry path = "e:role/a:read" id = "comp00006" width = "54" height = "38"/>
+</id-map>

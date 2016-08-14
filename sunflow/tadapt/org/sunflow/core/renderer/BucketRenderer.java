@@ -202,7 +202,7 @@ public class BucketRenderer@mode<?->X> implements ImageSampler@mode<X> {
         private class Sleeper@mode<?->X> {
           attributor {
             float temp = ENT_Util.Temperature.getTempC();
-            ENT_Util.writeModeFile(String.format("Temperature:%f\n",temp));
+            ENT_Util.writeModeFile(String.format("%f\n",temp));
             if (temp >= 65.0) {
               return @mode<low>;
             } else if (temp >= 60.0) {

@@ -9,7 +9,19 @@ import java.net.URL;
 /**
  * $Id: SiteInternal.java,v 1.13 2003/04/29 17:53:48 vanrogu Exp $
  */
-public class SiteInternal implements Site {
+public class SiteInternal@mode<?->X> implements Site {
+
+    private mcase<int> HACK = mcase<int> {low: 0; mid: 0; high: 0; };
+
+    attributor {
+      if (this.getAllResources().length < 100) {
+        return @mode<low>;
+      } else if (this.getAllResources().length < 1200) {
+        return @mode<mid>;
+      } else {
+        return @mode<high>;
+      } 
+    }
 
     protected StorageSPI storage;
 

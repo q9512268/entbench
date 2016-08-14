@@ -5,8 +5,12 @@ if [ $# -ne 1 ]; then
   exit
 fi
 
-export PANDA_BATTERY_RUN=true
 export PANDA_JSPIDER_INTERVAL=250
 export PANDA_JSPIDER_DEPTH=4
-jspider.sh http://docs.idris-lang.org/en/latest/index.html
+
+export PANDA_RUNS=1
+export ENT_BATTERY_LEVEL=0.90
+export PANDA_RECOVER=false
+
+jspider.sh http://api.rubyonrails.org/  > /dev/null
 mv mode.txt run_ld_${1}.txt

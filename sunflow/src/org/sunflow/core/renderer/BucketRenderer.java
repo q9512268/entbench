@@ -22,6 +22,8 @@ import org.sunflow.system.Timer;
 import org.sunflow.system.UI;
 import org.sunflow.system.UI.Module;
 
+import ent.runtime.*;
+
 public class BucketRenderer@mode<?->X> implements ImageSampler@mode<X> {
     private Scene@mode<low <= * <= X> scene;
     private Display display;
@@ -39,7 +41,6 @@ public class BucketRenderer@mode<?->X> implements ImageSampler@mode<X> {
     // anti-aliasing
     private int minAADepth;
     private int maxAADepth;
-
     private int superSampling;
     private float contrastThreshold;
     private boolean jitter;
@@ -61,26 +62,16 @@ public class BucketRenderer@mode<?->X> implements ImageSampler@mode<X> {
     private float fhs;
 
     attributor {
-      if (useBat) {
-        if (ENT_Util.Battery.percentRemaining() >= 0.75) {
-          return @mode<high>;
-        } else if (ENT_Util.Battery.percentRemaining() >= 0.50) {
-          return @mode<mid>;
-        } else {
-          return @mode<low>;
-        }
+      if (ENT_Util.Battery.percentRemaining() >= 0.75) {
+        return @mode<high>;
+      } else if (ENT_Util.Battery.percentRemaining() >= 0.50) {
+        return @mode<mid>;
       } else {
-        if (this.maxAADepth >= 2) {
-          return @mode<low>;
-        } else if (this.maxAADepth >= 1) {
-          return @mode<mid>;
-        } else {
-          return @mode<high>;
-        }
+        return @mode<low>;
       }
     }
 
-    private boolean useBat = false;
+    private boolean tadapt;
 
     public BucketRenderer() {
         bucketSize = 32;
@@ -90,34 +81,17 @@ public class BucketRenderer@mode<?->X> implements ImageSampler@mode<X> {
         filterName = "box";
         jitter = false; // off by default
         dumpBuckets = false; // for debugging only - not user settable
-        
-        String useBatStr = System.getenv("PANDA_BATTERY_RUN");
-        if (useBatStr != null && useBatStr.equals("true")) {
-          useBat = true;
-        }
-    }
 
-    public modesafe void preprepare(Options options) {
-        minAADepth = options.getInt("aa.min", minAADepth);
-        maxAADepth = options.getInt("aa.max", maxAADepth);
+        String tadaptstr = System.getenv("PANDA_TADAPT");
+        if (tadaptstr != null && tadaptstr.equals("true")) {
+          this.tadapt = true;
+        } else {
+          this.tadapt = false;
+        }
     }
 
     public boolean prepare(Options options, Scene@mode<?> scene, int w, int h) {
-        String recovstr = System.getenv("PANDA_RECOVER");
-        boolean recover = true;
-        if (recovstr != null && recovstr.equals("false")) {
-          recover = false;
-        }
-
-        try {
-          this.scene = snapshot scene ?mode[@mode<low>, @mode<X>];
-        } catch (RuntimeException e) {
-          this.scene = snapshotforce scene ?mode[@mode<low>, @mode<X>];
-          if (recover) {
-            minAADepth = -1;
-            maxAADepth = 0;
-          }
-        }
+        this.scene = snapshot scene ?mode[@mode<low>, @mode<X>];
 
         imageWidth = w;
         imageHeight = h;
@@ -126,6 +100,9 @@ public class BucketRenderer@mode<?->X> implements ImageSampler@mode<X> {
         bucketSize = options.getInt("bucket.size", bucketSize);
         bucketOrderName = options.getString("bucket.order", bucketOrderName);
 
+        minAADepth = options.getInt("aa.min", minAADepth);
+        maxAADepth = options.getInt("aa.max", maxAADepth);
+        
         superSampling = options.getInt("aa.samples", superSampling);
         displayAA = options.getBoolean("aa.display", displayAA);
         jitter = options.getBoolean("aa.jitter", jitter);
@@ -143,7 +120,7 @@ public class BucketRenderer@mode<?->X> implements ImageSampler@mode<X> {
         maxAADepth = MathUtils.clamp(maxAADepth, minAADepth, 5);
         superSampling = MathUtils.clamp(superSampling, 1, 256);
 
-        invSuperSampling = 1.0 / superSampling;
+        invSuperSampling = 1.0 / superSampling; 
 
         // compute AA stepping sizes
         subPixelSize = (maxAADepth > 0) ? (1 << maxAADepth) : 1;
@@ -203,7 +180,7 @@ public class BucketRenderer@mode<?->X> implements ImageSampler@mode<X> {
 
         Thread[] renderThreads = new Thread[scene.getThreads()];
         for (int i = 0; i < renderThreads.length; i++) {
-            renderThreads[i] = new BucketThread(i);
+            renderThreads[i] = new BucketThread(i, this.tadapt);
             renderThreads[i].setPriority(scene.getThreadPriority());
             renderThreads[i].start();
         }
@@ -221,15 +198,53 @@ public class BucketRenderer@mode<?->X> implements ImageSampler@mode<X> {
     }
 
     private class BucketThread extends Thread {
+        
+        private class Sleeper@mode<?->X> {
+          attributor {
+            float temp = ENT_Util.Temperature.getTempC();
+            ENT_Util.writeModeFile(String.format("%f\n",temp));
+            if (temp >= 65.0) {
+              return @mode<low>;
+            } else if (temp >= 60.0) {
+              return @mode<mid>;
+            } else {
+              return @mode<low>;
+            }
+          }
+
+          private boolean tadapt;
+
+          public Sleeper(boolean tadapt) {
+            this.tadapt = tadapt;
+          }
+
+          public mcase<int> sleepTime = mcase<int> { low:500; mid:150; high:0; };
+
+          public void sleep() {
+            if (tadapt && sleepTime > 0) {
+              try {
+                Thread.sleep(sleepTime);
+              } catch (Exception e) {
+              }
+            }
+          }
+        }
+
         private int threadID;
 
-        BucketThread(int threadID) {
+        private boolean tadapt;
+
+        BucketThread(int threadID, boolean tadapt) {
             this.threadID = threadID;
+            this.tadapt = tadapt;
         }
 
         public void run() {
             IntersectionState istate = new IntersectionState();
             while (true) {
+                Sleeper@mode<*> sleeper = snapshot (new Sleeper@mode<?>(this.tadapt)) ?mode[@mode<low>,@mode<high>];
+                sleeper.sleep();
+                
                 int bx, by;
                 synchronized (BucketRenderer.this) {
                     if (bucketCounter >= bucketCoords.length)

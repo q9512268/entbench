@@ -30,7 +30,7 @@ import java.util.Collection;
  * @author <a href="mailto:vincent.hardy@eng.sun.com">Vincent Hardy</a>
  * @version $Id: ImageRenderer.java 504760 2007-02-08 01:40:53Z deweese $
  */
-public interface ImageRenderer extends Renderer{
+public interface ImageRenderer@mode<?->X> extends Renderer {
 
     /**
      * release resources associated with this object.
@@ -40,7 +40,7 @@ public interface ImageRenderer extends Renderer{
     /**
      * Update the required size of the offscreen buffer.
      */
-    void updateOffScreen(int width, int height);
+    modesafe void updateOffScreen(int width, int height);
 
     /**
      * Sets the transform from the current user space (as defined by
@@ -49,20 +49,20 @@ public interface ImageRenderer extends Renderer{
      * @param usr2dev the new user space to device space transform. If null,
      *        the identity transform will be set.
      */
-    void setTransform(AffineTransform usr2dev);
+    modesafe void setTransform(AffineTransform usr2dev);
 
     /**
      * Returns the transform from the current user space (as defined
      * by the top node of the GVT tree) to the device space.
      */
-    public AffineTransform getTransform();
+    modesafe public AffineTransform getTransform();
 
     /**
      * Sets the specified rendering hints to be used for future renderings.
      * This replaces current set of rendering hints.
      * @param rh the rendering hints to use
      */
-    void setRenderingHints(RenderingHints rh);
+    modesafe void setRenderingHints(RenderingHints rh);
 
     /**
      * Returns the rendering hints this ImageRenderer is using for its

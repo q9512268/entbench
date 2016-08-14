@@ -54,7 +54,7 @@ public class SpiderContextImpl implements SpiderContext {
     protected String authenticationString;
     protected boolean useProxyAuthentication;
     protected boolean useProxy;
-    protected Ruleset generalSpiderRules;
+    protected Ruleset@mode<?> generalSpiderRules;
     protected Ruleset generalParserRules;
     protected String defaultUserAgent;
     protected Log log;
@@ -157,7 +157,7 @@ public class SpiderContextImpl implements SpiderContext {
         return throttle;
     }
 
-    public Ruleset getGeneralSpiderRules ( ) {
+    public Ruleset@mode<?> getGeneralSpiderRules ( ) {
         return generalSpiderRules;
     }
 
@@ -165,8 +165,8 @@ public class SpiderContextImpl implements SpiderContext {
         return generalParserRules;
     }
 
-    public Ruleset getSiteSpiderRules(Site site) {
-        Ruleset ruleSet =(Ruleset)spiderRules.get(site);
+    public Ruleset@mode<?> getSiteSpiderRules(Site site) {
+        Ruleset@mode<?> ruleSet =(Ruleset)spiderRules.get(site);
         if ( ruleSet == null) {
             return generalSpiderRules;
         } else {

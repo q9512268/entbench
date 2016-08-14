@@ -45,6 +45,7 @@ import org.apache.batik.ext.awt.image.rendered.PadRed;
 import org.apache.batik.ext.awt.image.rendered.TileCacheRed;
 import org.apache.batik.ext.awt.image.rendered.TranslateRed;
 import org.apache.batik.gvt.GraphicsNode;
+import org.apache.batik.gvt.CompositeGraphicsNode;
 import org.apache.batik.util.HaltingThread;
 
 /**
@@ -54,7 +55,17 @@ import org.apache.batik.util.HaltingThread;
  * @author <a href="mailto:vincent.hardy@eng.sun.com">Vincent Hardy</a>
  * @version $Id: StaticRenderer.java 504819 2007-02-08 08:23:19Z dvholten $
  */
-public class StaticRenderer implements ImageRenderer {
+public class StaticRenderer@mode<?->X> implements ImageRenderer@mode<X> {
+
+    attributor {
+      if (this.nodeCount >= 2000) {
+        return @mode<high>;
+      } else if (this.nodeCount >= 500) {
+        return @mode<mid>;
+      } else {
+        return @mode<low>;
+      }
+    }
 
     /**
      * Tree this Renderer paints.
@@ -64,6 +75,7 @@ public class StaticRenderer implements ImageRenderer {
     protected CachableRed       rootCR;
     protected SoftReference     lastCR;
     protected SoftReference     lastCache;
+    protected int nodeCount;
 
     /**
      * Flag for double buffering.
@@ -159,6 +171,24 @@ public class StaticRenderer implements ImageRenderer {
         currentRaster = null;
 
         // renderingHints = new RenderingHints(defaultRenderingHints);
+        this.nodeCount = this.countNodes(rootGN);
+    }
+
+    private int countNodes(GraphicsNode node) {
+      int c = 0;
+      if (node instanceof CompositeGraphicsNode) {
+        CompositeGraphicsNode cn = (CompositeGraphicsNode) node;
+        if (cn.children == null) {
+          return c;
+        }
+        c += cn.children.length;
+        for (int i = 0; i < cn.children.length; i++) {
+          if (cn.children[i] != null) {
+            c += this.countNodes(cn.children[i]);
+          }
+        }
+      }
+      return c;
     }
 
     /**

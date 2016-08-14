@@ -18,11 +18,14 @@ import io.FileCache;
 
 public class Data@mode<?->X> {
   attributor {
-    if (this.length <= 4096) {
+    if (this.length <= 1050000) {
+      System.out.format("Hit low\n");
       return @mode<low>;
-    } else if (this.length <= 65536) {
+    } else if (this.length <= 2100000) {
+      System.out.format("Hit mid\n");
       return @mode<mid>;
     } else {
+      System.out.format("Hit high\n");
       return @mode<high>;
     }
   }

@@ -1,0 +1,8 @@
+<?xml version = "1.0" encoding = "UTF-8"?>
+<id-map>
+	<entry path = "e:manager-list/e:manager/e:address" id = "comp00001" width = "68" height = "38"/>
+	<entry path = "e:manager-list/e:manager/e:port" id = "comp00002" width = "51" height = "38"/>
+	<entry path = "e:manager-list/e:manager/e:version" id = "comp00003" width = "66" height = "38"/>
+	<entry path = "e:manager-list/e:manager" id = "comp00004" width = "175" height = "108"/>
+	<entry path = "e:manager-list" id = "comp00005" width = "198" height = "38"/>
+</id-map>

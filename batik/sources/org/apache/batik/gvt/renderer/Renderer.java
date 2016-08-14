@@ -30,14 +30,14 @@ import org.apache.batik.ext.awt.geom.RectListManager;
  * @author <a href="mailto:vincent.hardy@eng.sun.com">Vincent Hardy</a>
  * @version $Id: Renderer.java 478188 2006-11-22 15:19:17Z dvholten $
  */
-public interface Renderer {
+public interface Renderer@mode<?->X> {
 
     /**
      * This associates the given GVT Tree with this renderer.
      * Any previous tree association is forgotten.
      * Not certain if this should be just GraphicsNode, or CanvasGraphicsNode.
      */
-    void setTree(GraphicsNode treeRoot);
+    modesafe void setTree(GraphicsNode treeRoot);
 
     /**
      * Returns the GVT tree associated with this renderer
@@ -65,7 +65,7 @@ public interface Renderer {
      * Sets the transform from the current user space (as defined by
      * the top node of the GVT tree, to the associated device space.
      */
-    void setTransform(AffineTransform usr2dev);
+    modesafe void setTransform(AffineTransform usr2dev);
 
     /**
      * Returns a copy of the transform from the current user space (as

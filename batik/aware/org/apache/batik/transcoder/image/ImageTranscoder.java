@@ -118,7 +118,7 @@ public abstract class ImageTranscoder@mode<?->X> extends SVGAbstractTranscoder@m
           renderer = snapshot d_renderer ?mode[@mode<low>, @mode<X>];
         } catch (RuntimeException e) {
           if (recover) {
-            width = 320;
+            width = 512;
             super.updateTransform(document, uri);
             w = (int)(width+0.5);
             h = (int)(height+0.5);

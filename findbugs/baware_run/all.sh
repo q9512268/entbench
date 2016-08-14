@@ -2,32 +2,46 @@
 
 dir=`dirname "$0"`
 
-if [ $# -ne 1 ]; then
-  echo "sd usage: [ESTIMATED_LEVEL]"
-  exit
-fi
-
-level=$1 
-
 runs=(
-  sd.sh
-  md.sh
   ld.sh
+  md.sh
+  sd.sh
 )
+
+contexts=(
+  hc
+  mc
+  lc
+)
+
+blevels=(
+  0.90
+  0.70
+  0.40
+) 
 
 export PANDA_RUNS=11
 
-for rn in ${runs[@]}; do
-  echo "Starting ${rn}"
-  $(./$rn $1 > /dev/null)  
-  echo "Completed ${rn}"
-  sleep 10
+export PANDA_RECOVER=true
+
+for i in `seq 0 2`; do
+  export ENT_BATTERY_LEVEL=${blevels[$i]}
+
+  for rn in ${runs[@]}; do
+    echo "Starting ${contexts[$i]} ${rn}"
+    $(./$rn ${contexts[$i]} > /dev/null)  
+    echo "Completed ${contexts[$i]} ${rn}"
+  done
 done
 
 export PANDA_RECOVER=false
-for rn in ${runs[@]}; do
-  echo "Starting ${rn}"
-  $(./$rn ${1}u > /dev/null)  
-  echo "Completed ${rn}u"
-  sleep 10
+
+for i in `seq 0 2`; do
+  export ENT_BATTERY_LEVEL=${blevels[$i]}
+
+  for rn in ${runs[@]}; do
+    echo "Starting ${contexts[$i]}u ${rn}"
+    $(./$rn ${contexts[$i]}u > /dev/null)  
+    echo "Completed ${contexts[$i]}u ${rn}"
+  done
 done

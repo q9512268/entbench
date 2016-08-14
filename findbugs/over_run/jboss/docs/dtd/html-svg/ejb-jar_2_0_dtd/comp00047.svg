@@ -1,0 +1,50 @@
+<?xml version = "1.0"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 20010904//EN" "http://www.w3.org/TR/2001/REC-SVG-20010904/DTD/svg10.dtd">
+<svg width = "240pt" height = "81pt" viewBox = "0 0 240 81" xmlns = "http://www.w3.org/2000/svg" xmlns:xlink = "http://www.w3.org/1999/xlink">
+	<defs>
+		<style type = "text/css"><![CDATA[
+rect.attrGroup { fill: ivory ; stroke: black; stroke-width: 1 }
+rect.element { fill: ivory ; stroke: black; stroke-width: 1 }
+rect.elTypeBkgnd { fill: lightgray ; stroke: none }
+text.elName { font-family: helvetica ; font-size : 10 }
+text.elType { font-family: helvetica ; font-size : 7 }
+text.occurLarge { font-family: helvetica ; font-size : 9; fill : blue }
+text.occurSmall { font-family: helvetica ; font-size : 7; fill : blue }
+rect.typeIconDark { fill : darkslategray }
+circle.occurs { stroke : black ; stroke-width: 1; fill : white }
+circle.ellipsis { fill : black }
+path.typeIconDark { stroke : lightgray ; stroke-width: 1 }
+path.connector { stroke : red ; stroke-width: 1 ; fill: none; }
+path.modelGroup { stroke : black ; stroke-width: 1 ; fill: lightgray; }
+polyline.connector { stroke : red ; stroke-width: 1 ; fill: none; }
+.nodeStyle { fill : blue }
+]]></style>
+	</defs>
+	<rect x = "131" y = "5" width = "54" height = "38" class = "attrGroup" rx = "5" ry = "5"/>
+	<circle class = "occurs" cx = "142" cy = "24" r = "6"/>
+	<text x = "139" y = "27" class = "occurLarge">?</text>
+	<rect x = "148" y = "10" width = "32" height = "28" class = "element" rx = "5" ry = "5"/>
+	<circle class = "nodeStyle" cx = "154" cy = "16" r = "4"/>
+	<text x = "159" y = "21" class = "elName">id</text>
+	<rect x = "149" y = "11" width = "30" height = "26" class = "elTypeBkgnd" rx = "5" ry = "5" clip-path = "url(#e:method-params/a:id)"/>
+	<defs/>
+	<clipPath id = "e:method-params/a:id">
+		<rect x = "148" y = "25" width = "32" height = "12"/>
+	</clipPath>
+	<text x = "149" y = "33" class = "elType">ID</text>
+	<image xlink:href = "../dgmDtName.gif" width = "10" height = "10" x = "170" y = "20"/>
+	<rect x = "5" y = "48" width = "96" height = "28" class = "element"/>
+	<polygon class = "nodeStyle" points = "11,50 7,54 11,58 15,54"/>
+	<text x = "16" y = "59" class = "elName">method-params</text>
+	<rect x = "6" y = "63" width = "94" height = "12" class = "elTypeBkgnd"/>
+	<image xlink:href = "../dgmTypeComplex.gif" width = "10" height = "10" x = "91" y = "58"/>
+	<polyline class = "connector" points = "101,62 131,62"/>
+	<polyline class = "connector" points = "101,60 109,60 109,24 131,24"/>
+	<circle class = "occurs" cx = "137" cy = "62" r = "6"/>
+	<text x = "134" y = "65" class = "occurLarge">*</text>
+	<rect x = "143" y = "48" width = "92" height = "28" class = "element"/>
+	<polygon class = "nodeStyle" points = "149,50 145,54 149,58 153,54"/>
+	<text x = "154" y = "59" class = "elName">method-param</text>
+	<rect x = "144" y = "63" width = "90" height = "12" class = "elTypeBkgnd"/>
+	<image xlink:href = "../dgmDtString.gif" width = "10" height = "10" x = "225" y = "58"/>
+</svg>

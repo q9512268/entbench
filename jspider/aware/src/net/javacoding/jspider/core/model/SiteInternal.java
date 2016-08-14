@@ -14,9 +14,9 @@ public class SiteInternal@mode<?->X> implements Site {
     private mcase<int> HACK = mcase<int> {low: 0; mid: 0; high: 0; };
 
     attributor {
-      if (this.getAllResources().length < 50) {
+      if (this.getAllResources().length < 100) {
         return @mode<low>;
-      } else if (this.getAllResources().length < 200) {
+      } else if (this.getAllResources().length < 1200) {
         return @mode<mid>;
       } else {
         return @mode<high>;

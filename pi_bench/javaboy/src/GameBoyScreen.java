@@ -482,8 +482,8 @@ class GameBoyScreen@mode<X> extends Frame implements ActionListener,
     clearWindow();
    }
 
-   FileDialog fd = new FileDialog(this, "Open ROM");
-   fd.show();
+   //FileDialog fd = new FileDialog(this, "Open ROM");
+   //fd.show();
 
 		String recovstr = System.getenv("PANDA_RECOVER");
 		boolean recover = true;
@@ -491,10 +491,12 @@ class GameBoyScreen@mode<X> extends Frame implements ActionListener,
 			recover = false;
 		} 
 
-	 Cartridge@mode<?> dc = new Cartridge@mode<?>(fd.getDirectory() + fd.getFile(), this);
+    System.out.println("HIT!\n");
+
+	 //Cartridge@mode<?> dc = new Cartridge@mode<?>(fd.getDirectory() + fd.getFile(), this);
+	 Cartridge@mode<?> dc = new Cartridge@mode<?>("/home/acanino/Projects/entbench/pi_bench/javaboy/input/large.gbc", this);
 	 Cartridge@mode<low<=*<=X> cartridge = null;
 
-   if (fd.getFile() != null) {
 		try {
   		cartridge = snapshot dc ?mode [@mode<low>,@mode<X>];
 		} catch (Exception e1) {
@@ -518,7 +520,6 @@ class GameBoyScreen@mode<X> extends Frame implements ActionListener,
     setChannelEnable();
     applet.dmgcpu.allowGbcFeatures = fileGameboyColor.getState();
     applet.dmgcpu.reset();
-   }
 
   } else if (command.equals("Frame counter")) {
    viewFrameCounter.setState(!viewFrameCounter.getState());

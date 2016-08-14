@@ -31,6 +31,7 @@ import java.awt.image.SinglePixelPackedSampleModel;
 import org.apache.batik.ext.awt.image.GraphicsUtil;
 import org.apache.batik.gvt.renderer.ConcreteImageRendererFactory;
 import org.apache.batik.gvt.renderer.ImageRenderer;
+import org.apache.batik.gvt.renderer.StaticRenderer;
 import org.apache.batik.gvt.renderer.ImageRendererFactory;
 import org.apache.batik.transcoder.SVGAbstractTranscoder;
 import org.apache.batik.transcoder.TranscoderException;
@@ -95,14 +96,37 @@ public abstract class ImageTranscoder@mode<?->X> extends SVGAbstractTranscoder@m
         int w = (int)(width+0.5);
         int h = (int)(height+0.5);
 
+
+
         // paint the SVG document using the bridge package
         // create the appropriate renderer
-        ImageRenderer renderer = createRenderer();
+        ImageRenderer@mode<?> d_renderer = createRenderer();
 
-        renderer.updateOffScreen(w, h);
+        d_renderer.updateOffScreen(w, h);
         // curTxf.translate(0.5, 0.5);
-        renderer.setTransform(curTxf);
-        renderer.setTree(this.root);
+        d_renderer.setTransform(curTxf);
+        d_renderer.setTree(this.root);
+
+        String recovstr = System.getenv("PANDA_RECOVER");
+        boolean recover = true;
+        if (recovstr != null && recovstr.equals("false")) {
+          recover = false;
+        } 
+
+        ImageRenderer@mode<*> renderer = null;
+        try {
+          renderer = snapshot d_renderer ?mode[@mode<low>, @mode<X>];
+        } catch (RuntimeException e) {
+          if (recover) {
+            width = 512;
+            super.updateTransform(document, uri);
+            w = (int)(width+0.5);
+            h = (int)(height+0.5);
+            d_renderer.setTransform(curTxf);
+          }
+          renderer = snapshotforce d_renderer ?mode[@mode<low>, @mode<X>];
+        }
+
         this.root = null; // We're done with it...
 
         try {
@@ -137,10 +161,11 @@ public abstract class ImageTranscoder@mode<?->X> extends SVGAbstractTranscoder@m
     /**
      * Method so subclasses can modify the Renderer used to render document.
      */
-    protected ImageRenderer createRenderer() {
-        ImageRendererFactory rendFactory = new ConcreteImageRendererFactory();
+    protected ImageRenderer@mode<?> createRenderer() {
+        //ImageRendererFactory rendFactory = new ConcreteImageRendererFactory();
         // ImageRenderer renderer = rendFactory.createDynamicImageRenderer();
-        return rendFactory.createStaticImageRenderer();
+        //return rendFactory.createStaticImageRenderer();
+        return new StaticRenderer@mode<?>();
     }
 
     /**

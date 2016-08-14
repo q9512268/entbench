@@ -1,0 +1,92 @@
+<?xml version = "1.0"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 20010904//EN" "http://www.w3.org/TR/2001/REC-SVG-20010904/DTD/svg10.dtd">
+<svg width = "252pt" height = "318pt" viewBox = "0 0 252 318" xmlns = "http://www.w3.org/2000/svg" xmlns:xlink = "http://www.w3.org/1999/xlink">
+	<defs>
+		<style type = "text/css"><![CDATA[
+rect.attrGroup { fill: ivory ; stroke: black; stroke-width: 1 }
+rect.element { fill: ivory ; stroke: black; stroke-width: 1 }
+rect.elTypeBkgnd { fill: lightgray ; stroke: none }
+text.elName { font-family: helvetica ; font-size : 10 }
+text.elType { font-family: helvetica ; font-size : 7 }
+text.occurLarge { font-family: helvetica ; font-size : 9; fill : blue }
+text.occurSmall { font-family: helvetica ; font-size : 7; fill : blue }
+rect.typeIconDark { fill : darkslategray }
+circle.occurs { stroke : black ; stroke-width: 1; fill : white }
+circle.ellipsis { fill : black }
+path.typeIconDark { stroke : lightgray ; stroke-width: 1 }
+path.connector { stroke : red ; stroke-width: 1 ; fill: none; }
+path.modelGroup { stroke : black ; stroke-width: 1 ; fill: lightgray; }
+polyline.connector { stroke : red ; stroke-width: 1 ; fill: none; }
+.nodeStyle { fill : blue }
+]]></style>
+	</defs>
+	<rect x = "5" y = "145" width = "72" height = "28" class = "element"/>
+	<polygon class = "nodeStyle" points = "11,147 7,151 11,155 15,151"/>
+	<text x = "16" y = "156" class = "elName">descriptors</text>
+	<rect x = "6" y = "160" width = "70" height = "12" class = "elTypeBkgnd"/>
+	<image xlink:href = "../dgmTypeComplex.gif" width = "10" height = "10" x = "67" y = "155"/>
+	<polyline class = "connector" points = "107,19 87,19 87,159 77,159 87,159 87,299 107,299"/>
+	<circle class = "occurs" cx = "113" cy = "19" r = "6"/>
+	<text x = "110" y = "22" class = "occurLarge">?</text>
+	<rect x = "119" y = "5" width = "77" height = "28" class = "element"/>
+	<polygon class = "nodeStyle" points = "125,7 121,11 125,15 129,11"/>
+	<text x = "130" y = "16" class = "elName">interceptors</text>
+	<rect x = "120" y = "20" width = "75" height = "12" class = "elTypeBkgnd"/>
+	<image xlink:href = "../dgmTypeComplex.gif" width = "10" height = "10" x = "186" y = "15"/>
+	<circle class = "occurs" cx = "113" cy = "54" r = "6"/>
+	<text x = "110" y = "57" class = "occurLarge">?</text>
+	<rect x = "119" y = "40" width = "75" height = "28" class = "element"/>
+	<polygon class = "nodeStyle" points = "125,42 121,46 125,50 129,46"/>
+	<text x = "130" y = "51" class = "elName">persistence</text>
+	<rect x = "120" y = "55" width = "73" height = "12" class = "elTypeBkgnd"/>
+	<image xlink:href = "../dgmTypeEmpty.gif" width = "10" height = "10" x = "184" y = "50"/>
+	<circle class = "occurs" cx = "113" cy = "89" r = "6"/>
+	<text x = "110" y = "92" class = "occurLarge">?</text>
+	<rect x = "119" y = "75" width = "111" height = "28" class = "element"/>
+	<polygon class = "nodeStyle" points = "125,77 121,81 125,85 129,81"/>
+	<text x = "130" y = "86" class = "elName">currencyTimeLimit</text>
+	<rect x = "120" y = "90" width = "109" height = "12" class = "elTypeBkgnd"/>
+	<image xlink:href = "../dgmTypeEmpty.gif" width = "10" height = "10" x = "220" y = "85"/>
+	<circle class = "occurs" cx = "113" cy = "124" r = "6"/>
+	<text x = "110" y = "127" class = "occurLarge">?</text>
+	<rect x = "119" y = "110" width = "128" height = "28" class = "element"/>
+	<polygon class = "nodeStyle" points = "125,112 121,116 125,120 129,116"/>
+	<text x = "130" y = "121" class = "elName">state-action-on-update</text>
+	<rect x = "120" y = "125" width = "126" height = "12" class = "elTypeBkgnd"/>
+	<image xlink:href = "../dgmTypeEmpty.gif" width = "10" height = "10" x = "237" y = "120"/>
+	<circle class = "occurs" cx = "113" cy = "159" r = "6"/>
+	<text x = "110" y = "162" class = "occurLarge">?</text>
+	<rect x = "119" y = "145" width = "86" height = "28" class = "element"/>
+	<polygon class = "nodeStyle" points = "125,147 121,151 125,155 129,151"/>
+	<text x = "130" y = "156" class = "elName">display-name</text>
+	<rect x = "120" y = "160" width = "84" height = "12" class = "elTypeBkgnd"/>
+	<image xlink:href = "../dgmTypeEmpty.gif" width = "10" height = "10" x = "195" y = "155"/>
+	<circle class = "occurs" cx = "113" cy = "194" r = "6"/>
+	<text x = "110" y = "197" class = "occurLarge">?</text>
+	<rect x = "119" y = "180" width = "56" height = "28" class = "element"/>
+	<polygon class = "nodeStyle" points = "125,182 121,186 125,190 129,186"/>
+	<text x = "130" y = "191" class = "elName">default</text>
+	<rect x = "120" y = "195" width = "54" height = "12" class = "elTypeBkgnd"/>
+	<image xlink:href = "../dgmTypeEmpty.gif" width = "10" height = "10" x = "165" y = "190"/>
+	<circle class = "occurs" cx = "113" cy = "229" r = "6"/>
+	<text x = "110" y = "232" class = "occurLarge">?</text>
+	<rect x = "119" y = "215" width = "49" height = "28" class = "element"/>
+	<polygon class = "nodeStyle" points = "125,217 121,221 125,225 129,221"/>
+	<text x = "130" y = "226" class = "elName">value</text>
+	<rect x = "120" y = "230" width = "47" height = "12" class = "elTypeBkgnd"/>
+	<image xlink:href = "../dgmTypeEmpty.gif" width = "10" height = "10" x = "158" y = "225"/>
+	<circle class = "occurs" cx = "113" cy = "264" r = "6"/>
+	<text x = "110" y = "267" class = "occurLarge">?</text>
+	<rect x = "119" y = "250" width = "120" height = "28" class = "element"/>
+	<polygon class = "nodeStyle" points = "125,252 121,256 125,260 129,256"/>
+	<text x = "130" y = "261" class = "elName">persistence-manager</text>
+	<rect x = "120" y = "265" width = "118" height = "12" class = "elTypeBkgnd"/>
+	<image xlink:href = "../dgmTypeEmpty.gif" width = "10" height = "10" x = "229" y = "260"/>
+	<circle class = "occurs" cx = "113" cy = "299" r = "6"/>
+	<text x = "110" y = "302" class = "occurLarge">*</text>
+	<rect x = "119" y = "285" width = "68" height = "28" class = "element"/>
+	<polygon class = "nodeStyle" points = "125,287 121,291 125,295 129,291"/>
+	<text x = "130" y = "296" class = "elName">descriptor</text>
+	<rect x = "120" y = "300" width = "66" height = "12" class = "elTypeBkgnd"/>
+	<image xlink:href = "../dgmTypeEmpty.gif" width = "10" height = "10" x = "177" y = "295"/>
+</svg>

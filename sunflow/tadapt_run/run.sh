@@ -9,5 +9,5 @@ fi
 
 level=$1
 
-panda -cp $dir/../build/classes:$dir/../janino.jar SunflowGUI -nogui $dir/gumbo_and_teapot.sc
-mv $dir/mode.txt $dir/${level}_sleep.txt
+ent -cp $dir/../build/classes:$dir/../janino.jar SunflowGUI -nogui $dir/gumbo_and_teapot.sc
+mv $dir/mode.txt $dir/${level}_level_mode.txt

@@ -51,7 +51,7 @@ public class CompositeGraphicsNode extends AbstractGraphicsNode
     /**
      * The children of this composite graphics node.
      */
-    protected GraphicsNode [] children;
+    public GraphicsNode [] children;
 
     /**
      * The number of children of this composite graphics node.

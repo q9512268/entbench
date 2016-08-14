@@ -16,12 +16,23 @@ import java.net.URL;
 public class PandaDepthRule extends BaseRuleImpl {
 
     public int minDepth = 0;
-    public mcase<int> maxDepth = mcase<int> { low: 3; mid: 4; high: 5; };
+    public int maxDepth = -1;
 
     public PandaDepthRule() {
+      String depth = System.getenv("PANDA_JSPIDER_DEPTH");
+      if (depth != null) {
+        maxDepth = Integer.parseInt(depth);
+      } else {
+        maxDepth = 4;
+      }
     }
 
     public Decision apply(SpiderContext context, Site currentSite, URL url) {
+        if (currentSite != null) {
+          System.out.println("CurrentSiteUrl: " + currentSite.getURL());
+        }
+        System.out.println("URL: " + url);
+
         int depth = URLUtil.getDepth(url);
 
         Decision decision = null;

@@ -10,7 +10,7 @@ import java.net.URL;
  *
  * @author Günther Van Roey
  */
-public interface Site {
+public interface Site@mode<?->X> {
 
     /**
      * if the site is newly discovered, we're not going to fetch resources

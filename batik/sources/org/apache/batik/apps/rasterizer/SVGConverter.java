@@ -99,27 +99,7 @@ modes { low <: mid; mid <: high; }
  * @author <a href="mailto:Henri.Ruini@nokia.com">Henri Ruini</a>
  * @author <a href="mailto:vhardy@apache.org">Vincent Hardy</a>
  */
-public class SVGConverter {
-
-    // HACK 
-    mcase<int> HACK = mcase<int> {
-      low: 0;
-      mid: 0;
-      high: 0;
-    };
-
-    /*
-    attributor {
-      int batteryMode = 2;
-      if (batteryMode == 0) {
-        return @mode<high>;
-      } else if (batteryMode == 1) {
-        return @mode<mid>;
-      } else {
-        return @mode<low>;
-      }
-    }
-    */
+public class SVGConverter@mode<X> {
 
     //
     // Error codes reported by the SVGConverter
@@ -743,6 +723,9 @@ public class SVGConverter {
             createOutputDir(outputFile);
             transcode(currentFile, outputFile, transcoder);
         }
+
+        dtranscoder = null;
+        transcoder = null;
     }
 
     /**

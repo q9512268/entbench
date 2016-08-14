@@ -5,6 +5,5 @@ if [ ! -f ./src/baware ]; then
   exit
 fi
 
-./bak.sh
 rm -rf ./baware
 cp -rf ./src ./baware

@@ -1,7 +1,7 @@
 package net.javacoding.jspider.core.task.work;
 
 import net.javacoding.jspider.api.event.resource.ResourceIgnoredForParsingEvent;
-import net.javacoding.jspider.api.model.Decision;
+import net.javacoding.jspider.api.model.*;
 import net.javacoding.jspider.core.SpiderContext;
 import net.javacoding.jspider.core.util.URLUtil;
 import net.javacoding.jspider.core.storage.Storage;
@@ -24,7 +24,9 @@ public class DecideOnParsingTask extends BaseWorkerTaskImpl {
     public void execute() {
         Storage storage = context.getStorage();
 
-        Decision parseDecision = context.getSiteParserRules(storage.getSiteDAO().find(URLUtil.getSiteURL(url))).applyRules(context, null, url);
+        Site@mode<?> site = storage.getSiteDAO().find(URLUtil.getSiteURL(url));
+
+        Decision parseDecision = context.getSiteParserRules(site).applyRules(context, site, null, url);
         storage.getDecisionDAO().saveParseDecision(storage.getResourceDAO().getResource(url), parseDecision);
 
         if (parseDecision.getDecision() == Decision.RULE_ACCEPT || parseDecision.getDecision() == Decision.RULE_DONTCARE) {

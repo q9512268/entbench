@@ -92,27 +92,14 @@ public class FindBugs2@mode<?->X> implements IFindBugsEngine@mode<X> {
     private ClassesContext@mode<low<=*<=X> appClasses;
 
     attributor {
-      if (useBat) {
-        if (ENT_Util.Battery.percentRemaining() >= 0.75) {
-          return @mode<high>;
-        } else if (ENT_Util.Battery.percentRemaining() >= 0.50) {
-          return @mode<mid>;
-        } else {
-          return @mode<low>;
-        }
+      if (ENT_Util.Battery.percentRemaining() >= 0.75) {
+        return @mode<high>;
+      } else if (ENT_Util.Battery.percentRemaining() >= 0.50) {
+        return @mode<mid>;
       } else {
-        int score = pointScore();
-        if (score <= 2) {
-          return @mode<high>;
-        } else if (score <= 8) {
-          return @mode<mid>;
-        } else {
-          return @mode<low>;
-        }
+      return @mode<low>;
       }
     }
-
-    private boolean useBat = false;
 
     int pointScore() {
       int score = 0;
@@ -220,11 +207,6 @@ public class FindBugs2@mode<?->X> implements IFindBugsEngine@mode<X> {
         // bug 2815983: no bugs are reported anymore
         // there is no info which value should be default, so using the any one
         rankThreshold = BugRanker.VISIBLE_RANK_MAX;
-
-        String useBatStr = System.getenv("PANDA_BATTERY_RUN");
-        if (useBatStr != null && useBatStr.equals("true")) {
-          useBat = true;
-        }
     }
 
     /**
@@ -737,6 +719,10 @@ public class FindBugs2@mode<?->X> implements IFindBugsEngine@mode<X> {
 
         appClassList = builder.getAppClassList();
         ClassesContext@mode<?> d_appClasses = new ClassesContext@mode<?>(appClassList);
+
+        System.out.format("Classes: %d\n", appClassList.size());
+        System.exit(1);
+
         try {
           appClasses = snapshot d_appClasses ?mode[@mode<low>,@mode<X>];
         } catch (Exception e) {

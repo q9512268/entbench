@@ -25,8 +25,6 @@ public interface Ruleset@mode<?->X> {
     /** A site-specific ruleset, only applied to urls of that site. */
     public static final int RULESET_SITE = 2;
 
-    public void postResolve();
-
     /**
      * Applies the ruleset to the given URL.
      * @param context context we're spidering under
@@ -35,7 +33,7 @@ public interface Ruleset@mode<?->X> {
      * @return Decision object expressing the ruleset's decision about the
      * given url in the given context.
      */
-    public Decision applyRules(SpiderContext context, Site currentSite, URL url);
+    public Decision applyRules(SpiderContext context, Site site, Site currentSite, URL url);
 
     /**
      * Adds a rule to the ruleset.

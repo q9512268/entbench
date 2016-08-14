@@ -9,5 +9,7 @@ fi
 
 level=$1 
 
-pfb analyze -effort:default drjava/drjava-stable-20140826-r5761.jar
+# 5871 Class files
+
+pfb analyze -maxHeap 2048 -effort:default rtjar/rt.jar
 mv $dir/mode.txt $dir/run_md_${level}.txt

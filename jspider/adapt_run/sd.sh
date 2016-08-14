@@ -7,5 +7,6 @@ fi
 
 export PANDA_JSPIDER_INTERVAL=250
 export PANDA_JSPIDER_DEPTH=4
-jspider.sh http://learnyouahaskell.com
+
+jspider.sh http://www.organicyogajcny.com/ 
 mv mode.txt run_sd_${1}.txt

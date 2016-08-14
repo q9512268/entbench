@@ -22,10 +22,10 @@ import java.lang.reflect.InvocationTargetException;
  */
 public class RuleFactory {
 
-    protected static Ruleset generalSpiderRules;
+    protected static Ruleset@mode<*> generalSpiderRules;
     protected static Ruleset generalParserRules;
 
-    public static synchronized Ruleset createGeneralSpiderRules() {
+    public static synchronized Ruleset@mode<*> createGeneralSpiderRules() {
         if (generalSpiderRules == null) {
             PropertySet props = ConfigurationFactory.getConfiguration().getJSpiderConfiguration();
             PropertySet jspiderProps = new MappedPropertySet ( ConfigConstants.JSPIDER, props );
@@ -43,7 +43,7 @@ public class RuleFactory {
         return generalParserRules;
     }
 
-    public static Ruleset createSiteSpiderRules(Site site) {
+    public static Ruleset@mode<*> createSiteSpiderRules(Site site) {
         PropertySet props = ConfigurationFactory.getConfiguration().getSiteConfiguration(site);
         PropertySet siteProps = new MappedPropertySet ( ConfigConstants.SITE, props );
         return createRules(siteProps, "spider", generalSpiderRules);
@@ -55,7 +55,7 @@ public class RuleFactory {
         return createRules(siteProps, "parser", generalParserRules);
     }
 
-    protected static Ruleset createRules(PropertySet props, String purpose, Ruleset generalRules) {
+    protected static Ruleset@mode<*> createRules(PropertySet props, String purpose, Ruleset generalRules) {
         PropertySet rulesProps = new MappedPropertySet(ConfigConstants.RULES, props);
 
         int rulesCount = rulesProps.getInteger(purpose + "." + ConfigConstants.RULES_COUNT, 0);
@@ -114,15 +114,13 @@ public class RuleFactory {
             }
         }
         if (generalRules == null) {
-          RuleSetImpl@mode<?> d_impl = new RuleSetImpl@mode<?>(Ruleset.RULESET_GENERAL, rules);
-          RuleSetImpl@mode<*> impl = snapshot d_impl ?mode[@mode<low>,@mode<high>];
-          impl.postResolve();
-          return impl;
+            Ruleset@mode<?> d_rules = new RuleSetImpl@mode<?>(Ruleset.RULESET_GENERAL, rules);
+            Ruleset@mode<*> c_rules = snapshot d_rules ?mode[@mode<low>,@mode<high>];
+            return c_rules;
         } else {
-          RuleSetImpl@mode<?> d_impl = new RuleSetImpl@mode<?>(Ruleset.RULESET_GENERAL, rules);
-          RuleSetImpl@mode<*> impl = snapshot d_impl ?mode[@mode<low>,@mode<high>];
-          impl.postResolve();
-          return impl;
+            Ruleset@mode<?> d_rules = new RuleSetImpl@mode<?>(Ruleset.RULESET_SITE, generalRules, rules);
+            Ruleset@mode<*> c_rules = snapshot d_rules ?mode[@mode<low>,@mode<high>];
+            return c_rules;
         }
     }
 }
