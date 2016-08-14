@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN"
+          "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:xform="http://www.w3.org/2001/06/xforms"
+      xml:lang="en">
+<head>
+  <title>XForms in XHTML</title>
+
+  <xform:xform>
+    <xform:submitInfo target="http://example.com/submit" method="..."/>
+    <xform:instance>
+      <payment type="credit" xmlns="http://commerce.wizard">
+        <cc/>
+        <exp/>
+      </payment>
+    </xform:instance>
+  </xform:xform>
+
+  <xform:xform id="poll">
+    <xform:submitInfo target="http://example.com/poll" method="..."/>
+  </xform:xform>
+
+</head>
+<body>
+    ... include advanced UI markup here ...
+</body>
+</html>

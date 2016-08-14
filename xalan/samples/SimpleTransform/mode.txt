@@ -1,0 +1,2 @@
+class org.apache.xalan.xsltc.TransletContext:2
+class org.apache.xalan.xsltc.SAXContext:2

@@ -1,0 +1,117 @@
+
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html lang="EN"><head>
+      <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+   <title>XForms  1.0 </title><style type="text/css">
+code           { font-family: monospace; }
+
+div.constraint,
+div.issue,
+div.note,
+div.notice     { margin-left: 2em; }
+
+dt.label       { display: run-in; }
+
+li p           { margin-top: 0.3em;
+                 margin-bottom: 0.3em; }
+      </style><link rel="stylesheet" type="text/css" href="http://www.w3.org/StyleSheets/TR/W3C-WD.css"></head><body> 
+  <div class="head"><p><a href="http://www.w3.org/"><img src="http://www.w3.org/Icons/w3c_home" alt="W3C" height="48" width="72"></a></p>
+<h1>XForms  1.0 </h1>
+<h2>W3C Working Draft 08 June 2001</h2><dl><dt>This version:</dt><dd> 
+      <a href="http://www.w3.org/TR/2001/WD-xforms-20010608/">
+        http://www.w3.org/TR/2001/WD-xforms-20010608</a>
+ 
+        
+        (<a href="http://www.w3.org/TR/2001/WD-xforms-20010608/index-all.html">One big file</a>, <a href="http://www.w3.org/TR/2001/WD-xforms-20010608/WD-xforms-20010608.zip">Zip archive</a>)</dd><dt>Latest version:</dt><dd> 
+      <a href="http://www.w3.org/TR/xforms/">
+        http://www.w3.org/TR/xforms/</a> 
+    </dd><dt>Previous versions:</dt><dd> 
+      <a href="http://www.w3.org/TR/2001/WD-xforms-20010216/">
+        http://www.w3.org/TR/2001/WD-xforms-20010216</a> 
+    </dd><dt>Editors:</dt> 
+      <dd>Micah Dubinko, Cardiff <a href="mailto:mdubinko@Cardiff.com">&lt;mdubinko@Cardiff.com&gt;</a></dd> 
+      <dd>Josef Dietl, Mozquito Technologies <a href="mailto:josef@mozquito.com">&lt;josef@mozquito.com&gt;</a></dd> 
+      <dd>Roland Merrick, IBM <a href="mailto:Roland_Merrick@uk.ibm.com">&lt;Roland_Merrick@uk.ibm.com&gt;</a></dd> 
+      <dd>Dave Raggett, W3C/Openwave <a href="mailto:dsr@w3.org">&lt;dsr@w3.org&gt;</a></dd> 
+      <dd>T. V. Raman, IBM <a href="mailto:tvraman@almaden.ibm.com">&lt;tvraman@almaden.ibm.com&gt;</a></dd> 
+       <dd>Linda Bucsay Welsh, Intel <a href="mailto:linda@intel.com">&lt;linda@intel.com&gt;</a></dd> 
+     </dl><p class="copyright"><a href="http://www.w3.org/Consortium/Legal/ipr-notice-20000612#Copyright"> Copyright</a> &copy;2001 <a href="http://www.w3.org/"><abbr title="World Wide Web Consortium">W3C</abbr></a><sup>&reg;</sup> (<a href="http://www.lcs.mit.edu/"><abbr title="Massachusetts Institute of Technology">MIT</abbr></a>, <a href="http://www.inria.fr/"><abbr lang="fr" title="Institut National de Recherche en Informatique et Automatique">INRIA</abbr></a>, <a href="http://www.keio.ac.jp/">Keio</a>), All Rights Reserved. W3C <a href="http://www.w3.org/Consortium/Legal/ipr-notice-20000612#Legal_Disclaimer">liability</a>, <a href="http://www.w3.org/Consortium/Legal/ipr-notice-20000612#W3C_Trademarks">trademark</a>, <a href="http://www.w3.org/Consortium/Legal/copyright-documents-19990405">document use</a> and <a href="http://www.w3.org/Consortium/Legal/copyright-software-19980720">software licensing</a> rules apply.</p></div><hr><div>
+<h2><a name="abstract">Abstract</a></h2> 
+      <p> Forms were introduced into HTML in 1993. Since then they have become a critical part of the Web. The existing mechanisms in HTML for forms
+        are now outdated, and W3C has started work on developing an effective
+        replacement. This document outlines the requirements for "XForms", W3C's name
+         for the next generation of Web forms.</p> 
+    </div><div>
+<h2><a name="status">Status of this Document</a></h2> 
+      <p><em>This section describes the status of this document at the time
+        of its publication. Other documents may supersede this document. The latest
+        status of this document series is maintained at the W3C.</em></p> 
+      <p>This is a Working Draft that incorporates new material agreed upon at the Boston face to face meeting, including the adoption of XML Schema replacing XForms Simple Syntax,  as well as initial efforts at modularizing XForms and additional feedback from outside sources. Interested parties are encouraged to provide additional feedback and comments.</p> 
+      <p>This document is a W3C Working Draft for review by W3C members and other interested parties. It is a draft document and may be updated, replaced, or obsoleted by other documents at any time. It is inappropriate to use W3C Working Drafts as reference material or to cite them as other than "work in progress". A list of current public W3C Working Drafts can be found at <a href="http://www.w3.org/TR/">http://www.w3.org/TR</a>.</p><p>This document has been produced as part of the <a href="http://www.w3.org/MarkUp/">W3C HTML Activity</a>.</p><p>Please send detailed comments on this document to <a href="mailto:www-forms@w3.org">www-forms@w3.org</a>, the public forum for discussion of W3C's work on Web forms. To subscribe, send an email to the above address with the word <em>subscribe</em> in the subject line (include the word <em>unsubscribe</em> if you want to unsubscribe). The <a href="http://lists.w3.org/Archives/Public/www-forms/">archive</a> for the list is accessible online.</p> 
+    </div> 
+
+<div class="toc">
+<h2><a name="contents">Table of Contents</a></h2><p class="toc">1 <a href="slice1.html">About the XForms 1.0 Specification</a><br>&nbsp;&nbsp;&nbsp;&nbsp;1.1 <a href="slice1.html#intro-background">Background</a><br>&nbsp;&nbsp;&nbsp;&nbsp;1.2 <a href="slice1.html#intro-reading">Reading the Specification</a><br>&nbsp;&nbsp;&nbsp;&nbsp;1.3 <a href="slice1.html#intro-org">How the Specification is Organized</a><br>&nbsp;&nbsp;&nbsp;&nbsp;1.4 <a href="slice1.html#intro-conventions">Documentation Conventions</a><br>2 <a href="slice2.html">Concepts</a><br>&nbsp;&nbsp;&nbsp;&nbsp;2.1 <a href="slice2.html#concepts-purpose-presentation">Purpose and Presentation</a><br>&nbsp;&nbsp;&nbsp;&nbsp;2.2 <a href="slice2.html#concepts-xhtml"> Current Approach: XHTML</a><br>&nbsp;&nbsp;&nbsp;&nbsp;2.3 <a href="slice2.html#concepts-xfu">Stepping Up to XForms</a><br>&nbsp;&nbsp;&nbsp;&nbsp;2.4 <a href="slice2.html#concpts-instance">Providing XML Instance Data</a><br>&nbsp;&nbsp;&nbsp;&nbsp;2.5 <a href="slice2.html#concepts-model">The XForms Model</a><br>&nbsp;&nbsp;&nbsp;&nbsp;2.6 <a href="slice2.html#concepts-multiple">Multiple Forms per Document</a><br>&nbsp;&nbsp;&nbsp;&nbsp;2.7 <a href="slice2.html#concepts-advancedUI">Additional User Interface Capabilities</a><br>&nbsp;&nbsp;&nbsp;&nbsp;2.8 <a href="slice2.html#concepts-complete">Complete Document</a><br>3 <a href="slice3.html">Terminology</a><br>4 <a href="slice4.html">Datatypes</a><br>&nbsp;&nbsp;&nbsp;&nbsp;4.1 <a href="slice4.html#datatypes-schema">XML Schema Datatypes</a><br>&nbsp;&nbsp;&nbsp;&nbsp;4.2 <a href="slice4.html#datatypes-xforms">XForms Datatypes</a><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;4.2.1 <a href="slice4.html#dt-currency">currency</a><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;4.2.2 <a href="slice4.html#dt-money">monetary</a><br>5 <a href="slice5.html">The XForms Model</a><br>&nbsp;&nbsp;&nbsp;&nbsp;5.1 <a href="slice5.html#model-intro">Introduction</a><br>&nbsp;&nbsp;&nbsp;&nbsp;5.2 <a href="slice5.html#model-prop">Model Item Properties</a><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;5.2.1 <a href="slice5.html#model-prop-name">name</a><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;5.2.2 <a href="slice5.html#model-prop-type">type</a><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;5.2.3 <a href="slice5.html#model-prop-readOnly">readOnly</a><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;5.2.4 <a href="slice5.html#model-prop-required">required</a><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;5.2.5 <a href="slice5.html#model-prop-relevant">relevant</a><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;5.2.6 <a href="slice5.html#model-prop-calculate">calculate</a><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;5.2.7 <a href="slice5.html#model-prop-priority">priority</a><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;5.2.8 <a href="slice5.html#model-prop-validate">validate</a><br>&nbsp;&nbsp;&nbsp;&nbsp;5.3 <a href="slice5.html#model-using">Using Datatypes in the XForms Model</a><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;5.3.1 <a href="slice5.html#model-using-atomic">Atomic Datatype</a><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;5.3.2 <a href="slice5.html#model-using-enum">Closed Enumeration</a><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;5.3.3 <a href="slice5.html#model-using-openenum">Open Enumeration</a><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;5.3.4 <a href="slice5.html#model-using-union">Union</a><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;5.3.5 <a href="slice5.html#model-using-array">Multiple Selection</a><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;5.3.6 <a href="slice5.html#model-using-repeat">Repeating Line Item</a><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;5.3.7 <a href="slice5.html#model-using-switch">Alternate Representation</a><br>6 <a href="slice6.html">XPath Expressions in XForms</a><br>&nbsp;&nbsp;&nbsp;&nbsp;6.1 <a href="slice6.html#expr-datatypes">Datatypes</a><br>&nbsp;&nbsp;&nbsp;&nbsp;6.2 <a href="slice6.html#expr-instance">Instance Data</a><br>&nbsp;&nbsp;&nbsp;&nbsp;6.3 <a href="slice6.html#expr-eval">Evaluation Context</a><br>&nbsp;&nbsp;&nbsp;&nbsp;6.4 <a href="slice6.html#expr-canonical">Canonical Binding Expressions</a><br>&nbsp;&nbsp;&nbsp;&nbsp;6.5 <a href="slice6.html#expr-lib">Forms Core Function Library</a><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;6.5.1 <a href="slice6.html#expr-lib-num">Number Methods</a><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;6.5.2 <a href="slice6.html#expr-lib-string">String Methods</a><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;6.5.3 <a href="slice6.html#expr-lib-misc">Miscellaneous Methods</a><br>&nbsp;&nbsp;&nbsp;&nbsp;6.6 <a href="slice6.html#expr-extend">Extensibility</a><br>7 <a href="slice7.html">Form Controls</a><br>&nbsp;&nbsp;&nbsp;&nbsp;7.1 <a href="slice7.html#ui-intro">Introduction</a><br>&nbsp;&nbsp;&nbsp;&nbsp;7.2 <a href="slice7.html#ui-entry">textbox</a><br>&nbsp;&nbsp;&nbsp;&nbsp;7.3 <a href="slice7.html#ui-secret">secret</a><br>&nbsp;&nbsp;&nbsp;&nbsp;7.4 <a href="slice7.html#ui-uploadMedia">uploadMedia</a><br>&nbsp;&nbsp;&nbsp;&nbsp;7.5 <a href="slice7.html#ui-selectOne">selectOne</a><br>&nbsp;&nbsp;&nbsp;&nbsp;7.6 <a href="slice7.html#ui-selectMany">selectMany</a><br>&nbsp;&nbsp;&nbsp;&nbsp;7.7 <a href="slice7.html#ui-selectBool">selectBoolean</a><br>&nbsp;&nbsp;&nbsp;&nbsp;7.8 <a href="slice7.html#ui-range">range</a><br>&nbsp;&nbsp;&nbsp;&nbsp;7.9 <a href="slice7.html#ui-button">button</a><br>&nbsp;&nbsp;&nbsp;&nbsp;7.10 <a href="slice7.html#ui-output">output</a><br>&nbsp;&nbsp;&nbsp;&nbsp;7.11 <a href="slice7.html#ui-submit">submit</a><br>&nbsp;&nbsp;&nbsp;&nbsp;7.12 <a href="slice7.html#ui-reset">reset</a><br>&nbsp;&nbsp;&nbsp;&nbsp;7.13 <a href="slice7.html#ui-common">Common Markup</a><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;7.13.1 <a href="slice7.html#ui-common-attributes">Common Attributes</a><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;7.13.2 <a href="slice7.html#ui-common-elements">Common Child Elements</a><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;7.13.2.1 <a href="slice7.html#ui-common-elements-caption">caption</a><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;7.13.2.2 <a href="slice7.html#ui-common-elements-help">help</a><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;7.13.2.3 <a href="slice7.html#ui-common-elements-hint">hint</a><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;7.13.2.4 <a href="slice7.html#ui-common-elements-onevent">onevent</a><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;7.13.2.5 <a href="slice7.html#ui-common-elements-item">item</a><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;7.13.2.6 <a href="slice7.html#ui-common-elements-choices">choices</a><br>8 <a href="slice8.html">XForms User Interface</a><br>&nbsp;&nbsp;&nbsp;&nbsp;8.1 <a href="slice8.html#ui-conditional">Conditional Constructs For Dynamic User Interfaces</a><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;8.1.1 <a href="slice8.html#ui-conditional-switch">switch</a><br>&nbsp;&nbsp;&nbsp;&nbsp;8.2 <a href="slice8.html#ui-repeat">Repeating Structures</a><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;8.2.1 <a href="slice8.html#ui-repeat-design">Design Rationale</a><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;8.2.2 <a href="slice8.html#ui-repeat-handlers">Special Event Handlers For  Element repeat</a><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;8.2.3 <a href="slice8.html#ui-repeat-repeat">repeat</a><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;8.2.4 <a href="slice8.html#ui-repeat-consequences">Design Consequences</a><br>&nbsp;&nbsp;&nbsp;&nbsp;8.3 <a href="slice8.html#ui-template">Reusable Form Controls</a><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;8.3.1 <a href="slice8.html#ui-templates-creating">Creating User Interface Templates</a><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;8.3.2 <a href="slice8.html#ui-templates-dtd-temp">DTD For uiTemplate And useUITemplate</a><br>&nbsp;&nbsp;&nbsp;&nbsp;8.4 <a href="slice8.html#ui-layout">Layout in XForms</a><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;8.4.1 <a href="slice8.html#ui-layout-dir">Orientation and Direction</a><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;8.4.2 <a href="slice8.html#ui-layout-align">Alignment</a><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;8.4.3 <a href="slice8.html#ui-layout-sizing">Controlling  Automatic Sizing </a><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;8.4.4 <a href="slice8.html#ui-layout-minmax">Preferred, Minimum, and Maximum Sizes</a><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;8.4.5 <a href="slice8.html#ui-layout-packing">Packing Controls</a><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;8.4.6 <a href="slice8.html#ui-layout-overflow">Overflow</a><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;8.4.7 <a href="slice8.html#ui-layout-inline">Inlines and Blocks</a><br>&nbsp;&nbsp;&nbsp;&nbsp;8.5 <a href="slice8.html#ui-subforms">Multiple Sub-forms Or Sub-pages</a><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;8.5.1 <a href="slice8.html#ui-subforms-pages">Subpages</a><br>9 <a href="slice9.html">Binding</a><br>&nbsp;&nbsp;&nbsp;&nbsp;9.1 <a href="slice9.html#binding-intro">Introduction</a><br>&nbsp;&nbsp;&nbsp;&nbsp;9.2 <a href="slice9.html#binding-attributes">Binding Attributes</a><br>&nbsp;&nbsp;&nbsp;&nbsp;9.3 <a href="slice9.html#binding-direct">Direct Binding</a><br>&nbsp;&nbsp;&nbsp;&nbsp;9.4 <a href="slice9.html#binding-indirect">Indirect Binding</a><br>&nbsp;&nbsp;&nbsp;&nbsp;9.5 <a href="slice9.html#binding-multiple">Multiple Forms per Page</a><br>10 <a href="slice10.html">Document Structure</a><br>&nbsp;&nbsp;&nbsp;&nbsp;10.1 <a href="slice10.html#structure-namespace">The XForms Namespace</a><br>&nbsp;&nbsp;&nbsp;&nbsp;10.2 <a href="slice10.html#structure-elements">XForms Elements</a><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;10.2.1 <a href="slice10.html#d3e5043">xform</a><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;10.2.2 <a href="slice10.html#structure-xform-model">model</a><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;10.2.3 <a href="slice10.html#structure-xform-instance">instance</a><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;10.2.4 <a href="slice10.html#structure-xform-submitInfo">submitInfo</a><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;10.2.5 <a href="slice10.html#structure-xform-bind">bind</a><br>&nbsp;&nbsp;&nbsp;&nbsp;10.3 <a href="slice10.html#structure-xlink">Integration with XLink</a><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;10.3.1 <a href="slice10.html#xlink-role-all">XLink role for XForms</a><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;10.3.2 <a href="slice10.html#xlink-role-model">XLink role for the XForms Model</a><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;10.3.3 <a href="slice10.html#xlink-role-instance">XLink role for the Instance Data</a><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;10.3.4 <a href="slice10.html#xlink-role-ui">XLink role for the XForms User Interface</a><br>11 <a href="slice11.html">Processing Model</a><br>&nbsp;&nbsp;&nbsp;&nbsp;11.1 <a href="slice11.html#rpm-intro">Introduction</a><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;11.1.1 <a href="slice11.html#rpm-intro-rationale">Design Rationale</a><br>&nbsp;&nbsp;&nbsp;&nbsp;11.2 <a href="slice11.html#rpm-properties">XForms Properties</a><br>&nbsp;&nbsp;&nbsp;&nbsp;11.3 <a href="slice11.html#rpm-events">Events</a><br>&nbsp;&nbsp;&nbsp;&nbsp;11.4 <a href="slice11.html#rpm-processing">XForms Processing</a><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;11.4.1 <a href="slice11.html#rpm-processing-init">Initialization/Resume</a><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;11.4.2 <a href="slice11.html#rpm-processing-instance">Instance Data Construction</a><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;11.4.3 <a href="slice11.html#rpm-processing-navorder">Navigation Sequence Algorithm</a><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;11.4.4 <a href="slice11.html#rpm-processing-interact">Interactivity</a><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;11.4.5 <a href="slice11.html#rpm-processing-recalc">Recalculation Algorithm</a><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;11.4.6 <a href="slice11.html#rpm-processing-refresh">UI Refresh Algorithm</a><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;11.4.7 <a href="slice11.html#rpm-processing-revalidate">Revalidation Algorithm</a><br>&nbsp;&nbsp;&nbsp;&nbsp;11.5 <a href="slice11.html#rpm-send">Submit and Reset</a><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;11.5.1 <a href="slice11.html#rpm-send-submit">Submit</a><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;11.5.2 <a href="slice11.html#rpm-send-reset">Reset</a><br>&nbsp;&nbsp;&nbsp;&nbsp;11.6 <a href="slice11.html#rpm-serialize">Serialization Formats for  Instance Data</a><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;11.6.1 <a href="slice11.html#rpm-send-urlencoded">application/x-www-form-urlencoded</a><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;11.6.2 <a href="slice11.html#rpm-send-multipart">multipart/form-data</a><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;11.6.3 <a href="slice11.html#rpm-send-xml">text/xml</a><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;11.6.3.1 <a href="slice11.html#rpm-send-xml-binary">Binary Content</a><br>&nbsp;&nbsp;&nbsp;&nbsp;11.7 <a href="slice11.html#rpm-conform">Conformance</a><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;11.7.1 <a href="slice11.html#rpm-conform-basic">XForms Basic</a><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;11.7.2 <a href="slice11.html#rpm-conform-full">XForms Full</a><br></p>
+<h3>Appendices</h3><p class="toc">A <a href="sliceA.html">Schema for XForms</a><br>B <a href="sliceB.html">References</a><br>&nbsp;&nbsp;&nbsp;&nbsp;B.1 <a href="sliceB.html#references-norm">Normative References</a><br>&nbsp;&nbsp;&nbsp;&nbsp;B.2 <a href="sliceB.html#references-inform">Informative References</a><br>C <a href="sliceC.html">Changes from Previous Release</a> (Non-Normative)<br>&nbsp;&nbsp;&nbsp;&nbsp;C.1 <a href="sliceC.html#changes-overall">Changes since the 16-Feb-2001 release</a><br>&nbsp;&nbsp;&nbsp;&nbsp;C.2 <a href="sliceC.html#changes-about">Changes to Chapter 1 'About XForms'</a><br>&nbsp;&nbsp;&nbsp;&nbsp;C.3 <a href="sliceC.html#changes-concepts">Changes to Chapter 2 'Concepts'</a><br>&nbsp;&nbsp;&nbsp;&nbsp;C.4 <a href="sliceC.html#changes-terms">Changes to Chapter 3 'Terminology'</a><br>&nbsp;&nbsp;&nbsp;&nbsp;C.5 <a href="sliceC.html#changes-datatypes">Changes to Chapter 4 'Datatypes'</a><br>&nbsp;&nbsp;&nbsp;&nbsp;C.6 <a href="sliceC.html#changes-model">Changes to Chapter 5 'XForms Model'</a><br>&nbsp;&nbsp;&nbsp;&nbsp;C.7 <a href="sliceC.html#changes-expr">Changes to Chapter 6 'XPath Expressions in XForms'</a><br>&nbsp;&nbsp;&nbsp;&nbsp;C.8 <a href="sliceC.html#changes-controls">Changes to Chapter 7 'Form Controls'</a><br>&nbsp;&nbsp;&nbsp;&nbsp;C.9 <a href="sliceC.html#changes-ui">Changes to Chapter 8 'XForms User Interface'</a><br>&nbsp;&nbsp;&nbsp;&nbsp;C.10 <a href="sliceC.html#changes-binding">Changes to Chapter 9 'Binding'</a><br>&nbsp;&nbsp;&nbsp;&nbsp;C.11 <a href="sliceC.html#changes-structure">Changes to Chapter 10 'Document Structure'</a><br>&nbsp;&nbsp;&nbsp;&nbsp;C.12 <a href="sliceC.html#changes-rpm">Changes to Chapter 11 'Processing Model and Conformance'</a><br>&nbsp;&nbsp;&nbsp;&nbsp;C.13 <a href="sliceC.html#changes-schema">Changes to Appendix  'Schema for XForms'</a><br>&nbsp;&nbsp;&nbsp;&nbsp;C.14 <a href="sliceC.html#changes-xslt">Changes to Appendix 'XSLT from Simple Syntax'</a><br>&nbsp;&nbsp;&nbsp;&nbsp;C.15 <a href="sliceC.html#changes-samples">Change to Appendix 'Sample Forms'</a><br>&nbsp;&nbsp;&nbsp;&nbsp;C.16 <a href="sliceC.html#changes-optional">Changes to Appendix 'Optional Function Library'</a><br>&nbsp;&nbsp;&nbsp;&nbsp;C.17 <a href="sliceC.html#changes-references">Changes to Appendix 'References'</a><br>D <a href="sliceD.html">Acknowledgements</a> (Non-Normative)<br>E <a href="sliceE.html">Production Notes</a> (Non-Normative)<br></p></div><hr><div class="body">
+
+ 
+
+
+ 
+
+
+
+
+
+ 
+
+
+ 
+
+
+ 
+
+
+
+
+
+ 
+
+
+
+
+
+ 
+
+
+ 
+
+
+
+
+
+ 
+
+</div>
+ 
+<div class="back">
+
+ 
+
+
+
+ 
+
+
+
+ 
+
+
+
+
+
+
+
+</div> 
+</body></html>

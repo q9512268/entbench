@@ -1,0 +1,429 @@
+
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+   
+      <title>Binding</title><style type="text/css">
+code           { font-family: monospace; }
+
+div.constraint,
+div.issue,
+div.note,
+div.notice     { margin-left: 2em; }
+
+dt.label       { display: run-in; }
+
+li p           { margin-top: 0.3em;
+                 margin-bottom: 0.3em; }
+      </style><link rel="stylesheet" type="text/css" href="http://www.w3.org/StyleSheets/TR/W3C-WD.css">
+   </head>
+   <body><a name="Top"></a>
+      <!-- TOP NAVIGATION BAR --><table border="0" width="90%" cellpadding="4" cellspacing="0" bgcolor="#eeeeff" class="navigation">
+         <col width="25%">
+         <col width="25%">
+         <col width="25%">
+         <col width="25%">
+         <tr>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+         </tr>
+         <tr>
+            <td align="left"><a href="index.html#contents">Table of Contents</a></td>
+            <td align="left"><a href="slice8.html">Prev</a></td>
+            <td align="left"><a href="slice10.html">Next</a></td>
+            <td align="left"><a href="#Bottom">Bottom</a></td>
+         </tr>
+      </table>
+      <table border="0" width="90%" cellpadding="4" cellspacing="0" bgcolor="#eeeeff" class="navigation-toc">
+         <col width="100%">
+         <tr align="left">
+            <th>
+               <hr>Quick Table of Contents
+               <hr>
+            </th>
+         </tr>
+         <tr>
+            <td>9 <a href="slice9.html">Binding</a><br>&nbsp;&nbsp;&nbsp;&nbsp;9.1 <a href="slice9.html#binding-intro">Introduction</a><br>&nbsp;&nbsp;&nbsp;&nbsp;9.2 <a href="slice9.html#binding-attributes">Binding Attributes</a><br>&nbsp;&nbsp;&nbsp;&nbsp;9.3 <a href="slice9.html#binding-direct">Direct Binding</a><br>&nbsp;&nbsp;&nbsp;&nbsp;9.4 <a href="slice9.html#binding-indirect">Indirect Binding</a><br>&nbsp;&nbsp;&nbsp;&nbsp;9.5 <a href="slice9.html#binding-multiple">Multiple Forms per Page</a><br></td>
+         </tr>
+      </table>
+      <div class="div1">
+         
+         <h2><a name="binding"></a>9 Binding
+         </h2> 
+         <div class="div2">
+            
+            <h3><a name="binding-intro"></a>9.1 Introduction
+            </h3> 
+            
+            <p><a title="binding" href="slice3.html#def-binding">Binding</a> is the glue that connects the 
+                 separate pieces of XForms--the <a title="XForms Model" href="slice3.html#def-XForms-Model">XForms Model</a>,
+                 <a title="instance data" href="slice3.html#def-instance-data">instance data</a>, and <a title="form control" href="slice3.html#def-form-control">form control</a>s.
+                 The binding is independent of the user interface language used.
+            </p>
+            
+            <p>Binding is specified through the use of 
+                 <a title="binding expression" href="slice3.html#def-binding-expression">binding expression</a>s. The syntax 
+                 and details of binding expressions are defined in the chapter <a href="slice6.html"><b>6 XPath Expressions in XForms</b></a>. 
+                 This chapter describes the wider topic of how binding expressions are used within XForms.
+            </p>
+            
+            <p>A future revision of this chapter will address binding 
+                 across XForms Models, for instance declaring an "address" in one XForms Model
+                 and referencing it from another.
+            </p>
+            
+            
+         </div>
+         
+         
+         <div class="div2">
+            
+            <h3><a name="binding-attributes"></a>9.2 Binding Attributes
+            </h3>
+            
+            <p>XForms defines an attribute <code>ref</code> that can be placed on any form 
+                 control. Note that when placed on form 
+                 controls outside of XForms, it must be appropriately namespace-qualified. The value 
+                 of the attribute is a binding expression, 
+                 based on <a href="slice6.html"><b>6 XPath Expressions in XForms</b></a>, that links the form control
+                 to a particular location in the instance data (and therefore a particular model 
+                 item). For example:
+            </p>
+            
+              
+            <div class="example">
+               
+               <h5>Example: XForms User Interface Markup with Binding Attributes</h5>
+                 
+               <table class="eg" cellpadding="5" border="1" bgcolor="#99ffff" width="100%" summary="Example">
+                  <tr>
+                     <td><pre>&lt;xform:textbox ref="binding-expression"&gt;
+   &lt;xform:caption&gt;Your first name&lt;/xform:caption&gt;
+&lt;/xform:textbox&gt;</pre></td>
+                  </tr>
+               </table>
+               
+               
+               <p>The <code>ref</code> attribute links the form 
+                          control to the instance data and XForms Model declared elsewhere 
+                          in the <a title="containing document" href="slice3.html#def-containing-document">containing document</a>.
+               </p>
+            </div>
+                    
+            
+            <p>This can also be used on non-XForms form controls, for instance XHTML:</p>
+            
+            
+            <div class="example">
+               
+               <h5>Example: XHTML with Binding Attributes</h5>
+               
+               <table class="eg" cellpadding="5" border="1" bgcolor="#99ffff" width="100%" summary="Example">
+                  <tr>
+                     <td><pre>&lt;html:input type="text" name="..." xform:ref="binding-expression"/&gt;</pre></td>
+                  </tr>
+               </table>
+               
+               <p> Here the <code>ref</code> attribute links an XHTML form 
+                      control to the instance data and XForms Model contained elsewhere 
+                      in the containing document. Note that the <code>html:</code> prefix is 
+                      used here to represent the XHTML namespace.
+               </p>
+            </div>
+            
+            
+            <p>Details on the operation of binding expressions are given throughout the rest of this chapter.</p>
+            
+         </div>
+         
+         
+         <div class="div2">
+            
+            <h3><a name="binding-direct"></a>9.3 Direct Binding
+            </h3>
+            
+            <p>When a containing document has only a single XForms 
+                 Model and only a single set of instance data, binding is simpler because there 
+                 is no possibility of ambiguity as to which XForms 
+                 Model and instance data will participate. The following syntax can be used for the
+                 binding expression:
+            </p>
+            
+            <ul>
+                 
+               <li>
+                  <p>A binding expression that evaluates to a node-set in the instance 
+                         data. If the node-set contains more than one node, only the first node is used. If the
+                         node-set contains zero nodes, the binding expression is invalid.
+                  </p>
+               </li>
+               
+            </ul>
+            
+            <p>For example:</p>
+            
+            
+            <div class="example">
+               
+               <h5>Example: Binding Expression</h5>
+               
+               <table class="eg" cellpadding="5" border="1" bgcolor="#99ffff" width="100%" summary="Example">
+                  <tr>
+                     <td><pre>&lt;xform:textbox ref="orderForm/shipTo/firstName"&gt;
+...</pre></td>
+                  </tr>
+               </table>
+               
+               <p>Here the <code>ref</code> attribute specifies a path through the instance data to the desired location.
+               </p>
+               
+               <table class="eg" cellpadding="5" border="1" bgcolor="#99ffff" width="100%" summary="Example">
+                  <tr>
+                     <td><pre>&lt;orderForm&gt;
+  &lt;shipTo&gt;
+    &lt;firstName&gt;value&lt;/firstName&gt;
+  &lt;/shipTo&gt;
+&lt;/orderForm&gt;</pre></td>
+                  </tr>
+               </table>
+               
+               <p>Here is the matching instance data for the above example.</p>
+            </div>
+            
+            
+            <p>A special case applies when binding to 
+                 an element in the instance data that 
+                 contains an attribute of type <code>xsd:ID</code>. In this case, an XPath function 
+                 <code>id()</code>, can be used:
+            </p>
+            
+            
+            <div class="example">
+               
+               <h5>Example: Binding Expression with XPath id() Syntax</h5>
+               
+               <table class="eg" cellpadding="5" border="1" bgcolor="#99ffff" width="100%" summary="Example">
+                  <tr>
+                     <td><pre>&lt;xform:textbox ref="id('myfirstname')"&gt;
+...</pre></td>
+                  </tr>
+               </table>
+               
+               
+               <p>Here the <code>ref</code> attribute specifies a link to an instance 
+                            data element with an id of <code>myfirstname</code>.
+               </p>
+               
+               <table class="eg" cellpadding="5" border="1" bgcolor="#99ffff" width="100%" summary="Example">
+                  <tr>
+                     <td><pre>&lt;a&gt;
+  &lt;b id="myfirstname"&gt;value&lt;/b&gt;
+&lt;/a&gt;</pre></td>
+                  </tr>
+               </table>
+               
+               <p>Here is the instance data for the above example.</p>
+            </div>
+            
+            
+            <p>For this syntax to be valid, the following conditions must be true:</p>
+            
+            <ul>
+                 
+               <li>
+                  <p>The instance data must be included 
+                         in the same document as the XForms User Interface
+                  </p>
+               </li>
+                 
+               <li>
+                  <p>Every referenced element in the instance 
+                         data must be marked with a valid ID (i.e. the ID is unique throughout 
+                         the whole document)
+                  </p>
+               </li>
+                 
+               
+            </ul>
+            
+            <p>Note also that:</p>
+            
+            <ul>
+                 
+               <li>
+                  <p>this method is limited, because it requires exactly one instance, decorated 
+                         with ID attributes.
+                  </p>
+               </li>
+                 
+               <li>
+                  <p>It is still legal to have elements without ID attributes in the instance data.</p>
+               </li>
+                 
+               <li>
+                  <p>Only elements can be addressed</p>
+               </li>
+               
+            </ul>
+            
+         </div>
+         
+         
+         <div class="div2">
+            
+            <h3><a name="binding-indirect"></a>9.4 Indirect Binding
+            </h3>
+            
+            <p>In situations where a form is designed by collaboration (such as between a 
+                 graphic designer and a database/XML specialist) it is desirable to locate all 
+                 binding expressions in a single area in the containing document. XForms allows 
+                 the binding expression to appear 
+                 in a separate element <code>bind</code>, a child of the <code>xform</code> element.
+            </p>
+            
+            <p>The attributes of <code>bind</code> are <code>id</code> of type <code>xsd:ID</code> 
+                 and <code>ref</code> which takes a binding expression. When a binding expression
+                 is defined this way, the form control 
+                 can reference the <code>id</code> of the <code>bind</code> element, 
+                 as seen here:
+            </p>
+              
+            
+            <div class="example">
+               
+               <h5>Example: Binding Expression Using Indirection</h5>
+               
+               <table class="eg" cellpadding="5" border="1" bgcolor="#99ffff" width="100%" summary="Example">
+                  <tr>
+                     <td><pre>&lt;xform:textbox ref="id('myfirstname')"&gt;
+...</pre></td>
+                  </tr>
+               </table>
+               
+               <p>Here the <code>ref</code> attribute specifies a link to a binding 
+                            expression defined elsewhere.
+               </p>
+               
+               <table class="eg" cellpadding="5" border="1" bgcolor="#99ffff" width="100%" summary="Example">
+                  <tr>
+                     <td><pre>&lt;xform:bind id="myfirstname" ref="orderForm/shipTo/firstName"/&gt;
+&lt;xform:instance&gt;
+  &lt;orderForm&gt;
+    &lt;shipTo&gt;
+      &lt;firstName&gt;value&lt;/firstName&gt;
+    &lt;/shipTo&gt;
+  &lt;/orderForm&gt;
+&lt;/xform:instance&gt;</pre></td>
+                  </tr>
+               </table>
+               
+               <p>Here is the instance data for the above example.</p>
+            </div>
+            
+            
+            <p>This accomplishes the following:</p>
+            
+            <ul>
+                 
+               <li>
+                  <p>It is no longer necessary to add IDs to the instance.</p>
+               </li>
+                 
+               <li>
+                  <p>The binding mechanism is <em>independent</em>
+                         of the schema and user interface mechanisms.
+                  </p>
+               </li>
+               
+            </ul>
+            
+         </div>
+         
+         
+         <div class="div2">
+            
+            <h3><a name="binding-multiple"></a>9.5 Multiple Forms per Page
+            </h3>
+            
+            <p>One design goal of XForms is to support multiple forms per page. This is accomplished 
+                 by having multiple <code>xform</code> elements within a containing document. 
+                 Each <code>xform</code> element might have a separate XForms Model or 
+                 instance data defined. This makes binding slightly more complex, because 
+                 the correct <code>xform</code> element needs to be referenced.
+            </p>
+            
+            <p>By default, binding expressions are based on the instance data
+                 associated with the first <code>xform</code> element in document 
+                 order. To refer to the contents of subsequent <code>xform</code> elements, 
+                 these must be decorated with <code>id</code> attributes of type <code>xsd:ID</code>. 
+                 Attached to the form control element, an additional attribute <code>xform</code> 
+                 serves to set the context node for the attached binding expression to the
+                 instance data or XForms Model associated with 
+                 the <code>xform</code> element with the matching <code>id</code>.
+            </p>
+            
+            <p>For example:</p>
+            
+            <div class="example">
+               
+               <h5>Example: Binding Expression Specifying Non-default <code>xform</code> Element
+               </h5>
+               
+               <table class="eg" cellpadding="5" border="1" bgcolor="#99ffff" width="100%" summary="Example">
+                  <tr>
+                     <td><pre>&lt;xform:textbox xform="b" ref="/orderForm/shipTo/firstName"&gt;
+...</pre></td>
+                  </tr>
+               </table>
+               
+               
+               <p>Here the <code>xform</code> and <code>ref</code> attributes specify 
+                            a binding to the instance data and XForms Model.
+               </p>
+               
+               <table class="eg" cellpadding="5" border="1" bgcolor="#99ffff" width="100%" summary="Example">
+                  <tr>
+                     <td><pre>&lt;xform:xform id="b"&gt;
+  &lt;xform:model&gt;
+    ...
+  &lt;/xform:model&gt;
+  &lt;xform:instance&gt;
+    &lt;orderForm xmlns="..."&gt;
+      &lt;shipTo&gt;
+        &lt;firstName&gt;value&lt;/firstName&gt;
+      &lt;/shipTo&gt;
+    &lt;/orderForm&gt;
+  &lt;/xform:instance&gt;
+&lt;/xform:xform&gt;</pre></td>
+                  </tr>
+               </table>
+            </div>
+            
+            <p>Scoped resolution of binding expressions, as defined in the chapter
+                 <a href="slice6.html"><b>6 XPath Expressions in XForms</b></a> can in some cases be used to avoid repetitive 
+                 uses of the <code>xform</code> attribute.
+            </p>
+            
+            
+              
+         </div> 
+         
+      </div><a name="Bottom"></a>
+      <!-- BOTTOM NAVIGATION BAR --><table border="0" width="90%" cellpadding="4" cellspacing="0" bgcolor="#eeeeff" class="navigation">
+         <col width="50%">
+         <col width="50%">
+         <tr>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+         </tr>
+         <tr>
+            <td align="left"><a href="index.html#contents">Table of Contents</a></td>
+            <td align="left"><a href="#Top">Top</a></td>
+         </tr>
+      </table>
+   </body>
+</html>

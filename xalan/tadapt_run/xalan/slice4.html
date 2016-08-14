@@ -1,0 +1,385 @@
+
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+   
+      <title>Datatypes</title><style type="text/css">
+code           { font-family: monospace; }
+
+div.constraint,
+div.issue,
+div.note,
+div.notice     { margin-left: 2em; }
+
+dt.label       { display: run-in; }
+
+li p           { margin-top: 0.3em;
+                 margin-bottom: 0.3em; }
+      </style><link rel="stylesheet" type="text/css" href="http://www.w3.org/StyleSheets/TR/W3C-WD.css">
+   </head>
+   <body><a name="Top"></a>
+      <!-- TOP NAVIGATION BAR --><table border="0" width="90%" cellpadding="4" cellspacing="0" bgcolor="#eeeeff" class="navigation">
+         <col width="25%">
+         <col width="25%">
+         <col width="25%">
+         <col width="25%">
+         <tr>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+         </tr>
+         <tr>
+            <td align="left"><a href="index.html#contents">Table of Contents</a></td>
+            <td align="left"><a href="slice3.html">Prev</a></td>
+            <td align="left"><a href="slice5.html">Next</a></td>
+            <td align="left"><a href="#Bottom">Bottom</a></td>
+         </tr>
+      </table>
+      <table border="0" width="90%" cellpadding="4" cellspacing="0" bgcolor="#eeeeff" class="navigation-toc">
+         <col width="100%">
+         <tr align="left">
+            <th>
+               <hr>Quick Table of Contents
+               <hr>
+            </th>
+         </tr>
+         <tr>
+            <td>4 <a href="slice4.html">Datatypes</a><br>&nbsp;&nbsp;&nbsp;&nbsp;4.1 <a href="slice4.html#datatypes-schema">XML Schema Datatypes</a><br>&nbsp;&nbsp;&nbsp;&nbsp;4.2 <a href="slice4.html#datatypes-xforms">XForms Datatypes</a><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;4.2.1 <a href="slice4.html#dt-currency">currency</a><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;4.2.2 <a href="slice4.html#dt-money">monetary</a><br></td>
+         </tr>
+      </table>
+      <div class="div1">
+         
+         <h2><a name="datatypes"></a>4 Datatypes
+         </h2>
+         
+         
+         <div class="div2">
+            
+            <h3><a name="datatypes-schema"></a>4.1 XML Schema Datatypes
+            </h3>
+            <p>XForms includes all XML
+                 Schema <a title="datatype" href="slice3.html#def-datatype">datatype</a>s, including the concepts of
+                 <a title="value space" href="slice3.html#def-value-space">value space</a> and
+                 <a title="lexical space" href="slice3.html#def-lexical-space">lexical space</a>, and all constraining
+                 <a title="facet" href="slice3.html#def-facet">facet</a>s, as specified in <a href="sliceB.html#ref-xschema-2">[XML Schema part 2]</a>.
+                 For reference, these are
+            </p>
+              
+            <p>Built-in primitive types:</p>
+              
+            <blockquote>
+               <p>
+                    duration
+                    <br>dateTime
+                    <br>time
+                    <br>date
+                    <br>gYearMonth
+                    <br>gYear
+                    <br>gMonthDay
+                    <br>gDay
+                    <br>gMonth
+                    <br>string
+                    <br>boolean
+                    <br>base64Binary
+                    <br>hexBinary
+                    <br>float
+                    <br>decimal
+                    <br>double
+                    <br>anyURI
+                    <br>QName
+                    <br>NOTATION
+                    
+               </p>
+            </blockquote>
+            <p>Built-in derived types:</p>
+              
+            <blockquote>
+               <p>
+                    normalizedString
+                    <br>token
+                    <br>language
+                    <br>Name
+                    <br>NCName
+                    <br>ID
+                    <br>IDREF
+                    <br>IDREFS
+                    <br>ENTITY
+                    <br>ENTITIES
+                    <br>integer
+                    <br>nonPositiveInteger
+                    <br>negativeInteger
+                    <br>long
+                    <br>int
+                    <br>short
+                    <br>byte
+                    <br>nonNegativeInteger
+                    <br>unsignedLong
+                    <br>unsignedInt
+                    <br>unsignedShort
+                    <br>unsignedByte
+                    <br>positiveInteger
+                    
+               </p>
+            </blockquote>
+            <p>The Schema for XForms derives new types for all the above datatypes, placing no
+                 additional restrictions on the allowed value space, but including them in the XForms namespace.
+            </p>
+              
+            <div class="issue">
+               <p class="prefix"><a name="datatype-identifiers"></a><b>Issue (datatype-identifiers):</b></p>
+               <p>One requirement is for XForms to include unique identifiers
+                    for each datatype listed here. We believe the facilities in XML Schema are sufficient for this,
+                    but welcome feedback  on this issue.
+               </p>
+            </div>
+              
+            <div class="issue">
+               <p class="prefix"><a name="ieee-datatypes"></a><b>Issue (ieee-datatypes):</b></p>
+               <p>There is concern that IEEE floating point, as used by the
+                    datatypes <code>xsd:float</code> and <code>xsd:double</code> may be difficult or impossible
+                    to implement on small devices. XPath (see <a href="slice6.html"><b>6 XPath Expressions in XForms</b></a>) also uses IEEE representation
+                    for numbers, and must be taken into consideration as to resolution of this conflict.
+               </p>
+            </div>
+              
+              
+            <div class="issue">
+               <p class="prefix"><a name="xml-datatypes"></a><b>Issue (xml-datatypes):</b></p>
+               <p>Several datatypes, namely <code>xsd:QName</code>,
+                    <code>xsd:NOTATION</code>, <code>xsd:Name</code>, <code>xsd:NCName</code>, <code>xsd:ID</code>,
+                    <code>xsd:IDREF</code>, <code>xsd:IDREFS</code>, <code>xsd:ENTITY</code>, and
+                    <code>xsd:ENTITES</code> are highly specific to XML, and perhaps not as useful in XForms.
+                    Particularly on small devices, the incremental cost of supporting these datatypes might be
+                    excessive.
+               </p>
+            </div>
+              
+              
+            <div class="issue">
+               <p class="prefix"><a name="pattern-facet"></a><b>Issue (pattern-facet):</b></p>
+               <p>Fully implementing the <code>pattern</code> facet might be too
+                    expensive on small devices.
+               </p>
+            </div>
+              
+              
+            <div class="issue">
+               <p class="prefix"><a name="mask-facet"></a><b>Issue (mask-facet):</b></p>
+               <p>Previous Working Drafts of XForms specified a <code>mask</code>
+                    facet, with less implementation cost than the Schema <code>pattern</code> facet. What are
+                    our options for adding an entirely new facet not defined in XML Schema?
+               </p>
+                 
+               <p>The mask facet was defined as follows:</p>
+                 
+               <div class="example">
+                  
+                  <h5>Example: Mask Facet</h5>
+                  <p>XML Schema has defined a Regular Expression language which
+                       is "similar to the regular expression language used in the Perl Programming language", 
+                       and can be applied to most built-in datatypes. Regular expression syntax, however, 
+                       is considered complex by some. Therefore, XForms defines the concept of a <code>mask</code> 
+                       facet. All <code>mask</code> facets 
+                       are convertible into <code>pattern</code>s.
+                  </p>
+                  
+                  <p>XML schema 
+                       allows multiple <code>pattern</code> facets to be specified. Similarly, multiple 
+                       <code>mask</code> or <code>pattern</code> facets, but not a mixture, are permitted.
+                  </p>
+                  
+                  <p>XForms <code>mask</code> uses the syntax and processing from <a href="sliceB.html#ref-wml1.3">[WML1.3]</a> 
+                       <code>format</code>. Some examples:
+                  </p>
+                  
+                  <ul>
+                       
+                     <li>
+                        <p><code>A</code> matches "A", "X", "$", "%", 
+                               or "."
+                        </p>
+                     </li>
+                       
+                     <li>
+                        <p><code>a</code> matches "a", "x", "$", "%", 
+                               or "."
+                        </p>
+                     </li>
+                       
+                     <li>
+                        <p><code>X</code> matches "A", "X", "$", "%", 
+                               ".", or "4"
+                        </p>
+                     </li>
+                       
+                     <li>
+                        <p><code>x</code> matches "a", "x", "$", "%", 
+                               ".", or "4"
+                        </p>
+                     </li>
+                       
+                     <li>
+                        <p><code>N</code> matches "0", "4", or "7"
+                        </p>
+                     </li>
+                       
+                     <li>
+                        <p><code>3N</code> matches "0", "63", or "999" 
+                               but not "1234" (Note: only allowed at end of mask)
+                        </p>
+                     </li>
+                       
+                     <li>
+                        <p><code>*X</code> matches "$", "3.0", or "ABCDEFG" 
+                               (Note: only allowed at end of mask)
+                        </p>
+                     </li>
+                       
+                     <li>
+                        <p><code>\</code> causes the next literal character to be inserted into the 
+                               mask
+                        </p>
+                     </li>
+                       
+                     <li>
+                        <p><code>NNN\-NNNN</code> matches "123-4567" but not "1234567"
+                        </p>
+                     </li>
+                     
+                  </ul>
+                  
+                  <p>As with WML <code>format</code> processing, an XForms Processor must ignore 
+                       invalid <code>mask</code>s.
+                  </p>
+               </div>
+            </div>
+              
+              
+            <div class="issue">
+               <p class="prefix"><a name="now-facet"></a><b>Issue (now-facet):</b></p>
+               <p>Previous Working Drafts of XForms specified "dynamic facets"
+                    that could be reevaluated at arbitrary times. One benefit of that approach was that a
+                    <code>now()</code> expression could be used as a constraining facet on date/time datatypes.
+                    What are our options for including similar functionality within the framework of XML Schema
+                    datatypes?
+               </p>
+            </div>
+         </div>
+           
+           
+         <div class="div2">
+            
+            <h3><a name="datatypes-xforms"></a>4.2 XForms Datatypes
+            </h3>
+            <p>The Schema for XForms derives the
+                 following types for use within forms:
+            </p>
+              
+              
+            <div class="div3">
+               
+               <h4><a name="dt-currency"></a>4.2.1 currency
+               </h4>
+               
+               <p>The XForms datatype <code>currency</code> is derived from the XForms datatype 
+                    <code>xform:string</code>. A <code>pattern</code> facet with a value of <code>[A-Z]{3}</code>
+                    is specified.
+               </p>
+               
+               <p>Valid currency values are specified in <a href="sliceB.html#ref-iso-4217">[ISO 4217]</a>.
+               </p>
+               
+               <div class="note">
+                  <p class="prefix"><b>Note:</b></p>
+                  <p>Since new currencies may appear at any time, the currency values as defined  in
+                     <a href="sliceB.html#ref-iso-4217">[ISO 4217]</a> are not strictly enforced.
+                  </p>
+               </div>
+               <ul>  
+                  
+                  
+                  <li>
+                     <p><b>Examples:</b>A value of 'Japanese Yen' would be represented as: 
+                     </p>
+                     
+                     <blockquote>
+                        <p>JPY</p>
+                     </blockquote>
+                  </li>
+                  
+                  <li> 
+                     <p>A value 'US Dollars' would be represented as:</p>
+                     
+                     <blockquote>
+                        <p>USD</p>
+                     </blockquote>
+                  </li>
+                  
+                  
+               </ul>
+               
+            </div>
+            <div class="div3">
+               
+               <h4><a name="dt-money"></a>4.2.2 monetary
+               </h4>
+               
+               
+               <p>Forms often deal with monetary values. In many cases the currency type in use is well-known,
+                  and not even needed in the instance data. When an explicit currency identifier is needed,
+                  authors can freely use separate <code>xform:decimal</code> and <code>xform:currency</code>
+                  values to accomplish this. For a unified approach, a monetary datatype would combine, in a single lexical space,
+                  both a currency code and a decimal value.
+               </p>
+               
+               <div class="issue">
+                  <p class="prefix"><a name="monetary-datatype"></a><b>Issue (monetary-datatype):</b></p>
+                  <p>Is such a datatype needed in XForms? If yes, how can it
+                     be defined in terms of XML Schema?
+                  </p>
+               </div>
+               <ul>  
+                  
+                  
+                  <li>
+                     <p><b>Examples:</b> A value of 42 Indonesian Rupiahs would be represented as:
+                     </p>
+                     
+                     <blockquote>
+                        <p>42IDR</p>
+                     </blockquote>
+                     
+                  </li>
+                  <li>
+                     <p> A value of 4.37 Euro would be represented as:</p>
+                     
+                     <blockquote>
+                        <p>4.37EUR</p>
+                     </blockquote>
+                  </li>
+                  
+                  
+               </ul>
+               
+            </div>
+            
+         </div>
+         
+      </div><a name="Bottom"></a>
+      <!-- BOTTOM NAVIGATION BAR --><table border="0" width="90%" cellpadding="4" cellspacing="0" bgcolor="#eeeeff" class="navigation">
+         <col width="50%">
+         <col width="50%">
+         <tr>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+         </tr>
+         <tr>
+            <td align="left"><a href="index.html#contents">Table of Contents</a></td>
+            <td align="left"><a href="#Top">Top</a></td>
+         </tr>
+      </table>
+   </body>
+</html>

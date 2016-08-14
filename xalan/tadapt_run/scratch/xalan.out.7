@@ -1,0 +1,124 @@
+<!DOCTYPE div PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<div class="div1"> 
+<h2><a name="intro"></a>1 About the XForms 1.0 Specification</h2> 
+<div class="div2"> 
+<h3><a name="intro-background"></a>1.1 Background</h3> 
+<p>Forms are an important part of the Web, and they continue to be the
+      primary means of interactivity used by many Web sites. Web applications and
+      eCommerce solutions have sparked the demand for better Web forms with richer
+      interactions. XForms are the response to this demand--extended analysis,
+      followed by the creation of a new platform-independent markup language for
+      online interaction between an <a title="" href="#">XForms Processor</a> and
+      a remote entity. XForms are the successor to XHTML forms, and benefit from the
+      lessons learned in the years of HTML forms implementation experience.</p>
+    <p>Further background information on XForms can be found at 
+      <a href="http://www.w3.org/MarkUp/Forms/">http://www.w3.org/MarkUp/Forms</a>.</p>
+  </div> 
+  <div class="div2">
+    
+<h3><a name="intro-reading"></a>1.2 Reading the Specification</h3>
+    <p>This specification has been written with various types of readers in
+      mind--in particular XForms authors and XForms implementors. We hope the
+      specification will provide authors with the tools they need to write efficient,
+      attractive, and accessible documents, without overexposing them to the XForms
+      implementation details. Implementors, however, should find all they need to
+      build conforming XForms Processors. The specification begins with a general
+      presentation of XForms and becomes more and more technical and specific towards
+      the end. For quick access to information, a general table of contents, specific
+      tables of contents at the beginning of each section, and an index provide easy
+      navigation, in both the electronic and printed versions.</p>
+    <p>The specification has been written with two modes of presentation in
+      mind: electronic and printed. In case of a discrepancy, the electronic version
+      is considered the authoritative version of the document.</p>
+  </div>
+  <div class="div2">
+    
+<h3><a name="intro-org"></a>1.3 How the Specification is Organized</h3>
+    <p>The specification is organized into the following chapters:</p>
+    <dl>
+      
+        <dt class="label">Chapters 1 and 2</dt>
+        <dd>
+          <p>An introduction to XForms The introduction includes a brief
+            tutorial on XForms and a discussion of design principles behind XForms.</p>
+        </dd>
+      
+      
+        <dt class="label">Chapters 3 and up</dt>
+        <dd>
+          <p>XForms reference manual. The bulk of the reference manual consists
+            of the specification of XForms. This reference defines what may go into XForms
+            and how XForms Processors must interpret the various components in order to
+            claim conformance.</p>
+        </dd>
+      
+      
+        <dt class="label">Appendixes</dt>
+        <dd>
+          <p>Appendixes contain a normative description of XForms described in
+            XML Schema, information on optional function libraries, references, a change
+            history, and other useful information.</p>
+        </dd>
+      
+    </dl>
+  </div>
+  <div class="div2">
+    
+<h3><a name="intro-conventions"></a>1.4 Documentation Conventions</h3>
+    <p>The following highlighting and typography is used to present technical
+      material in this document and other documents from the XForms Working
+      Group:</p>
+      
+    <p>Special terms are defined in their own chapter; hyperlinks connect uses
+      of the term to the definition.</p>
+      
+    <p>Throughout this document, the namespace prefixes "<code>xform:</code>",
+      "<code>xsd:</code>", and "<code>xsi:</code>" are used to denote the XForms, 
+      XML Schema, and XML Schema for Instances namespaces
+      respectively. This is by convention only; any namespace prefix may be used in
+      practice.</p>
+      
+    <p>Official terms are defined in the following manner: [<a title="term" name="def-term">Definition</a>: 
+    You can find most <b>terms</b> in the chapter <a href="#"><b>???</b></a>].
+    Links to <a title="" href="#">term</a>s may be specially highlighted in the text.</p>
+    
+    <p>The XML representations of various elements within XForms are presented
+  as follows: Listed are the element name, names of all attributes, allowed
+  values of attributes appearing after a "=" character, default values of
+  attributes appearing after a ":" character, and allowed content. One or
+  more headings below the table provide additional explanatory information.</p>
+  <div class="example">
+<h5>Example: XML Syntax Representation &lt;<code>example</code>&gt;</h5><table summary="Example" width="100%" bgcolor="#99ffff" border="1" cellpadding="5" class="eg"><tr><td><pre>&lt;example
+  count = integer
+  size = (small | medium | large) : medium
+&gt;
+  &lt;!-- Content: (allowed-content) --&gt;
+&lt;/example&gt;</pre></td></tr></table><blockquote><p>
+    <b>count = integer</b> - description of this attribute
+    <br><b>size = (small | medium | large) : medium</b> - description of
+    this attribute
+  </p></blockquote></div>  
+  
+  
+  
+  
+  <p>Non-normative short examples are set off typographically:</p>
+    <blockquote><p>Example Item</p></blockquote><p>or</p><table summary="Example" width="100%" bgcolor="#99ffff" border="1" cellpadding="5" class="eg"><tr><td><pre>Example Item</pre></td></tr></table>
+    
+    
+  <p>References to external documents appear as follows: <a href="#">[ref-example]</a>
+  with links to the references section of this document.</p><dl>
+  <dt class="label"><a name="ref-example"></a>Sample Reference</dt><dd><cite>Reference</cite> - linked
+  to from above.</dd></dl>
+  
+  <p>The following highlighting is used for non-normative commentary:</p>
+  
+  <div class="note"><p class="prefix"><b>Note:</b></p> <p>A general admonition to readers.</p></div>
+  
+  <table border="1" summary="Editorial note: Editorial Note Name"><tr><td width="50%" valign="top" align="left"><b>Editorial note: Editorial Note Name</b></td><td width="50%" valign="top" align="right">&nbsp;</td></tr><tr><td valign="top" align="left" colspan="2"> Editorial commentary.</td></tr></table>
+  
+  <div class="issue"><p class="prefix"><a name="issue-id"></a><b>Issue (issue-id):</b></p><p class="prefix"><b>Issue-Name</b></p>
+  <p> A specific issue to which input from readers is requested.</p></div>
+  
+  </div>
+</div>

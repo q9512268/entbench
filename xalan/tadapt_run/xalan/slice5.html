@@ -1,0 +1,580 @@
+
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+   
+      <title>The XForms Model</title><style type="text/css">
+code           { font-family: monospace; }
+
+div.constraint,
+div.issue,
+div.note,
+div.notice     { margin-left: 2em; }
+
+dt.label       { display: run-in; }
+
+li p           { margin-top: 0.3em;
+                 margin-bottom: 0.3em; }
+      </style><link rel="stylesheet" type="text/css" href="http://www.w3.org/StyleSheets/TR/W3C-WD.css">
+   </head>
+   <body><a name="Top"></a>
+      <!-- TOP NAVIGATION BAR --><table border="0" width="90%" cellpadding="4" cellspacing="0" bgcolor="#eeeeff" class="navigation">
+         <col width="25%">
+         <col width="25%">
+         <col width="25%">
+         <col width="25%">
+         <tr>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+         </tr>
+         <tr>
+            <td align="left"><a href="index.html#contents">Table of Contents</a></td>
+            <td align="left"><a href="slice4.html">Prev</a></td>
+            <td align="left"><a href="slice6.html">Next</a></td>
+            <td align="left"><a href="#Bottom">Bottom</a></td>
+         </tr>
+      </table>
+      <table border="0" width="90%" cellpadding="4" cellspacing="0" bgcolor="#eeeeff" class="navigation-toc">
+         <col width="100%">
+         <tr align="left">
+            <th>
+               <hr>Quick Table of Contents
+               <hr>
+            </th>
+         </tr>
+         <tr>
+            <td>5 <a href="slice5.html">The XForms Model</a><br>&nbsp;&nbsp;&nbsp;&nbsp;5.1 <a href="slice5.html#model-intro">Introduction</a><br>&nbsp;&nbsp;&nbsp;&nbsp;5.2 <a href="slice5.html#model-prop">Model Item Properties</a><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;5.2.1 <a href="slice5.html#model-prop-name">name</a><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;5.2.2 <a href="slice5.html#model-prop-type">type</a><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;5.2.3 <a href="slice5.html#model-prop-readOnly">readOnly</a><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;5.2.4 <a href="slice5.html#model-prop-required">required</a><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;5.2.5 <a href="slice5.html#model-prop-relevant">relevant</a><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;5.2.6 <a href="slice5.html#model-prop-calculate">calculate</a><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;5.2.7 <a href="slice5.html#model-prop-priority">priority</a><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;5.2.8 <a href="slice5.html#model-prop-validate">validate</a><br>&nbsp;&nbsp;&nbsp;&nbsp;5.3 <a href="slice5.html#model-using">Using Datatypes in the XForms Model</a><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;5.3.1 <a href="slice5.html#model-using-atomic">Atomic Datatype</a><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;5.3.2 <a href="slice5.html#model-using-enum">Closed Enumeration</a><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;5.3.3 <a href="slice5.html#model-using-openenum">Open Enumeration</a><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;5.3.4 <a href="slice5.html#model-using-union">Union</a><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;5.3.5 <a href="slice5.html#model-using-array">Multiple Selection</a><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;5.3.6 <a href="slice5.html#model-using-repeat">Repeating Line Item</a><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;5.3.7 <a href="slice5.html#model-using-switch">Alternate Representation</a><br></td>
+         </tr>
+      </table>
+      <div class="div1">
+         
+         <h2><a name="model"></a>5 The XForms Model
+         </h2> 
+         
+         
+         <div class="div2">
+            
+            <h3><a name="model-intro"></a>5.1 Introduction
+            </h3>
+            
+            <p>Chapter <a href="slice4.html"><b>4 Datatypes</b></a> described how XForms uses the XML Schema datatyping system, which can constrain the <a title="value space" href="slice3.html#def-value-space">value space</a> of datatypes that can be used in data collection. This chapter introduces a different set of properties, called <a title="model item property" href="slice3.html#def-model-item-property">model item properties</a>, which define XForms-specific behaviors and metadata useful for data collection.
+            </p>
+            
+         </div>
+         
+         
+         <div class="div2">
+            
+            <h3><a name="model-prop"></a>5.2 Model Item Properties
+            </h3>
+            
+            
+            <p>Model item properties fall into two basic categories:</p>
+            <ul>
+               <li>
+                  <p><a title="computed expression" href="slice3.html#def-computed-expression">Computed expressions</a> are XPath expressions that provide a value to the XForms Processor. The value is recomputed at certain times, according to
+                     the XForms Processing Model (see <a href="slice11.html"><b>11 Processing Model</b></a>).
+                  </p>
+               </li>
+               <li>
+                  <p>All other properties are fixed, static values that the XForms Processor evaluates only once.</p>
+               </li>
+            </ul>
+              
+            
+            <p>The following properties are available for all <a title="model item" href="slice3.html#def-model-item">model items</a>,
+                 and their syntax is explained throughout this chapter. For each property the following information is provided:
+            </p>
+            <blockquote>
+               <p>Description<br>Computed Expression (yes or no)<br>Legal Values<br>Default Value<br>Additional descriptive text
+               </p>
+            </blockquote>
+            <div class="div3">
+               
+               <h4><a name="model-prop-name"></a>5.2.1 name
+               </h4>
+               
+               <p>Description: provides a specific name for the model item.</p>
+               
+               <p>Computed Expression: No</p>
+               <p>Legal Values: only values of type <code>xsd:NCName</code></p>
+               
+               <p>Default Value: none.</p>
+               
+               <p>Authors can associate a human-readable name with a model item through 
+                    the use of the <code>name</code> property. Each <code>name</code> should be 
+                    unique within the scope of the XForms Model where it is declared.
+               </p>
+               
+               
+            </div>
+            
+            
+            <div class="div3">
+               
+               <h4><a name="model-prop-type"></a>5.2.2 type
+               </h4>
+               <p>Description: assigns a Schema datatype.</p>
+               <p>Computed Expression: No</p>
+               <p>Legal Values: any <code>xsd:QName</code> representing a Schema datatype.
+               </p>
+               <p>Default Value: <code>xsd:anyType</code></p>
+               <p>The concept of typed data is important to forms. The assignment of a particular datatype to a model item affects validation
+                  of the data it can accept, as well as affecting which form controls to which it can bind.
+               </p>
+               <div class="note">
+                  <p class="prefix"><b>Note:</b></p>
+                  <p>The XForms Model uses properties "name" and "type"
+                     as in XML Schema;
+                     the concrete syntax used to define XForm Models, and
+                     consequently the use of these properties  will be
+                     made concrete in a forthcoming revision of this Working Draft.
+                     
+                  </p>
+               </div>
+            </div>
+            <div class="div3">
+               
+               <h4><a name="model-prop-readOnly"></a>5.2.3 readOnly
+               </h4>
+               
+               <p>Description: describes whether the value is restricted from changing. 
+                    The ability of form controls to have focus and appear in the navigation order is unaffected 
+                    by this property.
+               </p>
+               <p>Computed Expression: Yes</p>
+               
+               <p>Legal Values: any expression is convertible to <code>boolean</code>.
+               </p>
+               
+               <p>Default Value: <code>false</code>.
+               </p>
+               
+               <p>When evaluating to <code>true</code>, this property indicates that the XForms Processor should not allow any changes to the bound instance data item.
+               </p>
+               <p>In addition to restricting value changes, the <code>readOnly</code> property 
+                    provides a hint to the XForms User Interface. Form controls 
+                    bound to a model item with the <code>readOnly</code> 
+                    property should indicate that entering or changing the value is not allowed. 
+                    The hint provided has no effect on visibility, focus, or navigation order.
+               </p>
+               
+            </div>
+            
+            
+            <div class="div3">
+               
+               <h4><a name="model-prop-required"></a>5.2.4 required
+               </h4>
+               
+               <p>Description: describes whether a value is required before the instance 
+                    data is submitted.
+               </p>
+               <p>Computed Expression: Yes</p>
+               
+               <p>Legal Values: any expression that is convertible to <code>boolean</code></p>
+               
+               <p>Default Value: <code>false</code>.
+               </p>
+               
+               <p>Often forms require certain values to be entered. This may be 
+                    a static requirement, or may only be the case if some condition is satisfied. When evaluating to <code>true</code>, this property indicates that a non-empty instance data item is required before a submission of instance data can occur.
+                  Non-empty is defined as:
+               </p>
+               <ol>
+                  <li>
+                     <p>If the bound instance data item is the text content of an element, the element  must not have the <code>xsi:nil</code> attribute set to <code>true</code>.
+                     </p>
+                  </li>
+                  <li>
+                     <p>The bound instance data item must be convertible to an XPath <code>string</code> with a length greater than zero.
+                     </p>
+                  </li>
+               </ol>
+               
+               <p>Except as noted below, the <code>required</code> property does not provide 
+                    a hint to the XForms User Interface regarding visibility, focus, or navigation order.
+                    XForms authors are strongly encouraged to make sure that form controls that
+                    accept <code>required</code> data are visible. An XForms Processor may provide a
+                    unique indication that a form control is required, and may provide immediate feedback, including limiting navigation, for
+                  required form controls.
+               </p>
+               
+               
+               <div class="issue">
+                  <p class="prefix"><a name="issue-default-default"></a><b>Issue (issue-default-default):</b></p>
+                  <p>It might be useful to set the default for the
+                     required attribute for an entire XForms Model. What should the default default be?
+                     How could we assign a default for a single XForms Model? This could apply to other
+                     attributes as well, e.g. readOnly, etc...
+                  </p>
+               </div>
+               
+               <p>The chapter <a href="slice11.html"><b>11 Processing Model</b></a> contains details on how the XForms Processor enforces required values.
+               </p>
+            </div>
+            
+            
+            <div class="div3">
+               
+               <h4><a name="model-prop-relevant"></a>5.2.5 relevant
+               </h4>
+               
+               <p>Description: indicates whether the model item is currently relevant to the
+                    rest of the XForms Model. XForms Processors would typically not render an
+                    associated form control, including children, when the value is <code>false</code>.
+               </p>
+               <p>Computed Expression: Yes</p>
+               
+               <p>Legal Values: any expression is convertible to <code>boolean</code></p>
+               
+               <p>Default Value: <code>true</code>.
+               </p>
+               
+               <p>Many forms have fields dependent on other conditions. For example, a form might 
+                    ask whether the respondent owns a car. It is only appropriate to ask for further information 
+                    about their car if they have indicated that they own one.
+               </p>
+               <p>When evaluating to <code>true</code>, this property indicates that the XForms Processor should render a form control, and conversely, when evaluating to <code>false</code>, indicates that the form control should not be rendered.
+               </p>
+               
+               <p>The <code>relevant</code> property provides hints to the XForms User Interface regarding 
+                    visibility, focus, and navigation order. In general, when <code>true</code>, associated 
+                    form controls should be made visible. When <code>false</code>, associated form
+                    controls should be made unavailable, removed from the navigation order, 
+                    and not allowed focus.
+               </p>
+               
+               <p>The following table shows the user interface interaction between <code>required</code> and 
+                    <code>relevant</code>.
+               </p>
+               
+               <table border="1" cellspacing="1" cellpadding="4" summary="shows combinations of depends and required">
+                  
+                  <tbody>
+                     <tr>
+                        <td rowspan="1" colspan="1"> </td>
+                        <td rowspan="1" colspan="1"><code>required="true"</code></td>
+                        <td rowspan="1" colspan="1"><code>required="false"</code></td>
+                     </tr>
+                     
+                     <tr>
+                        <td rowspan="1" colspan="1"><code>relevant="true"</code></td>
+                        
+                        <td rowspan="1" colspan="1">The form control (and any children) should be visible or available to 
+                             the user. The XForms User Interface may indicate that a value is required.
+                        </td>
+                          
+                        <td rowspan="1" colspan="1">The form control (and any children) should be visible or available to 
+                             the user. The XForms User Interface may indicate that a value is optional.
+                        </td>
+                     </tr>
+                       
+                     <tr>
+                        <td rowspan="1" colspan="1"><code>relevant="false"</code></td>
+                          
+                        <td rowspan="1" colspan="1">The form control (and any children) should be hidden or unavailable to 
+                             the user. Entering a value or obtaining focus should not be allowed. The 
+                             XForms User Interface may indicate that should the form control become relevant, 
+                             a value would be required.
+                        </td>
+                        <td rowspan="1" colspan="1">The form control (and any children) should be
+                             hidden or unavailable to the user. Entering a value or obtaining focus should not
+                             be allowed.
+                        </td>
+                     </tr>
+                  </tbody>
+               </table>
+                
+            </div>
+            
+            
+            <div class="div3">
+               
+               <h4><a name="model-prop-calculate"></a>5.2.6 calculate
+               </h4>
+               
+               <p>Description: indicates that the instance data item associated with the model item is to 
+                    be dynamically calculated.
+               </p>
+               <p>Computed Expression: Yes</p>
+               
+               <p>Legal Values: any expression is convertible  to an XPath datatype compatible 
+                    with the associated XML Schema datatype.
+               </p>
+               
+               <p>Default Value: none.</p>
+               
+               <p>An XForms Model may include model items that are computed from the other values 
+                    elsewhere. For example, the sum over line items for quantity times unit price, 
+                    or the amount of tax to be paid on an order. The computed value can be represented 
+                    as a computed expression using the values of other model items. The XForms Processing
+                    Model indicates how and when the calculation is recomputed.
+               </p>
+               
+            </div>
+            
+            
+            <div class="div3">
+               
+               <h4><a name="model-prop-priority"></a>5.2.7 priority
+               </h4>
+               
+               <p>Description: indicates the relative priority for calculations of the 
+                    model item.
+               </p>
+               <p>Computed Expression: No</p>
+               
+               <p>Legal Values: any expression that is convertible to an integer in the range 
+                    0-32767.
+               </p>
+               
+               <p>Default Value: 0.</p>
+               
+               <p>For model items that are calculated, this optional property specifies a calculation 
+                    order. The XForms Processing Model uses this property to determine the calculation order for multiple calculations.
+               </p>
+               
+            </div>
+            
+            
+            <div class="div3">
+               
+               <h4><a name="model-prop-validate"></a>5.2.8 validate
+               </h4>
+               
+               <p>Description: specifies the predicate that needs to be satisfied for the associated instance data item to be considered valid.</p>
+               <p>Computed Expression: Yes</p>
+               
+               <p>Legal Values: any expression that is convertible to <code>boolean</code></p>
+               
+               <p>Default Value: <code>true</code>.
+               </p>
+               
+               <p>An XForms Model may include model items that need to be validated. When evaluating to <code>true</code>, indicates that the model item 
+                    is considered valid. The chapter <a href="slice11.html"><b>11 Processing Model</b></a>  describes 
+                    details such as immediate validation vs. onsubmit validation.
+               </p>
+               
+               <p>Computed expressions used here are not restricted to examining the instance 
+                    data item they are invoked on. XPath, plus the extensions in this chapter, provide 
+                    the means to traverse the instance data, as well as call-outs to external script, enabling potentially complex validations.
+               </p>
+               
+               <p>The XForms User Interface may indicate whether a form control is currently valid or 
+                    invalid.
+               </p>
+               
+               <div class="issue">
+                  <p class="prefix"><a name="issue-cascade"></a><b>Issue (issue-cascade):</b></p>
+                  <p>Will the <code>validate</code> property be evaluated on
+                       all the parent or child model items whenever a value changes? We need to make sure
+                       that inter-model item constraints will get evaluated.
+                  </p>
+               </div>
+               
+            </div>
+            
+         </div>
+         
+         
+         <div class="div2">
+            
+            <h3><a name="model-using"></a>5.3 Using Datatypes in the XForms Model
+            </h3>
+            
+            <p>The following section is being rewritten with the guidance of the XML Schema Working Group. In its current state, it is an
+               informative listing of the functionality that we are planning in XForms 1.0, with illustrative examples of similar functionality
+               in XML Schema. A subsequent Working Draft will contain normative details on how the functionality is described in terms of
+               XForms.
+            </p>
+              
+            
+            <div class="div3">
+               
+               <h4><a name="model-using-atomic"></a>5.3.1 Atomic Datatype
+               </h4>
+               
+               <p>At the simplest level, it is necessary to associate a datatype with a model item. This has the effect of restricting the allowable
+                  values of the associated instance data item to valid representations of the lexical space of the datatype, including enforcing
+                  of any constraining facets.
+               </p>
+               
+               <p>Example Schema Syntax: declaring a datatype based on an <code>xsd:string</code> plus additional constraining facet would be accomplished as follows:
+               </p>
+               
+               <table class="eg" cellpadding="5" border="1" bgcolor="#99ffff" width="100%" summary="Example">
+                  <tr>
+                     <td><pre>&lt;xsd:simpleType&gt;
+  &lt;xsd:restriction base="xsd:string"&gt;
+    &lt;xsd:minLength value="1"/&gt;
+  &lt;/xsd:restriction&gt;
+&lt;/xsd:simpleType&gt;</pre></td>
+                  </tr>
+               </table>
+               
+               
+               
+            </div>
+            
+            
+            <div class="div3">
+               
+               <h4><a name="model-using-enum"></a>5.3.2 Closed Enumeration
+               </h4>
+               
+               <p>Often it is necessary to restrict the allowable values of the associated instance data item to a closed list of alternatives.
+                  Also under consideration is a method to obtain a list at runtime, for example, from an XPath node-set.
+               </p>
+               
+               
+               
+               
+               <p>Example Schema Syntax: declaring a datatype allowing enumerated values of an <code>xsd:string</code> would be accomplished as follows:
+               </p>
+               
+               <table class="eg" cellpadding="5" border="1" bgcolor="#99ffff" width="100%" summary="Example">
+                  <tr>
+                     <td><pre>&lt;xsd:simpleType&gt;
+  &lt;xsd:restriction base="xsd:string"&gt;
+    &lt;xsd:enumeration value="Mastercard"/&gt;
+    &lt;xsd:enumeration value="Diner's Club"/&gt;
+    &lt;xsd:enumeration value="American Express"/&gt;
+  &lt;/xsd:restriction&gt;
+&lt;/xsd:simpleType&gt;</pre></td>
+                  </tr>
+               </table>
+               
+               
+            </div>
+            <div class="div3">
+               
+               <h4><a name="model-using-openenum"></a>5.3.3 Open Enumeration
+               </h4>
+               <p>A special case of enumerated datatypes is the common form design pattern of a list, with an 'other, please specify' choice.
+                  This is referred to as an open enumeration.
+               </p>
+               <p>Example Schema Syntax: declaring an open enumeration is possible through a combination of union and enumeration features,
+                  as follows:
+               </p>
+               <table class="eg" cellpadding="5" border="1" bgcolor="#99ffff" width="100%" summary="Example">
+                  <tr>
+                     <td><pre>&lt;xsd:simpleType&gt;
+  &lt;xsd:union memberTypes="xsd:string"&gt;
+    &lt;xsd:simpleType&gt;
+      &lt;xsd:restriction base="xsd:string"&gt;
+        &lt;xsd:enumeration value="Mastercard"/&gt;
+        &lt;xsd:enumeration value="Diner's Club"/&gt;
+        &lt;xsd:enumeration value="American Express"/&gt;
+      &lt;/xsd:restriction&gt;
+    &lt;/xsd:simpleType&gt;
+  &lt;/xsd:union&gt;
+&lt;/xsd:simpleType&gt;</pre></td>
+                  </tr>
+               </table>
+            </div>
+            
+            
+              
+            
+            <div class="div3">
+               
+               <h4><a name="model-using-union"></a>5.3.4 Union
+               </h4>
+               
+               <p> It may be desirable for data collection purpose to allow an instance data item to be a valid lexical value of one among several
+                  datatypes. Unions are defined in XML Schema.
+               </p>
+               
+               <p>Example Schema Syntax:  declaring a datatype allowing either a <code>creditCardType</code> or <code>bonusProgramType</code> value would be as follows:
+               </p>
+               
+               <table class="eg" cellpadding="5" border="1" bgcolor="#99ffff" width="100%" summary="Example">
+                  <tr>
+                     <td><pre>&lt;xsd:simpleType&gt;
+  &lt;xsd:union memberTypes="creditCardType bonusProgramType"/&gt;
+&lt;/xsd:simpleType&gt;</pre></td>
+                  </tr>
+               </table>
+               
+            </div>
+            <div class="div3">
+               
+               <h4><a name="model-using-array"></a>5.3.5 Multiple Selection
+               </h4>
+               <p>Some form controls, such as <code>selectMany</code>, have the notion of supporting more than one simpleType value at any given time. This corresponds with Schema list datatypes.
+               </p>
+               <p>Example Schema Syntax: declaring a list-derived datatype would be as follows:</p>
+               
+               <table class="eg" cellpadding="5" border="1" bgcolor="#99ffff" width="100%" summary="Example">
+                  <tr>
+                     <td><pre>&lt;xsd:simpleType name="listOfMyIntType"&gt;
+  &lt;xsd:list itemType="xsd:int"/&gt;
+&lt;/xsd:simpleType&gt;</pre></td>
+                  </tr>
+               </table>
+            </div>
+            
+            
+            <div class="div3">
+               
+               <h4><a name="model-using-repeat"></a>5.3.6 Repeating Line Item
+               </h4>
+               
+               <p>It is common for certain types of forms, such as order forms, to contain repeating structures, typically line items. If each
+                  individual structure were represented as a Schema complexType, a line item group would be analogous to the <code>sequence</code> construct.
+               </p>
+               
+               <p>Example Schema Syntax: a datatype allowing a sequence of child elements would be declared as follows:</p>
+               
+               <table class="eg" cellpadding="5" border="1" bgcolor="#99ffff" width="100%" summary="Example">
+                  <tr>
+                     <td><pre>&lt;xsd:complexType&gt;
+  &lt;xsd:sequence&gt;
+    &lt;xsd:element name="child" type="xform:string" minOccurs="0" maxOccurs="unbounded"/&gt;
+  &lt;/xsd:sequence&gt;
+&lt;/xsd:complexType&gt;</pre></td>
+                  </tr>
+               </table>
+               
+               <p>Chapter <a href="slice8.html"><b>8 XForms User Interface</b></a> contains details on representing this with XForms User Interface form controls, as well as details for how this relates to
+                  the instance data in chapter <a href="slice11.html"><b>11 Processing Model</b></a>.
+               </p>
+            </div>
+            
+            
+            <div class="div3">
+               
+               <h4><a name="model-using-switch"></a>5.3.7 Alternate Representation
+               </h4>
+               
+               <p>In some forms, alternate representations might be necessary for underlying instance data structures.</p>
+               
+               <p>Example Schema Syntax: a Schema <code>choice</code> element is roughly analogous to this, although XForms uses a more dynamic version. Examples of this are found in <a href="slice8.html"><b>8 XForms User Interface</b></a></p>
+               
+               
+               
+               
+            </div>
+            
+         </div>
+         
+      </div><a name="Bottom"></a>
+      <!-- BOTTOM NAVIGATION BAR --><table border="0" width="90%" cellpadding="4" cellspacing="0" bgcolor="#eeeeff" class="navigation">
+         <col width="50%">
+         <col width="50%">
+         <tr>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+         </tr>
+         <tr>
+            <td align="left"><a href="index.html#contents">Table of Contents</a></td>
+            <td align="left"><a href="#Top">Top</a></td>
+         </tr>
+      </table>
+   </body>
+</html>

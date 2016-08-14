@@ -1,0 +1,280 @@
+
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+   
+      <title>Changes from Previous Release</title><style type="text/css">
+code           { font-family: monospace; }
+
+div.constraint,
+div.issue,
+div.note,
+div.notice     { margin-left: 2em; }
+
+dt.label       { display: run-in; }
+
+li p           { margin-top: 0.3em;
+                 margin-bottom: 0.3em; }
+      </style><link rel="stylesheet" type="text/css" href="http://www.w3.org/StyleSheets/TR/W3C-WD.css">
+   </head>
+   <body><a name="Top"></a>
+      <!-- TOP NAVIGATION BAR --><table border="0" width="90%" cellpadding="4" cellspacing="0" bgcolor="#eeeeff" class="navigation">
+         <col width="25%">
+         <col width="25%">
+         <col width="25%">
+         <col width="25%">
+         <tr>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+         </tr>
+         <tr>
+            <td align="left"><a href="index.html#contents">Table of Contents</a></td>
+            <td align="left"><a href="sliceB.html">Prev</a></td>
+            <td align="left"><a href="sliceD.html">Next</a></td>
+            <td align="left"><a href="#Bottom">Bottom</a></td>
+         </tr>
+      </table>
+      <table border="0" width="90%" cellpadding="4" cellspacing="0" bgcolor="#eeeeff" class="navigation-toc">
+         <col width="100%">
+         <tr align="left">
+            <th>
+               <hr>Quick Table of Contents
+               <hr>
+            </th>
+         </tr>
+         <tr>
+            <td>C <a href="sliceC.html">Changes from Previous Release</a> (Non-Normative)<br>&nbsp;&nbsp;&nbsp;&nbsp;C.1 <a href="sliceC.html#changes-overall">Changes since the 16-Feb-2001 release</a><br>&nbsp;&nbsp;&nbsp;&nbsp;C.2 <a href="sliceC.html#changes-about">Changes to Chapter 1 'About XForms'</a><br>&nbsp;&nbsp;&nbsp;&nbsp;C.3 <a href="sliceC.html#changes-concepts">Changes to Chapter 2 'Concepts'</a><br>&nbsp;&nbsp;&nbsp;&nbsp;C.4 <a href="sliceC.html#changes-terms">Changes to Chapter 3 'Terminology'</a><br>&nbsp;&nbsp;&nbsp;&nbsp;C.5 <a href="sliceC.html#changes-datatypes">Changes to Chapter 4 'Datatypes'</a><br>&nbsp;&nbsp;&nbsp;&nbsp;C.6 <a href="sliceC.html#changes-model">Changes to Chapter 5 'XForms Model'</a><br>&nbsp;&nbsp;&nbsp;&nbsp;C.7 <a href="sliceC.html#changes-expr">Changes to Chapter 6 'XPath Expressions in XForms'</a><br>&nbsp;&nbsp;&nbsp;&nbsp;C.8 <a href="sliceC.html#changes-controls">Changes to Chapter 7 'Form Controls'</a><br>&nbsp;&nbsp;&nbsp;&nbsp;C.9 <a href="sliceC.html#changes-ui">Changes to Chapter 8 'XForms User Interface'</a><br>&nbsp;&nbsp;&nbsp;&nbsp;C.10 <a href="sliceC.html#changes-binding">Changes to Chapter 9 'Binding'</a><br>&nbsp;&nbsp;&nbsp;&nbsp;C.11 <a href="sliceC.html#changes-structure">Changes to Chapter 10 'Document Structure'</a><br>&nbsp;&nbsp;&nbsp;&nbsp;C.12 <a href="sliceC.html#changes-rpm">Changes to Chapter 11 'Processing Model and Conformance'</a><br>&nbsp;&nbsp;&nbsp;&nbsp;C.13 <a href="sliceC.html#changes-schema">Changes to Appendix  'Schema for XForms'</a><br>&nbsp;&nbsp;&nbsp;&nbsp;C.14 <a href="sliceC.html#changes-xslt">Changes to Appendix 'XSLT from Simple Syntax'</a><br>&nbsp;&nbsp;&nbsp;&nbsp;C.15 <a href="sliceC.html#changes-samples">Change to Appendix 'Sample Forms'</a><br>&nbsp;&nbsp;&nbsp;&nbsp;C.16 <a href="sliceC.html#changes-optional">Changes to Appendix 'Optional Function Library'</a><br>&nbsp;&nbsp;&nbsp;&nbsp;C.17 <a href="sliceC.html#changes-references">Changes to Appendix 'References'</a><br></td>
+         </tr>
+      </table>
+      <div class="div1">
+         
+         <h2><a name="changes"></a>C Changes from Previous Release (Non-Normative)
+         </h2>
+          
+           
+         <div class="div2"> 
+                
+            
+            <h3><a name="changes-overall"></a>C.1 Changes since the 16-Feb-2001 release
+            </h3> 
+              
+            <p>There have been significant changes to the XForms since our last public draft. In addition, we have switched over to authoring
+               the specification using xmlspec.dtd from writing raw HTML (details at <a href="sliceE.html"><b>E Production Notes</b></a>). The change from hand-authored HTML to xmlspec has introduced changes throughout the document, and consequently, adding
+               diff marks for each change would be excessively distracting and make this appendix difficult to read. Instead, this section
+               summarizes how things have changed so that readers familiar with the previous draft can get up to to speed with the new specification.
+            </p>
+         </div> 
+         
+         <div class="div2">
+            
+            <h3><a name="changes-about"></a>C.2 Changes to Chapter 1 'About XForms'
+            </h3>
+            <p>The typographic samples have been updated to work better with the XMLspec publishing system.</p>
+         </div>
+         <div class="div2">
+            
+            <h3><a name="changes-concepts"></a>C.3 Changes to Chapter 2 'Concepts'
+            </h3>
+            <p>This chapter has been completely updated. The new version contains a samples of complete forms and a step-by-step guide through
+               the most common functionality in XForms.
+            </p>
+         </div>
+         <div class="div2">
+            
+            <h3><a name="changes-terms"></a>C.4 Changes to Chapter 3 'Terminology'
+            </h3>
+            <p>Terms have been cleaned-up and brought into line with the rest of the document. The term "datatype" has been imported from
+               XML Schema. The terms "computed expression", "containing document", and "model item property" are new.
+            </p>
+         </div>
+         <div class="div2">
+            
+            <h3><a name="changes-datatypes"></a>C.5 Changes to Chapter 4 'Datatypes'
+            </h3>
+            <p>The Working Group has decided to more directly reference XML Schema datatypes, hence this chapter has been restructured to
+               include by reference Schema datatypes, and define any additional types. Remaining issues are listed within the chapter.
+            </p>
+         </div>
+         <div class="div2">
+            
+            <h3><a name="changes-model"></a>C.6 Changes to Chapter 5 'XForms Model'
+            </h3>
+            <p>Removed all "simple syntax". Clarified how computed model item properties (including calculate) work. Improved terminology,
+               consistently using terms from chapter 3.
+            </p>
+            <p>Open and closed enumerations are now under separate headings. Removed 'group' to UI chapter. Renamed "Arrays" section to "Multiple
+               Simultaneous Values", and added section "Repeating Line Items". Renamed "Switch" to "Alternate Representation", with a pointer
+               to the UI section.
+            </p>
+            <p>Significant changes to this chapter, bringing it into much closer alignment with XML Schema, were not available for publication
+               at this time and will appear in a near-future Working Draft.
+            </p>
+         </div>
+         <div class="div2">
+            
+            <h3><a name="changes-expr"></a>C.7 Changes to Chapter 6 'XPath Expressions in XForms'
+            </h3>
+            <p>This chapter was previously named "Dynamic Constraint Language". The new title more accurately describes both the chapter
+               and the role of XPath within XForms. The term "Dynamic Constraints Language" has been removed throughout the remainder of
+               the document as well.
+            </p>
+            <p>New introductory material describes the various ways XPath is used throughout XForms. The "Instance Data" section formerly
+               residing in the Processing Model chapter is now in this chapter. The section on Datatypes now describes which parts of XForms
+               use XPath datatypes and which use XML Schema datatypes.
+            </p>
+            <p>The BNF productions have been removed, in favor of stronger wording that XPath is to be used directly.</p>
+            <p>The section "Evaluation Context" has been more thoroughly cross-checked against the XPath specification, with several underspecified
+               areas now addressed.
+            </p>
+            <p>The large set of custom operators has been replaced with a NOTE referencing the built-in XPath operators.</p>
+            <p>New functions defined--<code>count-non-empty(node-set)</code>, and <code>xforms-property(string)</code>.
+            </p>
+            <p>Several of the functions have been specified in greater detail.</p>
+            <p>The extensibility section now makes a reference to a possible direction--the <code>element-available()</code> and <code>function-available()</code> functions.
+            </p>
+         </div>
+         <div class="div2">
+            
+            <h3><a name="changes-controls"></a>C.8 Changes to Chapter 7 'Form Controls'
+            </h3>
+            <p>Originally part of the chapter "XForms User Interface". Now split into a separate chapter. The material in this new chapter
+               has been restructured for readability.
+            </p>
+            <p>The "Design Input" section has been removed. Further details are available in the XForms Requirements document.</p>
+            <p> 
+               
+                
+               
+               Note that names of form controls have changed, but are  not yet cast in stone. The following changes and additions have been
+               made to the core form controls:
+               
+               
+            </p>
+            <blockquote>
+               <p>hidden has been removed as a form control<br>output, textbox, submit, and reset  have kept their same names<br>exclusiveSelect and multipleSelect have been renamed selectOne and selectMany<br>checkbox is now selectBoolean<br>password is now secret<br>button has been fleshed out, including event listener details<br>uploadMedia and range are new form controls in this Working Draft
+               </p>
+            </blockquote>
+            <p>The "AnyControl" is now described in prose instead of formally. In addition, there are minimal changes to the common elements
+               and attributes defined in this section. Element onevent is now taken from the XHTML Events module and is therefore no longer
+               defined in detail in this specification. A later section defines XForms-specific event handlers for use within event listeners
+               declared via element onevent.
+            </p>
+         </div>
+         <div class="div2">
+            
+            <h3><a name="changes-ui"></a>C.9 Changes to Chapter 8 'XForms User Interface'
+            </h3>
+            <p>The section "Future Work" has been removed.</p>
+            <p>The specification now  introduces constructs for authoring conditional user interfaces (see switch) and a construct for authoring
+               repeating widgets (see repeat) for use in creating purchase orders or shopping carts that wish to create the user interface
+               needed for populating repeating rows from a table.
+            </p>
+            <p>Conditional User Interfaces: 
+               This is a new section, and defines construct switch along with its associated event handlers.
+            </p>
+            <p>New Construct repeat:
+               There is a new section that defines construct repeat for authoring things like shopping carts where the user interface for
+               populating a structure needs to be repeated multiple times.
+            </p>
+            <p>UI  Templates: 
+               Constructs for creating and using user interface templates have been renamed for consistency. The new element names are uiTemplate
+               and useUITemplate.
+            </p>
+            <p>Constructing High-level User Interfaces:
+               The content pertaining to creating higher-level user interfaces from the basic building blocks has been substantially reorganized.
+               This portion of the specification first defines construct group used to group user interface controls. Element group no longer
+               defines an XForms-specific layout model; instead all layout attributes come from CSS. This enables XForms user interfaces
+               to be laid out using either CSS or XSL:FO, or for that matter languages such as SVG.
+            </p>
+            <p> 
+               
+               Subforms And Subpages:
+               With the XForms constructs for authoring higher level user interaction now fleshed out, it turns out that there is no need
+               for an XForms-specific subform or subpage construct --we can leverage existing mechanisms such as group and more generally,
+               XHTML's div elements for this purpose.
+            </p>
+         </div>
+         <div class="div2">
+            
+            <h3><a name="changes-binding"></a>C.10 Changes to Chapter 9 'Binding'
+            </h3>
+            <p>Some of the text has been cleaned up with regard to the relationship with XPath, but otherwise no significant content changes.</p>
+         </div>
+         <div class="div2">
+            
+            <h3><a name="changes-structure"></a>C.11 Changes to Chapter 10 'Document Structure'
+            </h3>
+            <p>This chapter was previously named "Using XForms with Other Document Types". Added new section "Integration with XLink". Updated
+               examples to reflect xlink namespace. 
+            </p>
+         </div>
+         <div class="div2">
+            
+            <h3><a name="changes-rpm"></a>C.12 Changes to Chapter 11 'Processing Model and Conformance'
+            </h3>
+            <p>Cleaned up terminology and brought into greater consistency with the rest of the document.</p>
+            <p>Removed the <code>locale</code> property; separated the rest into those that can vary from one <code>xform</code> element to the next, and those that are the same across the containing document. Renamed <code>use-nulls</code> to <code>use-nil</code>.
+            </p>
+            <p>The "suspend" functionality has been removed, including the <code>xforms-suspend</code> event, and will appear in a post-1.0 version of XForms. The <code>xforms-resume</code> event has been renamed <code>xforms-initialize</code>. Clarified that model items are associated with only a single value.
+            </p>
+            <p>The "instance data" section has moved to the XPath Expressions chapter, though rules for constructing instance data are still
+               in this chapter, and reworded for clarity.
+            </p>
+            <p>The multipart/form-data section has been replaced with a reference to RFC 2388.</p>
+            <p>An early  conformance section has been added.</p>
+         </div>
+         <div class="div2">
+            
+            <h3><a name="changes-schema"></a>C.13 Changes to Appendix  'Schema for XForms'
+            </h3>
+            <p>For this release, the Schema only covers the XForms form controls and the Document Structure markup.</p>
+            <p>Significant changes to this appendix, bringing it into much closer alignment with XML Schema, were not available for publication
+               at this time and will appear in a near-future Working Draft.
+            </p>
+         </div>
+         <div class="div2">
+            
+            <h3><a name="changes-xslt"></a>C.14 Changes to Appendix 'XSLT from Simple Syntax'
+            </h3>
+            <p>Following the Working Group decision to remove the simple syntax, this appendix has also been removed.</p>
+         </div>
+         <div class="div2">
+            
+            <h3><a name="changes-samples"></a>C.15 Change to Appendix 'Sample Forms'
+            </h3>
+            <p>Sample forms have been incorporated into <a href="slice2.html"><b>2 Concepts</b></a></p>
+         </div>
+         <div class="div2">
+            
+            <h3><a name="changes-optional"></a>C.16 Changes to Appendix 'Optional Function Library'
+            </h3>
+            <p>The Working Group has decided to remove all optional functions from XForms.</p>
+         </div>
+         <div class="div2">
+            
+            <h3><a name="changes-references"></a>C.17 Changes to Appendix 'References'
+            </h3>
+            <p>References have been updated to refer to the changes in document status, most notably the XML Schema recommendation. New normative
+               reference to XLink, RFC2388; informative reference to T. V. Raman's book on auditory user interfaces. Removed orphaned references
+               to ISO 8601, RFC 2369, RFC 2141 and moved  the orphaned Unicode reference to the informative section.
+            </p>
+         </div>
+      </div><a name="Bottom"></a>
+      <!-- BOTTOM NAVIGATION BAR --><table border="0" width="90%" cellpadding="4" cellspacing="0" bgcolor="#eeeeff" class="navigation">
+         <col width="50%">
+         <col width="50%">
+         <tr>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+         </tr>
+         <tr>
+            <td align="left"><a href="index.html#contents">Table of Contents</a></td>
+            <td align="left"><a href="#Top">Top</a></td>
+         </tr>
+      </table>
+   </body>
+</html>

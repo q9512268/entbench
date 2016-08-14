@@ -1,0 +1,37 @@
+- Two approaches
+  - Attempt to transform XML that is too big for current battery (battery/size)
+    - Standard approach
+  - Attempt to use complex transformations and XML that is too big (size/size)
+    - Can expose energy bug, never intended to use intensive transformation on large inputs
+
+  - Both have potential to save energy by modifying the transformation with mcases
+    - LAST : Transform.java, AbstractTranslet.java, SAXImpl.java
+
+- Interesting observation
+  - copy works great when things are simply, but when the object being copied has a lot of global state,
+    (lots of pointers to the old reference) things get tricky real fast
+    - one way around it is to just snapshot immediately, may not always be possible though
+
+- Relationship
+  - SAXImpl is the DOM, which will have a size 
+    - For now, categorize based on the number of nodes with an arbitrary value, a roughly 512KB xml file had just under 64000 nodes,
+      a 1MB had just under 128000 nodes, so I used those to set low, mid, high.
+
+    - Can get a energy bug by comparing the complexity of transformation against the size of an xml document, lots of work arounds to
+    get this to happen, have to use a context pattern and snapshot that, only because of the global state tied into the SAXImpl and
+    Translet objects.
+      - Using a context isn't horrible, since it can be shown to keep type soundsness, but it is us essentially getting around our
+      use of copy.
+      
+      class A@mode<?->X> {
+        B@mode<X> b ...
+
+        attribute {
+          // use b
+        }
+
+      }
+
+      After the above code has been snapshot b will have it's mode type changed, can we make this correct with enough anotations?
+      
+      - Attempt to annotate enough to make a case for what I need to fix in the compiler
