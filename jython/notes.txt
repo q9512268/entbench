@@ -1,0 +1,42 @@
+- Let's create a scenario for Jython; perhaps having similar scenarios for the other case 
+  studies will help paint a better picture for what we are trying to accomplish with our
+  type system.
+
+  We have several Jython compilers that run batch jobs on some server somewhere. We can 
+  split these compilers into separate modes as usuall (several high energy compilers,
+  several low energy compilers).
+
+  The goal of a low energy compiler is to only run compiles on jobs that a user has been
+  labeled "unimportant" or "small": if we have an environment where users must schedule
+  jobs around an energy budget this is a very possible scenario.
+
+  Our type system could report a compilation on a job that was too expensive.
+
+- Try and categorize part of the compilation process as too expensive. Can move away
+  from battery for this one, just check against size.
+
+  Considering jython has a Compiler object, this should be a natuaral check.
+
+- Structure
+  - InteractiveInterpreter.java : Main entry point into running python code
+    - runsource
+      - compiles the code (i think) and then calls runcode
+    - runcode
+      - runs compiled python byte code
+
+  - PyBytecode : Actual compiled bytecode
+    - interpret
+      - runs the byte code given a PyFrame and ThreadState
+
+  - BaseParser : Actual python parser that returns a mod, an AST node
+
+  - LegacyCompiler : Actual python byte code compiler (implements PythonCompiler)
+    
+- Run
+  - Jython only ever runs one file at a time: it doesn't go through and compile a bunch of files,
+  you have to use the API for that.
+
+  - Maybe the API is more inline with the story we want to tell; misusing energy aware code
+
+
+
