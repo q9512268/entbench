@@ -31,8 +31,7 @@ public class SimpleRenderer@mode<?->X> implements ImageSampler@mode<X> {
       } else {
         return @mode<low>;
       }
-    }
-
+    } 
 
     public boolean prepare(Options options, Scene scene, int w, int h) {
         this.scene = scene;
