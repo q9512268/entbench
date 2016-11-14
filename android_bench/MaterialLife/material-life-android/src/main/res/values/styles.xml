@@ -1,0 +1,93 @@
+<resources>
+
+  <style name="MaterialLifeTheme" parent="Theme.AppCompat.Light.NoActionBar">
+    <item name="colorPrimary">@color/primary</item> 
+    <item name="colorPrimaryDark">@color/primary_dark</item> 
+    <item name="colorAccent">@color/accent</item>
+  </style>
+
+  <style name="MaterialLifeTheme.Info">
+    <item name="android:windowAnimationStyle">@null</item>
+  </style>
+
+  <style name="PixelText">
+    <item name="android:textSize">20sp</item>
+    <item name="android:paddingStart">12dp</item>
+    <item name="android:paddingEnd">12dp</item>
+    <item name="android:textAlignment">center</item>
+    <item name="android:textColor">@color/primary_very_dark</item>
+    <item name="android:ellipsize">marquee</item>
+  </style>
+
+  <style name="PixelText.Small">
+    <item name="android:textSize">10sp</item>
+  </style>
+
+  <style name="PixelText.Description">
+    <item name="android:scrollbars">vertical</item>
+    <item name="android:textSize">16sp</item>
+    <item name="android:singleLine">false</item>
+    <item name="android:textAlignment">textStart</item>
+    <item name="android:gravity">start</item>
+    <item name="android:layout_margin">12dp</item>
+    <item name="android:textColor">@color/primary_very_dark</item>
+  </style>
+
+  <style name="PixelText.Description.Title">
+    <item name="android:textSize">20sp</item>
+    <item name="android:textAlignment">center</item>
+    <item name="android:gravity">center</item>
+    <item name="android:layout_gravity">center</item>
+  </style>
+
+  <style name="PixelText.Description.Title.Big">
+    <item name="android:textSize">32sp</item>
+  </style>
+
+  <style name="PixelText.Big">
+    <item name="android:textSize">26sp</item>
+  </style>
+
+  <style name="PixelText.Button">
+    <item name="android:background">@drawable/btn_pixel_background</item>
+    <item name="android:drawable">@drawable/btn_pixel_background</item>
+  </style>
+
+  <style name="PixelText.List">
+    <item name="android:background">@drawable/btn_pixel_background</item>
+    <item name="android:drawable">@drawable/btn_pixel_background</item>
+  </style>
+
+  <style name="MenuOptions">
+    <item name="android:divider">@android:color/transparent</item>
+    <item name="android:dividerHeight">0dp</item>
+    <item name="android:background">@color/primary_bright</item>
+    <item name="android:listSelector">@drawable/list_view_selector</item>
+    <item name="android:clipToPadding">false</item>
+  </style>
+
+  <style name="Slide">
+    <item name="android:background">@color/primary_bright</item>
+    <item name="android:paddingTop">@dimen/slide_padding_top</item>
+  </style>
+
+  <style name="MaterialFAB">
+    <item name="fabSize">normal</item>
+    <item name="elevation">@dimen/fab_elevation</item>
+    <item name="pressedTranslationZ">@dimen/fab_translation_z_pressed</item>
+    <item name="borderWidth">0dp</item>
+    <item name="android:layout_margin">@dimen/fab_margin_bottom</item>
+    <item name="android:layout_centerHorizontal">true</item>
+    <item name="android:layout_alignParentBottom">true</item>
+  </style>
+
+  <style name="SeparatorLine">
+    <item name="android:layout_gravity">center_horizontal</item>
+    <item name="android:layout_width">1px</item>
+    <item name="android:layout_height">0dp</item>
+    <item name="android:layout_weight">1</item>
+    <item name="android:layout_marginTop">@dimen/separator_line_margin_vertical</item>
+    <item name="android:layout_marginBottom">@dimen/separator_line_margin_vertical</item>
+    <item name="android:background">@android:color/black</item>
+  </style>
+</resources>

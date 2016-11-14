@@ -1,0 +1,3 @@
+ENT_BATTERY_LEVEL=0.40=float
+LIFE_RULE_CHOICE=0=int
+ENT_RECOVER=true=boolean

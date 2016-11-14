@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<items version="2" >
+
+    <item
+        jar="/home/acanino/Projects/entbench/android_bench/MaterialLife/material-life-android/build/intermediates/exploded-aar/com.google.android.gms/play-services-analytics/7.5.0/jars/classes.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="e7b35244f50663b3f8d150714bca9ecd7a290da1">
+        <dex dex="/home/acanino/Projects/entbench/android_bench/MaterialLife/material-life-android/build/intermediates/pre-dexed/debug/classes-6287dc4fdb5aca94782a38fc073756a41e12b693.jar" />
+    </item>
+    <item
+        jar="/home/acanino/.gradle/caches/modules-2/files-2.1/com.github.juankysoriano/open-ca/v0.2.0-rc2/bcc2c31d2f60750f2cc6253ea54f3c27d996e0c3/open-ca-v0.2.0-rc2.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="bcc2c31d2f60750f2cc6253ea54f3c27d996e0c3">
+        <dex dex="/home/acanino/Projects/entbench/android_bench/MaterialLife/material-life-android/build/intermediates/pre-dexed/debug/open-ca-v0.2.0-rc2-53c97609d6849c11a25699c03ea72c820a06670e.jar" />
+    </item>
+    <item
+        jar="/home/acanino/Projects/entbench/android_bench/MaterialLife/material-life-android/build/intermediates/exploded-aar/com.github.juankysoriano/AppIntro/e514744523/jars/classes.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="63c6376f3539159c278fa8bd56392b2278e10079">
+        <dex dex="/home/acanino/Projects/entbench/android_bench/MaterialLife/material-life-android/build/intermediates/pre-dexed/debug/classes-15cfee343bcb978cdbfb0a52e6b94352a3b0005b.jar" />
+    </item>
+    <item
+        jar="/home/acanino/Projects/entbench/android_bench/MaterialLife/material-life-android/build/intermediates/exploded-aar/com.android.support/support-v4/22.2.0/jars/classes.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="1ee588ff2c4daf7b97c1cbf922a6c7f027285c2f">
+        <dex dex="/home/acanino/Projects/entbench/android_bench/MaterialLife/material-life-android/build/intermediates/pre-dexed/debug/classes-b9c85b172c534b4951df51941f4b9120ad30afc9.jar" />
+    </item>
+    <item
+        jar="/home/acanino/Projects/entbench/android_bench/MaterialLife/material-life-android/build/intermediates/exploded-aar/com.android.support/design/22.2.0/jars/classes.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="fc63b820d54c8a27a3a614bdd93920e0076581c2">
+        <dex dex="/home/acanino/Projects/entbench/android_bench/MaterialLife/material-life-android/build/intermediates/pre-dexed/debug/classes-cb41080a4ed4400241ecbe062d36241b0f66f8ee.jar" />
+    </item>
+    <item
+        jar="/home/acanino/Projects/entbench/android_bench/MaterialLife/material-life-android/build/intermediates/exploded-aar/rainbow/rainbow-lib/unspecified/jars/classes.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="678e4562aaecac0326465e5c6c41ddd68301d5cc">
+        <dex dex="/home/acanino/Projects/entbench/android_bench/MaterialLife/material-life-android/build/intermediates/pre-dexed/debug/classes-fdf01e19aaa68ea18c0277d634c91722ed08e17c.jar" />
+    </item>
+    <item
+        jar="/home/acanino/.gradle/caches/modules-2/files-2.1/com.novoda/notils/2.2.12/7d7a690e5014a4327d2fc185159ccae68d0d77d2/notils-2.2.12.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="7d7a690e5014a4327d2fc185159ccae68d0d77d2">
+        <dex dex="/home/acanino/Projects/entbench/android_bench/MaterialLife/material-life-android/build/intermediates/pre-dexed/debug/notils-2.2.12-af321d27ebd1d996e02272de2eff1cd413499f66.jar" />
+    </item>
+    <item
+        jar="/home/acanino/Projects/entbench/android_bench/MaterialLife/material-life-android/build/intermediates/exploded-aar/com.android.support/support-v4/22.2.0/jars/libs/internal_impl-22.2.0.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="57f2ab85c164ff1676ec64dee787981c046fab79">
+        <dex dex="/home/acanino/Projects/entbench/android_bench/MaterialLife/material-life-android/build/intermediates/pre-dexed/debug/internal_impl-22.2.0-21cb1fe99cda6af004ee76dd53801aff41b9b3a2.jar" />
+    </item>
+    <item
+        jar="/home/acanino/Projects/entbench/android_bench/MaterialLife/material-life-android/build/intermediates/exploded-aar/com.github.ozodrukh/CircularReveal/1.1.1/jars/classes.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="e3a3d62fab67ccb83f386a4c092bfb5747ea15a7">
+        <dex dex="/home/acanino/Projects/entbench/android_bench/MaterialLife/material-life-android/build/intermediates/pre-dexed/debug/classes-c236a1b5601ebc2b61c5a04289e7edede27cc251.jar" />
+    </item>
+    <item
+        jar="/home/acanino/Research/android/android-sdk-linux/extras/android/m2repository/com/android/support/support-annotations/22.2.0/support-annotations-22.2.0.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="66b42a1f3eb7676070b7ef7f14b603483aecbee1">
+        <dex dex="/home/acanino/Projects/entbench/android_bench/MaterialLife/material-life-android/build/intermediates/pre-dexed/debug/support-annotations-22.2.0-adcd280100ea8cfe2a8f5cbb57feaa37b287d2f3.jar" />
+    </item>
+    <item
+        jar="/home/acanino/.gradle/caches/modules-2/files-2.1/com.google.code.findbugs/annotations/2.0.0/d8dff1d83a79f0c0609c360f02bcd2f2fc1f1369/annotations-2.0.0.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="d8dff1d83a79f0c0609c360f02bcd2f2fc1f1369">
+        <dex dex="/home/acanino/Projects/entbench/android_bench/MaterialLife/material-life-android/build/intermediates/pre-dexed/debug/annotations-2.0.0-519065fea5b9d482acb07029fe06a8673124fea8.jar" />
+    </item>
+    <item
+        jar="/home/acanino/.gradle/caches/modules-2/files-2.1/com.nineoldandroids/library/2.4.0/e9b63380f3a242dbdbf103a2355ad7e43bad17cb/library-2.4.0.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="e9b63380f3a242dbdbf103a2355ad7e43bad17cb">
+        <dex dex="/home/acanino/Projects/entbench/android_bench/MaterialLife/material-life-android/build/intermediates/pre-dexed/debug/library-2.4.0-e7b6085f06248521ca57ce40c93979f7ea827e96.jar" />
+    </item>
+    <item
+        jar="/home/acanino/Projects/entbench/android_bench/MaterialLife/material-life-android/build/intermediates/exploded-aar/com.android.support/appcompat-v7/22.2.0/jars/classes.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="73753982da6bde518f3a4c6b372749981d14d1a0">
+        <dex dex="/home/acanino/Projects/entbench/android_bench/MaterialLife/material-life-android/build/intermediates/pre-dexed/debug/classes-74bff5a11366b17251a45c4917f7a6ef9fe70965.jar" />
+    </item>
+    <item
+        jar="/home/acanino/Projects/entbench/android_bench/MaterialLife/material-life-android/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/7.5.0/jars/classes.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="a78183f30e769a98ab4820794f597763088d3065">
+        <dex dex="/home/acanino/Projects/entbench/android_bench/MaterialLife/material-life-android/build/intermediates/pre-dexed/debug/classes-266ea7bb5544918a4871481da936e7f7e8809eda.jar" />
+    </item>
+    <item
+        jar="/home/acanino/.gradle/caches/modules-2/files-2.1/com.squareup.picasso/picasso/2.5.2/7446d06ec8d4f7ffcc53f1da37c95f200dcb9387/picasso-2.5.2.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="7446d06ec8d4f7ffcc53f1da37c95f200dcb9387">
+        <dex dex="/home/acanino/Projects/entbench/android_bench/MaterialLife/material-life-android/build/intermediates/pre-dexed/debug/picasso-2.5.2-798830fabd94c0aa060ea9fc39d8408d04370207.jar" />
+    </item>
+    <item
+        jar="/home/acanino/Projects/ent/lib/ent-rt.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="3866d63ef01eadac1063ae8f7ec7532880564a92">
+        <dex dex="/home/acanino/Projects/entbench/android_bench/MaterialLife/material-life-android/build/intermediates/pre-dexed/debug/ent-rt-351bffddda293d39a470d45b130c88baaccb5c0f.jar" />
+    </item>
+
+</items>

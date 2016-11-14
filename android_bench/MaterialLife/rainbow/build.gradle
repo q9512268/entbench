@@ -1,0 +1,22 @@
+buildscript {
+    repositories {
+        mavenCentral()
+    }
+    dependencies {
+        classpath 'com.android.tools.build:gradle:1.2.3'
+        classpath 'com.github.dcendents:android-maven-plugin:1.2'
+    }
+}
+
+repositories {
+    mavenCentral()
+}
+
+ext {
+    COMPILE_SDK = 22
+    TARGET_SDK = 17
+    MIN_SDK = 16
+    BUILD_TOOLS = '22.0.1'
+    VERSION_CODE = 1914100
+    VERSION_NAME = "1.0.0-rc2"
+}

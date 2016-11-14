@@ -1,0 +1,609 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.9~svn20110310	//
+ACCELERATE_INTERPOLATOR	material-life-android/src/main/java/com/juankysoriano/materiallife/ui/sketch/menu/MenuButton.java	/^    private static final AccelerateInterpolator ACCELERATE_INTERPOLATOR = new AccelerateInterpolator();$/;"	f	class:MenuButton	file:
+ALIVE	material-life-android/src/main/java/com/juankysoriano/materiallife/world/life/GameOfLife.java	/^    public static final int ALIVE = 1;$/;"	f	class:GameOfLife
+ALIVE	material-life-android/src/test/java/com/juankysoriano/materiallife/world/life/GameOfLifeTest.java	/^    private static final int ALIVE = 1;$/;"	f	class:GameOfLifeTest	file:
+ALIVE_CELL_THRESHOLD	material-life-android/src/main/java/com/juankysoriano/materiallife/world/life/GameOfLifeDrawer.java	/^    private static final int ALIVE_CELL_THRESHOLD = 128;$/;"	f	class:GameOfLifeDrawer	file:
+ALIVE_COLOR	material-life-android/src/main/java/com/juankysoriano/materiallife/world/life/GameOfLifeDrawer.java	/^    private static final int ALIVE_COLOR = ContextRetriever.INSTANCE.getApplicationContext().getResources().getColor(R.color.alive);$/;"	f	class:GameOfLifeDrawer	file:
+ALPHA	material-life-android/src/main/java/com/juankysoriano/materiallife/ui/sketch/menu/MenuButton.java	/^    private static final String ALPHA = "alpha";$/;"	f	class:MenuButton	file:
+ALPHA	material-life-android/src/main/java/com/juankysoriano/materiallife/world/life/GameOfLifeDrawer.java	/^    private static final int ALPHA = 70;$/;"	f	class:GameOfLifeDrawer	file:
+ALPHA	material-life-android/src/test/java/com/juankysoriano/materiallife/world/life/GameOfLifeDrawerTest.java	/^    private static final int ALPHA = 70;$/;"	f	class:GameOfLifeDrawerTest	file:
+ALREADY_SEEN	material-life-android/src/main/java/com/juankysoriano/materiallife/info/preferences/InfoPreferences.java	/^    private static final String ALREADY_SEEN = INFO_PREFERENCES + ".AlreadySeen";$/;"	f	class:InfoPreferences	file:
+ANIMATION_DURATION	material-life-android/src/main/java/com/juankysoriano/materiallife/ui/sketch/reveal/ViewRevealer.java	/^    private static final int ANIMATION_DURATION = 300;$/;"	f	class:ViewRevealer	file:
+ANY_CELL_X	material-life-android/src/test/java/com/juankysoriano/materiallife/world/life/GameOfLifeTest.java	/^    private static final int ANY_CELL_X = 0;$/;"	f	class:GameOfLifeTest	file:
+ANY_CELL_Y	material-life-android/src/test/java/com/juankysoriano/materiallife/world/life/GameOfLifeTest.java	/^    private static final int ANY_CELL_Y = 0;$/;"	f	class:GameOfLifeTest	file:
+ANY_IMAGE	material-life-android/src/test/java/com/juankysoriano/materiallife/world/WorldTest.java	/^    private static final RainbowImage ANY_IMAGE = Mockito.mock(RainbowImage.class);$/;"	f	class:WorldTest	file:
+ANY_URI	material-life-android/src/test/java/com/juankysoriano/materiallife/editor/WorldEditorTest.java	/^    private static Uri ANY_URI = Uri.parse("anyUri");$/;"	f	class:WorldEditorTest	file:
+ANY_URI	material-life-android/src/test/java/com/juankysoriano/materiallife/world/WorldTest.java	/^    private static final Uri ANY_URI = null;$/;"	f	class:WorldTest	file:
+AUTOMATA_HEIGHT	material-life-android/src/test/java/com/juankysoriano/materiallife/world/life/GameOfLifeTest.java	/^    private static final int AUTOMATA_HEIGHT = 3;$/;"	f	class:GameOfLifeTest	file:
+AUTOMATA_WIDTH	material-life-android/src/test/java/com/juankysoriano/materiallife/world/life/GameOfLifeTest.java	/^    private static final int AUTOMATA_WIDTH = 3;$/;"	f	class:GameOfLifeTest	file:
+AnalyticsTracker	material-life-android/src/main/java/com/juankysoriano/materiallife/analytics/AnalyticsTracker.java	/^public enum AnalyticsTracker implements MaterialLifeAnalytics {$/;"	g
+CAMERA	material-life-android/src/main/java/com/juankysoriano/materiallife/imageloader/ImageLoaderAction.java	/^    CAMERA,$/;"	e	enum:ImageLoaderAction	file:
+CAMERA	material-life-android/src/main/java/com/juankysoriano/materiallife/imageloader/ImageLoaderResult.java	/^    CAMERA(12321),$/;"	e	enum:ImageLoaderResult	file:
+CANCEL	material-life-android/src/main/java/com/juankysoriano/materiallife/editor/EditorAction.java	/^    CANCEL,$/;"	e	enum:EditorAction	file:
+CELL_SIZE	material-life-android/src/main/java/com/juankysoriano/materiallife/world/life/GameOfLife.java	/^    private static final int CELL_SIZE = ContextRetriever.INSTANCE.getResources().getInteger(R.integer.cell_size);$/;"	f	class:GameOfLife	file:
+CLEAR	material-life-android/src/main/java/com/juankysoriano/materiallife/editor/EditorAction.java	/^    CLEAR,$/;"	e	enum:EditorAction	file:
+ClearAnimationListener	material-life-android/src/main/java/com/juankysoriano/materiallife/ui/sketch/editor/EditorMenuView.java	/^    public interface ClearAnimationListener {$/;"	i	class:EditorMenuView
+ClearView	material-life-android/src/main/java/com/juankysoriano/materiallife/ui/sketch/editor/ClearView.java	/^    public ClearView(Context context, AttributeSet attrs) {$/;"	m	class:ClearView
+ClearView	material-life-android/src/main/java/com/juankysoriano/materiallife/ui/sketch/editor/ClearView.java	/^    public ClearView(Context context, AttributeSet attrs, int defStyleAttr) {$/;"	m	class:ClearView
+ClearView	material-life-android/src/main/java/com/juankysoriano/materiallife/ui/sketch/editor/ClearView.java	/^public class ClearView extends View {$/;"	c
+ContextRetriever	material-life-android/src/main/java/com/juankysoriano/materiallife/ContextRetriever.java	/^public enum ContextRetriever {$/;"	g
+ContextRetrieverTest	material-life-android/src/test/java/com/juankysoriano/materiallife/ContextRetrieverTest.java	/^public class ContextRetrieverTest extends MaterialLifeTestBase {$/;"	c
+DEAD	material-life-android/src/main/java/com/juankysoriano/materiallife/world/life/GameOfLife.java	/^    public static final int DEAD = 0;$/;"	f	class:GameOfLife
+DEAD	material-life-android/src/test/java/com/juankysoriano/materiallife/world/life/GameOfLifeTest.java	/^    private static final int DEAD = 0;$/;"	f	class:GameOfLifeTest	file:
+DEAD_COLOR	material-life-android/src/main/java/com/juankysoriano/materiallife/world/life/GameOfLifeDrawer.java	/^    private static final int DEAD_COLOR = ContextRetriever.INSTANCE.getApplicationContext().getResources().getColor(R.color.dead);$/;"	f	class:GameOfLifeDrawer	file:
+DEAD_COLOR	material-life-android/src/test/java/com/juankysoriano/materiallife/world/life/GameOfLifeDrawerTest.java	/^    private static final int DEAD_COLOR = ContextRetriever.INSTANCE.getApplicationContext().getResources().getColor(R.color.dead);$/;"	f	class:GameOfLifeDrawerTest	file:
+DONE	material-life-android/src/main/java/com/juankysoriano/materiallife/editor/EditorAction.java	/^    DONE$/;"	e	enum:EditorAction	file:
+EDIT_WORLD	material-life-android/src/main/java/com/juankysoriano/materiallife/menu/MenuItem.java	/^    EDIT_WORLD("Edit World"),$/;"	e	enum:MenuItem	file:
+EXECUTOR	material-life-android/src/main/java/com/juankysoriano/materiallife/world/World.java	/^    private static final ExecutorService EXECUTOR = Executors.newSingleThreadExecutor();$/;"	f	class:World	file:
+EXTENSION	material-life-android/src/main/java/com/juankysoriano/materiallife/navigation/PictureRetriever.java	/^    private static final String EXTENSION = ".jpg";$/;"	f	class:PictureRetriever	file:
+EditorAction	material-life-android/src/main/java/com/juankysoriano/materiallife/editor/EditorAction.java	/^public enum EditorAction {$/;"	g
+EditorMenuView	material-life-android/src/main/java/com/juankysoriano/materiallife/ui/sketch/editor/EditorMenuView.java	/^    public EditorMenuView(Context context, AttributeSet attrs) {$/;"	m	class:EditorMenuView
+EditorMenuView	material-life-android/src/main/java/com/juankysoriano/materiallife/ui/sketch/editor/EditorMenuView.java	/^    public EditorMenuView(Context context, AttributeSet attrs, int defStyleAttr) {$/;"	m	class:EditorMenuView
+EditorMenuView	material-life-android/src/main/java/com/juankysoriano/materiallife/ui/sketch/editor/EditorMenuView.java	/^public class EditorMenuView extends RelativeLayout {$/;"	c
+EmptyWorld	material-life-android/src/main/java/com/juankysoriano/materiallife/world/EmptyWorld.java	/^    protected EmptyWorld(RainbowDrawer rainbowDrawer, RainbowInputController rainbowInputController) {$/;"	m	class:EmptyWorld
+EmptyWorld	material-life-android/src/main/java/com/juankysoriano/materiallife/world/EmptyWorld.java	/^public class EmptyWorld extends World {$/;"	c
+FILE_SCHEME	material-life-android/src/main/java/com/juankysoriano/materiallife/navigation/PictureRetriever.java	/^    private static final String FILE_SCHEME = "file:";$/;"	f	class:PictureRetriever	file:
+FONT_PATH	material-life-android/src/main/java/com/juankysoriano/materiallife/ui/sketch/PixelButton.java	/^    private static final String FONT_PATH = "fonts\/pixel.ttf";$/;"	f	class:PixelButton	file:
+FONT_PATH	material-life-android/src/main/java/com/juankysoriano/materiallife/ui/sketch/PixelTextView.java	/^    private static final String FONT_PATH = "fonts\/pixel.ttf";$/;"	f	class:PixelTextView	file:
+FROM_MENU	material-life-android/src/main/java/com/juankysoriano/materiallife/info/preferences/InfoPreferences.java	/^    public static final String FROM_MENU = INFO_PREFERENCES + ".FromMenu";$/;"	f	class:InfoPreferences
+GALLERY	material-life-android/src/main/java/com/juankysoriano/materiallife/imageloader/ImageLoaderAction.java	/^    GALLERY$/;"	e	enum:ImageLoaderAction	file:
+GALLERY	material-life-android/src/main/java/com/juankysoriano/materiallife/imageloader/ImageLoaderResult.java	/^    GALLERY(23214),$/;"	e	enum:ImageLoaderResult	file:
+GAME_OF_LIFE_RADIUS	material-life-android/src/main/java/com/juankysoriano/materiallife/world/life/GameOfLifeCreator.java	/^    private static final int GAME_OF_LIFE_RADIUS = 1;$/;"	f	class:GameOfLifeCreator	file:
+GAME_OF_LIFE_RULE	material-life-android/src/main/java/com/juankysoriano/materiallife/world/life/GameOfLifeCreator.java	/^    private static final String GAME_OF_LIFE_RULE = "8-24";$/;"	f	class:GameOfLifeCreator	file:
+GAME_OF_LIFE_STATES	material-life-android/src/main/java/com/juankysoriano/materiallife/world/life/GameOfLifeCreator.java	/^    private static final int GAME_OF_LIFE_STATES = 2;$/;"	f	class:GameOfLifeCreator	file:
+GameOfLife	material-life-android/src/main/java/com/juankysoriano/materiallife/world/life/GameOfLife.java	/^    protected GameOfLife(AutomataDiscrete2D gameOfLifeAutomata, GameOfLifeDrawer gameOfLifeDrawer, RainbowInputController rainbowInputController) {$/;"	m	class:GameOfLife
+GameOfLife	material-life-android/src/main/java/com/juankysoriano/materiallife/world/life/GameOfLife.java	/^public class GameOfLife implements RainbowInputController.RainbowInteractionListener, OnCellUpdatedCallback2D, RainbowDrawer.PointDetectedListener {$/;"	c
+GameOfLifeActivity	material-life-android/src/main/java/com/juankysoriano/materiallife/activities/GameOfLifeActivity.java	/^    private GameOfLifeActivity(World world, InfoPreferences infoPreferences) {$/;"	m	class:GameOfLifeActivity	file:
+GameOfLifeActivity	material-life-android/src/main/java/com/juankysoriano/materiallife/activities/GameOfLifeActivity.java	/^    public GameOfLifeActivity() {$/;"	m	class:GameOfLifeActivity
+GameOfLifeActivity	material-life-android/src/main/java/com/juankysoriano/materiallife/activities/GameOfLifeActivity.java	/^public class GameOfLifeActivity extends MaterialLifeActivity {$/;"	c
+GameOfLifeCreator	material-life-android/src/main/java/com/juankysoriano/materiallife/world/life/GameOfLifeCreator.java	/^    protected GameOfLifeCreator(Automata.Builder builder) {$/;"	m	class:GameOfLifeCreator
+GameOfLifeCreator	material-life-android/src/main/java/com/juankysoriano/materiallife/world/life/GameOfLifeCreator.java	/^public class GameOfLifeCreator {$/;"	c
+GameOfLifeDrawer	material-life-android/src/main/java/com/juankysoriano/materiallife/world/life/GameOfLifeDrawer.java	/^    protected GameOfLifeDrawer(RainbowDrawer rainbowDrawer) {$/;"	m	class:GameOfLifeDrawer
+GameOfLifeDrawer	material-life-android/src/main/java/com/juankysoriano/materiallife/world/life/GameOfLifeDrawer.java	/^public class GameOfLifeDrawer {$/;"	c
+GameOfLifeDrawerTest	material-life-android/src/test/java/com/juankysoriano/materiallife/world/life/GameOfLifeDrawerTest.java	/^public class GameOfLifeDrawerTest extends MaterialLifeTestBase {$/;"	c
+GameOfLifeTest	material-life-android/src/test/java/com/juankysoriano/materiallife/world/life/GameOfLifeTest.java	/^public class GameOfLifeTest extends MaterialLifeTestBase {$/;"	c
+HIDE_DELAY	material-life-android/src/main/java/com/juankysoriano/materiallife/ui/sketch/editor/ClearView.java	/^    private static final int HIDE_DELAY = 100;$/;"	f	class:ClearView	file:
+HIDE_DURATION	material-life-android/src/main/java/com/juankysoriano/materiallife/ui/sketch/menu/MenuButton.java	/^    private static final int HIDE_DURATION = 50;$/;"	f	class:MenuButton	file:
+INFO	material-life-android/src/main/java/com/juankysoriano/materiallife/menu/MenuItem.java	/^    INFO("Info");$/;"	e	enum:MenuItem	file:
+INFO_PREFERENCES	material-life-android/src/main/java/com/juankysoriano/materiallife/info/preferences/InfoPreferences.java	/^    private static final String INFO_PREFERENCES = "InfoPreferences";$/;"	f	class:InfoPreferences	file:
+INSTANCE	material-life-android/src/main/java/com/juankysoriano/materiallife/ContextRetriever.java	/^    INSTANCE;$/;"	e	enum:ContextRetriever	file:
+INSTANCE	material-life-android/src/main/java/com/juankysoriano/materiallife/WorldRetriever.java	/^    INSTANCE;$/;"	e	enum:WorldRetriever	file:
+INSTANCE	material-life-android/src/main/java/com/juankysoriano/materiallife/analytics/AnalyticsTracker.java	/^    INSTANCE;$/;"	e	enum:AnalyticsTracker	file:
+ImageLoader	material-life-android/src/main/java/com/juankysoriano/materiallife/imageloader/ImageLoader.java	/^public interface ImageLoader {$/;"	i
+ImageLoaderAction	material-life-android/src/main/java/com/juankysoriano/materiallife/imageloader/ImageLoaderAction.java	/^public enum ImageLoaderAction {$/;"	g
+ImageLoaderFragment	material-life-android/src/main/java/com/juankysoriano/materiallife/imageloader/ImageLoaderFragment.java	/^public class ImageLoaderFragment extends Fragment implements ImageLoader {$/;"	c
+ImageLoaderResult	material-life-android/src/main/java/com/juankysoriano/materiallife/imageloader/ImageLoaderResult.java	/^    ImageLoaderResult(int code) {$/;"	m	class:ImageLoaderResult
+ImageLoaderResult	material-life-android/src/main/java/com/juankysoriano/materiallife/imageloader/ImageLoaderResult.java	/^public enum ImageLoaderResult {$/;"	g
+InfoActivity	material-life-android/src/main/java/com/juankysoriano/materiallife/info/InfoActivity.java	/^    public InfoActivity() {$/;"	m	class:InfoActivity
+InfoActivity	material-life-android/src/main/java/com/juankysoriano/materiallife/info/InfoActivity.java	/^public class InfoActivity extends AppIntro2 {$/;"	c
+InfoPreferences	material-life-android/src/main/java/com/juankysoriano/materiallife/info/preferences/InfoPreferences.java	/^    protected InfoPreferences(SharedPreferences sharedPreferences) {$/;"	m	class:InfoPreferences
+InfoPreferences	material-life-android/src/main/java/com/juankysoriano/materiallife/info/preferences/InfoPreferences.java	/^public class InfoPreferences {$/;"	c
+LOAD_WORLD	material-life-android/src/main/java/com/juankysoriano/materiallife/menu/MenuItem.java	/^    LOAD_WORLD("Load World"),$/;"	e	enum:MenuItem	file:
+LifeCreationSlide	material-life-android/src/main/java/com/juankysoriano/materiallife/info/slides/LifeCreationSlide.java	/^public class LifeCreationSlide extends SlideFragmentWithWorld {$/;"	c
+MATERIAL_LIFE	material-life-android/src/main/java/com/juankysoriano/materiallife/navigation/PictureRetriever.java	/^    private static final String MATERIAL_LIFE = "MATERIAL_LIFE";$/;"	f	class:PictureRetriever	file:
+MAX_SDK_SUPPORTED_BY_ROBOLECTRIC	material-life-android/src/test/java/com/juankysoriano/materiallife/RobolectricMaterialLifeGradleTestRunner.java	/^    private static final int MAX_SDK_SUPPORTED_BY_ROBOLECTRIC = 21;$/;"	f	class:RobolectricMaterialLifeGradleTestRunner	file:
+MainMenu	material-life-android/src/main/java/com/juankysoriano/materiallife/menu/MainMenu.java	/^public interface MainMenu {$/;"	i
+MainMenuFragment	material-life-android/src/main/java/com/juankysoriano/materiallife/menu/MainMenuFragment.java	/^public class MainMenuFragment extends Fragment implements MainMenu {$/;"	c
+MaterialLifeActivity	material-life-android/src/main/java/com/juankysoriano/materiallife/activities/MaterialLifeActivity.java	/^public class MaterialLifeActivity extends FragmentActivity {$/;"	c
+MaterialLifeAnalytics	material-life-android/src/main/java/com/juankysoriano/materiallife/analytics/MaterialLifeAnalytics.java	/^public interface MaterialLifeAnalytics {$/;"	i
+MaterialLifeApplication	material-life-android/src/main/java/com/juankysoriano/materiallife/MaterialLifeApplication.java	/^public class MaterialLifeApplication extends Application {$/;"	c
+MaterialLifeTestBase	material-life-android/src/test/java/com/juankysoriano/materiallife/MaterialLifeTestBase.java	/^    public MaterialLifeTestBase() {$/;"	m	class:MaterialLifeTestBase
+MaterialLifeTestBase	material-life-android/src/test/java/com/juankysoriano/materiallife/MaterialLifeTestBase.java	/^public class MaterialLifeTestBase {$/;"	c
+MenuButton	material-life-android/src/main/java/com/juankysoriano/materiallife/ui/sketch/menu/MenuButton.java	/^    public MenuButton(Context context, AttributeSet attrs) {$/;"	m	class:MenuButton
+MenuButton	material-life-android/src/main/java/com/juankysoriano/materiallife/ui/sketch/menu/MenuButton.java	/^    public MenuButton(Context context, AttributeSet attrs, int defStyleAttr) {$/;"	m	class:MenuButton
+MenuButton	material-life-android/src/main/java/com/juankysoriano/materiallife/ui/sketch/menu/MenuButton.java	/^public class MenuButton extends FloatingActionButton {$/;"	c
+MenuItem	material-life-android/src/main/java/com/juankysoriano/materiallife/menu/MenuItem.java	/^    MenuItem(String value) {$/;"	m	class:MenuItem
+MenuItem	material-life-android/src/main/java/com/juankysoriano/materiallife/menu/MenuItem.java	/^public enum MenuItem {$/;"	g
+MenuItemAdapter	material-life-android/src/main/java/com/juankysoriano/materiallife/ui/sketch/menu/MenuItemAdapter.java	/^    protected MenuItemAdapter(Context context) {$/;"	m	class:MenuItemAdapter
+MenuItemAdapter	material-life-android/src/main/java/com/juankysoriano/materiallife/ui/sketch/menu/MenuItemAdapter.java	/^public class MenuItemAdapter extends BaseAdapter {$/;"	c
+MenuItemAdapterTest	material-life-android/src/test/java/com/juankysoriano/materiallife/ui/sketch/menu/MenuItemAdapterTest.java	/^    public MenuItemAdapterTest(int position, String item) {$/;"	m	class:MenuItemAdapterTest
+MenuItemAdapterTest	material-life-android/src/test/java/com/juankysoriano/materiallife/ui/sketch/menu/MenuItemAdapterTest.java	/^public class MenuItemAdapterTest extends MaterialLifeTestBase {$/;"	c
+MenuOptionsView	material-life-android/src/main/java/com/juankysoriano/materiallife/ui/sketch/menu/MenuOptionsView.java	/^    public MenuOptionsView(Context context, AttributeSet attrs) {$/;"	m	class:MenuOptionsView
+MenuOptionsView	material-life-android/src/main/java/com/juankysoriano/materiallife/ui/sketch/menu/MenuOptionsView.java	/^    public MenuOptionsView(Context context, AttributeSet attrs, int defStyleAttr) {$/;"	m	class:MenuOptionsView
+MenuOptionsView	material-life-android/src/main/java/com/juankysoriano/materiallife/ui/sketch/menu/MenuOptionsView.java	/^public class MenuOptionsView extends ListView {$/;"	c
+MenuSwitcher	material-life-android/src/main/java/com/juankysoriano/materiallife/navigation/MenuSwitcher.java	/^    protected MenuSwitcher(FragmentManager fragmentManager) {$/;"	m	class:MenuSwitcher
+MenuSwitcher	material-life-android/src/main/java/com/juankysoriano/materiallife/navigation/MenuSwitcher.java	/^public class MenuSwitcher {$/;"	c
+MenuSwitcherTest	material-life-android/src/test/java/com/juankysoriano/materiallife/navigation/MenuSwitcherTest.java	/^public class MenuSwitcherTest extends MaterialLifeTestBase {$/;"	c
+MenuView	material-life-android/src/main/java/com/juankysoriano/materiallife/ui/sketch/menu/MenuView.java	/^    public MenuView(Context context, AttributeSet attrs) {$/;"	m	class:MenuView
+MenuView	material-life-android/src/main/java/com/juankysoriano/materiallife/ui/sketch/menu/MenuView.java	/^    public MenuView(Context context, AttributeSet attrs, int defStyleAttr) {$/;"	m	class:MenuView
+MenuView	material-life-android/src/main/java/com/juankysoriano/materiallife/ui/sketch/menu/MenuView.java	/^public class MenuView extends RelativeLayout {$/;"	c
+NormalisedCenter	material-life-android/src/main/java/com/juankysoriano/materiallife/ui/sketch/menu/NormalisedCenter.java	/^    public NormalisedCenter(float x, float y) {$/;"	m	class:NormalisedCenter
+NormalisedCenter	material-life-android/src/main/java/com/juankysoriano/materiallife/ui/sketch/menu/NormalisedCenter.java	/^public class NormalisedCenter {$/;"	c
+OFF_SCREEN_PAGE_LIMIT	material-life-android/src/main/java/com/juankysoriano/materiallife/info/InfoActivity.java	/^    private static final int OFF_SCREEN_PAGE_LIMIT = 3;$/;"	f	class:InfoActivity	file:
+OPAQUE	material-life-android/src/main/java/com/juankysoriano/materiallife/ui/sketch/editor/ClearView.java	/^    private static final float OPAQUE = 1f;$/;"	f	class:ClearView	file:
+OPAQUE	material-life-android/src/main/java/com/juankysoriano/materiallife/ui/sketch/menu/MenuButton.java	/^    private static final float OPAQUE = 1f;$/;"	f	class:MenuButton	file:
+OPAQUE	material-life-android/src/main/java/com/juankysoriano/materiallife/world/life/GameOfLifeDrawer.java	/^    private static final float OPAQUE = 255;$/;"	f	class:GameOfLifeDrawer	file:
+OPAQUE	material-life-android/src/test/java/com/juankysoriano/materiallife/world/life/GameOfLifeDrawerTest.java	/^    private static final float OPAQUE = 255;$/;"	f	class:GameOfLifeDrawerTest	file:
+OnActionSelectedListener	material-life-android/src/main/java/com/juankysoriano/materiallife/ui/sketch/editor/EditorMenuView.java	/^    public interface OnActionSelectedListener {$/;"	i	class:EditorMenuView
+OnItemSelectedListener	material-life-android/src/main/java/com/juankysoriano/materiallife/ui/sketch/menu/MenuOptionsView.java	/^    public interface OnItemSelectedListener {$/;"	i	class:MenuOptionsView
+OnLoadImageSelectedListener	material-life-android/src/main/java/com/juankysoriano/materiallife/imageloader/ImageLoader.java	/^    interface OnLoadImageSelectedListener {$/;"	i	interface:ImageLoader
+PictureRetriever	material-life-android/src/main/java/com/juankysoriano/materiallife/navigation/PictureRetriever.java	/^public class PictureRetriever {$/;"	c
+PictureRetrieverTest	material-life-android/src/test/java/com/juankysoriano/materiallife/navigation/PictureRetrieverTest.java	/^public class PictureRetrieverTest extends MaterialLifeTestBase {$/;"	c
+PixelButton	material-life-android/src/main/java/com/juankysoriano/materiallife/ui/sketch/PixelButton.java	/^    public PixelButton(Context context, AttributeSet attrs) {$/;"	m	class:PixelButton
+PixelButton	material-life-android/src/main/java/com/juankysoriano/materiallife/ui/sketch/PixelButton.java	/^    public PixelButton(Context context, AttributeSet attrs, int defStyleAttr) {$/;"	m	class:PixelButton
+PixelButton	material-life-android/src/main/java/com/juankysoriano/materiallife/ui/sketch/PixelButton.java	/^public class PixelButton extends Button {$/;"	c
+PixelTextView	material-life-android/src/main/java/com/juankysoriano/materiallife/ui/sketch/PixelTextView.java	/^    public PixelTextView(Context context, AttributeSet attrs) {$/;"	m	class:PixelTextView
+PixelTextView	material-life-android/src/main/java/com/juankysoriano/materiallife/ui/sketch/PixelTextView.java	/^    public PixelTextView(Context context, AttributeSet attrs, int defStyleAttr) {$/;"	m	class:PixelTextView
+PixelTextView	material-life-android/src/main/java/com/juankysoriano/materiallife/ui/sketch/PixelTextView.java	/^public class PixelTextView extends TextView {$/;"	c
+PresentationSlide	material-life-android/src/main/java/com/juankysoriano/materiallife/info/slides/PresentationSlide.java	/^public class PresentationSlide extends SlideFragmentWithWorld {$/;"	c
+RobolectricMaterialLifeGradleTestRunner	material-life-android/src/test/java/com/juankysoriano/materiallife/RobolectricMaterialLifeGradleTestRunner.java	/^    public RobolectricMaterialLifeGradleTestRunner(Class<?> testClass) throws InitializationError {$/;"	m	class:RobolectricMaterialLifeGradleTestRunner
+RobolectricMaterialLifeGradleTestRunner	material-life-android/src/test/java/com/juankysoriano/materiallife/RobolectricMaterialLifeGradleTestRunner.java	/^public class RobolectricMaterialLifeGradleTestRunner extends RobolectricTestRunner {$/;"	c
+RulesSlide	material-life-android/src/main/java/com/juankysoriano/materiallife/info/slides/RulesSlide.java	/^public class RulesSlide extends SlideFragmentWithoutWorld {$/;"	c
+SCALE_FACTOR	material-life-android/src/main/java/com/juankysoriano/materiallife/world/life/GameOfLifeDrawer.java	/^    private static final int SCALE_FACTOR = ContextRetriever.INSTANCE.getApplicationContext().getResources().getInteger(R.integer.cell_size);$/;"	f	class:GameOfLifeDrawer	file:
+SCALE_FACTOR	material-life-android/src/test/java/com/juankysoriano/materiallife/world/life/GameOfLifeDrawerTest.java	/^    private static final int SCALE_FACTOR = ContextRetriever.INSTANCE.getApplicationContext().getResources().getInteger(R.integer.cell_size);$/;"	f	class:GameOfLifeDrawerTest	file:
+SHOW_DURATION	material-life-android/src/main/java/com/juankysoriano/materiallife/ui/sketch/menu/MenuButton.java	/^    private static final int SHOW_DURATION = 50;$/;"	f	class:MenuButton	file:
+SlideFragmentWithWorld	material-life-android/src/main/java/com/juankysoriano/materiallife/info/slides/SlideFragmentWithWorld.java	/^public abstract class SlideFragmentWithWorld extends Fragment {$/;"	c
+SlideFragmentWithoutWorld	material-life-android/src/main/java/com/juankysoriano/materiallife/info/slides/SlideFragmentWithoutWorld.java	/^public abstract class SlideFragmentWithoutWorld extends Fragment {$/;"	c
+TAG	material-life-android/src/main/java/com/juankysoriano/materiallife/editor/WorldEditorMenuFragment.java	/^    public static final String TAG = "WorldEditorMenuFragment";$/;"	f	class:WorldEditorMenuFragment
+TAG	material-life-android/src/main/java/com/juankysoriano/materiallife/imageloader/ImageLoaderFragment.java	/^    public static final String TAG = "ImageLoaderFragment";$/;"	f	class:ImageLoaderFragment
+TAG	material-life-android/src/main/java/com/juankysoriano/materiallife/menu/MainMenuFragment.java	/^    public static final String TAG = "MainMenuFragment";$/;"	f	class:MainMenuFragment
+THREE	material-life-android/src/main/java/com/juankysoriano/materiallife/world/life/GameOfLifeDrawer.java	/^    private static final int THREE = 3;$/;"	f	class:GameOfLifeDrawer	file:
+TRANSPARENT	material-life-android/src/main/java/com/juankysoriano/materiallife/ui/sketch/editor/ClearView.java	/^    private static final float TRANSPARENT = 0f;$/;"	f	class:ClearView	file:
+TRANSPARENT	material-life-android/src/main/java/com/juankysoriano/materiallife/ui/sketch/menu/MenuButton.java	/^    private static final float TRANSPARENT = 0f;$/;"	f	class:MenuButton	file:
+UNKNOWN	material-life-android/src/main/java/com/juankysoriano/materiallife/imageloader/ImageLoaderResult.java	/^    UNKNOWN(-1);$/;"	e	enum:ImageLoaderResult	file:
+ViewMeasurer	material-life-android/src/main/java/com/juankysoriano/materiallife/ui/util/ViewMeasurer.java	/^    private ViewMeasurer() {$/;"	m	class:ViewMeasurer	file:
+ViewMeasurer	material-life-android/src/main/java/com/juankysoriano/materiallife/ui/util/ViewMeasurer.java	/^public class ViewMeasurer {$/;"	c
+ViewRevealer	material-life-android/src/main/java/com/juankysoriano/materiallife/ui/sketch/reveal/ViewRevealer.java	/^public class ViewRevealer {$/;"	c
+WellcomeSlide	material-life-android/src/main/java/com/juankysoriano/materiallife/info/slides/WellcomeSlide.java	/^public class WellcomeSlide extends SlideFragmentWithoutWorld {$/;"	c
+World	material-life-android/src/main/java/com/juankysoriano/materiallife/world/World.java	/^    protected World(RainbowDrawer rainbowDrawer, RainbowInputController rainbowInputController) {$/;"	m	class:World
+World	material-life-android/src/main/java/com/juankysoriano/materiallife/world/World.java	/^public class World extends Rainbow implements RainbowImage.LoadPictureListener {$/;"	c
+WorldEditor	material-life-android/src/main/java/com/juankysoriano/materiallife/editor/WorldEditor.java	/^    protected WorldEditor(World world) {$/;"	m	class:WorldEditor
+WorldEditor	material-life-android/src/main/java/com/juankysoriano/materiallife/editor/WorldEditor.java	/^public class WorldEditor {$/;"	c
+WorldEditorMenu	material-life-android/src/main/java/com/juankysoriano/materiallife/editor/WorldEditorMenu.java	/^public interface WorldEditorMenu {$/;"	i
+WorldEditorMenuFragment	material-life-android/src/main/java/com/juankysoriano/materiallife/editor/WorldEditorMenuFragment.java	/^public class WorldEditorMenuFragment extends Fragment implements WorldEditorMenu {$/;"	c
+WorldEditorTest	material-life-android/src/test/java/com/juankysoriano/materiallife/editor/WorldEditorTest.java	/^public class WorldEditorTest extends MaterialLifeTestBase {$/;"	c
+WorldRetriever	material-life-android/src/main/java/com/juankysoriano/materiallife/WorldRetriever.java	/^public enum WorldRetriever {$/;"	g
+WorldRetrieverTest	material-life-android/src/test/java/com/juankysoriano/materiallife/WorldRetrieverTest.java	/^public class WorldRetrieverTest extends MaterialLifeTestBase {$/;"	c
+WorldStub	material-life-android/src/test/java/com/juankysoriano/materiallife/world/WorldTest.java	/^        protected WorldStub(RainbowDrawer rainbowDrawer, RainbowInputController rainbowInputController) {$/;"	m	class:WorldTest.WorldStub
+WorldStub	material-life-android/src/test/java/com/juankysoriano/materiallife/world/WorldTest.java	/^    private class WorldStub extends World {$/;"	c	class:WorldTest
+WorldTest	material-life-android/src/test/java/com/juankysoriano/materiallife/world/WorldTest.java	/^public class WorldTest extends MaterialLifeTestBase {$/;"	c
+abortEdition	material-life-android/src/main/java/com/juankysoriano/materiallife/editor/WorldEditorMenu.java	/^    void abortEdition();$/;"	m	interface:WorldEditorMenu
+abortEdition	material-life-android/src/main/java/com/juankysoriano/materiallife/editor/WorldEditorMenuFragment.java	/^    public void abortEdition() {$/;"	m	class:WorldEditorMenuFragment
+abortPictureLoading	material-life-android/src/main/java/com/juankysoriano/materiallife/imageloader/ImageLoader.java	/^    void abortPictureLoading();$/;"	m	interface:ImageLoader
+abortPictureLoading	material-life-android/src/main/java/com/juankysoriano/materiallife/imageloader/ImageLoaderFragment.java	/^    public void abortPictureLoading() {$/;"	m	class:ImageLoaderFragment
+activity	material-life-android/src/main/java/com/juankysoriano/materiallife/ContextRetriever.java	/^    private FragmentActivity activity;$/;"	f	class:ContextRetriever	file:
+activity	material-life-android/src/test/java/com/juankysoriano/materiallife/ContextRetrieverTest.java	/^    private FragmentActivity activity;$/;"	f	class:ContextRetrieverTest	file:
+activityContext	material-life-android/src/test/java/com/juankysoriano/materiallife/ContextRetrieverTest.java	/^    private Context activityContext;$/;"	f	class:ContextRetrieverTest	file:
+addEditorMenu	material-life-android/src/main/java/com/juankysoriano/materiallife/activities/GameOfLifeActivity.java	/^    private void addEditorMenu() {$/;"	m	class:GameOfLifeActivity	file:
+addEditorMenu	material-life-android/src/main/java/com/juankysoriano/materiallife/navigation/MenuSwitcher.java	/^    public WorldEditorMenu addEditorMenu() {$/;"	m	class:MenuSwitcher
+addImageLoader	material-life-android/src/main/java/com/juankysoriano/materiallife/activities/GameOfLifeActivity.java	/^    private void addImageLoader() {$/;"	m	class:GameOfLifeActivity	file:
+addImageLoader	material-life-android/src/main/java/com/juankysoriano/materiallife/navigation/MenuSwitcher.java	/^    public ImageLoader addImageLoader() {$/;"	m	class:MenuSwitcher
+addMainMenu	material-life-android/src/main/java/com/juankysoriano/materiallife/activities/GameOfLifeActivity.java	/^    private void addMainMenu() {$/;"	m	class:GameOfLifeActivity	file:
+addMainMenu	material-life-android/src/main/java/com/juankysoriano/materiallife/navigation/MenuSwitcher.java	/^    public MainMenu addMainMenu() {$/;"	m	class:MenuSwitcher
+androidResources	material-life-android/src/test/java/com/juankysoriano/materiallife/ContextRetrieverTest.java	/^    private Resources androidResources;$/;"	f	class:ContextRetrieverTest	file:
+animateClear	material-life-android/src/main/java/com/juankysoriano/materiallife/ui/sketch/editor/EditorMenuView.java	/^    public void animateClear(final ClearAnimationListener clearAnimationListener) {$/;"	m	class:EditorMenuView
+animateClearFrom	material-life-android/src/main/java/com/juankysoriano/materiallife/ui/sketch/editor/ClearView.java	/^    public void animateClearFrom(Point point, final EditorMenuView.ClearAnimationListener clearAnimationListener) {$/;"	m	class:ClearView
+animateFor	material-life-android/src/main/java/com/juankysoriano/materiallife/ui/sketch/reveal/ViewRevealer.java	/^    private void animateFor(View view, Point origin, int startRadius, int targetRadius, final AnimatorListenerAdapter animatorListenerAdapter) {$/;"	m	class:ViewRevealer	file:
+animateHide	material-life-android/src/main/java/com/juankysoriano/materiallife/ui/sketch/menu/MenuButton.java	/^    public void animateHide() {$/;"	m	class:MenuButton
+animateShow	material-life-android/src/main/java/com/juankysoriano/materiallife/ui/sketch/menu/MenuButton.java	/^    public void animateShow() {$/;"	m	class:MenuButton
+animationHideListener	material-life-android/src/main/java/com/juankysoriano/materiallife/ui/sketch/menu/MenuButton.java	/^    private final AnimatorListenerAdapter animationHideListener = new AnimatorListenerAdapter() {$/;"	f	class:MenuButton	file:
+animationShowListener	material-life-android/src/main/java/com/juankysoriano/materiallife/ui/sketch/menu/MenuButton.java	/^    private final AnimatorListenerAdapter animationShowListener = new AnimatorListenerAdapter() {$/;"	f	class:MenuButton	file:
+application	material-life-android/src/main/java/com/juankysoriano/materiallife/ContextRetriever.java	/^    private Application application;$/;"	f	class:ContextRetriever	file:
+application	material-life-android/src/test/java/com/juankysoriano/materiallife/ContextRetrieverTest.java	/^    private Application application;$/;"	f	class:ContextRetrieverTest	file:
+applicationContext	material-life-android/src/test/java/com/juankysoriano/materiallife/ContextRetrieverTest.java	/^    private Context applicationContext;$/;"	f	class:ContextRetrieverTest	file:
+attachActionSelectedListener	material-life-android/src/main/java/com/juankysoriano/materiallife/editor/WorldEditorMenu.java	/^    void attachActionSelectedListener(EditorMenuView.OnActionSelectedListener listener);$/;"	m	interface:WorldEditorMenu
+attachActionSelectedListener	material-life-android/src/main/java/com/juankysoriano/materiallife/editor/WorldEditorMenuFragment.java	/^    public void attachActionSelectedListener(EditorMenuView.OnActionSelectedListener listener) {$/;"	m	class:WorldEditorMenuFragment
+attachItemSelectedListener	material-life-android/src/main/java/com/juankysoriano/materiallife/menu/MainMenu.java	/^    void attachItemSelectedListener(MenuOptionsView.OnItemSelectedListener listener);$/;"	m	interface:MainMenu
+attachItemSelectedListener	material-life-android/src/main/java/com/juankysoriano/materiallife/menu/MainMenuFragment.java	/^    public void attachItemSelectedListener(MenuOptionsView.OnItemSelectedListener listener) {$/;"	m	class:MainMenuFragment
+attachListeners	material-life-android/src/main/java/com/juankysoriano/materiallife/editor/WorldEditorMenuFragment.java	/^    private void attachListeners() {$/;"	m	class:WorldEditorMenuFragment	file:
+attachListeners	material-life-android/src/main/java/com/juankysoriano/materiallife/imageloader/ImageLoaderFragment.java	/^    private void attachListeners() {$/;"	m	class:ImageLoaderFragment	file:
+attachListeners	material-life-android/src/main/java/com/juankysoriano/materiallife/menu/MainMenuFragment.java	/^    private void attachListeners() {$/;"	m	class:MainMenuFragment	file:
+attachLoadImageListener	material-life-android/src/main/java/com/juankysoriano/materiallife/imageloader/ImageLoader.java	/^    void attachLoadImageListener(OnLoadImageSelectedListener listener);$/;"	m	interface:ImageLoader
+attachLoadImageListener	material-life-android/src/main/java/com/juankysoriano/materiallife/imageloader/ImageLoaderFragment.java	/^    public void attachLoadImageListener(OnLoadImageSelectedListener listener) {$/;"	m	class:ImageLoaderFragment
+attachedItemSelectedListener	material-life-android/src/main/java/com/juankysoriano/materiallife/menu/MainMenuFragment.java	/^    private MenuOptionsView.OnItemSelectedListener attachedItemSelectedListener;$/;"	f	class:MainMenuFragment	file:
+buildAnimatorForProperty	material-life-android/src/main/java/com/juankysoriano/materiallife/ui/sketch/menu/MenuButton.java	/^    private Animator buildAnimatorForProperty(String property, float from, float to, int duration) {$/;"	m	class:MenuButton	file:
+builder	material-life-android/src/main/java/com/juankysoriano/materiallife/world/life/GameOfLifeCreator.java	/^    private final Automata.Builder builder;$/;"	f	class:GameOfLifeCreator	file:
+cameraButton	material-life-android/src/main/java/com/juankysoriano/materiallife/imageloader/ImageLoaderFragment.java	/^    private PixelButton cameraButton;$/;"	f	class:ImageLoaderFragment	file:
+cancel	material-life-android/src/main/java/com/juankysoriano/materiallife/editor/WorldEditor.java	/^    public void cancel() {$/;"	m	class:WorldEditor
+cancelButton	material-life-android/src/main/java/com/juankysoriano/materiallife/editor/WorldEditorMenuFragment.java	/^    private PixelButton cancelButton;$/;"	f	class:WorldEditorMenuFragment	file:
+cellsBackup	material-life-android/src/main/java/com/juankysoriano/materiallife/world/life/GameOfLife.java	/^    private int[][] cellsBackup;$/;"	f	class:GameOfLife	file:
+clear	material-life-android/src/main/java/com/juankysoriano/materiallife/editor/WorldEditor.java	/^    public void clear() {$/;"	m	class:WorldEditor
+clear	material-life-android/src/main/java/com/juankysoriano/materiallife/world/World.java	/^    public void clear() {$/;"	m	class:World
+clear	material-life-android/src/main/java/com/juankysoriano/materiallife/world/life/GameOfLife.java	/^    public void clear() {$/;"	m	class:GameOfLife
+clearAnimationListener	material-life-android/src/main/java/com/juankysoriano/materiallife/editor/WorldEditorMenuFragment.java	/^    private final EditorMenuView.ClearAnimationListener clearAnimationListener = new EditorMenuView.ClearAnimationListener() {$/;"	f	class:WorldEditorMenuFragment	file:
+clearBackground	material-life-android/src/main/java/com/juankysoriano/materiallife/world/life/GameOfLifeDrawer.java	/^    public void clearBackground() {$/;"	m	class:GameOfLifeDrawer
+clearButton	material-life-android/src/main/java/com/juankysoriano/materiallife/editor/WorldEditorMenuFragment.java	/^    private PixelButton clearButton;$/;"	f	class:WorldEditorMenuFragment	file:
+clearButton	material-life-android/src/main/java/com/juankysoriano/materiallife/ui/sketch/editor/EditorMenuView.java	/^    private PixelButton clearButton;$/;"	f	class:EditorMenuView	file:
+clearView	material-life-android/src/main/java/com/juankysoriano/materiallife/ui/sketch/editor/EditorMenuView.java	/^    private ClearView clearView;$/;"	f	class:EditorMenuView	file:
+closeMenu	material-life-android/src/main/java/com/juankysoriano/materiallife/menu/MainMenu.java	/^    void closeMenu();$/;"	m	interface:MainMenu
+closeMenu	material-life-android/src/main/java/com/juankysoriano/materiallife/menu/MainMenuFragment.java	/^    public void closeMenu() {$/;"	m	class:MainMenuFragment
+closeMenu	material-life-android/src/main/java/com/juankysoriano/materiallife/ui/sketch/menu/MenuView.java	/^    public void closeMenu() {$/;"	m	class:MenuView
+code	material-life-android/src/main/java/com/juankysoriano/materiallife/imageloader/ImageLoaderResult.java	/^    private int code;$/;"	f	class:ImageLoaderResult	file:
+com.juankysoriano.materiallife	material-life-android/src/main/java/com/juankysoriano/materiallife/ContextRetriever.java	/^package com.juankysoriano.materiallife;$/;"	p
+com.juankysoriano.materiallife	material-life-android/src/main/java/com/juankysoriano/materiallife/MaterialLifeApplication.java	/^package com.juankysoriano.materiallife;$/;"	p
+com.juankysoriano.materiallife	material-life-android/src/main/java/com/juankysoriano/materiallife/WorldRetriever.java	/^package com.juankysoriano.materiallife;$/;"	p
+com.juankysoriano.materiallife	material-life-android/src/test/java/com/juankysoriano/materiallife/ContextRetrieverTest.java	/^package com.juankysoriano.materiallife;$/;"	p
+com.juankysoriano.materiallife	material-life-android/src/test/java/com/juankysoriano/materiallife/MaterialLifeTestBase.java	/^package com.juankysoriano.materiallife;$/;"	p
+com.juankysoriano.materiallife	material-life-android/src/test/java/com/juankysoriano/materiallife/RobolectricMaterialLifeGradleTestRunner.java	/^package com.juankysoriano.materiallife;$/;"	p
+com.juankysoriano.materiallife	material-life-android/src/test/java/com/juankysoriano/materiallife/WorldRetrieverTest.java	/^package com.juankysoriano.materiallife;$/;"	p
+com.juankysoriano.materiallife.activities	material-life-android/src/main/java/com/juankysoriano/materiallife/activities/GameOfLifeActivity.java	/^package com.juankysoriano.materiallife.activities;$/;"	p
+com.juankysoriano.materiallife.activities	material-life-android/src/main/java/com/juankysoriano/materiallife/activities/MaterialLifeActivity.java	/^package com.juankysoriano.materiallife.activities;$/;"	p
+com.juankysoriano.materiallife.analytics	material-life-android/src/main/java/com/juankysoriano/materiallife/analytics/AnalyticsTracker.java	/^package com.juankysoriano.materiallife.analytics;$/;"	p
+com.juankysoriano.materiallife.analytics	material-life-android/src/main/java/com/juankysoriano/materiallife/analytics/MaterialLifeAnalytics.java	/^package com.juankysoriano.materiallife.analytics;$/;"	p
+com.juankysoriano.materiallife.editor	material-life-android/src/main/java/com/juankysoriano/materiallife/editor/EditorAction.java	/^package com.juankysoriano.materiallife.editor;$/;"	p
+com.juankysoriano.materiallife.editor	material-life-android/src/main/java/com/juankysoriano/materiallife/editor/WorldEditor.java	/^package com.juankysoriano.materiallife.editor;$/;"	p
+com.juankysoriano.materiallife.editor	material-life-android/src/main/java/com/juankysoriano/materiallife/editor/WorldEditorMenu.java	/^package com.juankysoriano.materiallife.editor;$/;"	p
+com.juankysoriano.materiallife.editor	material-life-android/src/main/java/com/juankysoriano/materiallife/editor/WorldEditorMenuFragment.java	/^package com.juankysoriano.materiallife.editor;$/;"	p
+com.juankysoriano.materiallife.editor	material-life-android/src/test/java/com/juankysoriano/materiallife/editor/WorldEditorTest.java	/^package com.juankysoriano.materiallife.editor;$/;"	p
+com.juankysoriano.materiallife.imageloader	material-life-android/src/main/java/com/juankysoriano/materiallife/imageloader/ImageLoader.java	/^package com.juankysoriano.materiallife.imageloader;$/;"	p
+com.juankysoriano.materiallife.imageloader	material-life-android/src/main/java/com/juankysoriano/materiallife/imageloader/ImageLoaderAction.java	/^package com.juankysoriano.materiallife.imageloader;$/;"	p
+com.juankysoriano.materiallife.imageloader	material-life-android/src/main/java/com/juankysoriano/materiallife/imageloader/ImageLoaderFragment.java	/^package com.juankysoriano.materiallife.imageloader;$/;"	p
+com.juankysoriano.materiallife.imageloader	material-life-android/src/main/java/com/juankysoriano/materiallife/imageloader/ImageLoaderResult.java	/^package com.juankysoriano.materiallife.imageloader;$/;"	p
+com.juankysoriano.materiallife.info	material-life-android/src/main/java/com/juankysoriano/materiallife/info/InfoActivity.java	/^package com.juankysoriano.materiallife.info;$/;"	p
+com.juankysoriano.materiallife.info.preferences	material-life-android/src/main/java/com/juankysoriano/materiallife/info/preferences/InfoPreferences.java	/^package com.juankysoriano.materiallife.info.preferences;$/;"	p
+com.juankysoriano.materiallife.info.slides	material-life-android/src/main/java/com/juankysoriano/materiallife/info/slides/LifeCreationSlide.java	/^package com.juankysoriano.materiallife.info.slides;$/;"	p
+com.juankysoriano.materiallife.info.slides	material-life-android/src/main/java/com/juankysoriano/materiallife/info/slides/PresentationSlide.java	/^package com.juankysoriano.materiallife.info.slides;$/;"	p
+com.juankysoriano.materiallife.info.slides	material-life-android/src/main/java/com/juankysoriano/materiallife/info/slides/RulesSlide.java	/^package com.juankysoriano.materiallife.info.slides;$/;"	p
+com.juankysoriano.materiallife.info.slides	material-life-android/src/main/java/com/juankysoriano/materiallife/info/slides/SlideFragmentWithWorld.java	/^package com.juankysoriano.materiallife.info.slides;$/;"	p
+com.juankysoriano.materiallife.info.slides	material-life-android/src/main/java/com/juankysoriano/materiallife/info/slides/SlideFragmentWithoutWorld.java	/^package com.juankysoriano.materiallife.info.slides;$/;"	p
+com.juankysoriano.materiallife.info.slides	material-life-android/src/main/java/com/juankysoriano/materiallife/info/slides/WellcomeSlide.java	/^package com.juankysoriano.materiallife.info.slides;$/;"	p
+com.juankysoriano.materiallife.menu	material-life-android/src/main/java/com/juankysoriano/materiallife/menu/MainMenu.java	/^package com.juankysoriano.materiallife.menu;$/;"	p
+com.juankysoriano.materiallife.menu	material-life-android/src/main/java/com/juankysoriano/materiallife/menu/MainMenuFragment.java	/^package com.juankysoriano.materiallife.menu;$/;"	p
+com.juankysoriano.materiallife.menu	material-life-android/src/main/java/com/juankysoriano/materiallife/menu/MenuItem.java	/^package com.juankysoriano.materiallife.menu;$/;"	p
+com.juankysoriano.materiallife.navigation	material-life-android/src/main/java/com/juankysoriano/materiallife/navigation/MenuSwitcher.java	/^package com.juankysoriano.materiallife.navigation;$/;"	p
+com.juankysoriano.materiallife.navigation	material-life-android/src/main/java/com/juankysoriano/materiallife/navigation/PictureRetriever.java	/^package com.juankysoriano.materiallife.navigation;$/;"	p
+com.juankysoriano.materiallife.navigation	material-life-android/src/test/java/com/juankysoriano/materiallife/navigation/MenuSwitcherTest.java	/^package com.juankysoriano.materiallife.navigation;$/;"	p
+com.juankysoriano.materiallife.navigation	material-life-android/src/test/java/com/juankysoriano/materiallife/navigation/PictureRetrieverTest.java	/^package com.juankysoriano.materiallife.navigation;$/;"	p
+com.juankysoriano.materiallife.ui.sketch	material-life-android/src/main/java/com/juankysoriano/materiallife/ui/sketch/PixelButton.java	/^package com.juankysoriano.materiallife.ui.sketch;$/;"	p
+com.juankysoriano.materiallife.ui.sketch	material-life-android/src/main/java/com/juankysoriano/materiallife/ui/sketch/PixelTextView.java	/^package com.juankysoriano.materiallife.ui.sketch;$/;"	p
+com.juankysoriano.materiallife.ui.sketch.editor	material-life-android/src/main/java/com/juankysoriano/materiallife/ui/sketch/editor/ClearView.java	/^package com.juankysoriano.materiallife.ui.sketch.editor;$/;"	p
+com.juankysoriano.materiallife.ui.sketch.editor	material-life-android/src/main/java/com/juankysoriano/materiallife/ui/sketch/editor/EditorMenuView.java	/^package com.juankysoriano.materiallife.ui.sketch.editor;$/;"	p
+com.juankysoriano.materiallife.ui.sketch.menu	material-life-android/src/main/java/com/juankysoriano/materiallife/ui/sketch/menu/MenuButton.java	/^package com.juankysoriano.materiallife.ui.sketch.menu;$/;"	p
+com.juankysoriano.materiallife.ui.sketch.menu	material-life-android/src/main/java/com/juankysoriano/materiallife/ui/sketch/menu/MenuItemAdapter.java	/^package com.juankysoriano.materiallife.ui.sketch.menu;$/;"	p
+com.juankysoriano.materiallife.ui.sketch.menu	material-life-android/src/main/java/com/juankysoriano/materiallife/ui/sketch/menu/MenuOptionsView.java	/^package com.juankysoriano.materiallife.ui.sketch.menu;$/;"	p
+com.juankysoriano.materiallife.ui.sketch.menu	material-life-android/src/main/java/com/juankysoriano/materiallife/ui/sketch/menu/MenuView.java	/^package com.juankysoriano.materiallife.ui.sketch.menu;$/;"	p
+com.juankysoriano.materiallife.ui.sketch.menu	material-life-android/src/main/java/com/juankysoriano/materiallife/ui/sketch/menu/NormalisedCenter.java	/^package com.juankysoriano.materiallife.ui.sketch.menu;$/;"	p
+com.juankysoriano.materiallife.ui.sketch.menu	material-life-android/src/test/java/com/juankysoriano/materiallife/ui/sketch/menu/MenuItemAdapterTest.java	/^package com.juankysoriano.materiallife.ui.sketch.menu;$/;"	p
+com.juankysoriano.materiallife.ui.sketch.reveal	material-life-android/src/main/java/com/juankysoriano/materiallife/ui/sketch/reveal/ViewRevealer.java	/^package com.juankysoriano.materiallife.ui.sketch.reveal;$/;"	p
+com.juankysoriano.materiallife.ui.util	material-life-android/src/main/java/com/juankysoriano/materiallife/ui/util/ViewMeasurer.java	/^package com.juankysoriano.materiallife.ui.util;$/;"	p
+com.juankysoriano.materiallife.world	material-life-android/src/main/java/com/juankysoriano/materiallife/world/EmptyWorld.java	/^package com.juankysoriano.materiallife.world;$/;"	p
+com.juankysoriano.materiallife.world	material-life-android/src/main/java/com/juankysoriano/materiallife/world/World.java	/^package com.juankysoriano.materiallife.world;$/;"	p
+com.juankysoriano.materiallife.world	material-life-android/src/test/java/com/juankysoriano/materiallife/world/WorldTest.java	/^package com.juankysoriano.materiallife.world;$/;"	p
+com.juankysoriano.materiallife.world.life	material-life-android/src/main/java/com/juankysoriano/materiallife/world/life/GameOfLife.java	/^package com.juankysoriano.materiallife.world.life;$/;"	p
+com.juankysoriano.materiallife.world.life	material-life-android/src/main/java/com/juankysoriano/materiallife/world/life/GameOfLifeCreator.java	/^package com.juankysoriano.materiallife.world.life;$/;"	p
+com.juankysoriano.materiallife.world.life	material-life-android/src/main/java/com/juankysoriano/materiallife/world/life/GameOfLifeDrawer.java	/^package com.juankysoriano.materiallife.world.life;$/;"	p
+com.juankysoriano.materiallife.world.life	material-life-android/src/test/java/com/juankysoriano/materiallife/world/life/GameOfLifeDrawerTest.java	/^package com.juankysoriano.materiallife.world.life;$/;"	p
+com.juankysoriano.materiallife.world.life	material-life-android/src/test/java/com/juankysoriano/materiallife/world/life/GameOfLifeTest.java	/^package com.juankysoriano.materiallife.world.life;$/;"	p
+concealAnimationListener	material-life-android/src/main/java/com/juankysoriano/materiallife/ui/sketch/menu/MenuOptionsView.java	/^    private final AnimatorListenerAdapter concealAnimationListener = new AnimatorListenerAdapter() {$/;"	f	class:MenuOptionsView	file:
+concealFrom	material-life-android/src/main/java/com/juankysoriano/materiallife/ui/sketch/menu/MenuOptionsView.java	/^    public void concealFrom(Point point) {$/;"	m	class:MenuOptionsView
+concealFrom	material-life-android/src/main/java/com/juankysoriano/materiallife/ui/sketch/reveal/ViewRevealer.java	/^    public void concealFrom(Point point, View view, AnimatorListenerAdapter animatorListenerAdapter) {$/;"	m	class:ViewRevealer
+configure	material-life-android/src/main/java/com/juankysoriano/materiallife/world/life/GameOfLifeDrawer.java	/^    private static void configure(RainbowDrawer rainbowDrawer) {$/;"	m	class:GameOfLifeDrawer	file:
+context	material-life-android/src/main/java/com/juankysoriano/materiallife/ui/sketch/menu/MenuItemAdapter.java	/^    private final Context context;$/;"	f	class:MenuItemAdapter	file:
+createGameOfLife	material-life-android/src/main/java/com/juankysoriano/materiallife/world/life/GameOfLifeCreator.java	/^    public AutomataDiscrete2D createGameOfLife(int width, int height) {$/;"	m	class:GameOfLifeCreator
+createImageFile	material-life-android/src/main/java/com/juankysoriano/materiallife/navigation/PictureRetriever.java	/^    private File createImageFile() throws IOException {$/;"	m	class:PictureRetriever	file:
+createIntentForCamera	material-life-android/src/main/java/com/juankysoriano/materiallife/navigation/PictureRetriever.java	/^    private Intent createIntentForCamera() {$/;"	m	class:PictureRetriever	file:
+createIntentForGallery	material-life-android/src/main/java/com/juankysoriano/materiallife/navigation/PictureRetriever.java	/^    private Intent createIntentForGallery() {$/;"	m	class:PictureRetriever	file:
+data	material-life-android/src/test/java/com/juankysoriano/materiallife/ui/sketch/menu/MenuItemAdapterTest.java	/^    public static Collection<Object[]> data() {$/;"	m	class:MenuItemAdapterTest
+detachActionSelectedListener	material-life-android/src/main/java/com/juankysoriano/materiallife/editor/WorldEditorMenu.java	/^    void detachActionSelectedListener();$/;"	m	interface:WorldEditorMenu
+detachActionSelectedListener	material-life-android/src/main/java/com/juankysoriano/materiallife/editor/WorldEditorMenuFragment.java	/^    public void detachActionSelectedListener() {$/;"	m	class:WorldEditorMenuFragment
+detachActionSelectedListener	material-life-android/src/main/java/com/juankysoriano/materiallife/imageloader/ImageLoader.java	/^    void detachActionSelectedListener();$/;"	m	interface:ImageLoader
+detachActionSelectedListener	material-life-android/src/main/java/com/juankysoriano/materiallife/imageloader/ImageLoaderFragment.java	/^    public void detachActionSelectedListener() {$/;"	m	class:ImageLoaderFragment
+detachItemSelectedListener	material-life-android/src/main/java/com/juankysoriano/materiallife/menu/MainMenu.java	/^    void detachItemSelectedListener();$/;"	m	interface:MainMenu
+detachItemSelectedListener	material-life-android/src/main/java/com/juankysoriano/materiallife/menu/MainMenuFragment.java	/^    public void detachItemSelectedListener() {$/;"	m	class:MainMenuFragment
+detachListeners	material-life-android/src/main/java/com/juankysoriano/materiallife/editor/WorldEditorMenuFragment.java	/^    private void detachListeners() {$/;"	m	class:WorldEditorMenuFragment	file:
+detachListeners	material-life-android/src/main/java/com/juankysoriano/materiallife/imageloader/ImageLoaderFragment.java	/^    private void detachListeners() {$/;"	m	class:ImageLoaderFragment	file:
+detachListeners	material-life-android/src/main/java/com/juankysoriano/materiallife/menu/MainMenuFragment.java	/^    private void detachListeners() {$/;"	m	class:MainMenuFragment	file:
+doCellsBackup	material-life-android/src/main/java/com/juankysoriano/materiallife/world/life/GameOfLife.java	/^    private void doCellsBackup() {$/;"	m	class:GameOfLife	file:
+doConcealAnimation	material-life-android/src/main/java/com/juankysoriano/materiallife/ui/sketch/menu/MenuView.java	/^    private void doConcealAnimation() {$/;"	m	class:MenuView	file:
+doRevealAnimation	material-life-android/src/main/java/com/juankysoriano/materiallife/ui/sketch/menu/MenuView.java	/^    private void doRevealAnimation() {$/;"	m	class:MenuView	file:
+doStep	material-life-android/src/main/java/com/juankysoriano/materiallife/world/life/GameOfLife.java	/^    public void doStep() {$/;"	m	class:GameOfLife
+done	material-life-android/src/main/java/com/juankysoriano/materiallife/info/InfoActivity.java	/^    private void done() {$/;"	m	class:InfoActivity	file:
+doneButton	material-life-android/src/main/java/com/juankysoriano/materiallife/editor/WorldEditorMenuFragment.java	/^    private PixelButton doneButton;$/;"	f	class:WorldEditorMenuFragment	file:
+editing	material-life-android/src/main/java/com/juankysoriano/materiallife/world/life/GameOfLife.java	/^    private boolean editing;$/;"	f	class:GameOfLife	file:
+editorMenu	material-life-android/src/main/java/com/juankysoriano/materiallife/activities/GameOfLifeActivity.java	/^    private WorldEditorMenu editorMenu;$/;"	f	class:GameOfLifeActivity	file:
+editorMenuIsPresent	material-life-android/src/main/java/com/juankysoriano/materiallife/navigation/MenuSwitcher.java	/^    private boolean editorMenuIsPresent() {$/;"	m	class:MenuSwitcher	file:
+editorMenuView	material-life-android/src/main/java/com/juankysoriano/materiallife/editor/WorldEditorMenuFragment.java	/^    private EditorMenuView editorMenuView;$/;"	f	class:WorldEditorMenuFragment	file:
+endEdition	material-life-android/src/main/java/com/juankysoriano/materiallife/editor/WorldEditor.java	/^    public void endEdition() {$/;"	m	class:WorldEditor
+endEdition	material-life-android/src/main/java/com/juankysoriano/materiallife/world/World.java	/^    public void endEdition() {$/;"	m	class:World
+endEdition	material-life-android/src/main/java/com/juankysoriano/materiallife/world/life/GameOfLife.java	/^    public void endEdition() {$/;"	m	class:GameOfLife
+expectedCameraIntent	material-life-android/src/test/java/com/juankysoriano/materiallife/navigation/PictureRetrieverTest.java	/^    private Intent expectedCameraIntent() {$/;"	m	class:PictureRetrieverTest	file:
+expectedGalleryIntent	material-life-android/src/test/java/com/juankysoriano/materiallife/navigation/PictureRetrieverTest.java	/^    private Intent expectedGalleryIntent() {$/;"	m	class:PictureRetrieverTest	file:
+fillCellsWith	material-life-android/src/test/java/com/juankysoriano/materiallife/world/life/GameOfLifeTest.java	/^    private void fillCellsWith(int[][] cells, int state) {$/;"	m	class:GameOfLifeTest	file:
+fragmentManager	material-life-android/src/main/java/com/juankysoriano/materiallife/navigation/MenuSwitcher.java	/^    private final FragmentManager fragmentManager;$/;"	f	class:MenuSwitcher	file:
+fragmentManager	material-life-android/src/test/java/com/juankysoriano/materiallife/navigation/MenuSwitcherTest.java	/^    private FragmentManager fragmentManager;$/;"	f	class:MenuSwitcherTest	file:
+fragmentTransaction	material-life-android/src/test/java/com/juankysoriano/materiallife/navigation/MenuSwitcherTest.java	/^    private FragmentTransaction fragmentTransaction;$/;"	f	class:MenuSwitcherTest	file:
+from	material-life-android/src/main/java/com/juankysoriano/materiallife/imageloader/ImageLoaderResult.java	/^    public static ImageLoaderResult from(int code) {$/;"	m	class:ImageLoaderResult
+galleryButton	material-life-android/src/main/java/com/juankysoriano/materiallife/imageloader/ImageLoaderFragment.java	/^    private PixelButton galleryButton;$/;"	f	class:ImageLoaderFragment	file:
+gameOfLife	material-life-android/src/main/java/com/juankysoriano/materiallife/world/World.java	/^    protected GameOfLife gameOfLife;$/;"	f	class:World
+gameOfLife	material-life-android/src/test/java/com/juankysoriano/materiallife/world/life/GameOfLifeTest.java	/^    private GameOfLife gameOfLife;$/;"	f	class:GameOfLifeTest	file:
+gameOfLifeAutomata	material-life-android/src/main/java/com/juankysoriano/materiallife/world/life/GameOfLife.java	/^    private final AutomataDiscrete2D gameOfLifeAutomata;$/;"	f	class:GameOfLife	file:
+gameOfLifeAutomata	material-life-android/src/test/java/com/juankysoriano/materiallife/world/life/GameOfLifeTest.java	/^    private AutomataDiscrete2D gameOfLifeAutomata;$/;"	f	class:GameOfLifeTest	file:
+gameOfLifeDrawer	material-life-android/src/main/java/com/juankysoriano/materiallife/world/life/GameOfLife.java	/^    private final GameOfLifeDrawer gameOfLifeDrawer;$/;"	f	class:GameOfLife	file:
+gameOfLifeDrawer	material-life-android/src/test/java/com/juankysoriano/materiallife/world/life/GameOfLifeDrawerTest.java	/^    private GameOfLifeDrawer gameOfLifeDrawer;$/;"	f	class:GameOfLifeDrawerTest	file:
+gameOfLifeDrawer	material-life-android/src/test/java/com/juankysoriano/materiallife/world/life/GameOfLifeTest.java	/^    private GameOfLifeDrawer gameOfLifeDrawer;$/;"	f	class:GameOfLifeTest	file:
+gameOfLifeMock	material-life-android/src/test/java/com/juankysoriano/materiallife/world/WorldTest.java	/^    private GameOfLife gameOfLifeMock;$/;"	f	class:WorldTest	file:
+getActivity	material-life-android/src/main/java/com/juankysoriano/materiallife/ContextRetriever.java	/^    public FragmentActivity getActivity() {$/;"	m	class:ContextRetriever
+getAppManifest	material-life-android/src/test/java/com/juankysoriano/materiallife/RobolectricMaterialLifeGradleTestRunner.java	/^    protected AndroidManifest getAppManifest(Config config) {$/;"	m	class:RobolectricMaterialLifeGradleTestRunner
+getApplicationContext	material-life-android/src/main/java/com/juankysoriano/materiallife/ContextRetriever.java	/^    public Context getApplicationContext() {$/;"	m	class:ContextRetriever
+getCellStateFrom	material-life-android/src/main/java/com/juankysoriano/materiallife/world/life/GameOfLifeDrawer.java	/^    public int getCellStateFrom(RainbowImage image, int cellX, int cellY) {$/;"	m	class:GameOfLifeDrawer
+getCode	material-life-android/src/main/java/com/juankysoriano/materiallife/imageloader/ImageLoaderResult.java	/^    public int getCode() {$/;"	m	class:ImageLoaderResult
+getCount	material-life-android/src/main/java/com/juankysoriano/materiallife/ui/sketch/menu/MenuItemAdapter.java	/^    public int getCount() {$/;"	m	class:MenuItemAdapter
+getFragment	material-life-android/src/main/java/com/juankysoriano/materiallife/editor/WorldEditorMenu.java	/^    WorldEditorMenuFragment getFragment();$/;"	m	interface:WorldEditorMenu
+getFragment	material-life-android/src/main/java/com/juankysoriano/materiallife/editor/WorldEditorMenuFragment.java	/^    public WorldEditorMenuFragment getFragment() {$/;"	m	class:WorldEditorMenuFragment
+getFragment	material-life-android/src/main/java/com/juankysoriano/materiallife/imageloader/ImageLoader.java	/^    ImageLoaderFragment getFragment();$/;"	m	interface:ImageLoader
+getFragment	material-life-android/src/main/java/com/juankysoriano/materiallife/imageloader/ImageLoaderFragment.java	/^    public ImageLoaderFragment getFragment() {$/;"	m	class:ImageLoaderFragment
+getFragment	material-life-android/src/main/java/com/juankysoriano/materiallife/menu/MainMenu.java	/^    MainMenuFragment getFragment();$/;"	m	interface:MainMenu
+getFragment	material-life-android/src/main/java/com/juankysoriano/materiallife/menu/MainMenuFragment.java	/^    public MainMenuFragment getFragment() {$/;"	m	class:MainMenuFragment
+getItem	material-life-android/src/main/java/com/juankysoriano/materiallife/ui/sketch/menu/MenuItemAdapter.java	/^    public MenuItem getItem(int position) {$/;"	m	class:MenuItemAdapter
+getItemId	material-life-android/src/main/java/com/juankysoriano/materiallife/ui/sketch/menu/MenuItemAdapter.java	/^    public long getItemId(int position) {$/;"	m	class:MenuItemAdapter
+getLastLoadedImagePath	material-life-android/src/main/java/com/juankysoriano/materiallife/navigation/PictureRetriever.java	/^    public Uri getLastLoadedImagePath() {$/;"	m	class:PictureRetriever
+getLayoutId	material-life-android/src/main/java/com/juankysoriano/materiallife/info/slides/RulesSlide.java	/^    protected int getLayoutId() {$/;"	m	class:RulesSlide
+getLayoutId	material-life-android/src/main/java/com/juankysoriano/materiallife/info/slides/SlideFragmentWithoutWorld.java	/^    protected abstract int getLayoutId();$/;"	m	class:SlideFragmentWithoutWorld
+getLayoutId	material-life-android/src/main/java/com/juankysoriano/materiallife/info/slides/WellcomeSlide.java	/^    protected int getLayoutId() {$/;"	m	class:WellcomeSlide
+getRadiusFrom	material-life-android/src/main/java/com/juankysoriano/materiallife/ui/util/ViewMeasurer.java	/^    public static int getRadiusFrom(Point point, View view) {$/;"	m	class:ViewMeasurer
+getResources	material-life-android/src/main/java/com/juankysoriano/materiallife/ContextRetriever.java	/^    public Resources getResources() {$/;"	m	class:ContextRetriever
+getSlideLayoutId	material-life-android/src/main/java/com/juankysoriano/materiallife/info/slides/LifeCreationSlide.java	/^    protected int getSlideLayoutId() {$/;"	m	class:LifeCreationSlide
+getSlideLayoutId	material-life-android/src/main/java/com/juankysoriano/materiallife/info/slides/PresentationSlide.java	/^    protected int getSlideLayoutId() {$/;"	m	class:PresentationSlide
+getSlideLayoutId	material-life-android/src/main/java/com/juankysoriano/materiallife/info/slides/SlideFragmentWithWorld.java	/^    protected abstract int getSlideLayoutId();$/;"	m	class:SlideFragmentWithWorld
+getView	material-life-android/src/main/java/com/juankysoriano/materiallife/ui/sketch/menu/MenuItemAdapter.java	/^    public View getView(int position, View convertView, ViewGroup parent) {$/;"	m	class:MenuItemAdapter
+getViewCenter	material-life-android/src/main/java/com/juankysoriano/materiallife/ui/util/ViewMeasurer.java	/^    public static Point getViewCenter(View view) {$/;"	m	class:ViewMeasurer
+getViewCenterOnScreen	material-life-android/src/main/java/com/juankysoriano/materiallife/ui/util/ViewMeasurer.java	/^    public static Point getViewCenterOnScreen(View view) {$/;"	m	class:ViewMeasurer
+getWorld	material-life-android/src/main/java/com/juankysoriano/materiallife/WorldRetriever.java	/^    public World getWorld() {$/;"	m	class:WorldRetriever
+getWorldViewId	material-life-android/src/main/java/com/juankysoriano/materiallife/info/slides/LifeCreationSlide.java	/^    protected int getWorldViewId() {$/;"	m	class:LifeCreationSlide
+getWorldViewId	material-life-android/src/main/java/com/juankysoriano/materiallife/info/slides/PresentationSlide.java	/^    protected int getWorldViewId() {$/;"	m	class:PresentationSlide
+getWorldViewId	material-life-android/src/main/java/com/juankysoriano/materiallife/info/slides/SlideFragmentWithWorld.java	/^    protected abstract int getWorldViewId();$/;"	m	class:SlideFragmentWithWorld
+getX	material-life-android/src/main/java/com/juankysoriano/materiallife/ui/sketch/menu/NormalisedCenter.java	/^    public float getX() {$/;"	m	class:NormalisedCenter
+getY	material-life-android/src/main/java/com/juankysoriano/materiallife/ui/sketch/menu/NormalisedCenter.java	/^    public float getY() {$/;"	m	class:NormalisedCenter
+givenThatAutomataHasAllCellsAlive	material-life-android/src/test/java/com/juankysoriano/materiallife/world/life/GameOfLifeTest.java	/^    private void givenThatAutomataHasAllCellsAlive() {$/;"	m	class:GameOfLifeTest	file:
+givenThatAutomataHasAllCellsDead	material-life-android/src/test/java/com/juankysoriano/materiallife/world/life/GameOfLifeTest.java	/^    private void givenThatAutomataHasAllCellsDead() {$/;"	m	class:GameOfLifeTest	file:
+givenThatEditorMenuIsNotPresent	material-life-android/src/test/java/com/juankysoriano/materiallife/navigation/MenuSwitcherTest.java	/^    private void givenThatEditorMenuIsNotPresent() {$/;"	m	class:MenuSwitcherTest	file:
+givenThatEditorMenuIsPresent	material-life-android/src/test/java/com/juankysoriano/materiallife/navigation/MenuSwitcherTest.java	/^    private void givenThatEditorMenuIsPresent() {$/;"	m	class:MenuSwitcherTest	file:
+givenThatHasPreviousFingerMovements	material-life-android/src/test/java/com/juankysoriano/materiallife/world/life/GameOfLifeTest.java	/^    private void givenThatHasPreviousFingerMovements() {$/;"	m	class:GameOfLifeTest	file:
+givenThatImageLoaderIsNotPresent	material-life-android/src/test/java/com/juankysoriano/materiallife/navigation/MenuSwitcherTest.java	/^    private void givenThatImageLoaderIsNotPresent() {$/;"	m	class:MenuSwitcherTest	file:
+givenThatImageLoaderIsPresent	material-life-android/src/test/java/com/juankysoriano/materiallife/navigation/MenuSwitcherTest.java	/^    private void givenThatImageLoaderIsPresent() {$/;"	m	class:MenuSwitcherTest	file:
+givenThatIsEditing	material-life-android/src/test/java/com/juankysoriano/materiallife/world/life/GameOfLifeTest.java	/^    private void givenThatIsEditing() {$/;"	m	class:GameOfLifeTest	file:
+givenThatMainMenuIsNotPresent	material-life-android/src/test/java/com/juankysoriano/materiallife/navigation/MenuSwitcherTest.java	/^    private void givenThatMainMenuIsNotPresent() {$/;"	m	class:MenuSwitcherTest	file:
+givenThatMainMenuIsPresent	material-life-android/src/test/java/com/juankysoriano/materiallife/navigation/MenuSwitcherTest.java	/^    private void givenThatMainMenuIsPresent() {$/;"	m	class:MenuSwitcherTest	file:
+hasActionSelectedListener	material-life-android/src/main/java/com/juankysoriano/materiallife/editor/WorldEditorMenuFragment.java	/^    private boolean hasActionSelectedListener() {$/;"	m	class:WorldEditorMenuFragment	file:
+hasAttachedItemSelectedListener	material-life-android/src/main/java/com/juankysoriano/materiallife/menu/MainMenuFragment.java	/^    private boolean hasAttachedItemSelectedListener() {$/;"	m	class:MainMenuFragment	file:
+hasEditorMenu	material-life-android/src/main/java/com/juankysoriano/materiallife/activities/GameOfLifeActivity.java	/^    private boolean hasEditorMenu() {$/;"	m	class:GameOfLifeActivity	file:
+hasGameOfLife	material-life-android/src/main/java/com/juankysoriano/materiallife/world/World.java	/^    private boolean hasGameOfLife() {$/;"	m	class:World	file:
+hasImageLoader	material-life-android/src/main/java/com/juankysoriano/materiallife/activities/GameOfLifeActivity.java	/^    private boolean hasImageLoader() {$/;"	m	class:GameOfLifeActivity	file:
+hasLoadImageListener	material-life-android/src/main/java/com/juankysoriano/materiallife/imageloader/ImageLoaderFragment.java	/^    private boolean hasLoadImageListener() {$/;"	m	class:ImageLoaderFragment	file:
+hasMainMenu	material-life-android/src/main/java/com/juankysoriano/materiallife/activities/GameOfLifeActivity.java	/^    private boolean hasMainMenu() {$/;"	m	class:GameOfLifeActivity	file:
+hasOnMenuItemSelectedListener	material-life-android/src/main/java/com/juankysoriano/materiallife/ui/sketch/menu/MenuOptionsView.java	/^    private boolean hasOnMenuItemSelectedListener() {$/;"	m	class:MenuOptionsView	file:
+hide	material-life-android/src/main/java/com/juankysoriano/materiallife/ui/sketch/editor/ClearView.java	/^    private void hide() {$/;"	m	class:ClearView	file:
+hide	material-life-android/src/main/java/com/juankysoriano/materiallife/ui/sketch/menu/MenuOptionsView.java	/^    private void hide() {$/;"	m	class:MenuOptionsView	file:
+hideAnimationListener	material-life-android/src/main/java/com/juankysoriano/materiallife/ui/sketch/editor/ClearView.java	/^    private final AnimatorListenerAdapter hideAnimationListener = new AnimatorListenerAdapter() {$/;"	f	class:ClearView	file:
+imageLoader	material-life-android/src/main/java/com/juankysoriano/materiallife/activities/GameOfLifeActivity.java	/^    private ImageLoader imageLoader;$/;"	f	class:GameOfLifeActivity	file:
+imageLoaderIsPresent	material-life-android/src/main/java/com/juankysoriano/materiallife/navigation/MenuSwitcher.java	/^    private boolean imageLoaderIsPresent() {$/;"	m	class:MenuSwitcher	file:
+infoPreferences	material-life-android/src/main/java/com/juankysoriano/materiallife/activities/GameOfLifeActivity.java	/^    private final InfoPreferences infoPreferences;$/;"	f	class:GameOfLifeActivity	file:
+infoPreferences	material-life-android/src/main/java/com/juankysoriano/materiallife/info/InfoActivity.java	/^    private final InfoPreferences infoPreferences;$/;"	f	class:InfoActivity	file:
+init	material-life-android/src/main/java/com/juankysoriano/materiallife/info/InfoActivity.java	/^    public void init(Bundle savedInstanceState) {$/;"	m	class:InfoActivity
+initFonts	material-life-android/src/main/java/com/juankysoriano/materiallife/ui/sketch/PixelButton.java	/^    private void initFonts() {$/;"	m	class:PixelButton	file:
+initFonts	material-life-android/src/main/java/com/juankysoriano/materiallife/ui/sketch/PixelTextView.java	/^    private void initFonts() {$/;"	m	class:PixelTextView	file:
+inject	material-life-android/src/main/java/com/juankysoriano/materiallife/ContextRetriever.java	/^    public void inject(Application application) {$/;"	m	class:ContextRetriever
+inject	material-life-android/src/main/java/com/juankysoriano/materiallife/ContextRetriever.java	/^    public void inject(FragmentActivity activity) {$/;"	m	class:ContextRetriever
+inject	material-life-android/src/main/java/com/juankysoriano/materiallife/WorldRetriever.java	/^    public void inject(World world) {$/;"	m	class:WorldRetriever
+inject	material-life-android/src/main/java/com/juankysoriano/materiallife/analytics/AnalyticsTracker.java	/^    public void inject(Tracker tracker) {$/;"	m	class:AnalyticsTracker
+instantiateWorld	material-life-android/src/main/java/com/juankysoriano/materiallife/info/slides/LifeCreationSlide.java	/^    protected World instantiateWorld() {$/;"	m	class:LifeCreationSlide
+instantiateWorld	material-life-android/src/main/java/com/juankysoriano/materiallife/info/slides/PresentationSlide.java	/^    protected World instantiateWorld() {$/;"	m	class:PresentationSlide
+instantiateWorld	material-life-android/src/main/java/com/juankysoriano/materiallife/info/slides/SlideFragmentWithWorld.java	/^    protected abstract World instantiateWorld();$/;"	m	class:SlideFragmentWithWorld
+intentCaptor	material-life-android/src/test/java/com/juankysoriano/materiallife/navigation/PictureRetrieverTest.java	/^    private ArgumentCaptor<Intent> intentCaptor;$/;"	f	class:PictureRetrieverTest	file:
+isCellAlive	material-life-android/src/main/java/com/juankysoriano/materiallife/world/life/GameOfLife.java	/^    private boolean isCellAlive(int state) {$/;"	m	class:GameOfLife	file:
+isEditing	material-life-android/src/main/java/com/juankysoriano/materiallife/world/life/GameOfLife.java	/^    protected boolean isEditing() {$/;"	m	class:GameOfLife
+isMenuOpened	material-life-android/src/main/java/com/juankysoriano/materiallife/ui/sketch/menu/MenuView.java	/^    public boolean isMenuOpened() {$/;"	m	class:MenuView
+isOpened	material-life-android/src/main/java/com/juankysoriano/materiallife/menu/MainMenu.java	/^    boolean isOpened();$/;"	m	interface:MainMenu
+isOpened	material-life-android/src/main/java/com/juankysoriano/materiallife/menu/MainMenuFragment.java	/^    public boolean isOpened() {$/;"	m	class:MainMenuFragment
+item	material-life-android/src/test/java/com/juankysoriano/materiallife/ui/sketch/menu/MenuItemAdapterTest.java	/^    private final String item;$/;"	f	class:MenuItemAdapterTest	file:
+lastLoadedImagePath	material-life-android/src/main/java/com/juankysoriano/materiallife/navigation/PictureRetriever.java	/^    private String lastLoadedImagePath;$/;"	f	class:PictureRetriever	file:
+loadWorldFrom	material-life-android/src/main/java/com/juankysoriano/materiallife/editor/WorldEditor.java	/^    public void loadWorldFrom(Uri image) {$/;"	m	class:WorldEditor
+loadWorldFrom	material-life-android/src/main/java/com/juankysoriano/materiallife/imageloader/ImageLoader.java	/^    void loadWorldFrom(Uri imageUri);$/;"	m	interface:ImageLoader
+loadWorldFrom	material-life-android/src/main/java/com/juankysoriano/materiallife/imageloader/ImageLoaderFragment.java	/^    public void loadWorldFrom(Uri imageUri) {$/;"	m	class:ImageLoaderFragment
+loadWorldFrom	material-life-android/src/main/java/com/juankysoriano/materiallife/world/World.java	/^    public void loadWorldFrom(final Uri image) {$/;"	m	class:World
+loadWorldFrom	material-life-android/src/main/java/com/juankysoriano/materiallife/world/life/GameOfLife.java	/^    public void loadWorldFrom(RainbowImage image) {$/;"	m	class:GameOfLife
+mainMenu	material-life-android/src/main/java/com/juankysoriano/materiallife/activities/GameOfLifeActivity.java	/^    private MainMenu mainMenu;$/;"	f	class:GameOfLifeActivity	file:
+mainMenuIsPresent	material-life-android/src/main/java/com/juankysoriano/materiallife/navigation/MenuSwitcher.java	/^    private boolean mainMenuIsPresent() {$/;"	m	class:MenuSwitcher	file:
+makeAllCellsAlive	material-life-android/src/test/java/com/juankysoriano/materiallife/world/life/GameOfLifeTest.java	/^    private int[][] makeAllCellsAlive() {$/;"	m	class:GameOfLifeTest	file:
+makeAllCellsDead	material-life-android/src/test/java/com/juankysoriano/materiallife/world/life/GameOfLifeTest.java	/^    private int[][] makeAllCellsDead() {$/;"	m	class:GameOfLifeTest	file:
+markInfoAsSeen	material-life-android/src/main/java/com/juankysoriano/materiallife/info/preferences/InfoPreferences.java	/^    public void markInfoAsSeen() {$/;"	m	class:InfoPreferences
+menuButton	material-life-android/src/main/java/com/juankysoriano/materiallife/menu/MainMenuFragment.java	/^    private MenuButton menuButton;$/;"	f	class:MainMenuFragment	file:
+menuButton	material-life-android/src/main/java/com/juankysoriano/materiallife/ui/sketch/menu/MenuView.java	/^    private MenuButton menuButton;$/;"	f	class:MenuView	file:
+menuItemAdapter	material-life-android/src/test/java/com/juankysoriano/materiallife/ui/sketch/menu/MenuItemAdapterTest.java	/^    private MenuItemAdapter menuItemAdapter;$/;"	f	class:MenuItemAdapterTest	file:
+menuOpened	material-life-android/src/main/java/com/juankysoriano/materiallife/ui/sketch/menu/MenuView.java	/^    private boolean menuOpened;$/;"	f	class:MenuView	file:
+menuOptionsView	material-life-android/src/main/java/com/juankysoriano/materiallife/menu/MainMenuFragment.java	/^    private MenuOptionsView menuOptionsView;$/;"	f	class:MainMenuFragment	file:
+menuOptionsView	material-life-android/src/main/java/com/juankysoriano/materiallife/ui/sketch/menu/MenuView.java	/^    private MenuOptionsView menuOptionsView;$/;"	f	class:MenuView	file:
+menuSwitcher	material-life-android/src/main/java/com/juankysoriano/materiallife/activities/GameOfLifeActivity.java	/^    private MenuSwitcher menuSwitcher;$/;"	f	class:GameOfLifeActivity	file:
+menuSwitcher	material-life-android/src/test/java/com/juankysoriano/materiallife/navigation/MenuSwitcherTest.java	/^    private MenuSwitcher menuSwitcher;$/;"	f	class:MenuSwitcherTest	file:
+menuView	material-life-android/src/main/java/com/juankysoriano/materiallife/menu/MainMenuFragment.java	/^    private MenuView menuView;$/;"	f	class:MainMenuFragment	file:
+mockActivity	material-life-android/src/test/java/com/juankysoriano/materiallife/navigation/PictureRetrieverTest.java	/^    private FragmentActivity mockActivity;$/;"	f	class:PictureRetrieverTest	file:
+motionEvent	material-life-android/src/test/java/com/juankysoriano/materiallife/world/life/GameOfLifeTest.java	/^    private MotionEvent motionEvent;$/;"	f	class:GameOfLifeTest	file:
+newInstance	material-life-android/src/main/java/com/juankysoriano/materiallife/editor/WorldEditor.java	/^    public static WorldEditor newInstance() {$/;"	m	class:WorldEditor
+newInstance	material-life-android/src/main/java/com/juankysoriano/materiallife/info/preferences/InfoPreferences.java	/^    public static InfoPreferences newInstance() {$/;"	m	class:InfoPreferences
+newInstance	material-life-android/src/main/java/com/juankysoriano/materiallife/navigation/MenuSwitcher.java	/^    public static MenuSwitcher newInstance() {$/;"	m	class:MenuSwitcher
+newInstance	material-life-android/src/main/java/com/juankysoriano/materiallife/ui/sketch/menu/MenuItemAdapter.java	/^    public static MenuItemAdapter newInstance() {$/;"	m	class:MenuItemAdapter
+newInstance	material-life-android/src/main/java/com/juankysoriano/materiallife/world/EmptyWorld.java	/^    public static EmptyWorld newInstance() {$/;"	m	class:EmptyWorld
+newInstance	material-life-android/src/main/java/com/juankysoriano/materiallife/world/World.java	/^    public static World newInstance() {$/;"	m	class:World
+newInstance	material-life-android/src/main/java/com/juankysoriano/materiallife/world/life/GameOfLife.java	/^    public static GameOfLife newInstance(RainbowDrawer rainbowDrawer,$/;"	m	class:GameOfLife
+newInstance	material-life-android/src/main/java/com/juankysoriano/materiallife/world/life/GameOfLifeCreator.java	/^    public static GameOfLifeCreator newInstance() {$/;"	m	class:GameOfLifeCreator
+newInstance	material-life-android/src/main/java/com/juankysoriano/materiallife/world/life/GameOfLifeDrawer.java	/^    public static GameOfLifeDrawer newInstance(RainbowDrawer rainbowDrawer) {$/;"	m	class:GameOfLifeDrawer
+onActionPerformed	material-life-android/src/main/java/com/juankysoriano/materiallife/ui/sketch/editor/EditorMenuView.java	/^        void onActionPerformed(EditorAction action);$/;"	m	interface:EditorMenuView.OnActionSelectedListener
+onActionSelectedListener	material-life-android/src/main/java/com/juankysoriano/materiallife/activities/GameOfLifeActivity.java	/^    private final EditorMenuView.OnActionSelectedListener onActionSelectedListener = new EditorMenuView.OnActionSelectedListener() {$/;"	f	class:GameOfLifeActivity	file:
+onActionSelectedListener	material-life-android/src/main/java/com/juankysoriano/materiallife/editor/WorldEditorMenuFragment.java	/^    private EditorMenuView.OnActionSelectedListener onActionSelectedListener;$/;"	f	class:WorldEditorMenuFragment	file:
+onActivityResult	material-life-android/src/main/java/com/juankysoriano/materiallife/activities/GameOfLifeActivity.java	/^    protected void onActivityResult(int requestCode, int resultCode, Intent data) {$/;"	m	class:GameOfLifeActivity
+onAttachedToWindow	material-life-android/src/main/java/com/juankysoriano/materiallife/ui/sketch/menu/MenuOptionsView.java	/^    protected void onAttachedToWindow() {$/;"	m	class:MenuOptionsView
+onBackPressed	material-life-android/src/main/java/com/juankysoriano/materiallife/activities/GameOfLifeActivity.java	/^    public void onBackPressed() {$/;"	m	class:GameOfLifeActivity
+onCameraClickListener	material-life-android/src/main/java/com/juankysoriano/materiallife/imageloader/ImageLoaderFragment.java	/^    private final PixelButton.OnClickListener onCameraClickListener = new View.OnClickListener() {$/;"	f	class:ImageLoaderFragment	file:
+onCancelClickListener	material-life-android/src/main/java/com/juankysoriano/materiallife/editor/WorldEditorMenuFragment.java	/^    private final PixelButton.OnClickListener onCancelClickListener = new View.OnClickListener() {$/;"	f	class:WorldEditorMenuFragment	file:
+onCellDetected	material-life-android/src/main/java/com/juankysoriano/materiallife/world/life/GameOfLife.java	/^    public void onCellDetected(int x, int y, int state) {$/;"	m	class:GameOfLife
+onClearClickListener	material-life-android/src/main/java/com/juankysoriano/materiallife/editor/WorldEditorMenuFragment.java	/^    private final PixelButton.OnClickListener onClearClickListener = new View.OnClickListener() {$/;"	f	class:WorldEditorMenuFragment	file:
+onClearDone	material-life-android/src/main/java/com/juankysoriano/materiallife/ui/sketch/editor/EditorMenuView.java	/^        void onClearDone();$/;"	m	interface:EditorMenuView.ClearAnimationListener
+onCreate	material-life-android/src/main/java/com/juankysoriano/materiallife/MaterialLifeApplication.java	/^    public void onCreate() {$/;"	m	class:MaterialLifeApplication
+onCreate	material-life-android/src/main/java/com/juankysoriano/materiallife/activities/GameOfLifeActivity.java	/^    protected void onCreate(Bundle savedInstanceState) {$/;"	m	class:GameOfLifeActivity
+onCreate	material-life-android/src/main/java/com/juankysoriano/materiallife/activities/MaterialLifeActivity.java	/^    protected void onCreate(Bundle savedInstanceState) {$/;"	m	class:MaterialLifeActivity
+onCreateView	material-life-android/src/main/java/com/juankysoriano/materiallife/editor/WorldEditorMenuFragment.java	/^    public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {$/;"	m	class:WorldEditorMenuFragment
+onCreateView	material-life-android/src/main/java/com/juankysoriano/materiallife/imageloader/ImageLoaderFragment.java	/^    public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {$/;"	m	class:ImageLoaderFragment
+onCreateView	material-life-android/src/main/java/com/juankysoriano/materiallife/info/slides/SlideFragmentWithWorld.java	/^    public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {$/;"	m	class:SlideFragmentWithWorld
+onCreateView	material-life-android/src/main/java/com/juankysoriano/materiallife/info/slides/SlideFragmentWithoutWorld.java	/^    public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {$/;"	m	class:SlideFragmentWithoutWorld
+onCreateView	material-life-android/src/main/java/com/juankysoriano/materiallife/menu/MainMenuFragment.java	/^    public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {$/;"	m	class:MainMenuFragment
+onDestroy	material-life-android/src/main/java/com/juankysoriano/materiallife/activities/GameOfLifeActivity.java	/^    protected void onDestroy() {$/;"	m	class:GameOfLifeActivity
+onDestroy	material-life-android/src/main/java/com/juankysoriano/materiallife/activities/MaterialLifeActivity.java	/^    protected void onDestroy() {$/;"	m	class:MaterialLifeActivity
+onDestroy	material-life-android/src/main/java/com/juankysoriano/materiallife/info/slides/SlideFragmentWithWorld.java	/^    public void onDestroy() {$/;"	m	class:SlideFragmentWithWorld
+onDestroyView	material-life-android/src/main/java/com/juankysoriano/materiallife/editor/WorldEditorMenuFragment.java	/^    public void onDestroyView() {$/;"	m	class:WorldEditorMenuFragment
+onDestroyView	material-life-android/src/main/java/com/juankysoriano/materiallife/imageloader/ImageLoaderFragment.java	/^    public void onDestroyView() {$/;"	m	class:ImageLoaderFragment
+onDestroyView	material-life-android/src/main/java/com/juankysoriano/materiallife/info/slides/SlideFragmentWithWorld.java	/^    public void onDestroyView() {$/;"	m	class:SlideFragmentWithWorld
+onDestroyView	material-life-android/src/main/java/com/juankysoriano/materiallife/menu/MainMenuFragment.java	/^    public void onDestroyView() {$/;"	m	class:MainMenuFragment
+onDetachedFromWindow	material-life-android/src/main/java/com/juankysoriano/materiallife/ui/sketch/menu/MenuOptionsView.java	/^    protected void onDetachedFromWindow() {$/;"	m	class:MenuOptionsView
+onDoneClickListener	material-life-android/src/main/java/com/juankysoriano/materiallife/editor/WorldEditorMenuFragment.java	/^    private final PixelButton.OnClickListener onDoneClickListener = new View.OnClickListener() {$/;"	f	class:WorldEditorMenuFragment	file:
+onDonePressed	material-life-android/src/main/java/com/juankysoriano/materiallife/info/InfoActivity.java	/^    public void onDonePressed() {$/;"	m	class:InfoActivity
+onDrawingStep	material-life-android/src/main/java/com/juankysoriano/materiallife/world/World.java	/^    public void onDrawingStep() {$/;"	m	class:World
+onFingerDragged	material-life-android/src/main/java/com/juankysoriano/materiallife/world/life/GameOfLife.java	/^    public void onFingerDragged(MotionEvent motionEvent, RainbowDrawer rainbowDrawer) {$/;"	m	class:GameOfLife
+onFinishInflate	material-life-android/src/main/java/com/juankysoriano/materiallife/ui/sketch/editor/ClearView.java	/^    protected void onFinishInflate() {$/;"	m	class:ClearView
+onFinishInflate	material-life-android/src/main/java/com/juankysoriano/materiallife/ui/sketch/editor/EditorMenuView.java	/^    protected void onFinishInflate() {$/;"	m	class:EditorMenuView
+onFinishInflate	material-life-android/src/main/java/com/juankysoriano/materiallife/ui/sketch/menu/MenuOptionsView.java	/^    protected void onFinishInflate() {$/;"	m	class:MenuOptionsView
+onFinishInflate	material-life-android/src/main/java/com/juankysoriano/materiallife/ui/sketch/menu/MenuView.java	/^    protected void onFinishInflate() {$/;"	m	class:MenuView
+onGalleryClickListener	material-life-android/src/main/java/com/juankysoriano/materiallife/imageloader/ImageLoaderFragment.java	/^    private final PixelButton.OnClickListener onGalleryClickListener = new View.OnClickListener() {$/;"	f	class:ImageLoaderFragment	file:
+onItemSelected	material-life-android/src/main/java/com/juankysoriano/materiallife/ui/sketch/menu/MenuOptionsView.java	/^        void onItemSelected(MenuItem item);$/;"	m	interface:MenuOptionsView.OnItemSelectedListener
+onItemSelectedListener	material-life-android/src/main/java/com/juankysoriano/materiallife/menu/MainMenuFragment.java	/^    private final MenuOptionsView.OnItemSelectedListener onItemSelectedListener = new MenuOptionsView.OnItemSelectedListener() {$/;"	f	class:MainMenuFragment	file:
+onItemSelectedListener	material-life-android/src/main/java/com/juankysoriano/materiallife/ui/sketch/menu/MenuOptionsView.java	/^    private final AdapterView.OnItemClickListener onItemSelectedListener = new AdapterView.OnItemClickListener() {$/;"	f	class:MenuOptionsView	file:
+onLoadFail	material-life-android/src/main/java/com/juankysoriano/materiallife/world/World.java	/^    public void onLoadFail() {$/;"	m	class:World
+onLoadImage	material-life-android/src/main/java/com/juankysoriano/materiallife/imageloader/ImageLoader.java	/^        void onLoadImage(ImageLoaderAction action);$/;"	m	interface:ImageLoader.OnLoadImageSelectedListener
+onLoadImageSelectedListener	material-life-android/src/main/java/com/juankysoriano/materiallife/activities/GameOfLifeActivity.java	/^    private final ImageLoader.OnLoadImageSelectedListener onLoadImageSelectedListener = new ImageLoader.OnLoadImageSelectedListener() {$/;"	f	class:GameOfLifeActivity	file:
+onLoadImageSelectedListener	material-life-android/src/main/java/com/juankysoriano/materiallife/imageloader/ImageLoaderFragment.java	/^    private OnLoadImageSelectedListener onLoadImageSelectedListener;$/;"	f	class:ImageLoaderFragment	file:
+onLoadSucceed	material-life-android/src/main/java/com/juankysoriano/materiallife/world/World.java	/^    public void onLoadSucceed(RainbowImage image) {$/;"	m	class:World
+onMenuButtonClickListener	material-life-android/src/main/java/com/juankysoriano/materiallife/menu/MainMenuFragment.java	/^    private final View.OnClickListener onMenuButtonClickListener = new View.OnClickListener() {$/;"	f	class:MainMenuFragment	file:
+onMenuItemSelectedListener	material-life-android/src/main/java/com/juankysoriano/materiallife/activities/GameOfLifeActivity.java	/^    private final MenuOptionsView.OnItemSelectedListener onMenuItemSelectedListener = new MenuOptionsView.OnItemSelectedListener() {$/;"	f	class:GameOfLifeActivity	file:
+onMenuOnItemSelectedListener	material-life-android/src/main/java/com/juankysoriano/materiallife/ui/sketch/menu/MenuOptionsView.java	/^    private OnItemSelectedListener onMenuOnItemSelectedListener;$/;"	f	class:MenuOptionsView	file:
+onMotionEvent	material-life-android/src/main/java/com/juankysoriano/materiallife/world/life/GameOfLife.java	/^    public void onMotionEvent(MotionEvent motionEvent, RainbowDrawer rainbowDrawer) {$/;"	m	class:GameOfLife
+onPause	material-life-android/src/main/java/com/juankysoriano/materiallife/activities/GameOfLifeActivity.java	/^    protected void onPause() {$/;"	m	class:GameOfLifeActivity
+onPause	material-life-android/src/main/java/com/juankysoriano/materiallife/info/slides/SlideFragmentWithWorld.java	/^    public void onPause() {$/;"	m	class:SlideFragmentWithWorld
+onPointDetected	material-life-android/src/main/java/com/juankysoriano/materiallife/world/life/GameOfLife.java	/^    public void onPointDetected(float px, float py, float x, float y, RainbowDrawer rainbowDrawer) {$/;"	m	class:GameOfLife
+onResume	material-life-android/src/main/java/com/juankysoriano/materiallife/activities/GameOfLifeActivity.java	/^    protected void onResume() {$/;"	m	class:GameOfLifeActivity
+onResume	material-life-android/src/main/java/com/juankysoriano/materiallife/info/slides/SlideFragmentWithWorld.java	/^    public void onResume() {$/;"	m	class:SlideFragmentWithWorld
+onSketchReleased	material-life-android/src/main/java/com/juankysoriano/materiallife/world/life/GameOfLife.java	/^    public void onSketchReleased(MotionEvent motionEvent, RainbowDrawer rainbowDrawer) {$/;"	m	class:GameOfLife
+onSketchSetup	material-life-android/src/main/java/com/juankysoriano/materiallife/world/EmptyWorld.java	/^    public void onSketchSetup() {$/;"	m	class:EmptyWorld
+onSketchSetup	material-life-android/src/main/java/com/juankysoriano/materiallife/world/World.java	/^    public void onSketchSetup() {$/;"	m	class:World
+onSketchSetup	material-life-android/src/test/java/com/juankysoriano/materiallife/world/WorldTest.java	/^        public void onSketchSetup() {$/;"	m	class:WorldTest.WorldStub
+onSketchTouched	material-life-android/src/main/java/com/juankysoriano/materiallife/world/life/GameOfLife.java	/^    public void onSketchTouched(MotionEvent motionEvent, RainbowDrawer rainbowDrawer) {$/;"	m	class:GameOfLife
+onStart	material-life-android/src/main/java/com/juankysoriano/materiallife/activities/GameOfLifeActivity.java	/^    protected void onStart() {$/;"	m	class:GameOfLifeActivity
+onStart	material-life-android/src/main/java/com/juankysoriano/materiallife/activities/MaterialLifeActivity.java	/^    protected void onStart() {$/;"	m	class:MaterialLifeActivity
+onStart	material-life-android/src/main/java/com/juankysoriano/materiallife/info/slides/SlideFragmentWithWorld.java	/^    public void onStart() {$/;"	m	class:SlideFragmentWithWorld
+onStop	material-life-android/src/main/java/com/juankysoriano/materiallife/activities/GameOfLifeActivity.java	/^    protected void onStop() {$/;"	m	class:GameOfLifeActivity
+onStop	material-life-android/src/main/java/com/juankysoriano/materiallife/activities/MaterialLifeActivity.java	/^    protected void onStop() {$/;"	m	class:MaterialLifeActivity
+onStop	material-life-android/src/main/java/com/juankysoriano/materiallife/info/slides/SlideFragmentWithWorld.java	/^    public void onStop() {$/;"	m	class:SlideFragmentWithWorld
+onViewCreated	material-life-android/src/main/java/com/juankysoriano/materiallife/editor/WorldEditorMenuFragment.java	/^    public void onViewCreated(View view, @Nullable Bundle savedInstanceState) {$/;"	m	class:WorldEditorMenuFragment
+onViewCreated	material-life-android/src/main/java/com/juankysoriano/materiallife/imageloader/ImageLoaderFragment.java	/^    public void onViewCreated(View view, @Nullable Bundle savedInstanceState) {$/;"	m	class:ImageLoaderFragment
+onViewCreated	material-life-android/src/main/java/com/juankysoriano/materiallife/info/slides/SlideFragmentWithWorld.java	/^    public void onViewCreated(View view, Bundle savedInstanceState) {$/;"	m	class:SlideFragmentWithWorld
+onViewCreated	material-life-android/src/main/java/com/juankysoriano/materiallife/menu/MainMenuFragment.java	/^    public void onViewCreated(View view, @Nullable Bundle savedInstanceState) {$/;"	m	class:MainMenuFragment
+openCameraForResult	material-life-android/src/main/java/com/juankysoriano/materiallife/navigation/PictureRetriever.java	/^    public void openCameraForResult() {$/;"	m	class:PictureRetriever
+openGalleryForResult	material-life-android/src/main/java/com/juankysoriano/materiallife/navigation/PictureRetriever.java	/^    public void openGalleryForResult() {$/;"	m	class:PictureRetriever
+openMenu	material-life-android/src/main/java/com/juankysoriano/materiallife/menu/MainMenu.java	/^    void openMenu();$/;"	m	interface:MainMenu
+openMenu	material-life-android/src/main/java/com/juankysoriano/materiallife/menu/MainMenuFragment.java	/^    public void openMenu() {$/;"	m	class:MainMenuFragment
+openMenu	material-life-android/src/main/java/com/juankysoriano/materiallife/ui/sketch/menu/MenuView.java	/^    public void openMenu() {$/;"	m	class:MenuView
+paintBackground	material-life-android/src/main/java/com/juankysoriano/materiallife/world/life/GameOfLifeDrawer.java	/^    public void paintBackground() {$/;"	m	class:GameOfLifeDrawer
+paintCellAt	material-life-android/src/main/java/com/juankysoriano/materiallife/world/life/GameOfLifeDrawer.java	/^    public void paintCellAt(int x, int y) {$/;"	m	class:GameOfLifeDrawer
+paintCellWithStateAt	material-life-android/src/main/java/com/juankysoriano/materiallife/world/life/GameOfLife.java	/^    private void paintCellWithStateAt(int x, int y, int state) {$/;"	m	class:GameOfLife	file:
+paintCellsAndEvolve	material-life-android/src/main/java/com/juankysoriano/materiallife/world/life/GameOfLife.java	/^    private void paintCellsAndEvolve() {$/;"	m	class:GameOfLife	file:
+paintCellsWithoutEvolution	material-life-android/src/main/java/com/juankysoriano/materiallife/world/life/GameOfLife.java	/^    private void paintCellsWithoutEvolution() {$/;"	m	class:GameOfLife	file:
+pictureRetriever	material-life-android/src/main/java/com/juankysoriano/materiallife/activities/GameOfLifeActivity.java	/^    private PictureRetriever pictureRetriever;$/;"	f	class:GameOfLifeActivity	file:
+pictureRetriever	material-life-android/src/test/java/com/juankysoriano/materiallife/navigation/PictureRetrieverTest.java	/^    private PictureRetriever pictureRetriever;$/;"	f	class:PictureRetrieverTest	file:
+position	material-life-android/src/test/java/com/juankysoriano/materiallife/ui/sketch/menu/MenuItemAdapterTest.java	/^    private final int position;$/;"	f	class:MenuItemAdapterTest	file:
+rainbowDrawer	material-life-android/src/main/java/com/juankysoriano/materiallife/world/life/GameOfLifeDrawer.java	/^    private final RainbowDrawer rainbowDrawer;$/;"	f	class:GameOfLifeDrawer	file:
+rainbowDrawer	material-life-android/src/test/java/com/juankysoriano/materiallife/world/WorldTest.java	/^    private RainbowDrawer rainbowDrawer;$/;"	f	class:WorldTest	file:
+rainbowDrawer	material-life-android/src/test/java/com/juankysoriano/materiallife/world/life/GameOfLifeDrawerTest.java	/^    private RainbowDrawer rainbowDrawer;$/;"	f	class:GameOfLifeDrawerTest	file:
+rainbowDrawer	material-life-android/src/test/java/com/juankysoriano/materiallife/world/life/GameOfLifeTest.java	/^    private RainbowDrawer rainbowDrawer;$/;"	f	class:GameOfLifeTest	file:
+rainbowGraphics	material-life-android/src/test/java/com/juankysoriano/materiallife/world/life/GameOfLifeDrawerTest.java	/^    private RainbowGraphics rainbowGraphics;$/;"	f	class:GameOfLifeDrawerTest	file:
+rainbowImage	material-life-android/src/test/java/com/juankysoriano/materiallife/world/life/GameOfLifeDrawerTest.java	/^    private RainbowImage rainbowImage;$/;"	f	class:GameOfLifeDrawerTest	file:
+rainbowImage	material-life-android/src/test/java/com/juankysoriano/materiallife/world/life/GameOfLifeTest.java	/^    private RainbowImage rainbowImage;$/;"	f	class:GameOfLifeTest	file:
+rainbowInputController	material-life-android/src/main/java/com/juankysoriano/materiallife/world/life/GameOfLife.java	/^    private final RainbowInputController rainbowInputController;$/;"	f	class:GameOfLife	file:
+rainbowInputController	material-life-android/src/test/java/com/juankysoriano/materiallife/world/WorldTest.java	/^    private RainbowInputController rainbowInputController;$/;"	f	class:WorldTest	file:
+rainbowInputController	material-life-android/src/test/java/com/juankysoriano/materiallife/world/life/GameOfLifeTest.java	/^    private RainbowInputController rainbowInputController;$/;"	f	class:GameOfLifeTest	file:
+removeEditorMenu	material-life-android/src/main/java/com/juankysoriano/materiallife/activities/GameOfLifeActivity.java	/^    private void removeEditorMenu() {$/;"	m	class:GameOfLifeActivity	file:
+removeImageLoader	material-life-android/src/main/java/com/juankysoriano/materiallife/activities/GameOfLifeActivity.java	/^    private void removeImageLoader() {$/;"	m	class:GameOfLifeActivity	file:
+removeMainMenu	material-life-android/src/main/java/com/juankysoriano/materiallife/activities/GameOfLifeActivity.java	/^    private void removeMainMenu() {$/;"	m	class:GameOfLifeActivity	file:
+restoreLastWorld	material-life-android/src/main/java/com/juankysoriano/materiallife/world/World.java	/^    public void restoreLastWorld() {$/;"	m	class:World
+restoreLastWorld	material-life-android/src/main/java/com/juankysoriano/materiallife/world/life/GameOfLife.java	/^    public void restoreLastWorld() {$/;"	m	class:GameOfLife
+revealAnimationListener	material-life-android/src/main/java/com/juankysoriano/materiallife/ui/sketch/menu/MenuOptionsView.java	/^    private final AnimatorListenerAdapter revealAnimationListener = new AnimatorListenerAdapter() {$/;"	f	class:MenuOptionsView	file:
+revealFrom	material-life-android/src/main/java/com/juankysoriano/materiallife/ui/sketch/menu/MenuOptionsView.java	/^    public void revealFrom(Point point) {$/;"	m	class:MenuOptionsView
+revealFrom	material-life-android/src/main/java/com/juankysoriano/materiallife/ui/sketch/reveal/ViewRevealer.java	/^    public void revealFrom(Point point, View view, AnimatorListenerAdapter animatorListenerAdapter) {$/;"	m	class:ViewRevealer
+setOnMenuItemSelectedListener	material-life-android/src/main/java/com/juankysoriano/materiallife/ui/sketch/menu/MenuOptionsView.java	/^    public void setOnMenuItemSelectedListener(OnItemSelectedListener onMenuItemSelectedListener) {$/;"	m	class:MenuOptionsView
+setUp	material-life-android/src/test/java/com/juankysoriano/materiallife/ContextRetrieverTest.java	/^    public void setUp() {$/;"	m	class:ContextRetrieverTest
+setUp	material-life-android/src/test/java/com/juankysoriano/materiallife/WorldRetrieverTest.java	/^    public void setUp() {$/;"	m	class:WorldRetrieverTest
+setUp	material-life-android/src/test/java/com/juankysoriano/materiallife/editor/WorldEditorTest.java	/^    public void setUp() {$/;"	m	class:WorldEditorTest
+setUp	material-life-android/src/test/java/com/juankysoriano/materiallife/navigation/MenuSwitcherTest.java	/^    public void setUp() {$/;"	m	class:MenuSwitcherTest
+setUp	material-life-android/src/test/java/com/juankysoriano/materiallife/navigation/PictureRetrieverTest.java	/^    public void setUp() {$/;"	m	class:PictureRetrieverTest
+setUp	material-life-android/src/test/java/com/juankysoriano/materiallife/ui/sketch/menu/MenuItemAdapterTest.java	/^    public void setUp() {$/;"	m	class:MenuItemAdapterTest
+setUp	material-life-android/src/test/java/com/juankysoriano/materiallife/world/WorldTest.java	/^    public void setUp() {$/;"	m	class:WorldTest
+setUp	material-life-android/src/test/java/com/juankysoriano/materiallife/world/life/GameOfLifeDrawerTest.java	/^    public void setUp() {$/;"	m	class:GameOfLifeDrawerTest
+setUp	material-life-android/src/test/java/com/juankysoriano/materiallife/world/life/GameOfLifeTest.java	/^    public void setUp() {$/;"	m	class:GameOfLifeTest
+sharedPreferences	material-life-android/src/main/java/com/juankysoriano/materiallife/info/preferences/InfoPreferences.java	/^    private final SharedPreferences sharedPreferences;$/;"	f	class:InfoPreferences	file:
+shouldShowInfo	material-life-android/src/main/java/com/juankysoriano/materiallife/info/preferences/InfoPreferences.java	/^    public boolean shouldShowInfo() {$/;"	m	class:InfoPreferences
+show	material-life-android/src/main/java/com/juankysoriano/materiallife/ui/sketch/editor/ClearView.java	/^    private void show() {$/;"	m	class:ClearView	file:
+show	material-life-android/src/main/java/com/juankysoriano/materiallife/ui/sketch/menu/MenuOptionsView.java	/^    private void show() {$/;"	m	class:MenuOptionsView	file:
+startEdition	material-life-android/src/main/java/com/juankysoriano/materiallife/editor/WorldEditor.java	/^    public void startEdition() {$/;"	m	class:WorldEditor
+startEdition	material-life-android/src/main/java/com/juankysoriano/materiallife/world/World.java	/^    public void startEdition() {$/;"	m	class:World
+startEdition	material-life-android/src/main/java/com/juankysoriano/materiallife/world/life/GameOfLife.java	/^    public void startEdition() {$/;"	m	class:GameOfLife
+testThatCancelEndsEdition	material-life-android/src/test/java/com/juankysoriano/materiallife/editor/WorldEditorTest.java	/^    public void testThatCancelEndsEdition() {$/;"	m	class:WorldEditorTest
+testThatCancelRestoresLastWorld	material-life-android/src/test/java/com/juankysoriano/materiallife/editor/WorldEditorTest.java	/^    public void testThatCancelRestoresLastWorld() {$/;"	m	class:WorldEditorTest
+testThatClearBackgroundDrawsBackgroundWithoutTransparency	material-life-android/src/test/java/com/juankysoriano/materiallife/world/life/GameOfLifeDrawerTest.java	/^    public void testThatClearBackgroundDrawsBackgroundWithoutTransparency() {$/;"	m	class:GameOfLifeDrawerTest
+testThatClearDelegates	material-life-android/src/test/java/com/juankysoriano/materiallife/editor/WorldEditorTest.java	/^    public void testThatClearDelegates() {$/;"	m	class:WorldEditorTest
+testThatEndEditionDelegates	material-life-android/src/test/java/com/juankysoriano/materiallife/editor/WorldEditorTest.java	/^    public void testThatEndEditionDelegates() {$/;"	m	class:WorldEditorTest
+testThatGetCountIsExactlyTheNumberOfMenuItems	material-life-android/src/test/java/com/juankysoriano/materiallife/ui/sketch/menu/MenuItemAdapterTest.java	/^    public void testThatGetCountIsExactlyTheNumberOfMenuItems() {$/;"	m	class:MenuItemAdapterTest
+testThatGetItemIdReturnsItemPosition	material-life-android/src/test/java/com/juankysoriano/materiallife/ui/sketch/menu/MenuItemAdapterTest.java	/^    public void testThatGetItemIdReturnsItemPosition    () {$/;"	m	class:MenuItemAdapterTest
+testThatGetItemReturnsFromMenuItem	material-life-android/src/test/java/com/juankysoriano/materiallife/ui/sketch/menu/MenuItemAdapterTest.java	/^    public void testThatGetItemReturnsFromMenuItem() {$/;"	m	class:MenuItemAdapterTest
+testThatLoadWorldFromDelegates	material-life-android/src/test/java/com/juankysoriano/materiallife/editor/WorldEditorTest.java	/^    public void testThatLoadWorldFromDelegates() {$/;"	m	class:WorldEditorTest
+testThatOnFingerDraggedExploresLineForCoordinatesInRainbowInputController	material-life-android/src/test/java/com/juankysoriano/materiallife/world/life/GameOfLifeTest.java	/^    public void testThatOnFingerDraggedExploresLineForCoordinatesInRainbowInputController() {$/;"	m	class:GameOfLifeTest
+testThatOnLoadFailThenLastWorldIsRestored	material-life-android/src/test/java/com/juankysoriano/materiallife/world/WorldTest.java	/^    public void testThatOnLoadFailThenLastWorldIsRestored() {$/;"	m	class:WorldTest
+testThatOnLoadSuccessImageIsLoadedFromUri	material-life-android/src/test/java/com/juankysoriano/materiallife/world/WorldTest.java	/^    public void testThatOnLoadSuccessImageIsLoadedFromUri() {$/;"	m	class:WorldTest
+testThatPaintBackgroundDrawsBackgroundWithTransparency	material-life-android/src/test/java/com/juankysoriano/materiallife/world/life/GameOfLifeDrawerTest.java	/^    public void testThatPaintBackgroundDrawsBackgroundWithTransparency() {$/;"	m	class:GameOfLifeDrawerTest
+testThatPaintCellDrawsRectOnCellCoordinates	material-life-android/src/test/java/com/juankysoriano/materiallife/world/life/GameOfLifeDrawerTest.java	/^    public void testThatPaintCellDrawsRectOnCellCoordinates() {$/;"	m	class:GameOfLifeDrawerTest
+testThatStartEditionDelegates	material-life-android/src/test/java/com/juankysoriano/materiallife/editor/WorldEditorTest.java	/^    public void testThatStartEditionDelegates() {$/;"	m	class:WorldEditorTest
+testThatWhenAnActivityIsInjectedThenGetActivityReturnsInjectedActivity	material-life-android/src/test/java/com/juankysoriano/materiallife/ContextRetrieverTest.java	/^    public void testThatWhenAnActivityIsInjectedThenGetActivityReturnsInjectedActivity() {$/;"	m	class:ContextRetrieverTest
+testThatWhenAnApplicationIsInjectedThenGetApplicationContextReturnsApplicationContext	material-life-android/src/test/java/com/juankysoriano/materiallife/ContextRetrieverTest.java	/^    public void testThatWhenAnApplicationIsInjectedThenGetApplicationContextReturnsApplicationContext() {$/;"	m	class:ContextRetrieverTest
+testThatWhenAnApplicationIsInjectedThenGetResourcesReturnsApplicationResources	material-life-android/src/test/java/com/juankysoriano/materiallife/ContextRetrieverTest.java	/^    public void testThatWhenAnApplicationIsInjectedThenGetResourcesReturnsApplicationResources() {$/;"	m	class:ContextRetrieverTest
+testThatWhenClearIsCalledThenItDelegatesToGameOfLife	material-life-android/src/test/java/com/juankysoriano/materiallife/world/WorldTest.java	/^    public void testThatWhenClearIsCalledThenItDelegatesToGameOfLife() {$/;"	m	class:WorldTest
+testThatWhenClearIsInvokedThenBackgroundIsCleared	material-life-android/src/test/java/com/juankysoriano/materiallife/world/life/GameOfLifeTest.java	/^    public void testThatWhenClearIsInvokedThenBackgroundIsCleared() {$/;"	m	class:GameOfLifeTest
+testThatWhenClearIsInvokedThenDelegatesInAutomata	material-life-android/src/test/java/com/juankysoriano/materiallife/world/life/GameOfLifeTest.java	/^    public void testThatWhenClearIsInvokedThenDelegatesInAutomata() {$/;"	m	class:GameOfLifeTest
+testThatWhenDoStepIsCalledAndIsNotEditingThenEvolveIsCalledForGameOfLife	material-life-android/src/test/java/com/juankysoriano/materiallife/world/life/GameOfLifeTest.java	/^    public void testThatWhenDoStepIsCalledAndIsNotEditingThenEvolveIsCalledForGameOfLife() {$/;"	m	class:GameOfLifeTest
+testThatWhenDoStepIsCalledIfIsEditingAndAllCellsAliveThenAllCellsArePainted	material-life-android/src/test/java/com/juankysoriano/materiallife/world/life/GameOfLifeTest.java	/^    public void testThatWhenDoStepIsCalledIfIsEditingAndAllCellsAliveThenAllCellsArePainted() {$/;"	m	class:GameOfLifeTest
+testThatWhenDoStepIsCalledIfIsEditingAndAllCellsDeadThenNoCellsArePainted	material-life-android/src/test/java/com/juankysoriano/materiallife/world/life/GameOfLifeTest.java	/^    public void testThatWhenDoStepIsCalledIfIsEditingAndAllCellsDeadThenNoCellsArePainted() {$/;"	m	class:GameOfLifeTest
+testThatWhenDoStepIsCalledThenBackgroundIsPainted	material-life-android/src/test/java/com/juankysoriano/materiallife/world/life/GameOfLifeTest.java	/^    public void testThatWhenDoStepIsCalledThenBackgroundIsPainted() {$/;"	m	class:GameOfLifeTest
+testThatWhenEditingIfEndEditionIsCalledThenIsEditingReturnsFalse	material-life-android/src/test/java/com/juankysoriano/materiallife/world/life/GameOfLifeTest.java	/^    public void testThatWhenEditingIfEndEditionIsCalledThenIsEditingReturnsFalse() {$/;"	m	class:GameOfLifeTest
+testThatWhenEditorMenuIsNotPresentThenAddEditorMenuBeginsTransaction	material-life-android/src/test/java/com/juankysoriano/materiallife/navigation/MenuSwitcherTest.java	/^    public void testThatWhenEditorMenuIsNotPresentThenAddEditorMenuBeginsTransaction() {$/;"	m	class:MenuSwitcherTest
+testThatWhenEditorMenuIsNotPresentThenAddEditorMenuPerformsReplaceAndCommit	material-life-android/src/test/java/com/juankysoriano/materiallife/navigation/MenuSwitcherTest.java	/^    public void testThatWhenEditorMenuIsNotPresentThenAddEditorMenuPerformsReplaceAndCommit() {$/;"	m	class:MenuSwitcherTest
+testThatWhenEditorMenuIsPresentThenAddEditorMenuFindsFragmentByTag	material-life-android/src/test/java/com/juankysoriano/materiallife/navigation/MenuSwitcherTest.java	/^    public void testThatWhenEditorMenuIsPresentThenAddEditorMenuFindsFragmentByTag() {$/;"	m	class:MenuSwitcherTest
+testThatWhenEndEditionIsCalledThenItDelegatesToGameOfLife	material-life-android/src/test/java/com/juankysoriano/materiallife/world/WorldTest.java	/^    public void testThatWhenEndEditionIsCalledThenItDelegatesToGameOfLife() {$/;"	m	class:WorldTest
+testThatWhenImageLoaderIsNotPresentThenAddImageLoaderBeginsTransaction	material-life-android/src/test/java/com/juankysoriano/materiallife/navigation/MenuSwitcherTest.java	/^    public void testThatWhenImageLoaderIsNotPresentThenAddImageLoaderBeginsTransaction() {$/;"	m	class:MenuSwitcherTest
+testThatWhenImageLoaderIsNotPresentThenAddImageLoaderPerformsReplaceAndCommit	material-life-android/src/test/java/com/juankysoriano/materiallife/navigation/MenuSwitcherTest.java	/^    public void testThatWhenImageLoaderIsNotPresentThenAddImageLoaderPerformsReplaceAndCommit() {$/;"	m	class:MenuSwitcherTest
+testThatWhenImageLoaderIsPresentThenAddImageLoaderFindsFragmentByTag	material-life-android/src/test/java/com/juankysoriano/materiallife/navigation/MenuSwitcherTest.java	/^    public void testThatWhenImageLoaderIsPresentThenAddImageLoaderFindsFragmentByTag() {$/;"	m	class:MenuSwitcherTest
+testThatWhenLoadFromIsCalledThenWorldIsCleared	material-life-android/src/test/java/com/juankysoriano/materiallife/world/WorldTest.java	/^    public void testThatWhenLoadFromIsCalledThenWorldIsCleared() {$/;"	m	class:WorldTest
+testThatWhenLoadWorldFromIsCalledThenGameOfLifeDrawerCalculatesStateForAllCells	material-life-android/src/test/java/com/juankysoriano/materiallife/world/life/GameOfLifeTest.java	/^    public void testThatWhenLoadWorldFromIsCalledThenGameOfLifeDrawerCalculatesStateForAllCells() {$/;"	m	class:GameOfLifeTest
+testThatWhenMainMenuIsNotPresentThenAddMainMenuBeginsTransaction	material-life-android/src/test/java/com/juankysoriano/materiallife/navigation/MenuSwitcherTest.java	/^    public void testThatWhenMainMenuIsNotPresentThenAddMainMenuBeginsTransaction() {$/;"	m	class:MenuSwitcherTest
+testThatWhenMainMenuIsNotPresentThenAddMainMenuPerformsReplaceAndCommit	material-life-android/src/test/java/com/juankysoriano/materiallife/navigation/MenuSwitcherTest.java	/^    public void testThatWhenMainMenuIsNotPresentThenAddMainMenuPerformsReplaceAndCommit() {$/;"	m	class:MenuSwitcherTest
+testThatWhenMainMenuIsPresentThenAddMainMenuFindsFragmentByTag	material-life-android/src/test/java/com/juankysoriano/materiallife/navigation/MenuSwitcherTest.java	/^    public void testThatWhenMainMenuIsPresentThenAddMainMenuFindsFragmentByTag() {$/;"	m	class:MenuSwitcherTest
+testThatWhenOnCellDetectedIsCalledTheCellIsNotPaintedIfItStateIsDead	material-life-android/src/test/java/com/juankysoriano/materiallife/world/life/GameOfLifeTest.java	/^    public void testThatWhenOnCellDetectedIsCalledTheCellIsNotPaintedIfItStateIsDead() {$/;"	m	class:GameOfLifeTest
+testThatWhenOnCellDetectedIsCalledTheCellIsPaintedIfItStateIsAlive	material-life-android/src/test/java/com/juankysoriano/materiallife/world/life/GameOfLifeTest.java	/^    public void testThatWhenOnCellDetectedIsCalledTheCellIsPaintedIfItStateIsAlive() {$/;"	m	class:GameOfLifeTest
+testThatWhenOnDrawingStepIsCalledThenGameOfLifeStepIsDone	material-life-android/src/test/java/com/juankysoriano/materiallife/world/WorldTest.java	/^    public void testThatWhenOnDrawingStepIsCalledThenGameOfLifeStepIsDone() {$/;"	m	class:WorldTest
+testThatWhenOnPointDetectedIsCalledThenTheDetectedCellIsAlive	material-life-android/src/test/java/com/juankysoriano/materiallife/world/life/GameOfLifeTest.java	/^    public void testThatWhenOnPointDetectedIsCalledThenTheDetectedCellIsAlive() {$/;"	m	class:GameOfLifeTest
+testThatWhenOpenCameraForResultActivityIsStartedForResult	material-life-android/src/test/java/com/juankysoriano/materiallife/navigation/PictureRetrieverTest.java	/^    public void testThatWhenOpenCameraForResultActivityIsStartedForResult() {$/;"	m	class:PictureRetrieverTest
+testThatWhenOpenGalleryForResultActivityIsStartedForResult	material-life-android/src/test/java/com/juankysoriano/materiallife/navigation/PictureRetrieverTest.java	/^    public void testThatWhenOpenGalleryForResultActivityIsStartedForResult() {$/;"	m	class:PictureRetrieverTest
+testThatWhenRestoreLastWorldIsCalledThenItDelegatesToGameOfLife	material-life-android/src/test/java/com/juankysoriano/materiallife/world/WorldTest.java	/^    public void testThatWhenRestoreLastWorldIsCalledThenItDelegatesToGameOfLife() {$/;"	m	class:WorldTest
+testThatWhenStartEditionIsCalledThenIsEditingReturnsTrue	material-life-android/src/test/java/com/juankysoriano/materiallife/world/life/GameOfLifeTest.java	/^    public void testThatWhenStartEditionIsCalledThenIsEditingReturnsTrue() {$/;"	m	class:GameOfLifeTest
+testThatWhenStartEditionIsCalledThenItDelegatesToGameOfLife	material-life-android/src/test/java/com/juankysoriano/materiallife/world/WorldTest.java	/^    public void testThatWhenStartEditionIsCalledThenItDelegatesToGameOfLife() {$/;"	m	class:WorldTest
+testWhenAWorldIsInjectedThenGetWorldReturnsThatWorld	material-life-android/src/test/java/com/juankysoriano/materiallife/WorldRetrieverTest.java	/^    public void testWhenAWorldIsInjectedThenGetWorldReturnsThatWorld() {$/;"	m	class:WorldRetrieverTest
+trackActivityStart	material-life-android/src/main/java/com/juankysoriano/materiallife/analytics/AnalyticsTracker.java	/^    public void trackActivityStart(MaterialLifeActivity materialLifeActivity) {$/;"	m	class:AnalyticsTracker
+trackActivityStart	material-life-android/src/main/java/com/juankysoriano/materiallife/analytics/MaterialLifeAnalytics.java	/^    void trackActivityStart(MaterialLifeActivity materialLifeActivity);$/;"	m	interface:MaterialLifeAnalytics
+trackActivityStop	material-life-android/src/main/java/com/juankysoriano/materiallife/analytics/AnalyticsTracker.java	/^    public void trackActivityStop(MaterialLifeActivity materialLifeActivity) {$/;"	m	class:AnalyticsTracker
+trackActivityStop	material-life-android/src/main/java/com/juankysoriano/materiallife/analytics/MaterialLifeAnalytics.java	/^    void trackActivityStop(MaterialLifeActivity materialLifeActivity);$/;"	m	interface:MaterialLifeAnalytics
+tracker	material-life-android/src/main/java/com/juankysoriano/materiallife/analytics/AnalyticsTracker.java	/^    private Tracker tracker;$/;"	f	class:AnalyticsTracker	file:
+value	material-life-android/src/main/java/com/juankysoriano/materiallife/menu/MenuItem.java	/^    private final String value;$/;"	f	class:MenuItem	file:
+value	material-life-android/src/main/java/com/juankysoriano/materiallife/menu/MenuItem.java	/^    public String value() {$/;"	m	class:MenuItem
+viewRevealer	material-life-android/src/main/java/com/juankysoriano/materiallife/ui/sketch/editor/ClearView.java	/^    private ViewRevealer viewRevealer;$/;"	f	class:ClearView	file:
+viewRevealer	material-life-android/src/main/java/com/juankysoriano/materiallife/ui/sketch/menu/MenuOptionsView.java	/^    private ViewRevealer viewRevealer;$/;"	f	class:MenuOptionsView	file:
+world	material-life-android/src/main/java/com/juankysoriano/materiallife/WorldRetriever.java	/^    private World world;$/;"	f	class:WorldRetriever	file:
+world	material-life-android/src/main/java/com/juankysoriano/materiallife/activities/GameOfLifeActivity.java	/^    private final World world;$/;"	f	class:GameOfLifeActivity	file:
+world	material-life-android/src/main/java/com/juankysoriano/materiallife/editor/WorldEditor.java	/^    private final World world;$/;"	f	class:WorldEditor	file:
+world	material-life-android/src/main/java/com/juankysoriano/materiallife/info/slides/SlideFragmentWithWorld.java	/^    private World world;$/;"	f	class:SlideFragmentWithWorld	file:
+world	material-life-android/src/test/java/com/juankysoriano/materiallife/WorldRetrieverTest.java	/^    private World world;$/;"	f	class:WorldRetrieverTest	file:
+world	material-life-android/src/test/java/com/juankysoriano/materiallife/editor/WorldEditorTest.java	/^    private World world;$/;"	f	class:WorldEditorTest	file:
+world	material-life-android/src/test/java/com/juankysoriano/materiallife/world/WorldTest.java	/^    private WorldStub world;$/;"	f	class:WorldTest	file:
+worldEditor	material-life-android/src/main/java/com/juankysoriano/materiallife/editor/WorldEditorMenuFragment.java	/^    private WorldEditor worldEditor;$/;"	f	class:WorldEditorMenuFragment	file:
+worldEditor	material-life-android/src/main/java/com/juankysoriano/materiallife/imageloader/ImageLoaderFragment.java	/^    private WorldEditor worldEditor;$/;"	f	class:ImageLoaderFragment	file:
+worldEditor	material-life-android/src/test/java/com/juankysoriano/materiallife/editor/WorldEditorTest.java	/^    private WorldEditor worldEditor;$/;"	f	class:WorldEditorTest	file:
+x	material-life-android/src/main/java/com/juankysoriano/materiallife/ui/sketch/menu/NormalisedCenter.java	/^    private final float x;$/;"	f	class:NormalisedCenter	file:
+y	material-life-android/src/main/java/com/juankysoriano/materiallife/ui/sketch/menu/NormalisedCenter.java	/^    private final float y;$/;"	f	class:NormalisedCenter	file:
