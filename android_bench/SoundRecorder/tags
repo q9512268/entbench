@@ -1,0 +1,193 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.9~svn20110310	//
+ARG_ITEM	app/src/main/java/com/danielkim/soundrecorder/fragments/PlaybackFragment.java	/^    private static final String ARG_ITEM = "recording_item";$/;"	f	class:PlaybackFragment	file:
+ARG_POSITION	app/src/main/java/com/danielkim/soundrecorder/fragments/FileViewerFragment.java	/^    private static final String ARG_POSITION = "position";$/;"	f	class:FileViewerFragment	file:
+ARG_POSITION	app/src/main/java/com/danielkim/soundrecorder/fragments/RecordFragment.java	/^    private static final String ARG_POSITION = "position";$/;"	f	class:RecordFragment	file:
+ApplicationTest	app/src/androidTest/java/com/danielkim/soundrecorder/ApplicationTest.java	/^    public ApplicationTest() {$/;"	m	class:ApplicationTest
+ApplicationTest	app/src/androidTest/java/com/danielkim/soundrecorder/ApplicationTest.java	/^public class ApplicationTest extends ApplicationTestCase<Application> {$/;"	c
+COLUMN_NAME_RECORDING_FILE_PATH	app/src/main/java/com/danielkim/soundrecorder/DBHelper.java	/^        public static final String COLUMN_NAME_RECORDING_FILE_PATH = "file_path";$/;"	f	class:DBHelper.DBHelperItem
+COLUMN_NAME_RECORDING_LENGTH	app/src/main/java/com/danielkim/soundrecorder/DBHelper.java	/^        public static final String COLUMN_NAME_RECORDING_LENGTH = "length";$/;"	f	class:DBHelper.DBHelperItem
+COLUMN_NAME_RECORDING_NAME	app/src/main/java/com/danielkim/soundrecorder/DBHelper.java	/^        public static final String COLUMN_NAME_RECORDING_NAME = "recording_name";$/;"	f	class:DBHelper.DBHelperItem
+COLUMN_NAME_TIME_ADDED	app/src/main/java/com/danielkim/soundrecorder/DBHelper.java	/^        public static final String COLUMN_NAME_TIME_ADDED = "time_added";$/;"	f	class:DBHelper.DBHelperItem
+COMMA_SEP	app/src/main/java/com/danielkim/soundrecorder/DBHelper.java	/^    private static final String COMMA_SEP = ",";$/;"	f	class:DBHelper	file:
+CREATOR	app/src/main/java/com/danielkim/soundrecorder/RecordingItem.java	/^    public static final Parcelable.Creator<RecordingItem> CREATOR = new Parcelable.Creator<RecordingItem>() {$/;"	f	class:RecordingItem
+DATABASE_NAME	app/src/main/java/com/danielkim/soundrecorder/DBHelper.java	/^    public static final String DATABASE_NAME = "saved_recordings.db";$/;"	f	class:DBHelper
+DATABASE_VERSION	app/src/main/java/com/danielkim/soundrecorder/DBHelper.java	/^    private static final int DATABASE_VERSION = 1;$/;"	f	class:DBHelper	file:
+DBHelper	app/src/main/java/com/danielkim/soundrecorder/DBHelper.java	/^    public DBHelper(Context context) {$/;"	m	class:DBHelper
+DBHelper	app/src/main/java/com/danielkim/soundrecorder/DBHelper.java	/^public class DBHelper extends SQLiteOpenHelper {$/;"	c
+DBHelperItem	app/src/main/java/com/danielkim/soundrecorder/DBHelper.java	/^    public static abstract class DBHelperItem implements BaseColumns {$/;"	c	class:DBHelper
+FileViewerAdapter	app/src/main/java/com/danielkim/soundrecorder/adapters/FileViewerAdapter.java	/^    public FileViewerAdapter(Context context, LinearLayoutManager linearLayoutManager) {$/;"	m	class:FileViewerAdapter
+FileViewerAdapter	app/src/main/java/com/danielkim/soundrecorder/adapters/FileViewerAdapter.java	/^public class FileViewerAdapter extends RecyclerView.Adapter<FileViewerAdapter.RecordingsViewHolder>$/;"	c
+FileViewerFragment	app/src/main/java/com/danielkim/soundrecorder/fragments/FileViewerFragment.java	/^public class FileViewerFragment extends Fragment{$/;"	c
+LOG_TAG	app/src/main/java/com/danielkim/soundrecorder/DBHelper.java	/^    private static final String LOG_TAG = "DBHelper";$/;"	f	class:DBHelper	file:
+LOG_TAG	app/src/main/java/com/danielkim/soundrecorder/RecordingService.java	/^    private static final String LOG_TAG = "RecordingService";$/;"	f	class:RecordingService	file:
+LOG_TAG	app/src/main/java/com/danielkim/soundrecorder/activities/MainActivity.java	/^    private static final String LOG_TAG = MainActivity.class.getSimpleName();$/;"	f	class:MainActivity	file:
+LOG_TAG	app/src/main/java/com/danielkim/soundrecorder/adapters/FileViewerAdapter.java	/^    private static final String LOG_TAG = "FileViewerAdapter";$/;"	f	class:FileViewerAdapter	file:
+LOG_TAG	app/src/main/java/com/danielkim/soundrecorder/fragments/FileViewerFragment.java	/^    private static final String LOG_TAG = "FileViewerFragment";$/;"	f	class:FileViewerFragment	file:
+LOG_TAG	app/src/main/java/com/danielkim/soundrecorder/fragments/PlaybackFragment.java	/^    private static final String LOG_TAG = "PlaybackFragment";$/;"	f	class:PlaybackFragment	file:
+LOG_TAG	app/src/main/java/com/danielkim/soundrecorder/fragments/RecordFragment.java	/^    private static final String LOG_TAG = RecordFragment.class.getSimpleName();$/;"	f	class:RecordFragment	file:
+LicensesFragment	app/src/main/java/com/danielkim/soundrecorder/fragments/LicensesFragment.java	/^public class LicensesFragment extends DialogFragment {$/;"	c
+MainActivity	app/src/main/java/com/danielkim/soundrecorder/activities/MainActivity.java	/^    public MainActivity() {$/;"	m	class:MainActivity
+MainActivity	app/src/main/java/com/danielkim/soundrecorder/activities/MainActivity.java	/^public class MainActivity extends ActionBarActivity{$/;"	c
+MyAdapter	app/src/main/java/com/danielkim/soundrecorder/activities/MainActivity.java	/^        public MyAdapter(FragmentManager fm) {$/;"	m	class:MainActivity.MyAdapter
+MyAdapter	app/src/main/java/com/danielkim/soundrecorder/activities/MainActivity.java	/^    public class MyAdapter extends FragmentPagerAdapter {$/;"	c	class:MainActivity
+OnDatabaseChangedListener	app/src/main/java/com/danielkim/soundrecorder/listeners/OnDatabaseChangedListener.java	/^public interface OnDatabaseChangedListener{$/;"	i
+OnTimerChangedListener	app/src/main/java/com/danielkim/soundrecorder/RecordingService.java	/^    public interface OnTimerChangedListener {$/;"	i	class:RecordingService
+PlaybackFragment	app/src/main/java/com/danielkim/soundrecorder/fragments/PlaybackFragment.java	/^public class PlaybackFragment extends DialogFragment{$/;"	c
+RecordFragment	app/src/main/java/com/danielkim/soundrecorder/fragments/RecordFragment.java	/^    public RecordFragment() {$/;"	m	class:RecordFragment
+RecordFragment	app/src/main/java/com/danielkim/soundrecorder/fragments/RecordFragment.java	/^public class RecordFragment extends Fragment {$/;"	c
+RecordingComparator	app/src/main/java/com/danielkim/soundrecorder/DBHelper.java	/^    public class RecordingComparator implements Comparator<RecordingItem> {$/;"	c	class:DBHelper
+RecordingItem	app/src/main/java/com/danielkim/soundrecorder/RecordingItem.java	/^    public RecordingItem()$/;"	m	class:RecordingItem
+RecordingItem	app/src/main/java/com/danielkim/soundrecorder/RecordingItem.java	/^    public RecordingItem(Parcel in) {$/;"	m	class:RecordingItem
+RecordingItem	app/src/main/java/com/danielkim/soundrecorder/RecordingItem.java	/^public class RecordingItem implements Parcelable {$/;"	c
+RecordingService	app/src/main/java/com/danielkim/soundrecorder/RecordingService.java	/^public class RecordingService extends Service {$/;"	c
+RecordingsViewHolder	app/src/main/java/com/danielkim/soundrecorder/adapters/FileViewerAdapter.java	/^        public RecordingsViewHolder(View v) {$/;"	m	class:FileViewerAdapter.RecordingsViewHolder
+RecordingsViewHolder	app/src/main/java/com/danielkim/soundrecorder/adapters/FileViewerAdapter.java	/^    public static class RecordingsViewHolder extends RecyclerView.ViewHolder {$/;"	c	class:FileViewerAdapter
+SQL_CREATE_ENTRIES	app/src/main/java/com/danielkim/soundrecorder/DBHelper.java	/^    private static final String SQL_CREATE_ENTRIES =$/;"	f	class:DBHelper	file:
+SQL_DELETE_ENTRIES	app/src/main/java/com/danielkim/soundrecorder/DBHelper.java	/^    private static final String SQL_DELETE_ENTRIES = "DROP TABLE IF EXISTS " + DBHelperItem.TABLE_NAME;$/;"	f	class:DBHelper	file:
+TABLE_NAME	app/src/main/java/com/danielkim/soundrecorder/DBHelper.java	/^        public static final String TABLE_NAME = "saved_recordings";$/;"	f	class:DBHelper.DBHelperItem
+TEXT_TYPE	app/src/main/java/com/danielkim/soundrecorder/DBHelper.java	/^    private static final String TEXT_TYPE = " TEXT";$/;"	f	class:DBHelper	file:
+addRecording	app/src/main/java/com/danielkim/soundrecorder/DBHelper.java	/^    public long addRecording(String recordingName, String filePath, long length) {$/;"	m	class:DBHelper
+cardView	app/src/main/java/com/danielkim/soundrecorder/adapters/FileViewerAdapter.java	/^        protected View cardView;$/;"	f	class:FileViewerAdapter.RecordingsViewHolder
+com.danielkim.soundrecorder	app/src/androidTest/java/com/danielkim/soundrecorder/ApplicationTest.java	/^package com.danielkim.soundrecorder;$/;"	p
+com.danielkim.soundrecorder	app/src/main/java/com/danielkim/soundrecorder/DBHelper.java	/^package com.danielkim.soundrecorder;$/;"	p
+com.danielkim.soundrecorder	app/src/main/java/com/danielkim/soundrecorder/RecordingItem.java	/^package com.danielkim.soundrecorder;$/;"	p
+com.danielkim.soundrecorder	app/src/main/java/com/danielkim/soundrecorder/RecordingService.java	/^package com.danielkim.soundrecorder;$/;"	p
+com.danielkim.soundrecorder.activities	app/src/main/java/com/danielkim/soundrecorder/activities/MainActivity.java	/^package com.danielkim.soundrecorder.activities;$/;"	p
+com.danielkim.soundrecorder.adapters	app/src/main/java/com/danielkim/soundrecorder/adapters/FileViewerAdapter.java	/^package com.danielkim.soundrecorder.adapters;$/;"	p
+com.danielkim.soundrecorder.fragments	app/src/main/java/com/danielkim/soundrecorder/fragments/FileViewerFragment.java	/^package com.danielkim.soundrecorder.fragments;$/;"	p
+com.danielkim.soundrecorder.fragments	app/src/main/java/com/danielkim/soundrecorder/fragments/LicensesFragment.java	/^package com.danielkim.soundrecorder.fragments;$/;"	p
+com.danielkim.soundrecorder.fragments	app/src/main/java/com/danielkim/soundrecorder/fragments/PlaybackFragment.java	/^package com.danielkim.soundrecorder.fragments;$/;"	p
+com.danielkim.soundrecorder.fragments	app/src/main/java/com/danielkim/soundrecorder/fragments/RecordFragment.java	/^package com.danielkim.soundrecorder.fragments;$/;"	p
+com.danielkim.soundrecorder.listeners	app/src/main/java/com/danielkim/soundrecorder/listeners/OnDatabaseChangedListener.java	/^package com.danielkim.soundrecorder.listeners;$/;"	p
+compare	app/src/main/java/com/danielkim/soundrecorder/DBHelper.java	/^        public int compare(RecordingItem item1, RecordingItem item2) {$/;"	m	class:DBHelper.RecordingComparator
+createNotification	app/src/main/java/com/danielkim/soundrecorder/RecordingService.java	/^    private Notification createNotification() {$/;"	m	class:RecordingService	file:
+deleteFileDialog	app/src/main/java/com/danielkim/soundrecorder/adapters/FileViewerAdapter.java	/^    public void deleteFileDialog (final int position) {$/;"	m	class:FileViewerAdapter
+describeContents	app/src/main/java/com/danielkim/soundrecorder/RecordingItem.java	/^    public int describeContents() {$/;"	m	class:RecordingItem
+getContext	app/src/main/java/com/danielkim/soundrecorder/DBHelper.java	/^    public Context getContext() {$/;"	m	class:DBHelper
+getCount	app/src/main/java/com/danielkim/soundrecorder/DBHelper.java	/^    public int getCount() {$/;"	m	class:DBHelper
+getCount	app/src/main/java/com/danielkim/soundrecorder/activities/MainActivity.java	/^        public int getCount() {$/;"	m	class:MainActivity.MyAdapter
+getFilePath	app/src/main/java/com/danielkim/soundrecorder/RecordingItem.java	/^    public String getFilePath() {$/;"	m	class:RecordingItem
+getId	app/src/main/java/com/danielkim/soundrecorder/RecordingItem.java	/^    public int getId() {$/;"	m	class:RecordingItem
+getItem	app/src/main/java/com/danielkim/soundrecorder/activities/MainActivity.java	/^        public Fragment getItem(int position) {$/;"	m	class:MainActivity.MyAdapter
+getItem	app/src/main/java/com/danielkim/soundrecorder/adapters/FileViewerAdapter.java	/^    public RecordingItem getItem(int position) {$/;"	m	class:FileViewerAdapter
+getItemAt	app/src/main/java/com/danielkim/soundrecorder/DBHelper.java	/^    public RecordingItem getItemAt(int position) {$/;"	m	class:DBHelper
+getItemCount	app/src/main/java/com/danielkim/soundrecorder/adapters/FileViewerAdapter.java	/^    public int getItemCount() {$/;"	m	class:FileViewerAdapter
+getLength	app/src/main/java/com/danielkim/soundrecorder/RecordingItem.java	/^    public int getLength() {$/;"	m	class:RecordingItem
+getName	app/src/main/java/com/danielkim/soundrecorder/RecordingItem.java	/^    public String getName() {$/;"	m	class:RecordingItem
+getPageTitle	app/src/main/java/com/danielkim/soundrecorder/activities/MainActivity.java	/^        public CharSequence getPageTitle(int position) {$/;"	m	class:MainActivity.MyAdapter
+getTime	app/src/main/java/com/danielkim/soundrecorder/RecordingItem.java	/^    public long getTime() {$/;"	m	class:RecordingItem
+isPlaying	app/src/main/java/com/danielkim/soundrecorder/fragments/PlaybackFragment.java	/^    private boolean isPlaying = false;$/;"	f	class:PlaybackFragment	file:
+item	app/src/main/java/com/danielkim/soundrecorder/adapters/FileViewerAdapter.java	/^    RecordingItem item;$/;"	f	class:FileViewerAdapter
+item	app/src/main/java/com/danielkim/soundrecorder/fragments/PlaybackFragment.java	/^    private RecordingItem item;$/;"	f	class:PlaybackFragment	file:
+llm	app/src/main/java/com/danielkim/soundrecorder/adapters/FileViewerAdapter.java	/^    LinearLayoutManager llm;$/;"	f	class:FileViewerAdapter
+mChronometer	app/src/main/java/com/danielkim/soundrecorder/fragments/RecordFragment.java	/^    private Chronometer mChronometer = null;$/;"	f	class:RecordFragment	file:
+mContext	app/src/main/java/com/danielkim/soundrecorder/DBHelper.java	/^    private Context mContext;$/;"	f	class:DBHelper	file:
+mContext	app/src/main/java/com/danielkim/soundrecorder/adapters/FileViewerAdapter.java	/^    Context mContext;$/;"	f	class:FileViewerAdapter
+mCurrentProgressTextView	app/src/main/java/com/danielkim/soundrecorder/fragments/PlaybackFragment.java	/^    private TextView mCurrentProgressTextView = null;$/;"	f	class:PlaybackFragment	file:
+mDatabase	app/src/main/java/com/danielkim/soundrecorder/RecordingService.java	/^    private DBHelper mDatabase;$/;"	f	class:RecordingService	file:
+mDatabase	app/src/main/java/com/danielkim/soundrecorder/adapters/FileViewerAdapter.java	/^    private DBHelper mDatabase;$/;"	f	class:FileViewerAdapter	file:
+mElapsedMillis	app/src/main/java/com/danielkim/soundrecorder/RecordingService.java	/^    private long mElapsedMillis = 0;$/;"	f	class:RecordingService	file:
+mElapsedSeconds	app/src/main/java/com/danielkim/soundrecorder/RecordingService.java	/^    private int mElapsedSeconds = 0;$/;"	f	class:RecordingService	file:
+mFileLengthTextView	app/src/main/java/com/danielkim/soundrecorder/fragments/PlaybackFragment.java	/^    private TextView mFileLengthTextView = null;$/;"	f	class:PlaybackFragment	file:
+mFileName	app/src/main/java/com/danielkim/soundrecorder/RecordingService.java	/^    private String mFileName = null;$/;"	f	class:RecordingService	file:
+mFileNameTextView	app/src/main/java/com/danielkim/soundrecorder/fragments/PlaybackFragment.java	/^    private TextView mFileNameTextView = null;$/;"	f	class:PlaybackFragment	file:
+mFilePath	app/src/main/java/com/danielkim/soundrecorder/RecordingItem.java	/^    private String mFilePath; \/\/file path$/;"	f	class:RecordingItem	file:
+mFilePath	app/src/main/java/com/danielkim/soundrecorder/RecordingService.java	/^    private String mFilePath = null;$/;"	f	class:RecordingService	file:
+mFileViewerAdapter	app/src/main/java/com/danielkim/soundrecorder/fragments/FileViewerFragment.java	/^    private FileViewerAdapter mFileViewerAdapter;$/;"	f	class:FileViewerFragment	file:
+mHandler	app/src/main/java/com/danielkim/soundrecorder/fragments/PlaybackFragment.java	/^    private Handler mHandler = new Handler();$/;"	f	class:PlaybackFragment	file:
+mId	app/src/main/java/com/danielkim/soundrecorder/RecordingItem.java	/^    private int mId; \/\/id in database$/;"	f	class:RecordingItem	file:
+mIncrementTimerTask	app/src/main/java/com/danielkim/soundrecorder/RecordingService.java	/^    private TimerTask mIncrementTimerTask = null;$/;"	f	class:RecordingService	file:
+mLength	app/src/main/java/com/danielkim/soundrecorder/RecordingItem.java	/^    private int mLength; \/\/ length of recording in seconds$/;"	f	class:RecordingItem	file:
+mMediaPlayer	app/src/main/java/com/danielkim/soundrecorder/fragments/PlaybackFragment.java	/^    private MediaPlayer mMediaPlayer = null;$/;"	f	class:PlaybackFragment	file:
+mName	app/src/main/java/com/danielkim/soundrecorder/RecordingItem.java	/^    private String mName; \/\/ file name$/;"	f	class:RecordingItem	file:
+mOnDatabaseChangedListener	app/src/main/java/com/danielkim/soundrecorder/DBHelper.java	/^    private static OnDatabaseChangedListener mOnDatabaseChangedListener;$/;"	f	class:DBHelper	file:
+mPauseButton	app/src/main/java/com/danielkim/soundrecorder/fragments/RecordFragment.java	/^    private Button mPauseButton = null;$/;"	f	class:RecordFragment	file:
+mPauseRecording	app/src/main/java/com/danielkim/soundrecorder/fragments/RecordFragment.java	/^    private boolean mPauseRecording = true;$/;"	f	class:RecordFragment	file:
+mPlayButton	app/src/main/java/com/danielkim/soundrecorder/fragments/PlaybackFragment.java	/^    private FloatingActionButton mPlayButton = null;$/;"	f	class:PlaybackFragment	file:
+mRecordButton	app/src/main/java/com/danielkim/soundrecorder/fragments/RecordFragment.java	/^    private FloatingActionButton mRecordButton = null;$/;"	f	class:RecordFragment	file:
+mRecordPromptCount	app/src/main/java/com/danielkim/soundrecorder/fragments/RecordFragment.java	/^    private int mRecordPromptCount = 0;$/;"	f	class:RecordFragment	file:
+mRecorder	app/src/main/java/com/danielkim/soundrecorder/RecordingService.java	/^    private MediaRecorder mRecorder = null;$/;"	f	class:RecordingService	file:
+mRecordingPrompt	app/src/main/java/com/danielkim/soundrecorder/fragments/RecordFragment.java	/^    private TextView mRecordingPrompt;$/;"	f	class:RecordFragment	file:
+mRunnable	app/src/main/java/com/danielkim/soundrecorder/fragments/PlaybackFragment.java	/^    private Runnable mRunnable = new Runnable() {$/;"	f	class:PlaybackFragment	file:
+mSeekBar	app/src/main/java/com/danielkim/soundrecorder/fragments/PlaybackFragment.java	/^    private SeekBar mSeekBar = null;$/;"	f	class:PlaybackFragment	file:
+mStartRecording	app/src/main/java/com/danielkim/soundrecorder/fragments/RecordFragment.java	/^    private boolean mStartRecording = true;$/;"	f	class:RecordFragment	file:
+mStartingTimeMillis	app/src/main/java/com/danielkim/soundrecorder/RecordingService.java	/^    private long mStartingTimeMillis = 0;$/;"	f	class:RecordingService	file:
+mTime	app/src/main/java/com/danielkim/soundrecorder/RecordingItem.java	/^    private long mTime; \/\/ date\/time of the recording$/;"	f	class:RecordingItem	file:
+mTimer	app/src/main/java/com/danielkim/soundrecorder/RecordingService.java	/^    private Timer mTimer = null;$/;"	f	class:RecordingService	file:
+mTimerFormat	app/src/main/java/com/danielkim/soundrecorder/RecordingService.java	/^    private static final SimpleDateFormat mTimerFormat = new SimpleDateFormat("mm:ss", Locale.getDefault());$/;"	f	class:RecordingService	file:
+minutes	app/src/main/java/com/danielkim/soundrecorder/fragments/PlaybackFragment.java	/^    long minutes = 0;$/;"	f	class:PlaybackFragment
+newInstance	app/src/main/java/com/danielkim/soundrecorder/fragments/FileViewerFragment.java	/^    public static FileViewerFragment newInstance(int position) {$/;"	m	class:FileViewerFragment
+newInstance	app/src/main/java/com/danielkim/soundrecorder/fragments/PlaybackFragment.java	/^    public PlaybackFragment newInstance(RecordingItem item) {$/;"	m	class:PlaybackFragment
+newInstance	app/src/main/java/com/danielkim/soundrecorder/fragments/RecordFragment.java	/^    public static RecordFragment newInstance(int position) {$/;"	m	class:RecordFragment
+observer	app/src/main/java/com/danielkim/soundrecorder/fragments/FileViewerFragment.java	/^    FileObserver observer =$/;"	f	class:FileViewerFragment
+onActivityCreated	app/src/main/java/com/danielkim/soundrecorder/fragments/PlaybackFragment.java	/^    public void onActivityCreated(Bundle savedInstanceState) {$/;"	m	class:PlaybackFragment
+onBind	app/src/main/java/com/danielkim/soundrecorder/RecordingService.java	/^    public IBinder onBind(Intent intent) {$/;"	m	class:RecordingService
+onBindViewHolder	app/src/main/java/com/danielkim/soundrecorder/adapters/FileViewerAdapter.java	/^    public void onBindViewHolder(final RecordingsViewHolder holder, int position) {$/;"	m	class:FileViewerAdapter
+onCreate	app/src/main/java/com/danielkim/soundrecorder/DBHelper.java	/^    public void onCreate(SQLiteDatabase db) {$/;"	m	class:DBHelper
+onCreate	app/src/main/java/com/danielkim/soundrecorder/RecordingService.java	/^    public void onCreate() {$/;"	m	class:RecordingService
+onCreate	app/src/main/java/com/danielkim/soundrecorder/activities/MainActivity.java	/^    protected void onCreate(Bundle savedInstanceState) {$/;"	m	class:MainActivity
+onCreate	app/src/main/java/com/danielkim/soundrecorder/fragments/FileViewerFragment.java	/^    public void onCreate(Bundle savedInstanceState) {$/;"	m	class:FileViewerFragment
+onCreate	app/src/main/java/com/danielkim/soundrecorder/fragments/PlaybackFragment.java	/^    public void onCreate(Bundle savedInstanceState) {$/;"	m	class:PlaybackFragment
+onCreate	app/src/main/java/com/danielkim/soundrecorder/fragments/RecordFragment.java	/^    public void onCreate(Bundle savedInstanceState) {$/;"	m	class:RecordFragment
+onCreateDialog	app/src/main/java/com/danielkim/soundrecorder/fragments/LicensesFragment.java	/^    public Dialog onCreateDialog(Bundle savedInstanceState) {$/;"	m	class:LicensesFragment
+onCreateDialog	app/src/main/java/com/danielkim/soundrecorder/fragments/PlaybackFragment.java	/^    public Dialog onCreateDialog(Bundle savedInstanceState) {$/;"	m	class:PlaybackFragment
+onCreateOptionsMenu	app/src/main/java/com/danielkim/soundrecorder/activities/MainActivity.java	/^    public boolean onCreateOptionsMenu(Menu menu) {$/;"	m	class:MainActivity
+onCreateView	app/src/main/java/com/danielkim/soundrecorder/fragments/FileViewerFragment.java	/^    public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {$/;"	m	class:FileViewerFragment
+onCreateView	app/src/main/java/com/danielkim/soundrecorder/fragments/RecordFragment.java	/^    public View onCreateView(LayoutInflater inflater, ViewGroup container,$/;"	m	class:RecordFragment
+onCreateViewHolder	app/src/main/java/com/danielkim/soundrecorder/adapters/FileViewerAdapter.java	/^    public RecordingsViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {$/;"	m	class:FileViewerAdapter
+onDatabaseEntryRenamed	app/src/main/java/com/danielkim/soundrecorder/adapters/FileViewerAdapter.java	/^    public void onDatabaseEntryRenamed() {$/;"	m	class:FileViewerAdapter
+onDatabaseEntryRenamed	app/src/main/java/com/danielkim/soundrecorder/listeners/OnDatabaseChangedListener.java	/^    void onDatabaseEntryRenamed();$/;"	m	interface:OnDatabaseChangedListener
+onDestroy	app/src/main/java/com/danielkim/soundrecorder/RecordingService.java	/^    public void onDestroy() {$/;"	m	class:RecordingService
+onDestroy	app/src/main/java/com/danielkim/soundrecorder/fragments/PlaybackFragment.java	/^    public void onDestroy() {$/;"	m	class:PlaybackFragment
+onNewDatabaseEntryAdded	app/src/main/java/com/danielkim/soundrecorder/adapters/FileViewerAdapter.java	/^    public void onNewDatabaseEntryAdded() {$/;"	m	class:FileViewerAdapter
+onNewDatabaseEntryAdded	app/src/main/java/com/danielkim/soundrecorder/listeners/OnDatabaseChangedListener.java	/^    void onNewDatabaseEntryAdded();$/;"	m	interface:OnDatabaseChangedListener
+onOptionsItemSelected	app/src/main/java/com/danielkim/soundrecorder/activities/MainActivity.java	/^    public boolean onOptionsItemSelected(MenuItem item) {$/;"	m	class:MainActivity
+onPause	app/src/main/java/com/danielkim/soundrecorder/fragments/PlaybackFragment.java	/^    public void onPause() {$/;"	m	class:PlaybackFragment
+onPauseRecord	app/src/main/java/com/danielkim/soundrecorder/fragments/RecordFragment.java	/^    private void onPauseRecord(boolean pause) {$/;"	m	class:RecordFragment	file:
+onPlay	app/src/main/java/com/danielkim/soundrecorder/fragments/PlaybackFragment.java	/^    private void onPlay(boolean isPlaying){$/;"	m	class:PlaybackFragment	file:
+onRecord	app/src/main/java/com/danielkim/soundrecorder/fragments/RecordFragment.java	/^    private void onRecord(boolean start){$/;"	m	class:RecordFragment	file:
+onStart	app/src/main/java/com/danielkim/soundrecorder/fragments/PlaybackFragment.java	/^    public void onStart() {$/;"	m	class:PlaybackFragment
+onStartCommand	app/src/main/java/com/danielkim/soundrecorder/RecordingService.java	/^    public int onStartCommand(Intent intent, int flags, int startId) {$/;"	m	class:RecordingService
+onTimerChanged	app/src/main/java/com/danielkim/soundrecorder/RecordingService.java	/^        void onTimerChanged(int seconds);$/;"	m	interface:RecordingService.OnTimerChangedListener
+onTimerChangedListener	app/src/main/java/com/danielkim/soundrecorder/RecordingService.java	/^    private OnTimerChangedListener onTimerChangedListener = null;$/;"	f	class:RecordingService	file:
+onUpgrade	app/src/main/java/com/danielkim/soundrecorder/DBHelper.java	/^    public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {$/;"	m	class:DBHelper
+openLicenses	app/src/main/java/com/danielkim/soundrecorder/activities/MainActivity.java	/^    public void openLicenses(){$/;"	m	class:MainActivity
+pager	app/src/main/java/com/danielkim/soundrecorder/activities/MainActivity.java	/^    private ViewPager pager;$/;"	f	class:MainActivity	file:
+pausePlaying	app/src/main/java/com/danielkim/soundrecorder/fragments/PlaybackFragment.java	/^    private void pausePlaying() {$/;"	m	class:PlaybackFragment	file:
+position	app/src/main/java/com/danielkim/soundrecorder/fragments/FileViewerFragment.java	/^    private int position;$/;"	f	class:FileViewerFragment	file:
+position	app/src/main/java/com/danielkim/soundrecorder/fragments/RecordFragment.java	/^    private int position;$/;"	f	class:RecordFragment	file:
+prepareMediaPlayerFromPoint	app/src/main/java/com/danielkim/soundrecorder/fragments/PlaybackFragment.java	/^    private void prepareMediaPlayerFromPoint(int progress) {$/;"	m	class:PlaybackFragment	file:
+remove	app/src/main/java/com/danielkim/soundrecorder/adapters/FileViewerAdapter.java	/^    public void remove(int position) {$/;"	m	class:FileViewerAdapter
+removeItemWithId	app/src/main/java/com/danielkim/soundrecorder/DBHelper.java	/^    public void removeItemWithId(int id) {$/;"	m	class:DBHelper
+removeOutOfApp	app/src/main/java/com/danielkim/soundrecorder/adapters/FileViewerAdapter.java	/^    public void removeOutOfApp(String filePath) {$/;"	m	class:FileViewerAdapter
+rename	app/src/main/java/com/danielkim/soundrecorder/adapters/FileViewerAdapter.java	/^    public void rename(int position, String name) {$/;"	m	class:FileViewerAdapter
+renameFileDialog	app/src/main/java/com/danielkim/soundrecorder/adapters/FileViewerAdapter.java	/^    public void renameFileDialog (final int position) {$/;"	m	class:FileViewerAdapter
+renameItem	app/src/main/java/com/danielkim/soundrecorder/DBHelper.java	/^    public void renameItem(RecordingItem item, String recordingName) {$/;"	m	class:DBHelper
+restoreRecording	app/src/main/java/com/danielkim/soundrecorder/DBHelper.java	/^    public long restoreRecording(RecordingItem item) {$/;"	m	class:DBHelper
+resumePlaying	app/src/main/java/com/danielkim/soundrecorder/fragments/PlaybackFragment.java	/^    private void resumePlaying() {$/;"	m	class:PlaybackFragment	file:
+seconds	app/src/main/java/com/danielkim/soundrecorder/fragments/PlaybackFragment.java	/^    long seconds = 0;$/;"	f	class:PlaybackFragment
+setFileNameAndPath	app/src/main/java/com/danielkim/soundrecorder/RecordingService.java	/^    public void setFileNameAndPath(){$/;"	m	class:RecordingService
+setFilePath	app/src/main/java/com/danielkim/soundrecorder/RecordingItem.java	/^    public void setFilePath(String filePath) {$/;"	m	class:RecordingItem
+setId	app/src/main/java/com/danielkim/soundrecorder/RecordingItem.java	/^    public void setId(int id) {$/;"	m	class:RecordingItem
+setLength	app/src/main/java/com/danielkim/soundrecorder/RecordingItem.java	/^    public void setLength(int length) {$/;"	m	class:RecordingItem
+setName	app/src/main/java/com/danielkim/soundrecorder/RecordingItem.java	/^    public void setName(String name) {$/;"	m	class:RecordingItem
+setOnDatabaseChangedListener	app/src/main/java/com/danielkim/soundrecorder/DBHelper.java	/^    public static void setOnDatabaseChangedListener(OnDatabaseChangedListener listener) {$/;"	m	class:DBHelper
+setTime	app/src/main/java/com/danielkim/soundrecorder/RecordingItem.java	/^    public void setTime(long time) {$/;"	m	class:RecordingItem
+startPlaying	app/src/main/java/com/danielkim/soundrecorder/fragments/PlaybackFragment.java	/^    private void startPlaying() {$/;"	m	class:PlaybackFragment	file:
+startRecording	app/src/main/java/com/danielkim/soundrecorder/RecordingService.java	/^    public void startRecording() {$/;"	m	class:RecordingService
+startTimer	app/src/main/java/com/danielkim/soundrecorder/RecordingService.java	/^    private void startTimer() {$/;"	m	class:RecordingService	file:
+stopPlaying	app/src/main/java/com/danielkim/soundrecorder/fragments/PlaybackFragment.java	/^    private void stopPlaying() {$/;"	m	class:PlaybackFragment	file:
+stopRecording	app/src/main/java/com/danielkim/soundrecorder/RecordingService.java	/^    public void stopRecording() {$/;"	m	class:RecordingService
+tabs	app/src/main/java/com/danielkim/soundrecorder/activities/MainActivity.java	/^    private PagerSlidingTabStrip tabs;$/;"	f	class:MainActivity	file:
+timeWhenPaused	app/src/main/java/com/danielkim/soundrecorder/fragments/RecordFragment.java	/^    long timeWhenPaused = 0; \/\/stores time when user clicks pause button$/;"	f	class:RecordFragment
+titles	app/src/main/java/com/danielkim/soundrecorder/activities/MainActivity.java	/^        private String[] titles = { getString(R.string.tab_title_record),$/;"	f	class:MainActivity.MyAdapter	file:
+updateSeekBar	app/src/main/java/com/danielkim/soundrecorder/fragments/PlaybackFragment.java	/^    private void updateSeekBar() {$/;"	m	class:PlaybackFragment	file:
+vDateAdded	app/src/main/java/com/danielkim/soundrecorder/adapters/FileViewerAdapter.java	/^        protected TextView vDateAdded;$/;"	f	class:FileViewerAdapter.RecordingsViewHolder
+vLength	app/src/main/java/com/danielkim/soundrecorder/adapters/FileViewerAdapter.java	/^        protected TextView vLength;$/;"	f	class:FileViewerAdapter.RecordingsViewHolder
+vName	app/src/main/java/com/danielkim/soundrecorder/adapters/FileViewerAdapter.java	/^        protected TextView vName;$/;"	f	class:FileViewerAdapter.RecordingsViewHolder
+writeToParcel	app/src/main/java/com/danielkim/soundrecorder/RecordingItem.java	/^    public void writeToParcel(Parcel dest, int flags) {$/;"	m	class:RecordingItem

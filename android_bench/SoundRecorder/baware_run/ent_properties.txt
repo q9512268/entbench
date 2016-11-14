@@ -1,0 +1,2 @@
+ENT_BATTERY_LEVEL=0.90=float
+ENT_RECOVER=false=boolean
