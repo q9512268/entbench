@@ -12,6 +12,7 @@ level=$1
 export PANDA_RUNS=11
 
 export PANDA_RECOVER=true
+export PANDA_BATTERY_RUN=true
 
 pfb analyze -maxHeap 2048 -effort:default drjava/drjava-stable-20140826-r5761.jar
 mv $dir/mode.txt $dir/run_sd_${level}.txt
