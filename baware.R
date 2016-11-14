@@ -12,12 +12,12 @@ g_legend<-function(a.gplot) {
 }
 
 colors <- brewer.pal(6, "Paired")
-mapped_colors <- c("full_throttle"=colors[1],
-                   "full_throttle silent"=colors[2],
-                   "managed"=colors[3],
-                   "managed silent"=colors[4],
-                   "energy_saver"=colors[5],
-                   "energy_saver silent"=colors[6])
+mapped_colors <- c("full_throttle"=colors[6],
+                   "full_throttle silent"=colors[5],
+                   "managed"=colors[4],
+                   "managed silent"=colors[3],
+                   "energy_saver"=colors[2],
+                   "energy_saver silent"=colors[1])
 
 benchmarks = c("sunflow","jspider","pagerank","findbugs","crypto","batik")
 
@@ -37,13 +37,14 @@ for (b in benchmarks) {
   p <- ggplot(data=dta, aes(x=data,y=energy,fill=context)) +
        geom_bar(stat="identity", position=position_dodge()) +
        scale_fill_brewer(palette="Paired",direction=-1) +
-       #ylab("Energy") +
+       xlab("Workload Mode") +
+       ylab("Energy (J)") +
        scale_fill_manual(name="Boot Mode",values=mapped_colors) +
        ggtitle(title) +
        theme_gray(base_size=16) +
        theme(
-           axis.title.y=element_blank(),
-           axis.title.x=element_blank(),
+           axis.title=element_text(size=12),
+           axis.text=element_text(color="black"),
            plot.margin=unit(c(0.3,0.5,0.1,0.0),"cm"),
            legend.position="bottom",
            legend.text = element_text(size=12) 

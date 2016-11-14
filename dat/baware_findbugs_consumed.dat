@@ -1,19 +1,19 @@
 data	context	energy	order
-energy_saver	"full_throttle"	1225.2694107	0
-energy_saver	"full_throttle silent"	1207.6710633	1
-energy_saver	"managed"	1262.2740234	2
-energy_saver	"managed silent"	1226.4637909	3
-energy_saver	"energy_saver"	1220.9895614	4
-energy_saver	"energy_saver silent"	1211.9947204000002	5
-managed	"full_throttle"	3799.7149871	0
-managed	"full_throttle silent"	3751.3892944	1
-managed	"managed"	3754.0391939	2
-managed	"managed silent"	3732.0723678000004	3
-managed	"energy_saver"	2889.3692032000004	4
-managed	"energy_saver silent"	3825.7735593999996	5
-full_throttle	"full_throttle"	13893.461672999998	0
-full_throttle	"full_throttle silent"	13799.81008	1
-full_throttle	"managed"	10232.666175999999	2
-full_throttle	"managed silent"	13772.571249499999	3
-full_throttle	"energy_saver"	10370.9063126	4
-full_throttle	"energy_saver silent"	13816.6530761	5
+energy_saver	"full_throttle"	1223.9179534999998	0
+energy_saver	"full_throttle silent"	1206.4720840999998	1
+energy_saver	"managed"	1260.9094024	2
+energy_saver	"managed silent"	1225.1990311	3
+energy_saver	"energy_saver"	1219.7737548999999	4
+energy_saver	"energy_saver silent"	1210.746318	5
+managed	"full_throttle"	3798.4740051	0
+managed	"full_throttle silent"	3750.0376693	1
+managed	"managed"	3752.7736787000003	2
+managed	"managed silent"	3730.4920150999997	3
+managed	"energy_saver"	2888.0312271	4
+managed	"energy_saver silent"	3825.3762282	5
+full_throttle	"full_throttle"	13890.648484800002	0
+full_throttle	"full_throttle silent"	13796.9892105	1
+full_throttle	"managed"	10230.8310411	2
+full_throttle	"managed silent"	13768.629011599998	3
+full_throttle	"energy_saver"	10368.556826799997	4
+full_throttle	"energy_saver silent"	13815.001525800002	5

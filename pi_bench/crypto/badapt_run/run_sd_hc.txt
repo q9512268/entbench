@@ -1,3 +1,4 @@
+// Created from logs/pi-badapt-all-paper.log
 ERun: 0: 0 0 1911.3999999999928 0
 ERun: 1: 0 0 1882.7999999999863 0
 ERun: 2: 0 0 1895.999999999986 0

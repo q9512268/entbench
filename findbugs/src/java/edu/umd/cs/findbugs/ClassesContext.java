@@ -12,10 +12,9 @@ public class ClassesContext@mode<?->X> {
 
   attributor {
     int size = appClassList.size();
-    System.out.format("ClassSize:%d\n",size);
-    if (size < 6000) {
+    if (size < 1000) {
       return @mode<low>;
-    } else if (size < 21000) {
+    } else if (size < 2600) {
       return @mode<mid>;
     } else {
       return @mode<high>;

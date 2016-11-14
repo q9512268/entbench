@@ -8,6 +8,7 @@ $BENCH = {
     video:"video",
     camera:"camera", 
     javaboy:"javaboy", 
+#    batik:"batik",
 }
 
 $DIR   = "baware_run"
@@ -50,11 +51,14 @@ $BENCH.each do |bench, path|
     for i in 1..m.length-1 do
       e += m[i][0].strip().split()[2].to_f
     end
-    e = e / m.length.to_f
+    e = e / (m.length.to_f-1)
     maxe = e unless maxe > e 
     energy << e
   end
-  energy.map! { |n| n / maxe }
+
+  normalize = energy[17]
+  energy.map! { |n| n / normalize }
+
   consumedtable[bench] = energy
 end
 
@@ -82,15 +86,15 @@ $BENCH.each do |bench, path|
 
   xcord = 0*$LITTLEGAP+k*$LARGEGAP
   consumeddat.write("#{xcord}\t#{bench}\t#{$DATAS[1]}")
-  consumeddat.write("\t#{consumedtable[bench][10]}\t#{consumedtable[bench][11]}\t\t\t#{es_me}%\n")
+  consumeddat.write("\t#{consumedtable[bench][10]}\t#{consumedtable[bench][11]}\t\t\t#{es_me}\n")
   
   xcord = 1*$LITTLEGAP+k*$LARGEGAP
   consumeddat.write("#{xcord}\t#{bench}\t#{$DATAS[2]}")
-  consumeddat.write("\t#{consumedtable[bench][14]}\t#{consumedtable[bench][15]}\t\t\t#{m_fte}%\n")
+  consumeddat.write("\t#{consumedtable[bench][14]}\t#{consumedtable[bench][15]}\t\t\t#{m_fte}\n")
 
   xcord = 2*$LITTLEGAP+k*$LARGEGAP
   consumeddat.write("#{xcord}\t#{bench}\t#{$DATAS[3]}")
-  consumeddat.write("\t\t\t#{consumedtable[bench][16]}\t#{consumedtable[bench][17]}\t#{es_fte}%\n")
+  consumeddat.write("\t\t\t#{consumedtable[bench][16]}\t#{consumedtable[bench][17]}\t#{es_fte}\n")
 
   k += 1
 end

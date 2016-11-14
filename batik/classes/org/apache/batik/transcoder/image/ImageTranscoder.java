@@ -49,16 +49,7 @@ public abstract class ImageTranscoder extends org.apache.batik.transcoder.SVGAbs
           null;
         try {
             renderer =
-              ent.runtime.ENT_Snapshot.
-                snapshot(
-                  d_renderer,
-                  org.apache.batik.apps.rasterizer.EntMode.
-                    LOW_MODE,
-                  ent.runtime.ENT_Runtime.
-                    getObjMode(
-                      this,
-                      0),
-                  true);
+              d_renderer;
         }
         catch (java.lang.RuntimeException e) {
             if (recover) {
@@ -81,16 +72,7 @@ public abstract class ImageTranscoder extends org.apache.batik.transcoder.SVGAbs
                     curTxf);
             }
             renderer =
-              ent.runtime.ENT_Snapshot.
-                forceSnapshot(
-                  d_renderer,
-                  org.apache.batik.apps.rasterizer.EntMode.
-                    LOW_MODE,
-                  ent.runtime.ENT_Runtime.
-                    getObjMode(
-                      this,
-                      0),
-                  true);
+              d_renderer;
         }
         this.
           root =
@@ -168,13 +150,8 @@ public abstract class ImageTranscoder extends org.apache.batik.transcoder.SVGAbs
         }
     }
     protected org.apache.batik.gvt.renderer.ImageRenderer createRenderer() {
-        return (org.apache.batik.gvt.renderer.StaticRenderer)
-                 ent.runtime.ENT_Runtime.
-                 putObj(
-                   new org.apache.batik.gvt.renderer.StaticRenderer(
-                     ),
-                   new java.lang.Integer[] { org.apache.batik.apps.rasterizer.EntMode.
-                                               DYNAMIC_MODE });
+        return new org.apache.batik.gvt.renderer.StaticRenderer(
+          );
     }
     protected void forceTransparentWhite(java.awt.image.BufferedImage img,
                                          java.awt.image.SinglePixelPackedSampleModel sppsm) {

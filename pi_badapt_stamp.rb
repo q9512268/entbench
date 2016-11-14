@@ -3,12 +3,12 @@
 require 'terminal-table'
 
 $BENCH = {
-#  sunflow:"sunflow", 
-#  crypto:"crypto", 
-#  camera:"camera", 
-#  video:"video", 
-  batik:"batik", 
-#  javaboy:"javaboy"
+  sunflow:"sunflow", 
+  camera:"camera", 
+  video:"video", 
+  crypto:"crypto", 
+  javaboy:"javaboy"
+#  batik:"batik", 
 }
 
 $DIR   = "badapt_run"
@@ -32,7 +32,7 @@ def load_timestamp(fname)
   stamps = []
   File.open(fname).read().each_line do |line|
     parsed = line.strip().split() 
-    stamps << [parsed[2].to_f, parsed[3].to_f, parsed[4].to_f, parsed[5].to_f]
+    stamps << [parsed[2].to_f, parsed[3].to_f, parsed[4].to_f, parsed[5].to_f, parsed[6].to_f]
   end
   return stamps
 end
@@ -41,7 +41,22 @@ def within(stamp1,stamp2,compare)
   return (stamp1 <= compare && compare <= stamp2)
 end
 
-def get_energy(stamps, tmin, tmax)
+def check_sync(file, run, stamps, imin, imax) 
+  unless (within(1.8,2.0,stamps[imin][2])) then
+    puts "\tWarning: Not synced: #{file} - #{run}"
+    for i in 0..20 do
+      if (within(1.8,2.0,stamps[imin-i][2])) then
+        #puts "\tWarning: Using sync offset #{i}"
+        return i
+      end
+    end
+    puts "\tError: Sync point further than 20 steps, exiting..."
+    exit
+  end
+  return 0
+end
+
+def get_energy(file, run, stamps, tmin, tmax)
   i = 0
   while i < stamps.length && !within(stamps[i][0],stamps[i+1][0],tmin) 
     i += 1
@@ -65,7 +80,19 @@ def get_energy(stamps, tmin, tmax)
   for j in indexmin..indexmax do
     energy += stamps[j][2]
   end
-  
+
+  # Do some checking for sync hotspots
+  offset = check_sync(file, run, stamps, indexmin, indexmax)
+
+  if (offset != 0) then
+    corrected = 0.0
+    for j in (indexmin-offset)..(indexmax-offset) do
+      corrected += stamps[j][2]
+    end
+    puts "\tWarning: Offset:#{offset} Original:#{energy.round(2)} Corrected:#{corrected.round(2)} Percent Error:#{(((energy-corrected)/energy) * 100.0).round(2)}%"
+    return corrected
+  end
+
   return energy
 end
 
@@ -85,6 +112,7 @@ $BENCH.each do |bench, path|
   $RUNS.each do |run| 
     refstamps = File.open("./pi_bench/#{path}/#{$DIR}/#{run}_stamp.txt").read().scan(/ERun.*:(.*)$/)
     energyfile = File.open("./pi_bench/#{path}/#{$DIR}/#{run}.txt", "w")
+    energyfile.write("// Created from #{timestamp_file}\n")
 
     puts "#{bench} #{run}"
 
@@ -94,8 +122,10 @@ $BENCH.each do |bench, path|
       tmin = parsed[0].to_f
       tmax = parsed[1].to_f
 
-      energy = get_energy(stamps, tmin, tmax)
+      energy = get_energy("#{bench}/#{run}", "ERun #{i}", stamps, tmin, tmax)
+
       energyfile.write("ERun: #{i}: 0 0 #{energy} 0\n")
+      #puts "ERun: #{i}: 0 0 #{energy} 0"
     end
     energyfile.close
 

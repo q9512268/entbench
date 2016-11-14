@@ -32,6 +32,7 @@ $BENCH.each do |bench, path|
     m = File.open("./#{path}/over_run/#{run[0]}").read().scan(/ERun.*:(.*)$/)
     e1 = 0.0
     for i in 1..m.length-1 do
+      e1 += m[i][0].strip().split()[0].to_f
       e1 += m[i][0].strip().split()[2].to_f
     end
     ae1 = e1 / (m.length-1).to_f
@@ -40,17 +41,18 @@ $BENCH.each do |bench, path|
     m = File.open("./#{path}/over_run/#{run[1]}").read().scan(/ERun.*:(.*)$/)
     e2 = 0.0
     for i in 1..m.length-1 do
+      e2 += m[i][0].strip().split()[0].to_f
       e2 += m[i][0].strip().split()[2].to_f
     end
     energy << e2 / (m.length-1).to_f
     ae2 = e2 / (m.length-1).to_f
 
-    diff = ((ae2-ae1)/ae2)*100.0
-    #diff = ((ae1-ae2)/ae1)*100.0
+    #diff = ((ae2-ae1)/ae2)*100.0
+    diff = (((ae1-ae2)/ae2)*100.0).round(2)
 
     puts "#{bench} #{ae1} #{ae2} #{diff}"
 
-    energy << ((ae1 - ae2) / ae1) * 100
+    energy << ((ae1 - ae2) / ae2) * 100
 
   end
   consumedtable[bench] = energy

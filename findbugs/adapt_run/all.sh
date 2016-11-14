@@ -3,9 +3,9 @@
 dir=`dirname "$0"`
 
 runs=(
-  ld.sh
+#  ld.sh
 #  md.sh
-#  sd.sh
+  sd.sh
 )
 
 contexts=(
@@ -27,7 +27,7 @@ for i in `seq 0 2`; do
 
   for rn in ${runs[@]}; do
     echo "Starting ${contexts[$i]} ${rn}"
-    $(./$rn ${contexts[$i]} > /dev/null)  
+    $(./$rn ${contexts[$i]} >/dev/null)  
     echo "Completed ${contexts[$i]} ${rn}"
   done
 done

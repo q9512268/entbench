@@ -54,29 +54,14 @@ public final class DestinationType {
     protected org.apache.batik.transcoder.Transcoder getTranscoder() {
         switch (code) {
             case PNG_CODE:
-                return (org.apache.batik.transcoder.image.PNGTranscoder)
-                         ent.runtime.ENT_Runtime.
-                         putObj(
-                           new org.apache.batik.transcoder.image.PNGTranscoder(
-                             ),
-                           new java.lang.Integer[] { org.apache.batik.apps.rasterizer.EntMode.
-                                                       DYNAMIC_MODE });
+                return new org.apache.batik.transcoder.image.PNGTranscoder(
+                  );
             case JPEG_CODE:
-                return (org.apache.batik.transcoder.image.JPEGTranscoder)
-                         ent.runtime.ENT_Runtime.
-                         putObj(
-                           new org.apache.batik.transcoder.image.JPEGTranscoder(
-                             ),
-                           new java.lang.Integer[] { org.apache.batik.apps.rasterizer.EntMode.
-                                                       DYNAMIC_MODE });
+                return new org.apache.batik.transcoder.image.JPEGTranscoder(
+                  );
             case TIFF_CODE:
-                return (org.apache.batik.transcoder.image.TIFFTranscoder)
-                         ent.runtime.ENT_Runtime.
-                         putObj(
-                           new org.apache.batik.transcoder.image.TIFFTranscoder(
-                             ),
-                           new java.lang.Integer[] { org.apache.batik.apps.rasterizer.EntMode.
-                                                       DYNAMIC_MODE });
+                return new org.apache.batik.transcoder.image.TIFFTranscoder(
+                  );
             case PDF_CODE:
                 try {
                     java.lang.Class pdfClass =
@@ -101,22 +86,19 @@ public final class DestinationType {
         TIFF,
         PDF };
     }
-    public java.lang.Object readResolve() {
-        switch (code) {
-            case PNG_CODE:
-                return PNG;
-            case JPEG_CODE:
-                return JPEG;
-            case TIFF_CODE:
-                return TIFF;
-            case PDF_CODE:
-                return PDF;
-            default:
-                throw new java.lang.Error(
-                  "unknown code:" +
-                  code);
-        }
-    }
+    public java.lang.Object readResolve() { switch (code) { case PNG_CODE:
+                                                                return PNG;
+                                                            case JPEG_CODE:
+                                                                return JPEG;
+                                                            case TIFF_CODE:
+                                                                return TIFF;
+                                                            case PDF_CODE:
+                                                                return PDF;
+                                                            default:
+                                                                throw new java.lang.Error(
+                                                                  "unknown code:" +
+                                                                  code);
+                                            } }
     public static final java.lang.String jlc$CompilerVersion$jl7 =
       "2.7.0";
     public static final long jlc$SourceLastModified$jl7 =

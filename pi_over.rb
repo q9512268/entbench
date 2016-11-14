@@ -38,7 +38,7 @@ $BENCH.each do |bench, path|
     energy << e2 / (m.length-1).to_f
     ae2 = e2 / (m.length-1).to_f
 
-    diff = ((ae2-ae1)/ae2)*100.0
+    diff = (((ae1-ae2)/ae2)*100.0).round(2)
 
     puts "#{bench} #{ae1} #{ae2} #{diff}"
 

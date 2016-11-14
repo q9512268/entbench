@@ -20,7 +20,7 @@ mapped_colors <- c("full_throttle"=colors[1],
                    "energy_saver silent"=colors[6])
 
 
-benchmarks = c("sunflow","camera","video","crypto")
+benchmarks = c("sunflow","camera","video","crypto", "javaboy")
 
 for (b in benchmarks) {
 
@@ -59,7 +59,10 @@ for (b in benchmarks) {
     p3 <- p
   } else if (b == "crypto") {
     p4 <- p
+  } else if (b == "javaboy") {
+    p5 <- p
   } 
+
 
   print(p)
   dev.off()
@@ -73,6 +76,7 @@ grid.arrange(
               p2 + theme(legend.position="none"),
               p3 + theme(legend.position="none"),
               p4 + theme(legend.position="none"),
+              p5 + theme(legend.position="none"),
               nrow=2),
              leg, nrow=2, heights=c(3.8,0.5))
 

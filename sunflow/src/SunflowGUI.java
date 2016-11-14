@@ -179,7 +179,7 @@ public class SunflowGUI extends javax.swing.JFrame implements UserInterface {
         System.exit(1);
     }
 
-    public static void main(String[] args) {
+    public static void main(String[] args) { 
         UI.verbosity(4);
         if (args.length > 0) {
             boolean showFrame = true;
@@ -457,12 +457,10 @@ public class SunflowGUI extends javax.swing.JFrame implements UserInterface {
               double[] after = EnergyCheckUtils.getEnergyStats();
               ENT_Util.stopStopwatch();
               ENT_Util.writeModeFile(String.format("ERun %d: %f %f %f %f\n", k, after[0]-before[0], after[1]-before[1], after[2]-before[2], ENT_Util.elapsedTime()));
-
-            }
+            } 
 
             ENT_Util.closeModeFile();
             EnergyCheckUtils.DeallocProfile();
-
 
         } else {
             MetalLookAndFeel.setCurrentTheme(new DefaultMetalTheme());
@@ -473,8 +471,7 @@ public class SunflowGUI extends javax.swing.JFrame implements UserInterface {
                 gui.setExtendedState(MAXIMIZED_BOTH);
             gui.tileWindowMenuItem.doClick();
             SunflowAPI.runSystemCheck();
-        }
-
+        } 
     }
 
     public SunflowGUI() {

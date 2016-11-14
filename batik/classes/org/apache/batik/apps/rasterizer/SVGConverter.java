@@ -346,14 +346,7 @@ public class SVGConverter {
           setTranscodingHints(
             hints);
         org.apache.batik.transcoder.Transcoder transcoder =
-          ent.runtime.ENT_Snapshot.
-          snapshot(
-            dtranscoder,
-            org.apache.batik.apps.rasterizer.EntMode.
-              LOW_MODE,
-            org.apache.batik.apps.rasterizer.EntMode.
-              HIGH_MODE,
-            true);
+          dtranscoder;
         if (!controller.
               proceedWithComputedTask(
                 transcoder,
