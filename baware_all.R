@@ -5,6 +5,8 @@ library(RColorBrewer)
 dta <- read.table("dat/baware_consumed.dat", sep="\t", head=T)
 
 colors <- brewer.pal(6, "Paired")
+grays <- brewer.pal(6, "Greys")
+
 mapped_colors <- c("managed"=colors[4],"managed silent"=colors[3],"full_throttle"=colors[6], "full_throttle silent"=colors[5]) 
 
 xvals <- c()

@@ -3,7 +3,10 @@ library(ggplot2)
 library(RColorBrewer)
 
 colors <- brewer.pal(6, "Paired")
-mapped_colors <- c("full_throttle"=colors[5],"managed"=colors[3],"energy_saver"=colors[1])
+grays <- brewer.pal(6, "Greys")
+
+#mapped_colors <- c("full_throttle"=colors[5],"managed"=colors[3],"energy_saver"=colors[1])
+mapped_colors <- c("full_throttle"=grays[5],"managed"=grays[3],"energy_saver"=grays[1])
 
 dta <- read.table("dat/all_badapt_consumed.dat", sep="\t", head=T)
 
@@ -80,12 +83,12 @@ p <- ggplot(data=dta, aes(xcord)) +
               stat="identity", 
               width=0.15) + 
 
-     geom_text(aes(y=managed,label=mid_percent_saved,vjust=vj1),colour="blue4",size=5.5) +
+     geom_text(aes(y=managed,label=mid_percent_saved,vjust=vj1),colour="black",size=6.5) +
 
-     geom_text(aes(y=energy_saver,label=low_percent_saved,vjust=vj2),colour="red2",size=5.5) +
+     geom_text(aes(y=energy_saver,label=low_percent_saved,vjust=vj2),colour="black",size=6.5) +
 
      geom_vline(data=d, aes(xintercept=xint), colour="red3", linetype = "longdash") +
-     geom_text(data=d2, aes(x=xsys,y=1.05,label=systems), colour="blue4", size=6.5) +
+     geom_text(data=d2, aes(x=xsys,y=1.05,label=systems), colour="black", size=7.5) +
 
      scale_fill_manual(name="Boot Mode",values=mapped_colors) +
      xlim(0.0,16) +

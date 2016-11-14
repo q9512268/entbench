@@ -5,8 +5,11 @@ library(RColorBrewer)
 dta <- read.table("dat/all_baware_consumed.dat", sep="\t", head=T)
 
 colors <- brewer.pal(6, "Paired")
+grays <- brewer.pal(6, "Greys")
+
 #mapped_colors <- c("managed"=colors[4],"managed silent"=colors[3],"full_throttle"=colors[6], "full_throttle silent"=colors[5]) 
-mapped_colors <- c("ent"=colors[2],"silent"=colors[1])
+#mapped_colors <- c("ent"=colors[2],"silent"=colors[1])
+mapped_colors <- c("ent"=grays[5],"silent"=grays[3])
 
 xvals <- c()
 xlbls <- c()
@@ -62,10 +65,10 @@ p <- ggplot(data=dta, aes(xcord)) +
 
      #geom_text(aes(y=ent_managed,label=percent_saved,vjust=vj1),colour="red2",size=5.5) +
 
-     geom_text(aes(y=ent_full,label=percent_saved,vjust=vj2),colour="red2",size=5.5) +
+     geom_text(aes(y=ent_full,label=percent_saved,vjust=vj2),colour="black",size=6.5) +
 
      geom_vline(data=d, aes(xintercept=xint), colour="red3", linetype = "longdash") +
-     geom_text(data=d2, aes(x=xsys,y=1.10,label=systems), colour="blue4", size=6.5) +
+     geom_text(data=d2, aes(x=xsys,y=1.10,label=systems), colour="black", size=7.5) +
 
      scale_fill_manual(name="Boot Mode",values=mapped_colors) +
 

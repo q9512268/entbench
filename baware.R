@@ -11,13 +11,15 @@ g_legend<-function(a.gplot) {
   return(legend)
 }
 
+grays <- brewer.pal(8, "Greys")
+
 colors <- brewer.pal(6, "Paired")
-mapped_colors <- c("full_throttle"=colors[6],
-                   "full_throttle silent"=colors[5],
-                   "managed"=colors[4],
-                   "managed silent"=colors[3],
-                   "energy_saver"=colors[2],
-                   "energy_saver silent"=colors[1])
+mapped_colors <- c("full_throttle"=grays[8],
+                   "full_throttle silent"=grays[7],
+                   "managed"=grays[6],
+                   "managed silent"=grays[5],
+                   "energy_saver"=grays[4],
+                   "energy_saver silent"=grays[3])
 
 benchmarks = c("sunflow","jspider","pagerank","findbugs","crypto","batik")
 

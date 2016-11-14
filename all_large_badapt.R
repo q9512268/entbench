@@ -3,7 +3,9 @@ library(ggplot2)
 library(RColorBrewer)
 
 colors <- brewer.pal(6, "Paired")
-mapped_colors <- c("full_throttle"=colors[5],"managed"=colors[3],"energy_saver"=colors[1])
+grays <- brewer.pal(6, "Greys")
+
+mapped_colors <- c("full_throttle"=grays[5],"managed"=grays[4],"energy_saver"=grays[5])
 
 dta <- read.table("dat/all_large_badapt.dat", sep="\t", head=T)
 
@@ -32,6 +34,12 @@ for (i in 1:nrow(dta)) {
 dta$vj1 <- rep(c(0,0,0), length.out=30)
 dta$vj2 <- rep(c(0,0,0), length.out=30)
 
+for (i in 1:30) {
+  dta$vj1[i] <- -0.5
+  dta$vj2[i] <- -0.5
+}
+
+
 pdf("all_large_battery_casing.pdf", width=16,height=7)
 
 d=data.frame(xint=c(5.6,10.6))
@@ -53,8 +61,11 @@ print(dta)
 #  dta$vj2[i+2] <- 1.3
 #}
 
-dta$vj2[11] <- dta$vj2[11] + 1
-dta$vj2[21] <- dta$vj2[21] + 1
+dta$vj1[12] <- -1.5
+dta$vj1[18] <- -1.2
+
+dta$vj2[21] <- -.2
+dta$vj1[22] <- -1.2
 
 p <- ggplot(data=dta, aes(xcord)) +
      #geom_bar(aes(y=full_throttle,fill="full_throttle"),
@@ -70,13 +81,16 @@ p <- ggplot(data=dta, aes(xcord)) +
      #geom_text(aes(y=managed,label=mid_percent_saved),colour="blue4",size=5.5) +
      #geom_text(aes(y=energy_saver,label=low_percent_saved),colour="red2",size=5.5) +
 
-     geom_text(aes(y=managed,label=mid_percent_saved,vjust=vj1),colour="blue4",size=5.5) +
-     geom_text(aes(y=energy_saver,label=low_percent_saved,vjust=vj2),colour="blue4",size=5.5) +
+     geom_text(aes(y=managed,label=mid_percent_saved,vjust=vj1),colour="black",size=6.5) +
+     geom_text(aes(y=energy_saver,label=low_percent_saved,vjust=vj2),colour="black",size=6.5) +
 
      geom_vline(data=d, aes(xintercept=xint), colour="red3", linetype = "longdash") +
-     geom_text(data=d2, aes(x=xsys,y=1.05,label=systems), colour="blue4", size=6.5) +
+     geom_text(data=d2, aes(x=xsys,y=1.10,label=systems), colour="black", size=7.5) +
 
      scale_fill_manual(name="Boot Mode",values=mapped_colors) +
+
+     scale_y_continuous(breaks=c(0.0, 0.25, 0.50, 0.75, 1.0)) +
+
      xlim(0.0,16) +
      xlab("Benchmark") +
      ylab("Normalized Energy") +

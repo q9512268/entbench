@@ -5,7 +5,9 @@ library(grid)
 library(gridExtra)
 
 colors <- brewer.pal(2, "Dark2")
-mapped_colors <- c("ent"=colors[1],"java"=colors[2])
+grays <- brewer.pal(6, "Greys")
+
+mapped_colors <- c("ent"=grays[6],"java"=grays[4])
 
 g_legend<-function(a.gplot) {
   tmp <- ggplot_gtable(ggplot_build(a.gplot))
