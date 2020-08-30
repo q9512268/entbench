@@ -12,13 +12,13 @@
 
 	<target name="compile" depends="init" description="Compile source">
 		<mkdir dir="${build.classes.dir}" />
-    <javac 
-      fork="yes" 
-      executable="/home/acanino/Projects/ent/bin/entc" 
-      srcdir="${src.dir}" 
-      destdir="${build.classes.dir}" 
-      debug="on" 
+    <javac
+      fork="yes"
+      executable="entc" 
+      srcdir="${src.dir}"
+      destdir="${build.classes.dir}"
+      debug="on"
       classpath="${crypto.libs}">
     </javac>
 	</target>
-</project> 
+</project>
